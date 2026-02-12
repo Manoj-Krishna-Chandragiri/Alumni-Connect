@@ -16,6 +16,9 @@ urlpatterns = [
     path('me/', views.MeView.as_view(), name='me'),
     path('change-password/', views.ChangePasswordView.as_view(), name='change_password'),
     
+    # Validation
+    path('validate-roll-number/', views.ValidateRollNumberView.as_view(), name='validate_roll_number'),
+    
     # User management (Admin)
     path('users/', views.UserListView.as_view(), name='user_list'),
     path('users/<int:pk>/', views.UserDetailView.as_view(), name='user_detail'),

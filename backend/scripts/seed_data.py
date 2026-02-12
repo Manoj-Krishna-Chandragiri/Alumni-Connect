@@ -123,11 +123,12 @@ def create_student_profiles(users):
     """Create student profiles."""
     print("\nCreating student profiles...")
     
+    # Student roll numbers: 22BQ1A05## = joined 2022, regular, CSE, passout 2026
     profiles = [
         {
             'user': users['student1@college.edu'],
-            'roll_no': 'CS2021001',
-            'department': 'Computer Science',
+            'roll_no': '22BQ1A0501',  # Joined 2022, regular entry, CSE, passout 2026
+            'department': 'CSE',
             'year': 3,
             'cgpa': 8.5,
             'phone': '9876543210',
@@ -140,8 +141,8 @@ def create_student_profiles(users):
         },
         {
             'user': users['student2@college.edu'],
-            'roll_no': 'CS2021002',
-            'department': 'Computer Science',
+            'roll_no': '22BQ1A0502',  # Joined 2022, regular entry, CSE, passout 2026
+            'department': 'CSE',
             'year': 3,
             'cgpa': 9.0,
             'phone': '9876543211',
@@ -157,18 +158,28 @@ def create_student_profiles(users):
     for profile_data in profiles:
         profile = StudentProfile(**profile_data)
         profile.save()
-        print(f"  Created student profile: {profile_data['user'].email}")
+        print(f"  Created student profile: {profile_data['user'].email} - Roll: {profile_data['roll_no']}")
+        
+        # Print auto-calculated values
+        from common.roll_number_utils import calculate_passout_year, get_academic_status
+        passout_year = calculate_passout_year(profile_data['roll_no'])
+        status = get_academic_status(profile_data['roll_no'])
+        print(f"    → Passout Year: {passout_year}, Status: {status['status']}")
 
 
 def create_alumni_profiles(users):
     """Create alumni profiles."""
     print("\nCreating alumni profiles...")
     
+    # Alumni roll numbers with auto-calculated graduation years:
+    # 20BQ1A05## = joined 2020, regular entry (4 years), passout 2024
+    # 19BQ1A05## = joined 2019, regular entry (4 years), passout 2023
+    # 21BQ5A05## = joined 2021, lateral entry (3 years), passout 2024
     profiles = [
         {
             'user': users['alumni1@gmail.com'],
-            'graduation_year': 2020,
-            'department': 'Computer Science',
+            'roll_no': '20BQ1A0501',  # Joined 2020, regular, passout 2024 (auto-calculated)
+            'department': 'CSE',
             'phone': '9876543212',
             'current_company': 'Google',
             'current_position': 'Software Engineer',
@@ -182,8 +193,8 @@ def create_alumni_profiles(users):
         },
         {
             'user': users['alumni2@gmail.com'],
-            'graduation_year': 2019,
-            'department': 'Computer Science',
+            'roll_no': '19BQ1A0501',  # Joined 2019, regular, passout 2023 (auto-calculated)
+            'department': 'CSE',
             'phone': '9876543213',
             'current_company': 'Amazon',
             'current_position': 'Data Scientist',
@@ -197,8 +208,8 @@ def create_alumni_profiles(users):
         },
         {
             'user': users['alumni3@gmail.com'],
-            'graduation_year': 2021,
-            'department': 'Computer Science',
+            'roll_no': '21BQ5A0501',  # Joined 2021, lateral entry, passout 2024 (auto-calculated)
+            'department': 'CSE',
             'phone': '9876543214',
             'current_company': 'Startup Inc',
             'current_position': 'Backend Developer',
@@ -212,9 +223,17 @@ def create_alumni_profiles(users):
     ]
     
     for profile_data in profiles:
+        # Remove graduation_year if present, let it be auto-calculated
+        profile_data.pop('graduation_year', None)
         profile = AlumniProfile(**profile_data)
         profile.save()
-        print(f"  Created alumni profile: {profile_data['user'].email} (verified: {profile_data['is_verified']})")
+        
+        # Print created profile with calculated graduation year
+        from common.roll_number_utils import calculate_passout_year, get_academic_status
+        passout_year = calculate_passout_year(profile_data['roll_no'])
+        status = get_academic_status(profile_data['roll_no'])
+        print(f"  Created alumni profile: {profile_data['user'].email} - Roll: {profile_data['roll_no']}")
+        print(f"    → Graduation Year (auto-calculated): {passout_year}, Status: {status['status']}, Verified: {profile_data['is_verified']}")
 
 
 def create_blogs(users):

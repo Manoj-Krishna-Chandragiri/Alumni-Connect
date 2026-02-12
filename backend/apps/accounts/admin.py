@@ -28,8 +28,8 @@ class UserAdmin(BaseUserAdmin):
 
 @admin.register(StudentProfile)
 class StudentProfileAdmin(admin.ModelAdmin):
-    list_display = ['user', 'roll_number', 'batch_year', 'semester', 'cgpa']
-    list_filter = ['batch_year', 'semester']
+    list_display = ['user', 'roll_number', 'batch_year', 'current_semester', 'cgpa']
+    list_filter = ['batch_year', 'current_semester']
     search_fields = ['user__email', 'roll_number']
 
 

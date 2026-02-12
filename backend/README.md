@@ -1,6 +1,6 @@
-# Alumni Connect Backend
+# VVITU Alumni Connect Backend
 
-Production-grade Django REST Framework backend for College Alumni Management & Engagement Platform.
+Production-grade Django REST Framework backend for Vasireddy Venkatadri International Technological University Alumni Management & Engagement Platform.
 
 ## Tech Stack
 

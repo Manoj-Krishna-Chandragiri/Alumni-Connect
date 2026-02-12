@@ -6,6 +6,7 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from django.contrib.auth import get_user_model
 from django.conf import settings
 from .models import StudentProfile, AlumniProfile
+from common.roll_number_utils import validate_roll_number, parse_roll_number
 
 User = get_user_model()
 
@@ -89,6 +90,26 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
             })
         
         role = attrs.get('role', 'student')
+        roll_number = attrs.get('roll_number')
+        
+        # Validate roll number format
+        if roll_number:
+            is_valid, error_message = validate_roll_number(roll_number)
+            if not is_valid:
+                raise serializers.ValidationError({
+                    'roll_number': error_message
+                })
+            
+            # Parse roll number to extract information
+            roll_info = parse_roll_number(roll_number)
+            if roll_info:
+                # Auto-populate department from roll number if not provided
+                if not attrs.get('department'):
+                    attrs['department'] = roll_info['branch_short']
+                
+                # Auto-populate batch year from roll number if not provided
+                if not attrs.get('batch_year') and role == 'student':
+                    attrs['batch_year'] = int(roll_info['year'])
         
         if role == 'student':
             if not attrs.get('roll_number'):

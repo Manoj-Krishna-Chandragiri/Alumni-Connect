@@ -4,6 +4,76 @@ Utility functions for Alumni Connect backend.
 from rest_framework.views import exception_handler
 from rest_framework.response import Response
 from rest_framework import status
+from django.utils.text import slugify as django_slugify
+
+
+# Re-export Django's slugify for convenience
+slugify = django_slugify
+
+
+class Choices:
+    """Constants for model choices."""
+    
+    ROLES = [
+        ('student', 'Student'),
+        ('alumni', 'Alumni'),
+        ('counsellor', 'Counsellor'),
+        ('hod', 'HOD'),
+        ('principal', 'Principal'),
+        ('admin', 'Admin'),
+    ]
+    
+    DEPARTMENTS = [
+        ('cse', 'Computer Science & Engineering'),
+        ('ece', 'Electronics & Communication Engineering'),
+        ('eee', 'Electrical & Electronics Engineering'),
+        ('mech', 'Mechanical Engineering'),
+        ('civil', 'Civil Engineering'),
+        ('it', 'Information Technology'),
+    ]
+    
+    VERIFICATION_STATUS = [
+        ('pending', 'Pending'),
+        ('verified', 'Verified'),
+        ('rejected', 'Rejected'),
+    ]
+    
+    EVENT_TYPE = [
+        ('workshop', 'Workshop'),
+        ('seminar', 'Seminar'),
+        ('webinar', 'Webinar'),
+        ('conference', 'Conference'),
+        ('meetup', 'Meetup'),
+        ('networking', 'Networking'),
+        ('other', 'Other'),
+    ]
+    
+    EVENT_STATUS = [
+        ('upcoming', 'Upcoming'),
+        ('ongoing', 'Ongoing'),
+        ('completed', 'Completed'),
+        ('cancelled', 'Cancelled'),
+    ]
+    
+    BLOG_STATUS = [
+        ('draft', 'Draft'),
+        ('published', 'Published'),
+        ('archived', 'Archived'),
+    ]
+    
+    JOB_TYPE = [
+        ('full_time', 'Full Time'),
+        ('part_time', 'Part Time'),
+        ('contract', 'Contract'),
+        ('internship', 'Internship'),
+        ('freelance', 'Freelance'),
+    ]
+    
+    JOB_STATUS = [
+        ('open', 'Open'),
+        ('closed', 'Closed'),
+        ('filled', 'Filled'),
+    ]
 
 
 def custom_exception_handler(exc, context):

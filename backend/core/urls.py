@@ -9,6 +9,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     # All API endpoints
     path('api/', include('api.urls')),
+    path('api/notifications/', include('apps.notifications.urls')),
 ]
 
 # Serve media files in development

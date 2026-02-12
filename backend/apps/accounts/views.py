@@ -11,6 +11,7 @@ from django.utils import timezone
 
 from common.permissions import RolePermission, ScopePermission, IsSameUserOrAdmin
 from common.utils import success_response, error_response
+from common.roll_number_utils import validate_roll_number, parse_roll_number
 from .serializers import (
     CustomTokenObtainPairSerializer,
     UserSerializer,
@@ -205,7 +206,53 @@ class StudentProfileView(APIView):
         try:
             profile = request.user.student_profile
             serializer = StudentProfileSerializer(profile)
-            return success_response(data=serializer.data)
+            
+            # Merge user data with profile data
+            data = serializer.data
+            data['firstName'] = request.user.first_name
+            data['lastName'] = request.user.last_name
+            data['email'] = request.user.email
+            data['phone'] = request.user.phone
+            data['department'] = request.user.department
+            
+            # Field name mapping (snake_case to camelCase)
+            top_level_mapping = {
+                'roll_number': 'rollNumber',
+                'batch_year': 'batchYear',
+                'graduation_year': 'graduationYear',
+                'current_year': 'currentYear',
+                'current_semester': 'currentSemester',
+                'profile_picture': 'profilePicture',
+                'social_profiles': 'socialProfiles',
+                'created_at': 'createdAt',
+                'updated_at': 'updatedAt',
+            }
+            
+            # Nested field mappings
+            nested_mapping = {
+                'start_date': 'startDate',
+                'end_date': 'endDate',
+                'is_current': 'isCurrent',
+            }
+            
+            def convert_field_names(obj):
+                """Recursively convert snake_case keys to camelCase"""
+                if isinstance(obj, dict):
+                    converted = {}
+                    for key, value in obj.items():
+                        # Try top-level mapping first, then nested mapping
+                        new_key = top_level_mapping.get(key, nested_mapping.get(key, key))
+                        converted[new_key] = convert_field_names(value)
+                    return converted
+                elif isinstance(obj, list):
+                    return [convert_field_names(item) for item in obj]
+                else:
+                    return obj
+            
+            # Convert field names
+            converted_data = convert_field_names(data)
+            
+            return success_response(data=converted_data)
         except StudentProfile.DoesNotExist:
             return error_response(
                 'Student profile not found',
@@ -221,15 +268,119 @@ class StudentProfileView(APIView):
         
         try:
             profile = request.user.student_profile
+            
+            # Extract User model fields
+            user_fields = {}
+            if 'firstName' in request.data:
+                user_fields['first_name'] = request.data.pop('firstName')
+            if 'lastName' in request.data:
+                user_fields['last_name'] = request.data.pop('lastName')
+            if 'phone' in request.data:
+                user_fields['phone'] = request.data.pop('phone')
+            if 'email' in request.data:
+                # Email might be read-only, skip it
+                request.data.pop('email')
+            
+            # Update user fields
+            if user_fields:
+                for field, value in user_fields.items():
+                    setattr(request.user, field, value)
+                request.user.save()
+            
+            # Helper function to convert nested camelCase to snake_case
+            def convert_to_snake_case(obj):
+                """Recursively convert nested camelCase keys to snake_case"""
+                nested_field_mapping = {
+                    'startDate': 'start_date',
+                    'endDate': 'end_date',
+                    'isCurrent': 'is_current',
+                }
+                
+                if isinstance(obj, dict):
+                    converted = {}
+                    for key, value in obj.items():
+                        # Check if key needs conversion
+                        new_key = nested_field_mapping.get(key, key)
+                        converted[new_key] = convert_to_snake_case(value)
+                    return converted
+                elif isinstance(obj, list):
+                    return [convert_to_snake_case(item) for item in obj]
+                else:
+                    return obj
+            
+            # Map frontend field names to backend (camelCase to snake_case)
+            profile_data = {}
+            field_mapping = {
+                'rollNumber': 'roll_number',
+                'currentYear': 'current_year',
+                'currentSemester': 'current_semester',
+                'profilePicture': 'profile_picture',
+                'socialProfiles': 'social_profiles',
+            }
+            
+            for key, value in request.data.items():
+                backend_key = field_mapping.get(key, key)
+                # Convert nested objects/arrays (like internships, skills, etc.) from camelCase to snake_case
+                if backend_key in ['social_profiles', 'internships', 'certifications', 'placements']:
+                    profile_data[backend_key] = convert_to_snake_case(value)
+                else:
+                    profile_data[backend_key] = value
+            
             serializer = StudentProfileSerializer(
                 profile,
-                data=request.data,
+                data=profile_data,
                 partial=True
             )
             serializer.is_valid(raise_exception=True)
             serializer.save()
+            
+            # Return merged data with camelCase field names
+            response_data = serializer.data
+            response_data['firstName'] = request.user.first_name
+            response_data['lastName'] = request.user.last_name
+            response_data['email'] = request.user.email
+            response_data['phone'] = request.user.phone
+            response_data['department'] = request.user.department
+            
+            # Field name mapping (snake_case to camelCase) for response
+            top_level_mapping = {
+                'roll_number': 'rollNumber',
+                'batch_year': 'batchYear',
+                'graduation_year': 'graduationYear',
+                'current_year': 'currentYear',
+                'current_semester': 'currentSemester',
+                'profile_picture': 'profilePicture',
+                'social_profiles': 'socialProfiles',
+                'created_at': 'createdAt',
+                'updated_at': 'updatedAt',
+            }
+            
+            # Nested field mappings
+            nested_mapping = {
+                'start_date': 'startDate',
+                'end_date': 'endDate',
+                'is_current': 'isCurrent',
+            }
+            
+            def convert_field_names(obj):
+                """Recursively convert snake_case keys to camelCase for response"""
+                if isinstance(obj, dict):
+                    converted = {}
+                    for key, value in obj.items():
+                        # Try top-level mapping first, then nested mapping
+                        new_key = top_level_mapping.get(key, nested_mapping.get(key, key))
+                        converted[new_key] = convert_field_names(value)
+                    return converted
+                elif isinstance(obj, list):
+                    return [convert_field_names(item) for item in obj]
+                else:
+                    return obj
+            
+            # Convert field names for response
+            converted_response = convert_field_names(response_data)
+            
             return success_response(
-                data=serializer.data,
+                data=converted_response,
                 message='Profile updated successfully'
             )
         except StudentProfile.DoesNotExist:
@@ -254,7 +405,52 @@ class AlumniProfileView(APIView):
         try:
             profile = request.user.alumni_profile
             serializer = AlumniProfileSerializer(profile)
-            return success_response(data=serializer.data)
+            
+            # Merge user data with profile data
+            data = serializer.data
+            data['firstName'] = request.user.first_name
+            data['lastName'] = request.user.last_name
+            data['email'] = request.user.email
+            data['phone'] = request.user.phone
+            data['department'] = request.user.department
+            
+            # Field name mapping (snake_case to camelCase) - TOP LEVEL ONLY
+            field_mapping = {
+                'roll_number': 'rollNumber',
+                'graduation_year': 'graduationYear',
+                'profile_picture': 'profilePicture',
+                'current_company': 'currentCompany',
+                'current_designation': 'currentDesignation',
+                'current_location': 'currentLocation',
+                'experience_years': 'experienceYears',
+                'expertise_areas': 'expertiseAreas',
+                'social_profiles': 'socialProfiles',
+                'work_experience': 'workExperience',
+                'verification_status': 'verificationStatus',
+                'verification_document': 'verificationDocument',
+                'verified_at': 'verifiedAt',
+                'verified_by': 'verifiedBy',
+                'available_for_mentoring': 'availableForMentoring',
+                'available_for_referrals': 'availableForReferrals',
+                'created_at': 'createdAt',
+                'updated_at': 'updatedAt',
+            }
+            
+            # Convert ONLY top-level field names, leave nested data as-is
+            converted_data = {}
+            for key, value in data.items():
+                new_key = field_mapping.get(key, key)
+                converted_data[new_key] = value
+            
+            # Debug logging
+            import json
+            if converted_data.get('workExperience'):
+                print(f"\n=== RETRIEVING PROFILE ===")
+                print(f"DB stored: {json.dumps(profile.work_experience, indent=2)}")
+                print(f"Returning: {json.dumps(converted_data.get('workExperience'), indent=2)}")
+                print(f"============================\n")
+            
+            return success_response(data=converted_data)
         except AlumniProfile.DoesNotExist:
             return error_response(
                 'Alumni profile not found',
@@ -270,15 +466,115 @@ class AlumniProfileView(APIView):
         
         try:
             profile = request.user.alumni_profile
+            
+            # Make a mutable copy of request.data
+            data = dict(request.data)
+            
+            # Extract User model fields
+            user_fields = {}
+            if 'firstName' in data:
+                user_fields['first_name'] = data.pop('firstName')
+            if 'lastName' in data:
+                user_fields['last_name'] = data.pop('lastName')
+            if 'phone' in data:
+                user_fields['phone'] = data.pop('phone')
+            if 'email' in data:
+                # Email might be read-only, skip it
+                data.pop('email')
+            
+            # Update user fields
+            if user_fields:
+                for field, value in user_fields.items():
+                    setattr(request.user, field, value)
+                request.user.save()
+            
+            # Map frontend field names to backend (camelCase to snake_case)
+            # Store workExperience AS-IS without any nested conversions
+            profile_data = {}
+            field_mapping = {
+                'rollNumber': 'roll_number',
+                'graduationYear': 'graduation_year',
+                'currentCompany': 'current_company',
+                'currentDesignation': 'current_designation',
+                'currentLocation': 'current_location',
+                'experienceYears': 'experience_years',
+                'expertiseAreas': 'expertise_areas',
+                'profilePicture': 'profile_picture',
+                'socialProfiles': 'social_profiles',
+                'workExperience': 'work_experience',
+                'yearsOfExperience': 'experience_years',
+                'availableForMentoring': 'available_for_mentoring',
+                'availableForReferrals': 'available_for_referrals',
+            }
+            
+            for key, value in data.items():
+                backend_key = field_mapping.get(key, key)
+                # Store as-is without any nested conversions
+                profile_data[backend_key] = value
+            
+            # Debug logging
+            import json
+            print(f"\n=== SAVING PROFILE ===")
+            if 'workExperience' in data:
+                print(f"Frontend sent: {json.dumps(data['workExperience'], indent=2)}")
+                print(f"Storing in DB: {json.dumps(profile_data.get('work_experience'), indent=2)}")
+            
             serializer = AlumniProfileSerializer(
                 profile,
-                data=request.data,
+                data=profile_data,
                 partial=True
             )
             serializer.is_valid(raise_exception=True)
             serializer.save()
+            
+            # Debug logging after save
+            print(f"\n=== AFTER SAVE ===")
+            profile.refresh_from_db()
+            print(f"Stored in DB: {json.dumps(profile.work_experience, indent=2)}")
+            print(f"===================\n")
+            
+            # Return merged data with camelCase field names
+            response_data = serializer.data
+            response_data['firstName'] = request.user.first_name
+            response_data['lastName'] = request.user.last_name
+            response_data['email'] = request.user.email
+            response_data['phone'] = request.user.phone
+            response_data['department'] = request.user.department
+            
+            # Field name mapping (snake_case to camelCase) - TOP LEVEL ONLY
+            field_mapping = {
+                'roll_number': 'rollNumber',
+                'graduation_year': 'graduationYear',
+                'profile_picture': 'profilePicture',
+                'current_company': 'currentCompany',
+                'current_designation': 'currentDesignation',
+                'current_location': 'currentLocation',
+                'experience_years': 'experienceYears',
+                'expertise_areas': 'expertiseAreas',
+                'social_profiles': 'socialProfiles',
+                'work_experience': 'workExperience',
+                'verification_status': 'verificationStatus',
+                'verification_document': 'verificationDocument',
+                'verified_at': 'verifiedAt',
+                'verified_by': 'verifiedBy',
+                'available_for_mentoring': 'availableForMentoring',
+                'available_for_referrals': 'availableForReferrals',
+                'created_at': 'createdAt',
+                'updated_at': 'updatedAt',
+            }
+            
+            # Convert ONLY top-level field names, leave nested data UNCHANGED
+            converted_response = {}
+            for key, value in response_data.items():
+                new_key = field_mapping.get(key, key)
+                converted_response[new_key] = value
+            
+            print(f"\n=== RETURNING TO FRONTEND ===")
+            print(f"workExperience: {json.dumps(converted_response.get('workExperience'), indent=2)}")
+            print(f"==============================\n")
+            
             return success_response(
-                data=serializer.data,
+                data=converted_response,
                 message='Profile updated successfully'
             )
         except AlumniProfile.DoesNotExist:
@@ -286,3 +582,44 @@ class AlumniProfileView(APIView):
                 'Alumni profile not found',
                 status_code=status.HTTP_404_NOT_FOUND
             )
+
+
+class ValidateRollNumberView(APIView):
+    """Validate roll number format and return parsed information."""
+    
+    permission_classes = [permissions.AllowAny]
+    
+    def post(self, request):
+        roll_number = request.data.get('roll_number', '').strip()
+        
+        if not roll_number:
+            return error_response(
+                'Roll number is required',
+                status_code=status.HTTP_400_BAD_REQUEST
+            )
+        
+        # Validate roll number
+        is_valid, error_message = validate_roll_number(roll_number)
+        
+        if not is_valid:
+            return Response({
+                'is_valid': False,
+                'error': error_message
+            }, status=status.HTTP_200_OK)
+        
+        # Parse roll number to get information
+        roll_info = parse_roll_number(roll_number)
+        
+        # Check if roll number already exists
+        existing_student = StudentProfile.objects.filter(roll_number=roll_number).first()
+        existing_alumni = AlumniProfile.objects.filter(roll_number=roll_number).first()
+        
+        already_exists = existing_student is not None or existing_alumni is not None
+        
+        return success_response(
+            data={
+                'is_valid': True,
+                'already_exists': already_exists,
+                'info': roll_info
+            }
+        )
