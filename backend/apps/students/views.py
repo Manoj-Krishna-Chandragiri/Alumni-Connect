@@ -1,11 +1,11 @@
 """
 Views for student-related operations.
 """
-from rest_framework import generics, permissions
+from rest_framework import generics, permissions, status
 from rest_framework.views import APIView
 from django.contrib.auth import get_user_model
 
-from common.permissions import RolePermission, ScopePermission, DepartmentPermission
+from common.permissions import RolePermission, ScopePermission, DepartmentPermission, IsAuthenticated, IsAdmin
 from common.utils import success_response, error_response
 from apps.accounts.models import StudentProfile
 from apps.accounts.serializers import StudentProfileSerializer, UserWithProfileSerializer
@@ -91,3 +91,33 @@ class StudentStatsView(APIView):
         }
         
         return success_response(data=stats)
+
+
+class AdminStudentToggleView(APIView):
+    """Toggle a student's active/disabled status (admin only)."""
+    permission_classes = [IsAuthenticated, IsAdmin]
+
+    def post(self, request, pk):
+        User = get_user_model()
+        try:
+            student_user = User.objects.get(pk=pk, role='student')
+        except User.DoesNotExist:
+            return error_response('Student not found', status.HTTP_404_NOT_FOUND)
+
+        student_user.is_active = not student_user.is_active
+        student_user.save(update_fields=['is_active'])
+
+        # Try to sync to MongoDB user if it exists
+        try:
+            from common.models import User as MongoUser
+            mongo_user = MongoUser.objects(email=student_user.email).first()
+            if mongo_user:
+                mongo_user.is_active = student_user.is_active
+                mongo_user.save()
+        except Exception:
+            pass
+
+        return success_response(
+            data={'active': student_user.is_active},
+            message=f"Student {'enabled' if student_user.is_active else 'disabled'} successfully"
+        )

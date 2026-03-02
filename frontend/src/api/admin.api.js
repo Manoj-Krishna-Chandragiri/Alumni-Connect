@@ -1,8 +1,8 @@
 import axiosInstance from './axiosInstance';
 import { mockAdminData } from '../mock/admin.mock';
 
-// Use mock data for now until backend is fully ready
-const USE_MOCK = true;
+// Use real backend data
+const USE_MOCK = false;
 
 const adminApi = {
   // Users Management (all users)
@@ -10,7 +10,7 @@ const adminApi = {
     if (USE_MOCK) {
       return { data: mockAdminData.users || [] };
     }
-    return axiosInstance.get('/admin/users/', { params: filters });
+    return axiosInstance.get('/admin/users/', { params: { page_size: 500, ...filters } });
   },
 
   updateUser: async (id, data) => {
@@ -61,21 +61,21 @@ const adminApi = {
     if (USE_MOCK) {
       return { data: mockAdminData.students || [] };
     }
-    return axiosInstance.get('/admin/students/', { params: filters });
+    return axiosInstance.get('/students/', { params: filters });
   },
 
   updateStudent: async (id, data) => {
     if (USE_MOCK) {
       return { data: { success: true, ...data } };
     }
-    return axiosInstance.put(`/admin/students/${id}/`, data);
+    return axiosInstance.patch(`/students/${id}/`, data);
   },
 
   deactivateStudent: async (id) => {
     if (USE_MOCK) {
       return { data: { success: true, id } };
     }
-    return axiosInstance.post(`/admin/students/${id}/deactivate/`);
+    return axiosInstance.post(`/admin/students/${id}/toggle-status/`);
   },
 
   // Alumni Management
@@ -83,21 +83,21 @@ const adminApi = {
     if (USE_MOCK) {
       return { data: mockAdminData.alumni || [] };
     }
-    return axiosInstance.get('/admin/alumni/', { params: filters });
+    return axiosInstance.get('/alumni/', { params: filters });
   },
 
   updateAlumni: async (id, data) => {
     if (USE_MOCK) {
       return { data: { success: true, ...data } };
     }
-    return axiosInstance.put(`/admin/alumni/${id}/`, data);
+    return axiosInstance.patch(`/alumni/${id}/`, data);
   },
 
-  deactivateAlumni: async (id) => {
+  deactivateAlumni: async (userId) => {
     if (USE_MOCK) {
-      return { data: { success: true, id } };
+      return { data: { success: true, userId } };
     }
-    return axiosInstance.post(`/admin/alumni/${id}/deactivate/`);
+    return axiosInstance.post(`/admin/users/${userId}/toggle-status/`);
   },
 
   // Events Management
@@ -105,7 +105,7 @@ const adminApi = {
     if (USE_MOCK) {
       return { data: mockAdminData.events || [] };
     }
-    return axiosInstance.get('/admin/events/');
+    return axiosInstance.get('/events/');
   },
 
   createEvent: async (eventData) => {
@@ -113,21 +113,21 @@ const adminApi = {
       const newEvent = { id: Date.now().toString(), ...eventData, createdAt: new Date().toISOString() };
       return { data: newEvent };
     }
-    return axiosInstance.post('/admin/events/', eventData);
+    return axiosInstance.post('/events/', eventData);
   },
 
   updateEvent: async (id, eventData) => {
     if (USE_MOCK) {
       return { data: { success: true, ...eventData } };
     }
-    return axiosInstance.put(`/admin/events/${id}/`, eventData);
+    return axiosInstance.put(`/events/${id}/`, eventData);
   },
 
   deleteEvent: async (id) => {
     if (USE_MOCK) {
       return { data: { success: true, id } };
     }
-    return axiosInstance.delete(`/admin/events/${id}/`);
+    return axiosInstance.delete(`/events/${id}/`);
   },
 
   // Image Upload
@@ -173,7 +173,23 @@ const adminApi = {
         reportedIssues: 3,
       }};
     }
-    return axiosInstance.get('/admin/stats/');
+    return axiosInstance.get('/dashboard/stats/');
+  },
+
+  // Recent Activity
+  getRecentUsers: async (limit = 10) => {
+    if (USE_MOCK) {
+      return { data: [] };
+    }
+    return axiosInstance.get('/admin/recent-users/', { params: { limit } });
+  },
+
+  // Get all users list (for manage users page)
+  getAllUsers: async (filters = {}) => {
+    if (USE_MOCK) {
+      return { data: mockAdminData.users || [] };
+    }
+    return axiosInstance.get('/users/', { params: filters });
   },
 };
 

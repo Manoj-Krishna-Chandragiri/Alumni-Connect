@@ -31,8 +31,8 @@ const ConfirmModal = ({
       button: 'bg-green-600 hover:bg-green-700 text-white',
     },
     primary: {
-      icon: 'bg-indigo-100 text-indigo-600',
-      button: 'bg-indigo-600 hover:bg-indigo-700 text-white',
+      icon: 'bg-primary-100 text-primary-600',
+      button: 'bg-primary-600 hover:bg-primary-700 text-white',
     },
   };
 

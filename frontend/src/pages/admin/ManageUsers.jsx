@@ -1,8 +1,20 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import adminApi from '../../api/admin.api';
 import { UserTable, UserEditModal } from '../../components/admin';
 import { Loader, ErrorAlert, ConfirmModal, Pagination } from '../../components/shared';
-import { FiPlus, FiDownload } from 'react-icons/fi';
+import { FiUsers, FiUserCheck, FiUserX, FiShield } from 'react-icons/fi';
+
+const StatCard = ({ icon: Icon, label, value, colorClass, bgClass, borderClass }) => (
+  <div className={`rounded-xl border ${borderClass} ${bgClass} p-5 flex items-center gap-4 shadow-sm`}>
+    <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${colorClass} bg-white/60 shadow-sm flex-shrink-0`}>
+      <Icon className="w-6 h-6" />
+    </div>
+    <div>
+      <p className={`text-xs font-semibold uppercase tracking-wide ${colorClass} opacity-80`}>{label}</p>
+      <p className={`text-3xl font-bold ${colorClass}`}>{value}</p>
+    </div>
+  </div>
+);
 
 const ManageUsers = () => {
   const [users, setUsers] = useState([]);
@@ -24,9 +36,8 @@ const ManageUsers = () => {
     try {
       setLoading(true);
       const response = await adminApi.getUsers();
-      // Handle paginated response (results array) or direct array
-      const usersData = Array.isArray(response.data) 
-        ? response.data 
+      const usersData = Array.isArray(response.data)
+        ? response.data
         : response.data?.results || [];
       setUsers(usersData);
     } catch (err) {
@@ -75,82 +86,83 @@ const ManageUsers = () => {
     }
   };
 
-  const handleExport = () => {
-    alert('Exporting user data...');
-  };
-
   const paginatedUsers = users.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
 
+  const activeCount = users.filter((u) => u.active !== false).length;
+  const disabledCount = users.filter((u) => u.active === false).length;
+  const adminCount = users.filter((u) => u.role === 'admin').length;
+
   return (
     <div className="space-y-6">
-      {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-        <div>
-          <h1 className="text-2xl font-bold text-gray-900">Manage Users</h1>
-          <p className="text-gray-500">
-            View and manage all platform users
-          </p>
-        </div>
-        <div className="flex gap-2">
-          <button
-            onClick={handleExport}
-            className="btn-secondary flex items-center gap-2"
-          >
-            <FiDownload className="w-4 h-4" />
-            Export
-          </button>
-          <button className="btn-primary flex items-center gap-2">
-            <FiPlus className="w-4 h-4" />
-            Add User
-          </button>
+      {/* Page Header */}
+      <div className="bg-gradient-to-r from-[#A8422F] via-[#C4503A] to-[#E77E69] rounded-2xl p-6 text-white shadow-lg">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <h1 className="text-2xl font-bold tracking-tight">Manage Users</h1>
+            <p className="text-rose-100 mt-1 text-sm">
+              View, edit, and control all platform user accounts
+            </p>
+          </div>
         </div>
       </div>
 
       {/* Error Alert */}
       {error && <ErrorAlert message={error} onClose={() => setError('')} />}
 
-      {/* Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-          <p className="text-blue-600 text-sm font-medium">Total Users</p>
-          <p className="text-2xl font-bold text-blue-800">{users.length}</p>
-        </div>
-        <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-          <p className="text-green-600 text-sm font-medium">Active</p>
-          <p className="text-2xl font-bold text-green-800">
-            {users.filter((u) => u.active !== false).length}
-          </p>
-        </div>
-        <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-          <p className="text-red-600 text-sm font-medium">Disabled</p>
-          <p className="text-2xl font-bold text-red-800">
-            {users.filter((u) => u.active === false).length}
-          </p>
-        </div>
-        <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
-          <p className="text-purple-600 text-sm font-medium">Admins</p>
-          <p className="text-2xl font-bold text-purple-800">
-            {users.filter((u) => u.role === 'admin').length}
-          </p>
-        </div>
+      {/* Stats Grid */}
+      <div className="grid grid-cols-2 xl:grid-cols-4 gap-4">
+        <StatCard
+          icon={FiUsers}
+          label="Total Users"
+          value={users.length}
+          colorClass="text-indigo-700"
+          bgClass="bg-indigo-50"
+          borderClass="border-indigo-200"
+        />
+        <StatCard
+          icon={FiUserCheck}
+          label="Active"
+          value={activeCount}
+          colorClass="text-emerald-700"
+          bgClass="bg-emerald-50"
+          borderClass="border-emerald-200"
+        />
+        <StatCard
+          icon={FiUserX}
+          label="Disabled"
+          value={disabledCount}
+          colorClass="text-rose-700"
+          bgClass="bg-rose-50"
+          borderClass="border-rose-200"
+        />
+        <StatCard
+          icon={FiShield}
+          label="Admins"
+          value={adminCount}
+          colorClass="text-violet-700"
+          bgClass="bg-violet-50"
+          borderClass="border-violet-200"
+        />
       </div>
 
       {/* Users Table */}
-      {loading ? (
-        <div className="flex items-center justify-center py-12">
-          <Loader size="lg" />
-        </div>
-      ) : (
-        <UserTable
-          users={paginatedUsers}
-          onEdit={(user) => setEditingUser(user)}
-          onDelete={(user) => setDeleteUser(user)}
-          onToggleStatus={(user) => setToggleUser(user)}
-        />
-      )}
+      <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+        {loading ? (
+          <div className="flex items-center justify-center py-16">
+            <Loader size="lg" />
+          </div>
+        ) : (
+          <UserTable
+            users={paginatedUsers}
+            onEdit={(user) => setEditingUser(user)}
+            onDelete={(user) => setDeleteUser(user)}
+            onToggleStatus={(user) => setToggleUser(user)}
+          />
+        )}
+      </div>
 
       {/* Pagination */}
       {!loading && users.length > itemsPerPage && (
@@ -186,10 +198,10 @@ const ManageUsers = () => {
         isOpen={!!toggleUser}
         onClose={() => setToggleUser(null)}
         onConfirm={handleToggleStatus}
-        title={toggleUser?.active ? 'Disable User' : 'Enable User'}
-        message={`Are you sure you want to ${toggleUser?.active ? 'disable' : 'enable'} ${toggleUser?.name}'s account?`}
-        confirmText={processing ? 'Processing...' : toggleUser?.active ? 'Disable' : 'Enable'}
-        variant={toggleUser?.active ? 'danger' : 'primary'}
+        title={toggleUser?.active !== false ? 'Disable User' : 'Enable User'}
+        message={`Are you sure you want to ${toggleUser?.active !== false ? 'disable' : 'enable'} ${toggleUser?.name}'s account?`}
+        confirmText={processing ? 'Processing...' : toggleUser?.active !== false ? 'Disable' : 'Enable'}
+        variant={toggleUser?.active !== false ? 'danger' : 'primary'}
       />
     </div>
   );

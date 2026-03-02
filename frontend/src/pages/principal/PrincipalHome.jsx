@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import principalApi from '../../api/principal.api';
 import {
@@ -42,9 +42,9 @@ const PrincipalHome = () => {
   return (
     <div className="space-y-6">
       {/* Welcome Section */}
-      <div className="bg-gradient-to-r from-primary-600 to-primary-700 rounded-xl p-6 text-white">
+      <div className="bg-gradient-to-r from-[#A8422F] via-[#C4503A] to-[#E77E69] rounded-xl p-6 text-white">
         <h1 className="text-2xl font-bold mb-2">
-          Welcome back, {user?.firstName}! 👋
+          Welcome back, {user?.firstName}! 
         </h1>
         <p className="text-primary-100">
           Institution-wide analytics and performance overview.
@@ -74,21 +74,19 @@ const PrincipalHome = () => {
             Top Recruiters
           </h3>
           <div className="space-y-3">
-            {[
-              { name: 'Google', hires: 45 },
-              { name: 'Microsoft', hires: 38 },
-              { name: 'Amazon', hires: 35 },
-              { name: 'Meta', hires: 28 },
-              { name: 'Apple', hires: 22 },
-            ].map((company, idx) => (
-              <div
-                key={idx}
-                className="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg"
-              >
-                <span className="font-medium text-gray-900">{company.name}</span>
-                <span className="text-sm text-gray-500">{company.hires} hires</span>
-              </div>
-            ))}
+            {(stats?.topRecruiters || []).length > 0 ? (
+              stats.topRecruiters.map((company, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg"
+                >
+                  <span className="font-medium text-gray-900">{company.name}</span>
+                  <span className="text-sm text-gray-500">{company.hires} hires</span>
+                </div>
+              ))
+            ) : (
+              <p className="text-sm text-gray-400 text-center py-4">No placement data available</p>
+            )}
           </div>
         </div>
 
@@ -98,29 +96,29 @@ const PrincipalHome = () => {
             Notable Alumni
           </h3>
           <div className="space-y-3">
-            {[
-              { name: 'Dr. Rajesh Kumar', role: 'CEO, TechCorp', batch: '2005' },
-              { name: 'Priya Menon', role: 'VP Engineering, Google', batch: '2008' },
-              { name: 'Amit Shah', role: 'Founder, StartupX', batch: '2010' },
-              { name: 'Neha Gupta', role: 'Research Lead, MIT', batch: '2012' },
-            ].map((alum, idx) => (
-              <div
-                key={idx}
-                className="flex items-center gap-3 p-2 hover:bg-gray-50 rounded-lg"
-              >
-                <img
-                  src={`https://ui-avatars.com/api/?name=${encodeURIComponent(alum.name)}&background=6366f1&color=fff`}
-                  alt={alum.name}
-                  className="w-10 h-10 rounded-full"
-                />
-                <div>
-                  <p className="font-medium text-gray-900">{alum.name}</p>
-                  <p className="text-xs text-gray-500">
-                    {alum.role} • Batch {alum.batch}
-                  </p>
+            {(stats?.notableAlumni || []).length > 0 ? (
+              stats.notableAlumni.map((alum, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-center gap-3 p-2 hover:bg-gray-50 rounded-lg"
+                >
+                  <img
+                    src={alum.avatar || `https://ui-avatars.com/api/?name=${encodeURIComponent(alum.name)}&background=6366f1&color=fff`}
+                    alt={alum.name}
+                    className="w-10 h-10 rounded-full"
+                  />
+                  <div>
+                    <p className="font-medium text-gray-900">{alum.name}</p>
+                    <p className="text-xs text-gray-500">
+                      {alum.currentPosition && `${alum.currentPosition}, `}{alum.currentCompany}
+                      {alum.graduationYear && ` • Batch ${alum.graduationYear}`}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))
+            ) : (
+              <p className="text-sm text-gray-400 text-center py-4">No alumni data available</p>
+            )}
           </div>
         </div>
 
@@ -130,25 +128,24 @@ const PrincipalHome = () => {
             Upcoming Events
           </h3>
           <div className="space-y-3">
-            {[
-              { title: 'Annual Alumni Meet', date: 'Feb 15, 2024', type: 'Flagship' },
-              { title: 'Career Fair 2024', date: 'Jan 20, 2024', type: 'Placement' },
-              { title: 'Industry Conclave', date: 'Mar 5, 2024', type: 'Industry' },
-              { title: 'Founders Summit', date: 'Apr 10, 2024', type: 'Startup' },
-            ].map((event, idx) => (
-              <div
-                key={idx}
-                className="p-2 hover:bg-gray-50 rounded-lg"
-              >
-                <div className="flex items-center justify-between">
-                  <p className="font-medium text-gray-900">{event.title}</p>
-                  <span className="text-xs px-2 py-1 bg-primary-100 text-primary-700 rounded-full">
-                    {event.type}
-                  </span>
+            {(stats?.upcomingEvents || []).length > 0 ? (
+              stats.upcomingEvents.map((event, idx) => (
+                <div
+                  key={idx}
+                  className="p-2 hover:bg-gray-50 rounded-lg"
+                >
+                  <div className="flex items-center justify-between">
+                    <p className="font-medium text-gray-900">{event.title}</p>
+                    <span className="text-xs px-2 py-1 bg-primary-100 text-primary-700 rounded-full">
+                      {event.event_type}
+                    </span>
+                  </div>
+                  <p className="text-sm text-gray-500">{event.date}</p>
                 </div>
-                <p className="text-sm text-gray-500">{event.date}</p>
-              </div>
-            ))}
+              ))
+            ) : (
+              <p className="text-sm text-gray-400 text-center py-4">No upcoming events</p>
+            )}
           </div>
         </div>
       </div>

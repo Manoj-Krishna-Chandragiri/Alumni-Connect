@@ -1,4 +1,6 @@
 import { FiEdit2, FiTrash2, FiUsers, FiCalendar, FiMapPin, FiVideo } from 'react-icons/fi';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 const EventList = ({ events, onEdit, onDelete, onViewRegistrations }) => {
   const getEventTypeColor = (type) => {
@@ -46,9 +48,11 @@ const EventList = ({ events, onEdit, onDelete, onViewRegistrations }) => {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 {event.title}
               </h3>
-              <p className="text-gray-600 text-sm mb-3 line-clamp-2">
-                {event.description}
-              </p>
+              <div className="text-gray-600 text-sm mb-3 line-clamp-4 prose prose-sm max-w-none">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                  {event.description}
+                </ReactMarkdown>
+              </div>
               <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
                 <span className="flex items-center gap-1">
                   <FiCalendar className="w-4 h-4" />

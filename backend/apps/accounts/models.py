@@ -6,6 +6,9 @@ from django.db import models
 from django.utils import timezone
 from common.utils import Choices
 
+# Import OTP models
+from .otp_models import EmailOTP
+
 
 class UserManager(BaseUserManager):
     """Custom user manager."""
@@ -95,6 +98,12 @@ class User(AbstractBaseUser, PermissionsMixin):
     
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    
+    def save(self, *args, **kwargs):
+        # Normalize email to lowercase
+        if self.email:
+            self.email = self.email.lower()
+        super().save(*args, **kwargs)
     
     objects = UserManager()
     

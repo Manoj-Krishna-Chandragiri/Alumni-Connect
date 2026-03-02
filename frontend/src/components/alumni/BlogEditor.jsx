@@ -9,7 +9,7 @@ const BlogEditor = ({ blog, onSubmit, onCancel, loading }) => {
     category: blog?.category || '',
     excerpt: blog?.excerpt || '',
     content: blog?.content || '',
-    coverImage: blog?.coverImage || '',
+    coverImage: blog?.cover_image || blog?.coverImage || '',
     tags: blog?.tags?.join(', ') || '',
   });
   const [uploading, setUploading] = useState(false);

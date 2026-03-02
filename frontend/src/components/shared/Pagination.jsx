@@ -7,8 +7,8 @@ const Pagination = ({
   totalItems,
   itemsPerPage,
 }) => {
-  const startItem = (currentPage - 1) * itemsPerPage + 1;
-  const endItem = Math.min(currentPage * itemsPerPage, totalItems);
+  const startItem = totalItems && itemsPerPage ? (currentPage - 1) * itemsPerPage + 1 : 0;
+  const endItem = totalItems && itemsPerPage ? Math.min(currentPage * itemsPerPage, totalItems) : 0;
 
   const getPageNumbers = () => {
     const pages = [];
@@ -47,11 +47,13 @@ const Pagination = ({
 
   return (
     <div className="flex items-center justify-between px-4 py-3 bg-white border-t border-gray-200">
-      <div className="text-sm text-gray-600">
-        Showing <span className="font-medium">{startItem}</span> to{' '}
-        <span className="font-medium">{endItem}</span> of{' '}
-        <span className="font-medium">{totalItems}</span> results
-      </div>
+      {totalItems && itemsPerPage && (
+        <div className="text-sm text-gray-600">
+          Showing <span className="font-medium">{startItem}</span> to{' '}
+          <span className="font-medium">{endItem}</span> of{' '}
+          <span className="font-medium">{totalItems}</span> results
+        </div>
+      )}
 
       <div className="flex items-center gap-2">
         <button

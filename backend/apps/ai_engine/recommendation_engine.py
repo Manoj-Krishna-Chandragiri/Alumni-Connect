@@ -23,9 +23,18 @@ class CareerRecommendationEngine:
             ngram_range=(1, 2)
         )
     
+    def _extract_skill_names(self, skills_list):
+        """Extract skill names handling both string and dict formats."""
+        if not skills_list:
+            return []
+        return [
+            s['name'] if isinstance(s, dict) else str(s)
+            for s in skills_list
+        ]
+
     def get_student_profile_text(self, student_profile):
         """Convert student profile to text for vectorization."""
-        skills = ' '.join(student_profile.skills) if student_profile.skills else ''
+        skills = ' '.join(self._extract_skill_names(student_profile.skills))
         interests = ' '.join(student_profile.interests) if student_profile.interests else ''
         bio = student_profile.bio or ''
         department = student_profile.user.department or ''
@@ -34,7 +43,7 @@ class CareerRecommendationEngine:
     
     def get_alumni_profile_text(self, alumni_profile):
         """Convert alumni profile to text for vectorization."""
-        skills = ' '.join(alumni_profile.skills) if alumni_profile.skills else ''
+        skills = ' '.join(self._extract_skill_names(alumni_profile.skills))
         expertise = ' '.join(alumni_profile.expertise_areas) if alumni_profile.expertise_areas else ''
         bio = alumni_profile.bio or ''
         company = alumni_profile.current_company or ''
@@ -214,7 +223,7 @@ class CareerRecommendationEngine:
             if alumni.current_company:
                 career_paths[key]['companies'].add(alumni.current_company)
             if alumni.skills:
-                career_paths[key]['skills'].update(alumni.skills[:5])
+                career_paths[key]['skills'].update(self._extract_skill_names(alumni.skills)[:5])
             career_paths[key]['total_experience'] += alumni.experience_years
         
         # Calculate averages and convert sets to lists
@@ -246,7 +255,9 @@ class CareerRecommendationEngine:
         except StudentProfile.DoesNotExist:
             return {}
         
-        student_skills = set(s.lower() for s in (student.skills or []))
+        student_skills = set(
+            s.lower() for s in self._extract_skill_names(student.skills)
+        )
         
         # Get in-demand skills from jobs
         jobs = Job.objects.filter(status='open')

@@ -79,11 +79,14 @@ export const AuthProvider = ({ children }) => {
   const login = useCallback(async (credentials) => {
     try {
       const response = await authApi.login(credentials);
+      console.log('Login response:', response.data);
+      
       // Interceptor already unwraps response.data, so response.data contains {tokens, user, profile}
       const { tokens, user: userData, profile: profileData } = response.data;
       
       // Get access token
       const token = tokens.access;
+      console.log('Access token:', token ? `${token.substring(0, 20)}...` : 'NO TOKEN');
       
       // Decode token to get user info
       const decoded = jwtDecode(token);
@@ -103,6 +106,8 @@ export const AuthProvider = ({ children }) => {
         setProfile(profileData);
       }
       
+      console.log('Stored in localStorage - accessToken:', localStorage.getItem('accessToken') ? 'YES' : 'NO');
+      
       setUser(userWithScopes);
       
       // Redirect to role-specific dashboard
@@ -112,9 +117,39 @@ export const AuthProvider = ({ children }) => {
       return { success: true };
     } catch (error) {
       console.error('Login error:', error);
+      
+      // Extract detailed error message and error code
+      let errorMessage = 'Login failed. Please try again.';
+      let errorCode = null;
+      
+      if (error.response?.data) {
+        const errorData = error.response.data;
+        
+        // Extract error code for special handling
+        errorCode = errorData.error_code || null;
+        
+        // Check for specific error fields
+        if (errorData.detail) {
+          errorMessage = Array.isArray(errorData.detail) ? errorData.detail[0] : errorData.detail;
+        } else if (errorData.email) {
+          errorMessage = Array.isArray(errorData.email) ? errorData.email[0] : errorData.email;
+        } else if (errorData.password) {
+          errorMessage = Array.isArray(errorData.password) ? errorData.password[0] : errorData.password;
+        } else if (errorData.message) {
+          errorMessage = errorData.message;
+        } else if (errorData.error) {
+          errorMessage = errorData.error;
+        }
+      } else if (error.code === 'ERR_NETWORK') {
+        errorMessage = 'Unable to connect to the server. Please check your internet connection and try again.';
+      } else if (error.code === 'ECONNABORTED') {
+        errorMessage = 'The request timed out. Please try again.';
+      }
+      
       return {
         success: false,
-        error: error.response?.data?.message || error.response?.data?.error || 'Login failed',
+        error: errorMessage,
+        errorCode: errorCode,
       };
     }
   }, [navigate]);
@@ -150,9 +185,29 @@ export const AuthProvider = ({ children }) => {
       return { success: true, data: data };
     } catch (error) {
       console.error('Registration error:', error);
+      
+      let errorMessage = 'Registration failed. Please try again.';
+      
+      if (error.response?.data) {
+        const errorData = error.response.data;
+        if (errorData.detail) {
+          errorMessage = Array.isArray(errorData.detail) ? errorData.detail[0] : errorData.detail;
+        } else if (errorData.message) {
+          errorMessage = errorData.message;
+        } else if (errorData.error) {
+          errorMessage = errorData.error;
+        } else if (errorData.email) {
+          errorMessage = Array.isArray(errorData.email) ? errorData.email[0] : errorData.email;
+        } else if (errorData.roll_number) {
+          errorMessage = Array.isArray(errorData.roll_number) ? errorData.roll_number[0] : errorData.roll_number;
+        }
+      } else if (error.code === 'ERR_NETWORK') {
+        errorMessage = 'Unable to connect to the server. Please check your internet connection.';
+      }
+      
       return {
         success: false,
-        error: error.response?.data?.message || error.response?.data?.error || 'Registration failed',
+        error: errorMessage,
       };
     }
   }, [navigate]);
@@ -185,6 +240,41 @@ export const AuthProvider = ({ children }) => {
   const updateProfile = useCallback((updatedProfile) => {
     setProfile(updatedProfile);
     localStorage.setItem('profile', JSON.stringify(updatedProfile));
+    
+    // Also update user avatar if profile picture changed
+    if (updatedProfile?.profilePicture || updatedProfile?.profileImage) {
+      setUser(prevUser => {
+        if (!prevUser) return prevUser;
+        const updatedUser = {
+          ...prevUser,
+          avatar: updatedProfile.profilePicture || updatedProfile.profileImage || prevUser.avatar,
+          firstName: updatedProfile.firstName || prevUser.firstName,
+          lastName: updatedProfile.lastName || prevUser.lastName,
+          fullName: updatedProfile.firstName && updatedProfile.lastName 
+            ? `${updatedProfile.firstName} ${updatedProfile.lastName}` 
+            : prevUser.fullName,
+          phone: updatedProfile.phone || prevUser.phone,
+        };
+        localStorage.setItem('user', JSON.stringify(updatedUser));
+        return updatedUser;
+      });
+    }
+  }, []);
+
+  const updateUser = useCallback((updatedData) => {
+    setUser(prevUser => {
+      if (!prevUser) return prevUser;
+      const updatedUser = {
+        ...prevUser,
+        ...updatedData,
+        fullName: updatedData.firstName && updatedData.lastName
+          ? `${updatedData.firstName} ${updatedData.lastName}`
+          : prevUser.fullName,
+        scopes: prevUser.scopes, // preserve scopes
+      };
+      localStorage.setItem('user', JSON.stringify(updatedUser));
+      return updatedUser;
+    });
   }, []);
 
   const value = {
@@ -199,6 +289,7 @@ export const AuthProvider = ({ children }) => {
     hasAnyScope,
     hasAllScopes,
     updateProfile,
+    updateUser,
   };
 
   return (

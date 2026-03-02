@@ -99,29 +99,6 @@ const SuggestedAlumniCard = ({ alumni, matchReason }) => {
               {bio}
             </p>
           )}
-
-          {/* Match Reason */}
-          {matchReason && (
-            <div className="mt-3 p-2 bg-green-50 rounded-lg">
-              <p className="text-xs text-green-700">
-                <span className="font-medium">Why suggested: </span>
-                {matchReason}
-              </p>
-            </div>
-          )}
-          
-          {/* Match Score */}
-          {alumni.matchScore && (
-            <div className="mt-2 flex items-center gap-2">
-              <div className="flex-1 bg-gray-200 rounded-full h-1.5">
-                <div 
-                  className="bg-green-500 h-1.5 rounded-full transition-all duration-300"
-                  style={{ width: `${alumni.matchScore}%` }}
-                />
-              </div>
-              <span className="text-xs font-medium text-green-600">{alumni.matchScore}%</span>
-            </div>
-          )}
         </div>
       </div>
 

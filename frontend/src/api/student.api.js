@@ -65,6 +65,20 @@ const studentApi = {
     return axiosInstance.post(`/jobs/${jobId}/save/`);
   },
 
+  unsaveJob: async (jobId) => {
+    if (USE_MOCK) {
+      return { data: { success: true, isSaved: false } };
+    }
+    return axiosInstance.post(`/jobs/${jobId}/save/`); // Same endpoint, it toggles
+  },
+
+  getSavedJobs: async () => {
+    if (USE_MOCK) {
+      return { data: { jobs: [], count: 0 } };
+    }
+    return axiosInstance.get('/jobs/saved/');
+  },
+
   // Blogs
   getBlogs: async (filters = {}) => {
     if (USE_MOCK) {
@@ -87,6 +101,20 @@ const studentApi = {
       return { data: { success: true, liked: true, likes_count: 1 } };
     }
     return axiosInstance.post(`/blogs/${id}/like/`);
+  },
+
+  saveBlog: async (id) => {
+    if (USE_MOCK) {
+      return { data: { success: true, saved: true } };
+    }
+    return axiosInstance.post(`/blogs/${id}/save/`);
+  },
+
+  getSavedBlogs: async () => {
+    if (USE_MOCK) {
+      return { data: [] };
+    }
+    return axiosInstance.get('/blogs/saved/');
   },
 
   getBlogComments: async (id) => {
@@ -115,7 +143,7 @@ const studentApi = {
     if (USE_MOCK) {
       return { data: mockStudentData.recommendedAlumni || [] };
     }
-    return axiosInstance.get('/alumni/', { params: { limit: 3 } });
+    return axiosInstance.get('/ai/mentors/', { params: { limit: 3 } });
   },
 
   getCareerRecommendations: async () => {

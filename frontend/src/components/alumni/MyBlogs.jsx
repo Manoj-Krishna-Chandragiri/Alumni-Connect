@@ -17,10 +17,10 @@ const MyBlogs = ({ blogs, onEdit, onDelete, onView }) => {
       {blogs.map((blog) => (
         <div key={blog.id} className="card flex gap-4">
           {/* Cover Image */}
-          {blog.coverImage && (
+          {(blog.cover_image || blog.coverImage) && (
             <div className="w-32 h-24 flex-shrink-0">
               <img
-                src={blog.coverImage}
+                src={blog.cover_image || blog.coverImage}
                 alt={blog.title}
                 className="w-full h-full object-cover rounded-lg"
               />

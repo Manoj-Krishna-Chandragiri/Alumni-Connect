@@ -24,8 +24,23 @@ MONGODB_URI = os.getenv(
     'mongodb+srv://alumni_app_user:wg1Ai34AJYndCOLm@cluster0.p9k7x.mongodb.net/alumni_connect_db?retryWrites=true&w=majority'
 )
 
-# Connect to MongoDB using mongoengine
-mongoengine.connect(host=MONGODB_URI)
+# Connect to MongoDB using mongoengine (optional - for document-based models)
+try:
+    # Parse database name from URI or use default
+    if '/' in MONGODB_URI.split('@')[-1]:
+        db_name = MONGODB_URI.split('/')[-1].split('?')[0]
+    else:
+        db_name = 'alumni_connect'
+    
+    mongoengine.connect(
+        db=db_name,
+        host=MONGODB_URI,
+        tlsAllowInvalidCertificates=True  # For development only
+    )
+    print("[OK] MongoDB connected successfully")
+except Exception as e:
+    print(f"[WARNING] MongoDB connection failed: {str(e)}")
+    print("[OK] Continuing with SQLite database...")
 
 # Application definition
 INSTALLED_APPS = [
@@ -61,6 +76,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'core.middleware.jwt_middleware.JWTScopeMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -113,21 +129,43 @@ CORS_ALLOWED_ORIGINS = os.getenv('CORS_ALLOWED_ORIGINS', '').split(',') if os.ge
 # REST Framework
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'common.jwt_auth.JWTAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 20,
-    'UNAUTHENTICATED_USER': None,
 }
 
-# JWT Settings
+# JWT Settings (custom)
 JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY', SECRET_KEY)
 JWT_ACCESS_TOKEN_LIFETIME = timedelta(days=1)
 JWT_REFRESH_TOKEN_LIFETIME = timedelta(days=7)
 JWT_ALGORITHM = 'HS256'
+
+# SimpleJWT Settings (for rest_framework_simplejwt)
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
+    'ROTATE_REFRESH_TOKENS': False,
+    'BLACKLIST_AFTER_ROTATION': True,
+    'UPDATE_LAST_LOGIN': False,
+    
+    'ALGORITHM': 'HS256',
+    'SIGNING_KEY': SECRET_KEY,
+    'VERIFYING_KEY': None,
+    'AUDIENCE': None,
+    'ISSUER': None,
+    
+    'AUTH_HEADER_TYPES': ('Bearer',),
+    'AUTH_HEADER_NAME': 'HTTP_AUTHORIZATION',
+    'USER_ID_FIELD': 'id',
+    'USER_ID_CLAIM': 'user_id',
+    
+    'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),
+    'TOKEN_TYPE_CLAIM': 'token_type',
+}
 
 # Role to Scope Mapping
 ROLE_SCOPES = {
@@ -159,10 +197,12 @@ ROLE_SCOPES = {
 FRONTEND_URL = os.getenv('FRONTEND_URL', 'http://localhost:5173')
 
 # Email Configuration
-EMAIL_BACKEND = os.getenv('EMAIL_BACKEND', 'django.core.mail.backends.console.EmailBackend')
+# Set EMAIL_BACKEND to 'django.core.mail.backends.smtp.EmailBackend' to send real emails
+# Keep 'django.core.mail.backends.console.EmailBackend' for dev (prints OTP to console)
+EMAIL_BACKEND = os.getenv('EMAIL_BACKEND', 'django.core.mail.backends.smtp.EmailBackend')
 EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.gmail.com')
 EMAIL_PORT = int(os.getenv('EMAIL_PORT', '587'))
 EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'True').lower() == 'true'
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', '')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', '')
-DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', 'alumni@vvitu.ac.in')
+DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', 'VVITU Alumni Network <noreply@vvit.net>')

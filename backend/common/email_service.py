@@ -5,12 +5,61 @@ from django.core.mail import send_mail, EmailMultiAlternatives
 from django.template.loader import render_to_string
 from django.conf import settings
 from django.contrib.auth import get_user_model
+import os
 
 User = get_user_model()
 
 
 class EmailNotificationService:
     """Service for sending email notifications."""
+    
+    @staticmethod
+    def send_otp_email(user, otp_code):
+        """Send OTP verification email to new user."""
+        # Print OTP to console in development mode for easy testing
+        print(f"\n{'='*60}")
+        print(f"📧 OTP Email for: {user.email}")
+        print(f"🔑 OTP Code: {otp_code}")
+        print(f"⏰ Expires in: 5 minutes")
+        print(f"{'='*60}\n")
+        
+        subject = f'Verify Your Email - VVITU Alumni Network'
+        
+        context = {
+            'user': user,
+            'otp_code': otp_code,
+            'site_name': 'VVITU Alumni Network',
+            'verify_url': f'{settings.FRONTEND_URL}/verify-email',
+        }
+        
+        html_message = render_to_string('emails/otp_verification.html', context)
+        plain_message = f"""
+        Email Verification - VVITU Alumni Network
+        
+        Hi {user.first_name},
+        
+        Thank you for registering with VVITU Alumni Network!
+        
+        Your One-Time Password (OTP) for email verification is:
+        
+        {otp_code}
+        
+        This OTP will expire in 5 minutes.
+        
+        Please enter this code on the verification page to activate your account.
+        
+        If you didn't create an account, please ignore this email.
+        
+        Best regards,
+        VVITU Alumni Network Team
+        """
+        
+        return EmailNotificationService._send_email(
+            subject=subject,
+            message=plain_message,
+            recipient_list=[user.email],
+            html_message=html_message
+        )
     
     @staticmethod
     def send_welcome_email(user):
@@ -242,7 +291,7 @@ class EmailNotificationService:
     
     @staticmethod
     def _send_email(subject, message, recipient_list, html_message=None):
-        """Internal method to send email."""
+        """Internal method to send email. Supports both college and personal emails."""
         try:
             if html_message:
                 email = EmailMultiAlternatives(
@@ -261,9 +310,54 @@ class EmailNotificationService:
                     recipient_list=recipient_list,
                     fail_silently=False,
                 )
+            print(f"Email sent successfully to: {', '.join(recipient_list)}")
             return True
         except Exception as e:
-            print(f"Failed to send email: {str(e)}")
+            print(f"Primary email failed ({str(e)}). Trying Gmail fallback...")
+            
+            # Try Gmail fallback
+            gmail_user = os.getenv('GMAIL_HOST_USER', '')
+            gmail_password = os.getenv('GMAIL_HOST_PASSWORD', '')
+            
+            if gmail_user and gmail_password:
+                try:
+                    from django.core.mail import get_connection
+                    gmail_connection = get_connection(
+                        backend='django.core.mail.backends.smtp.EmailBackend',
+                        host='smtp.gmail.com',
+                        port=587,
+                        username=gmail_user,
+                        password=gmail_password,
+                        use_tls=True,
+                    )
+                    gmail_from = f'VVITU Alumni Network <{gmail_user}>'
+                    if html_message:
+                        email = EmailMultiAlternatives(
+                            subject=subject,
+                            body=message,
+                            from_email=gmail_from,
+                            to=recipient_list,
+                            connection=gmail_connection,
+                        )
+                        email.attach_alternative(html_message, "text/html")
+                        email.send()
+                    else:
+                        send_mail(
+                            subject=subject,
+                            message=message,
+                            from_email=gmail_from,
+                            recipient_list=recipient_list,
+                            fail_silently=False,
+                            connection=gmail_connection,
+                        )
+                    print(f"Email sent via Gmail fallback to: {', '.join(recipient_list)}")
+                    return True
+                except Exception as gmail_err:
+                    print(f"Gmail fallback also failed: {str(gmail_err)}")
+            
+            # Final fallback: print to console so OTP is still visible
+            print(f"[FALLBACK] Email subject: {subject}")
+            print(f"[FALLBACK] Recipients: {', '.join(recipient_list)}")
             return False
 
 

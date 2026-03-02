@@ -107,3 +107,26 @@ class BlogLike(models.Model):
     class Meta:
         db_table = 'blog_likes'
         unique_together = ['blog', 'user']
+
+
+class BlogSave(models.Model):
+    """Saved/bookmarked blog post."""
+
+    blog = models.ForeignKey(
+        Blog,
+        on_delete=models.CASCADE,
+        related_name='saves'
+    )
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='saved_blogs'
+    )
+    saved_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = 'blog_saves'
+        unique_together = ['blog', 'user']
+
+    def __str__(self):
+        return f"{self.user.email} saved {self.blog.title}"

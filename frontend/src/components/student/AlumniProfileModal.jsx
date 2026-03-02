@@ -1,4 +1,4 @@
-import {
+﻿import {
   FiX,
   FiMapPin,
   FiBriefcase,
@@ -57,7 +57,7 @@ const AlumniProfileModal = ({ isOpen, onClose, alumni }) => {
           </button>
 
           {/* Header */}
-          <div className="bg-gradient-to-r from-primary-600 to-primary-700 px-6 py-8 text-white">
+          <div className="bg-gradient-to-r from-[#A8422F] via-[#C4503A] to-[#E77E69] px-6 py-8 text-white">
             <div className="flex items-center gap-4">
               <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center">
                 {avatar ? (

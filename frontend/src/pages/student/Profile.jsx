@@ -3,6 +3,7 @@ import { useAuth } from '../../context/AuthContext';
 import studentApi from '../../api/student.api';
 import { Loader, ErrorAlert } from '../../components/shared';
 import ProfileEditForm from '../../components/student/ProfileEditForm';
+import { parseRollNumber } from '../../utils/rollNumberUtils';
 import {
   FiMail,
   FiPhone,
@@ -62,6 +63,18 @@ const Profile = () => {
   const handleCancel = () => {
     setEditMode(false);
     setError('');
+  };
+
+  const getDepartmentDisplay = () => {
+    // Try to parse roll number to get full department name
+    if (profile?.rollNumber) {
+      const parsed = parseRollNumber(profile.rollNumber);
+      if (parsed && parsed.branchFull) {
+        return parsed.branchFull;
+      }
+    }
+    // Fallback to profile department
+    return profile?.department || 'N/A';
   };
 
   if (loading) {
@@ -132,7 +145,7 @@ const Profile = () => {
                 <h2 className="text-2xl font-bold text-gray-900">
                   {profile?.firstName} {profile?.lastName}
                 </h2>
-                <p className="text-gray-600 font-medium">{profile?.department}</p>
+                <p className="text-gray-600 font-medium">{getDepartmentDisplay()}</p>
                 <div className="flex flex-wrap gap-4 mt-3 text-sm text-gray-500">
                   {profile?.rollNumber && (
                     <div className="flex items-center gap-1">

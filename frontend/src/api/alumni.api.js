@@ -83,7 +83,7 @@ const alumniApi = {
     if (USE_MOCK) {
       return { data: mockAlumniData.myBlogs || [] };
     }
-    return axiosInstance.get('/blogs/', { params: { my: true } });
+    return axiosInstance.get('/blogs/my/');
   },
 
   createBlog: async (blogData) => {
@@ -91,14 +91,24 @@ const alumniApi = {
       const newBlog = { id: String(Date.now()), ...blogData, createdAt: new Date().toISOString() };
       return { data: newBlog };
     }
-    return axiosInstance.post('/blogs/', blogData);
+    const { coverImage, ...rest } = blogData;
+    return axiosInstance.post('/blogs/', {
+      ...rest,
+      cover_image: coverImage || '',
+      status: blogData.status || 'published',
+    });
   },
 
   updateBlog: async (id, blogData) => {
     if (USE_MOCK) {
       return { data: { success: true, id, ...blogData } };
     }
-    return axiosInstance.put(`/blogs/${id}/`, blogData);
+    const { coverImage, ...rest } = blogData;
+    return axiosInstance.put(`/blogs/${id}/`, {
+      ...rest,
+      cover_image: coverImage || '',
+      status: blogData.status || 'published',
+    });
   },
 
   deleteBlog: async (id) => {
@@ -113,6 +123,27 @@ const alumniApi = {
       return { data: mockAlumniData.blogs?.[0] || {} };
     }
     return axiosInstance.get(`/blogs/${id}/`);
+  },
+
+  saveBlog: async (id) => {
+    if (USE_MOCK) {
+      return { data: { success: true, saved: true } };
+    }
+    return axiosInstance.post(`/blogs/${id}/save/`);
+  },
+
+  getSavedBlogs: async () => {
+    if (USE_MOCK) {
+      return { data: [] };
+    }
+    return axiosInstance.get('/blogs/saved/');
+  },
+
+  getSavedJobs: async () => {
+    if (USE_MOCK) {
+      return { data: { jobs: [] } };
+    }
+    return axiosInstance.get('/jobs/saved/');
   },
 
   // Blog Interactions

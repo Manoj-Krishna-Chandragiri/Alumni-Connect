@@ -1,47 +1,29 @@
 import axiosInstance from './axiosInstance';
-import { mockPrincipalData } from '../mock/principal.mock';
-
-const USE_MOCK = import.meta.env.VITE_USE_MOCK === 'true' || true;
 
 const principalApi = {
-  // All Students
+  // Institution-wide stats for home dashboard
+  getInstitutionStats: async () => {
+    return axiosInstance.get('/principal/stats/');
+  },
+
+  // All Students (paginated, optional department/search filters)
   getAllStudents: async (filters = {}) => {
-    if (USE_MOCK) {
-      return { data: mockPrincipalData.students };
-    }
-    return axiosInstance.get('/principal/students', { params: filters });
+    return axiosInstance.get('/principal/students/', { params: filters });
   },
 
-  // All Alumni
+  // All Alumni (paginated, optional department/search filters)
   getAllAlumni: async (filters = {}) => {
-    if (USE_MOCK) {
-      return { data: mockPrincipalData.alumni };
-    }
-    return axiosInstance.get('/principal/alumni', { params: filters });
+    return axiosInstance.get('/principal/alumni/', { params: filters });
   },
 
-  // Institution Analytics
-  getInstitutionAnalytics: async () => {
-    if (USE_MOCK) {
-      return { data: mockPrincipalData.analytics };
-    }
-    return axiosInstance.get('/principal/analytics');
+  // Institution-wide analytics (for InstitutionAnalytics page)
+  getInstitutionInsights: async () => {
+    return axiosInstance.get('/principal/insights/');
   },
 
-  // Events
+  // Events (reuse existing events endpoint)
   getEvents: async () => {
-    if (USE_MOCK) {
-      return { data: mockPrincipalData.events };
-    }
-    return axiosInstance.get('/principal/events');
-  },
-
-  // Department-wise Summary
-  getDepartmentSummary: async () => {
-    if (USE_MOCK) {
-      return { data: mockPrincipalData.departmentSummary };
-    }
-    return axiosInstance.get('/principal/departments/summary');
+    return axiosInstance.get('/events/');
   },
 };
 

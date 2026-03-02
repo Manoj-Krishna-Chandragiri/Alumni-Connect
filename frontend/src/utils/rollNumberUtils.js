@@ -32,18 +32,36 @@ export const BRANCH_CODE_REVERSE = Object.entries(BRANCH_CODES).reduce(
 
 // Full branch names
 export const BRANCH_FULL_NAMES = {
-  CSE: 'Computer Science & Engineering',
-  CSM: 'CSE with Artificial Intelligence & Machine Learning',
-  AID: 'Artificial Intelligence & Data Science',
+  CSE:  'Computer Science & Engineering',
+  CSM:  'CSE with Artificial Intelligence & Machine Learning',
+  AID:  'Artificial Intelligence & Data Science',
   AIML: 'Artificial Intelligence & Machine Learning',
-  CSO: 'CSE with Internet of Things',
-  CIC: 'CSE with IoT and Cyber Security including Blockchain Technology',
-  ECE: 'Electronics & Communication Engineering',
-  EEE: 'Electrical & Electronics Engineering',
-  IT: 'Information Technology',
-  CIV: 'Civil Engineering',
-  MEC: 'Mechanical Engineering',
+  CSO:  'CSE with Internet of Things',
+  CIC:  'CSE with IoT and Cyber Security including Blockchain Technology',
+  ECE:  'Electronics & Communication Engineering',
+  EEE:  'Electrical & Electronics Engineering',
+  IT:   'Information Technology',
+  CIV:  'Civil Engineering',
+  MEC:  'Mechanical Engineering',
 };
+
+/**
+ * Ordered department list for dropdowns across the app.
+ * value = lowercase short code (stored in DB), label = full display name.
+ */
+export const DEPARTMENTS_LIST = [
+  { value: 'civ',  short: 'CIV',  label: 'Civil Engineering' },
+  { value: 'eee',  short: 'EEE',  label: 'Electrical & Electronics Engineering' },
+  { value: 'mec',  short: 'MEC',  label: 'Mechanical Engineering' },
+  { value: 'ece',  short: 'ECE',  label: 'Electronics & Communication Engineering' },
+  { value: 'cse',  short: 'CSE',  label: 'Computer Science & Engineering' },
+  { value: 'it',   short: 'IT',   label: 'Information Technology' },
+  { value: 'csm',  short: 'CSM',  label: 'CSE with Artificial Intelligence & Machine Learning' },
+  { value: 'cic',  short: 'CIC',  label: 'CSE with IoT and Cyber Security including Blockchain Technology' },
+  { value: 'cso',  short: 'CSO',  label: 'CSE with Internet of Things' },
+  { value: 'aid',  short: 'AID',  label: 'Artificial Intelligence & Data Science' },
+  { value: 'aiml', short: 'AIML', label: 'Artificial Intelligence & Machine Learning' },
+];
 
 export const ENTRY_TYPES = {
   '1': 'Regular',
@@ -166,6 +184,8 @@ export const parseRollNumber = (rollNumber) => {
     actualStudentNumber: actualStudentNum,
     isLateralEntry: entryType === '5',
     isRegular: entryType === '1',
+    courseDuration: entryType === '1' ? 4 : 3,
+    passoutYear: entryType === '1' ? parseInt(`20${year}`) + 4 : parseInt(`20${year}`) + 3,
   };
 };
 

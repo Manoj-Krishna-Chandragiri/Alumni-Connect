@@ -129,7 +129,7 @@ class Command(BaseCommand):
                     user=user,
                     roll_number=f'2021CSE{str(i).zfill(3)}',
                     batch_year=random.choice([2021, 2022, 2023]),
-                    semester=random.randint(1, 8),
+                    current_semester=random.randint(1, 8),
                     cgpa=round(random.uniform(7.0, 10.0), 2),
                     skills=random.sample(skills, k=random.randint(3, 7)),
                     interests=['Web Development', 'AI/ML', 'Cloud Computing'],

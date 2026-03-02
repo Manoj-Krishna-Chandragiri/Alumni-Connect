@@ -1,0 +1,1001 @@
+alumni_id,roll_number,name,department,batch_year,graduation_year,current_company,current_designation,years_of_experience,total_companies_worked,location,current_salary,career_domain,specialization,total_skills,linkedin_connections,github_contributions,is_mentor,mentees_count,mentor_rating,workshops_conducted,talks_given,publications,patents,open_source_contributions,career_growth_rate,job_satisfaction,willing_to_relocate,preferred_mentee_department,preferred_mentee_skills,availability_hours_per_month,response_time_hours,success_score
+1,17CSE001,Rajesh Kumar,CSE,2017,2021,Google,Senior Software Engineer,5,2,Bangalore,2800000,Software Engineering,Backend Systems,22,850,245,1,3,4.8,2,1,0,0,5,85,9,0,CSE|IT,Python|Java|Distributed Systems,8,12,95
+2,17CSE002,Priya Sharma,CSE,2017,2021,Amazon,Software Development Engineer III,5,3,Hyderabad,2600000,Cloud Engineering,AWS Infrastructure,20,720,189,1,2,4.6,1,0,0,0,3,80,8,1,CSE|IT|CSM,AWS|Cloud|Python,6,18,92
+3,17IT001,Vikram Singh,IT,2017,2021,Microsoft,Senior DevOps Engineer,5,2,Pune,2500000,DevOps,CI/CD,19,680,156,1,4,4.9,3,2,0,0,8,88,9,0,IT|CSE,DevOps|Kubernetes|Azure,10,8,96
+4,17ECE001,Anjali Reddy,ECE,2017,2021,Intel,Senior Design Engineer,5,2,Bangalore,2400000,Hardware Design,VLSI,17,520,78,1,1,4.5,1,1,2,0,0,75,8,0,ECE,Verilog|VLSI|ASIC,4,24,90
+5,17EEE001,Sanjay Patel,EEE,2017,2021,ABB,Senior Power Systems Engineer,5,2,Mumbai,2200000,Power Systems,Grid Design,15,450,0,1,2,4.7,2,1,1,0,0,78,8,0,EEE,Power Systems|MATLAB,6,16,91
+6,17MEC001,Kavya Nair,MEC,2017,2021,Bosch,Senior Mechanical Engineer,5,2,Bangalore,2300000,Automotive,Powertrain,16,490,0,1,1,4.4,1,0,1,0,0,72,8,0,MEC,SolidWorks|Automotive,5,20,89
+7,17CIV001,Arun Kumar,CIV,2017,2021,L&T Construction,Senior Structural Engineer,5,1,Chennai,2000000,Structural Design,High-Rise Buildings,13,380,0,1,1,4.3,1,1,0,0,0,68,7,0,CIV,Staad Pro|AutoCAD,4,24,87
+8,18CSE001,Deepak Gupta,CSE,2018,2022,Meta,Software Engineer,4,2,Bangalore,2700000,Full Stack,React Native,21,780,210,1,3,4.7,2,1,0,0,4,82,9,0,CSE|IT,React|Node|Mobile,8,12,94
+9,18CSE002,Sneha Iyer,CSE,2018,2022,Netflix,Senior Backend Engineer,4,2,Mumbai,2600000,Backend,Microservices,20,695,178,1,2,4.8,2,2,0,0,6,86,9,1,CSE,Java|Spring|Microservices,7,10,95
+10,18IT001,Rahul Desai,IT,2018,2022,Atlassian,DevOps Engineer,4,2,Hyderabad,2400000,DevOps,Atlassian Tools,18,610,145,1,2,4.6,1,1,0,0,3,79,8,0,IT|CSE,Jenkins|Bitbucket|Jira,6,14,92
+11,18ECE002,Lakshmi Menon,ECE,2018,2022,Qualcomm,RF Engineer,4,1,Bangalore,2350000,Wireless,5G RF,16,485,65,1,1,4.5,1,0,1,0,0,74,8,0,ECE,RF Design|5G,5,18,90
+12,18EEE002,Karthik Reddy,EEE,2018,2022,Siemens,Control Systems Engineer,4,2,Pune,2150000,Automation,Industrial Control,14,420,0,1,1,4.4,1,1,0,0,0,71,7,0,EEE,PLC|SCADA,4,20,88
+13,18MEC002,Divya Krishnan,MEC,2018,2022,Tata Motors,Product Engineer,4,1,Pune,2200000,Automotive,EV Powertrain,15,455,0,1,2,4.6,2,1,1,0,0,76,8,0,MEC,Electric Vehicles|CAD,6,16,91
+14,18CIV002,Manoj Kumar,CIV,2018,2022,Shapoorji Pallonji,Project Engineer,4,2,Mumbai,1950000,Construction,Project Management,12,360,0,1,1,4.2,1,0,0,0,0,65,7,0,CIV,Project Management|BIM,4,24,86
+15,19CSE001,Aarti Verma,CSE,2019,2023,Flipkart,Software Engineer,3,1,Bangalore,2000000,E-commerce,Backend,18,620,156,1,2,4.7,1,1,0,0,4,81,8,0,CSE|IT,Java|Microservices|Kafka,6,14,93
+16,19CSE002,Suresh Babu,CSE,2019,2023,Swiggy,Senior Software Engineer,3,2,Hyderabad,1900000,Food Tech,Backend APIs,17,580,142,1,1,4.5,1,0,0,0,2,77,8,1,CSE,Python|Django|Redis,5,16,91
+17,19IT002,Pooja Rao,IT,2019,2023,TCS,Cloud Engineer,3,1,Pune,1600000,Cloud,Azure,16,510,98,1,1,4.3,1,1,0,0,1,73,7,0,IT|CSE,Azure|Terraform,4,18,88
+18,19ECE003,Harish Kumar,ECE,2019,2023,Texas Instruments,Embedded Engineer,3,1,Bangalore,1800000,Embedded,DSP,15,440,72,1,1,4.4,1,0,1,0,0,72,7,0,ECE,C|DSP|Embedded,4,20,89
+19,19EEE003,Meena Pillai,EEE,2019,2023,Schneider Electric,Electrical Engineer,3,1,Chennai,1700000,Energy Management,Building Automation,13,395,0,1,1,4.2,1,0,0,0,0,68,7,0,EEE,BMS|Automation,3,22,87
+20,19MEC003,Vivek Yadav,MEC,2019,2023,Mahindra,Design Engineer,3,1,Pune,1650000,Automotive,Vehicle Design,14,410,0,1,1,4.3,1,1,0,0,0,70,7,0,MEC,CATIA|Automotive,4,20,88
+21,19CIV003,Sowmya Reddy,CIV,2019,2023,Gammon India,Structural Engineer,3,1,Hyderabad,1550000,Construction,Structural Analysis,11,340,0,0,0,0.0,0,0,0,0,0,64,7,0,CIV,Staad Pro|Structural,0,0,85
+22,20CSE001,Naveen Kumar,CSE,2020,2024,Zoho,Software Engineer,2,1,Chennai,1500000,SaaS,Full Stack,16,490,124,1,1,4.6,1,0,0,0,3,75,8,0,CSE,JavaScript|React|Node,5,16,90
+23,20CSE002,Rekha Singh,CSE,2020,2024,Freshworks,Software Engineer,2,1,Bangalore,1550000,SaaS,Frontend,15,465,108,1,1,4.5,1,1,0,0,2,74,8,0,CSE|IT,React|TypeScript|CSS,4,18,89
+24,20IT003,Ashok Reddy,IT,2020,2024,Infosys,System Engineer,2,1,Hyderabad,1200000,IT Services,Cloud Support,14,420,85,0,0,0.0,0,0,0,0,1,68,7,1,IT,AWS|Support,0,0,84
+25,20ECE004,Lavanya Kumar,ECE,2020,2024,Analog Devices,Design Engineer,2,1,Bangalore,1650000,Analog IC,IC Design,14,408,58,1,1,4.4,1,0,0,0,0,71,7,0,ECE,Analog Design|IC,3,20,88
+26,20EEE004,Ramesh Naidu,EEE,2020,2024,L&T Electrical,Electrical Engineer,2,1,Mumbai,1400000,Power,Substation Design,12,365,0,0,0,0.0,0,0,0,0,0,65,7,0,EEE,AutoCAD Electrical|Power,0,0,86
+27,20MEC004,Shruti Sharma,MEC,2020,2024,Cummins,Graduate Engineer,2,1,Pune,1550000,Diesel Engines,Engine Design,13,385,0,1,1,4.2,1,0,0,0,0,69,7,0,MEC,Engine Design|CAE,3,22,87
+28,20CIV004,Ganesh Patel,CIV,2020,2024,NCC Limited,Site Engineer,2,1,Delhi,1350000,Construction,Site Management,10,310,0,0,0,0.0,0,0,0,0,0,62,6,0,CIV,Site Management|AutoCAD,0,0,83
+29,17CSE003,Arjun Menon,CSE,2017,2021,Salesforce,Senior Software Engineer,5,2,Bangalore,2650000,CRM,Apex Development,21,740,198,1,2,4.7,2,1,0,0,5,84,9,0,CSE|IT,Salesforce|Apex|Lightning,7,12,94
+30,17CSE004,Nithya Krishnan,CSE,2017,2021,Adobe,Senior Software Engineer,5,2,Bangalore,2700000,Creative Cloud,C++ Development,20,710,167,1,3,4.8,2,2,0,0,4,87,9,0,CSE,C++|Graphics|Qt,8,10,95
+31,17IT002,Prakash Rao,IT,2017,2021,Oracle,Senior Database Administrator,5,2,Hyderabad,2350000,Database,Oracle DBA,18,580,112,1,2,4.5,2,1,0,0,2,76,8,0,IT|CSE,Oracle|SQL|Performance,6,14,91
+32,17ECE002,Mythili Iyer,ECE,2017,2021,Broadcom,Senior Verification Engineer,5,2,Bangalore,2400000,Semiconductor,Verification,17,495,89,1,1,4.6,1,1,2,0,0,77,8,0,ECE,SystemVerilog|UVM,5,18,91
+33,17EEE002,Sunil Kumar,EEE,2017,2021,GE,Senior Electrical Engineer,5,2,Bangalore,2250000,Power,Gas Turbines,15,435,0,1,1,4.4,1,1,1,0,0,73,8,0,EEE,Power Generation|Turbines,5,20,89
+34,17MEC002,Preethi Menon,MEC,2017,2021,Ashok Leyland,Senior Design Engineer,5,2,Chennai,2150000,Commercial Vehicles,Chassis Design,16,450,0,1,1,4.3,1,0,1,0,0,72,7,0,MEC,Vehicle Design|Chassis,4,22,88
+35,17CIV002,Balasubramanian K,CIV,2017,2021,GMR Infrastructure,Senior Engineer,5,2,Hyderabad,2050000,Infrastructure,Airports,13,370,0,1,1,4.2,1,1,0,0,0,67,7,0,CIV,Airport Design|Planning,4,24,87
+36,18CSE003,Madhavi Reddy,CSE,2018,2022,PayPal,Software Engineer,4,2,Bangalore,2550000,Fintech,Payment Systems,20,680,185,1,2,4.7,2,1,0,0,4,83,9,0,CSE|IT,Java|Payment Systems,7,12,94
+37,18CSE004,Venkat Sai,CSE,2018,2022,Uber,Software Engineer,4,2,Hyderabad,2450000,Mobility,Backend,19,645,172,1,2,4.6,1,1,0,0,3,81,8,1,CSE,Go|Microservices|Kafka,6,14,92
+38,18IT002,Lakshmi Prasad,IT,2018,2022,Red Hat,DevOps Engineer,4,1,Bangalore,2300000,Open Source,Linux,18,595,138,1,2,4.7,2,2,1,0,12,85,9,0,IT|CSE,Linux|OpenShift|Ansible,8,10,94
+39,18ECE003,Ramya Devi,ECE,2018,2022,Marvell,Design Engineer,4,1,Pune,2250000,Networking,Ethernet,16,470,74,1,1,4.4,1,0,1,0,0,73,7,0,ECE,Ethernet|PHY Design,4,18,89
+40,18EEE003,Narasimha Rao,EEE,2018,2022,ABB,Automation Engineer,4,1,Mumbai,2100000,Industrial,Robotics,14,405,0,1,1,4.3,1,1,0,0,0,70,7,0,EEE,Industrial Robotics|PLC,4,20,88
+41,18MEC003,Swathi Kumar,MEC,2018,2022,GE Aviation,Engineer,4,1,Bangalore,2250000,Aerospace,Jet Engines,15,440,0,1,1,4.5,1,1,1,0,0,75,8,0,MEC,Aerospace|Turbines,5,18,90
+42,18CIV003,Mohan Krishna,CIV,2018,2022,Afcons Infrastructure,Design Engineer,4,2,Chennai,1900000,Infrastructure,Bridges,12,350,0,0,0,0.0,0,0,0,0,0,64,7,0,CIV,Bridge Design|Structural,0,0,85
+43,19CSE003,Ananya Reddy,CSE,2019,2023,PhonePe,Software Engineer,3,1,Bangalore,1850000,Fintech,Mobile Backend,17,560,138,1,1,4.6,1,1,0,0,3,78,8,0,CSE|IT,Kotlin|Java|Mobile,5,16,91
+44,19CSE004,Krishna Murthy,CSE,2019,2023,Ola,Software Engineer,3,1,Bangalore,1750000,Mobility,Backend,16,530,125,1,1,4.5,1,0,0,0,2,75,8,1,CSE,Python|Flask|Redis,4,18,89
+45,19IT003,Sahana Rao,IT,2019,2023,Wipro,Senior System Engineer,3,1,Bangalore,1500000,IT Services,DevOps,15,480,95,1,1,4.3,1,1,0,0,1,72,7,0,IT|CSE,Docker|Kubernetes|CI/CD,4,18,88
+46,19ECE004,Vinay Kumar,ECE,2019,2023,Xilinx,Engineer,3,1,Hyderabad,1800000,FPGA,FPGA Design,15,425,68,1,1,4.4,1,0,1,0,0,71,7,0,ECE,FPGA|Verilog|DSP,4,20,89
+47,19EEE004,Saranya Lakshmi,EEE,2019,2023,Honeywell,Engineer,3,1,Bangalore,1650000,Building Tech,BMS,13,385,0,1,1,4.2,1,0,0,0,0,68,7,0,EEE,BMS|HVAC Control,3,22,87
+48,19MEC004,Aditya Sharma,MEC,2019,2023,Eicher Motors,Engineer,3,1,Chennai,1600000,Automotive,Two-Wheeler,14,395,0,0,0,0.0,0,0,0,0,0,69,7,0,MEC,Vehicle Design|Testing,0,0,86
+49,19CIV004,Divya Sree,CIV,2019,2023,Simplex Infrastructures,Engineer,3,1,Hyderabad,1500000,Construction,Residential,11,325,0,0,0,0.0,0,0,0,0,0,63,7,0,CIV,Construction|Estimation,0,0,84
+50,20CSE003,Kiran Kumar,CSE,2020,2024,Citrix,Software Engineer,2,1,Bangalore,1600000,Networking,Virtualization,15,455,115,1,1,4.5,1,0,0,0,2,73,8,0,CSE|IT,C++|Networking|Virtual,4,18,89
+51,20CSE004,Srividya Reddy,CSE,2020,2024,Nutanix,Software Engineer,2,1,Bangalore,1650000,Hyperconverged,Backend,16,470,120,1,1,4.6,1,1,0,0,3,75,8,0,CSE,Python|Distributed|Storage,5,16,90
+52,20IT004,Mahesh Babu,IT,2020,2024,HCL Tech,Engineer,2,1,Chennai,1150000,IT Services,Support,13,395,78,0,0,0.0,0,0,0,0,1,67,6,1,IT,Support|Troubleshooting,0,0,82
+53,20ECE005,Anusha Patel,ECE,2020,2024,NXP,Engineer,2,1,Bangalore,1600000,Automotive IC,IC Design,14,398,62,1,1,4.3,1,0,0,0,0,70,7,0,ECE,Automotive IC|Analog,3,20,87
+54,20EEE005,Rajesh Naik,EEE,2020,2024,Alstom,Engineer,2,1,Mumbai,1450000,Rail,Signaling,12,355,0,0,0,0.0,0,0,0,0,0,64,7,0,EEE,Railway Signaling|Automation,0,0,85
+55,20MEC005,Kavitha Nair,MEC,2020,2024,Volvo,Graduate Engineer,2,1,Bangalore,1600000,Trucks,Powertrain,13,375,0,1,1,4.1,0,0,0,0,0,68,7,0,MEC,Diesel Engines|Analysis,3,24,86
+56,20CIV005,Anil Kumar,CIV,2020,2024,Larsen & Toubro,Engineer,2,1,Chennai,1400000,Construction,Infrastructure,10,305,0,0,0,0.0,0,0,0,0,0,61,6,0,CIV,Infrastructure|Roads,0,0,82
+57,17CSM001,Harini Subramanian,CSM,2017,2021,Microsoft Research,Research Scientist,5,2,Bangalore,3200000,AI Research,Machine Learning,25,950,287,1,5,4.9,4,3,5,0,15,92,10,0,CSM|AIML|AID,ML|Research|Python,12,6,98
+58,17CSM002,Karthikeyan R,CSM,2017,2021,Google AI,Senior ML Engineer,5,2,Bangalore,3100000,AI,Computer Vision,24,920,265,1,4,4.8,3,2,3,0,12,90,9,0,CSM|AIML|CSE,Computer Vision|PyTorch,10,8,97
+59,17AID001,Bhavana Reddy,AID,2017,2021,Amazon,Senior Data Scientist,5,2,Bangalore,2700000,Data Science,ML Engineering,22,810,234,1,3,4.7,2,2,1,0,8,86,9,0,AID|CSM|AIML,Data Science|ML|Python,8,10,95
+60,17AIML001,Gopal Krishna,AIML,2017,2021,NVIDIA,Senior ML Engineer,5,2,Bangalore,2900000,AI,Deep Learning,23,885,256,1,4,4.8,3,2,2,0,10,89,9,0,AIML|CSM|AID,Deep Learning|CUDA|PyTorch,10,8,96
+61,18CSM001,Ramya Krishnan,CSM,2018,2022,Meta AI,ML Engineer,4,2,Bangalore,2800000,AI,NLP,22,795,242,1,3,4.7,2,1,2,0,9,87,9,0,CSM|AIML|CSE,NLP|Transformers|Python,8,10,95
+62,18CSM002,Srinivas Rao,CSM,2018,2022,OpenAI,ML Engineer,4,2,Bangalore,2950000,AI Research,LLMs,23,845,258,1,3,4.8,3,2,3,0,11,90,10,1,CSM|AIML,LLMs|GPT|Research,10,8,97
+63,18AID001,Padma Lakshmi,AID,2018,2022,Flipkart,Senior Data Scientist,4,2,Bangalore,2300000,E-commerce,Recommendation Systems,20,685,198,1,2,4.6,2,1,1,0,6,82,8,0,AID|CSM,Recommender Systems|ML,7,12,93
+64,18AIML001,Sumanth Reddy,AIML,2018,2022,Uber,ML Engineer,4,2,Bangalore,2450000,Mobility,Deep Learning,21,715,215,1,2,4.7,2,1,1,0,7,84,9,1,AIML|CSM|CSE,Deep Learning|Computer Vision,8,10,94
+65,19CSM001,Divya Bharathi,CSM,2019,2023,Fractal Analytics,Data Scientist,3,1,Mumbai,1850000,Analytics,AI/ML,18,595,176,1,2,4.5,1,1,1,0,4,79,8,0,CSM|AID|AIML,ML|Analytics|Python,6,14,91
+66,19CSM002,Prashanth Kumar,CSM,2019,2023,Tiger Analytics,ML Engineer,3,1,Bangalore,1900000,Analytics,ML,19,615,182,1,2,4.6,1,1,1,0,5,81,8,0,CSM|AIML,ML Engineering|TensorFlow,6,14,92
+67,19AID001,Vidya Sagar,AID,2019,2023,Swiggy,Data Scientist,3,1,Bangalore,1750000,Food Tech,Analytics,17,545,158,1,1,4.4,1,1,0,0,3,76,8,1,AID|CSM,Data Science|SQL|Python,5,16,89
+68,19AIML001,Ravi Teja,AIML,2019,2023,Ola,ML Engineer,3,1,Bangalore,1800000,Mobility,Deep Learning,18,575,165,1,2,4.5,1,1,1,0,4,78,8,0,AIML|CSM|CSE,Deep Learning|Computer Vision,6,14,90
+69,20CSM001,Lakshmi Priya,CSM,2020,2024,Accenture,AI Engineer,2,1,Bangalore,1550000,Consulting,AI/ML,16,485,142,1,1,4.3,1,0,0,0,2,73,7,0,CSM|AIML,ML|Python|AI,4,18,88
+70,20CSM002,Naveen Chandra,CSM,2020,2024,Deloitte,ML Engineer,2,1,Hyderabad,1500000,Consulting,Analytics,15,460,135,1,1,4.2,1,1,0,0,2,72,7,1,CSM|AID,ML|Statistics|Python,4,18,87
+71,20AID001,Shalini Reddy,AID,2020,2024,Mu Sigma,Data Scientist,2,1,Bangalore,1400000,Analytics,Data Science,14,425,118,0,0,0.0,0,0,0,0,1,68,7,0,AID,Data Science|Statistics,0,0,85
+72,20AIML001,Chaitanya Kumar,AIML,2020,2024,LatentView,ML Engineer,2,1,Chennai,1450000,Analytics,ML,15,440,125,1,1,4.1,0,0,0,0,2,70,7,0,AIML|CSM,ML|Deep Learning|Python,3,20,86
+73,17CIC001,Sandeep Varma,CIC,2017,2021,IBM Security,Senior Security Engineer,5,2,Bangalore,2500000,Cyber Security,Security Architecture,20,720,168,1,3,4.7,2,2,1,0,6,84,9,0,CIC|CSE|IT,Security|Blockchain|Python,8,10,94
+74,17CIC002,Meera Balaji,CIC,2017,2021,Palo Alto Networks,Senior Security Analyst,5,2,Bangalore,2550000,Cyber Security,Threat Intelligence,19,695,152,1,2,4.6,2,1,2,0,5,82,8,0,CIC|CSE,Cyber Security|Threat Intel,7,12,93
+75,17CSO001,Aravind Kumar,CSO,2017,2021,Siemens,Senior IoT Engineer,5,2,Bangalore,2350000,Industrial IoT,IIoT,18,640,145,1,2,4.5,2,1,1,0,4,80,8,0,CSO|ECE|CSE,IoT|Industrial|Sensors,7,12,92
+76,17CSO002,Nandini Rao,CSO,2017,2021,Cisco,IoT Architect,5,2,Bangalore,2450000,Networking,IoT,19,670,158,1,3,4.7,2,2,1,0,5,83,9,0,CSO|CSE|IT,IoT|Networking|Edge,8,10,93
+77,18CIC001,Vishal Reddy,CIC,2018,2022,CrowdStrike,Security Engineer,4,2,Bangalore,2300000,Cyber Security,Endpoint Security,18,610,138,1,2,4.5,1,1,1,0,4,79,8,0,CIC|CSE,Security|Python|Linux,6,14,91
+78,18CIC002,Poornima Iyer,CIC,2018,2022,Fortinet,Security Analyst,4,1,Bangalore,2200000,Network Security,Firewall,17,575,125,1,2,4.4,1,1,0,0,3,77,8,0,CIC|IT,Network Security|Firewall,6,14,90
+79,18CSO001,Kiran Shetty,CSO,2018,2022,Bosch,IoT Engineer,4,1,Bangalore,2250000,Automotive IoT,Connected Vehicles,18,590,142,1,2,4.6,2,1,1,0,4,81,8,0,CSO|ECE|CSE,Automotive IoT|Embedded,7,12,92
+80,18CSO002,Shweta Menon,CSO,2018,2022,Honeywell,IoT Engineer,4,1,Bangalore,2150000,Building IoT,Smart Buildings,17,565,135,1,1,4.4,1,1,0,0,3,78,8,0,CSO|CSE,IoT|Smart Buildings|Sensors,6,14,90
+81,19CIC001,Praveen Kumar,CIC,2019,2023,Infosec,Security Engineer,3,1,Bangalore,1700000,Cyber Security,Penetration Testing,16,520,118,1,1,4.3,1,1,0,0,2,75,7,0,CIC|CSE,Ethical Hacking|Pentesting,5,16,88
+82,19CIC002,Archana Reddy,CIC,2019,2023,Quick Heal,Security Analyst,3,1,Pune,1600000,Security,Malware Analysis,15,485,105,1,1,4.2,1,0,1,0,2,73,7,0,CIC|CSE,Malware|Security|Python,4,18,87
+83,19CSO001,Siddharth Rao,CSO,2019,2023,Tata Elxsi,IoT Engineer,3,1,Bangalore,1650000,Embedded IoT,Industrial,16,510,125,1,1,4.3,1,1,0,0,2,74,7,0,CSO|ECE|CSE,IoT|Embedded|Sensors,5,16,88
+84,19CSO002,Vasudha Sharma,CSO,2019,2023,Tech Mahindra,IoT Developer,3,1,Hyderabad,1550000,IoT Solutions,Smart Cities,15,475,112,1,1,4.2,1,0,0,0,2,72,7,1,CSO|CSE,IoT|Edge|Python,4,18,86
+85,20CIC001,Deepak Rao,CIC,2020,2024,Sophos,Junior Security Analyst,2,1,Bangalore,1400000,Cyber Security,Threat Detection,14,410,95,0,0,0.0,0,0,0,0,1,68,7,0,CIC,Security|Python,0,0,84
+86,20CIC002,Akshara Reddy,CIC,2020,2024,McAfee,Security Engineer,2,1,Bangalore,1450000,Cyber Security,Endpoint,14,425,102,1,1,4.1,0,0,0,0,1,69,7,0,CIC|CSE,Security|Endpoint|Python,3,20,85
+87,20CSO001,Manoj Krishna,CSO,2020,2024,Wipro IoT,IoT Engineer,2,1,Bangalore,1350000,IoT,Cloud IoT,14,395,108,1,1,4.0,1,0,0,0,2,67,7,0,CSO|CSE,IoT|Cloud|MQTT,3,20,84
+88,20CSO002,Sahithi Patel,CSO,2020,2024,LG Soft,IoT Developer,2,1,Bangalore,1380000,Consumer IoT,Smart Home,13,378,98,0,0,0.0,0,0,0,0,1,66,7,1,CSO|ECE,IoT|Smart Home|Embedded,0,0,83
+89,17CSE005,Balaji Sundaram,CSE,2017,2021,Walmart Labs,Senior Software Engineer,5,2,Bangalore,2750000,E-commerce,Backend,21,765,205,1,3,4.8,2,2,0,0,6,88,9,0,CSE|IT,Java|Microservices|Kafka,9,10,96
+90,17CSE006,Gayathri Menon,CSE,2017,2021,LinkedIn,Senior Software Engineer,5,2,Bangalore,2800000,Social Network,Backend,22,790,218,1,3,4.8,3,2,0,0,7,89,9,0,CSE|IT,Java|Scala|Big Data,9,9,96
+91,17IT003,Mohan Kumar,IT,2017,2021,VMware,Senior Cloud Engineer,5,2,Bangalore,2500000,Virtualization,Cloud,19,655,148,1,2,4.6,2,1,0,0,4,81,8,0,IT|CSE,VMware|vSphere|Cloud,7,12,93
+92,17ECE003,Saritha Reddy,ECE,2017,2021,Samsung,Senior Design Engineer,5,2,Bangalore,2450000,Consumer Electronics,Mobile SoC,18,615,102,1,2,4.5,1,1,2,0,0,79,8,0,ECE,Mobile SoC|Low Power,6,14,91
+93,17EEE003,Venkatesh Iyer,EEE,2017,2021,Vestas,Senior Wind Engineer,5,2,Chennai,2300000,Renewable,Wind Energy,16,525,0,1,2,4.6,2,1,1,0,0,78,8,1,EEE,Wind Energy|Turbines,6,14,92
+94,17MEC003,Keerthi Kumar,MEC,2017,2021,Tesla,Senior Mechanical Engineer,5,2,Bangalore,2600000,Electric Vehicles,Battery Pack,18,685,0,1,3,4.7,2,2,1,0,0,84,9,1,MEC,EV|Battery|Mechanical,8,10,94
+95,17CIV003,Srinivas Rao,CIV,2017,2021,Arup,Senior Structural Engineer,5,2,Mumbai,2150000,Consulting,Structural,14,435,0,1,1,4.4,1,1,1,0,0,72,8,0,CIV,Structural|FEM|Seismic,5,18,89
+96,18CSE005,Lavanya Sharma,CSE,2018,2022,Twitter,Software Engineer,4,2,Bangalore,2500000,Social Media,Backend,20,695,192,1,2,4.7,2,1,0,0,5,85,9,1,CSE|IT,Scala|Distributed|API,8,10,94
+97,18CSE006,Arun Prasad,CSE,2018,2022,Stripe,Software Engineer,4,2,Bangalore,2600000,Fintech,Payment Infrastructure,21,720,202,1,3,4.8,2,2,0,0,6,87,9,0,CSE|IT,Ruby|Rails|Payments,9,9,95
+98,18IT003,Renuka Reddy,IT,2018,2022,Cloudflare,DevOps Engineer,4,2,Bangalore,2400000,CDN,Edge Computing,19,635,155,1,2,4.6,2,1,0,0,5,82,9,0,IT|CSE,Edge|CDN|Security,7,12,93
+99,18ECE004,Sumanth Kumar,ECE,2018,2022,Apple,Hardware Engineer,4,2,Bangalore,2650000,Consumer Electronics,Wireless,19,665,118,1,2,4.7,1,1,2,1,0,85,9,0,ECE,Wireless|RF|Antenna,7,12,94
+100,18EEE004,Padmavathi Nair,EEE,2018,2022,Tesla,Electrical Engineer,4,2,Bangalore,2400000,Electric Vehicles,Charging,16,585,0,1,2,4.6,2,1,1,0,0,80,8,1,EEE|MEC,EV Charging|Power,7,12,92
+101,1702001,Padma Gupta,EEE,2017,2021,Rockwell,Senior Engineer,5,2,Noida,3064034,Power Systems,Grid,23,513,64,0,0,0.0,0,0,0,0,3,65,8,1,EEE|ECE,MATLAB|Power Systems|PLC,5,0,94
+102,1702002,Kavya Verma,EEE,2017,2021,Eaton,Staff Engineer,5,1,Mumbai,2320605,Automation,PLC,21,635,39,1,2,4.7,1,3,0,0,1,88,9,1,EEE|CSM,MATLAB|Power Systems|PLC,4,10,91
+103,1754003,Amit Swamy,AID,2017,2021,Swiggy,Senior Engineer,5,2,Chennai,2785714,Data Engineering,Pipelines,18,973,204,0,0,0.0,0,0,2,0,3,66,10,0,AID|CSM,Python|Data Science|SQL|ML,4,0,82
+104,1749004,Vidya Naidu,CSO,2017,2021,Bosch,Senior Engineer,5,1,Mumbai,2371797,Edge Computing,IoT,13,313,42,1,5,4.7,1,1,0,0,2,82,7,1,CSO|AID,Python|IoT|Sensors|Edge,3,14,92
+105,1754005,Ajay Shetty,AID,2017,2021,Meta,Principal Engineer,5,2,Bangalore,2226591,Data Science,Analytics,19,561,274,0,0,0.0,0,0,2,0,2,70,8,1,AID|CSM,Python|Data Science|SQL|ML,6,0,98
+106,1742006,Keerthi Gupta,CSM,2017,2021,Meta AI,Senior Engineer,5,2,Pune,2706635,AI,NLP,24,346,104,1,4,4.6,4,1,2,0,3,92,10,0,CSM|AID,Python|ML|TensorFlow|PyTorch,8,10,98
+107,1754007,Akshara Reddy,AID,2017,2021,Uber,Senior Engineer,5,2,Bangalore,2496390,Data Engineering,Pipelines,24,721,271,0,0,0.0,0,0,0,0,1,71,8,1,AID|CIC,Python|Data Science|SQL|ML,3,0,84
+108,1761008,Ramya Srinivas,AIML,2017,2021,Cruise,Principal Engineer,5,1,Noida,2960318,AI,NLP,25,768,108,1,4,4.4,3,2,1,0,0,68,6,1,AIML|CSM,Python|Deep Learning|PyTorch,6,16,90
+109,1747009,Krishna Srinivas,CIC,2017,2021,Check Point,Senior Engineer,5,1,Delhi,2577712,Blockchain,Smart Contracts,14,924,33,0,0,0.0,0,0,0,0,0,72,8,1,CIC|CIV,Python|Security|Blockchain,12,0,96
+110,1703010,Gopal Kumar,MEC,2017,2021,Ashok Leyland,Principal Engineer,5,2,Mumbai,2543378,Automotive,Powertrain,15,837,84,1,5,4.9,4,3,0,0,1,77,10,1,MEC|EEE,SolidWorks|CATIA|ANSYS,3,16,87
+111,1742011,Amit Patel,CSM,2017,2021,OpenAI,Principal Engineer,5,2,Pune,2818719,AI,Computer Vision,16,698,272,0,0,0.0,0,0,1,0,0,74,6,1,CSM|IT,Python|ML|TensorFlow|PyTorch,3,0,91
+112,1701012,Kavya Krishna,CIV,2017,2021,Simplex,Senior Engineer,5,2,Noida,2712866,Structural Design,Buildings,24,955,47,0,0,0.0,0,0,0,0,0,95,8,1,CIV|CSM,AutoCAD|Staad Pro|Revit,6,0,82
+113,1712013,Lavanya Ramani,IT,2017,2021,Cognizant,Lead Engineer,5,2,Pune,2862507,System Administration,Linux,21,676,142,1,3,4.5,1,2,0,0,2,70,6,1,IT|MEC,Python|Kubernetes|Docker|AWS,10,18,87
+114,1701014,Rekha Sharma,CIV,2017,2021,Arup,Principal Engineer,5,2,Noida,2336108,Infrastructure,Roads,18,712,37,1,5,4.2,4,0,0,0,0,95,7,1,CIV|CIV,AutoCAD|Staad Pro|Revit,7,8,97
+115,1747015,Ramesh Patel,CIC,2017,2021,Fortinet,Lead Engineer,5,2,Mumbai,2399565,Cyber Security,Threat Intelligence,18,867,65,1,5,4.8,4,1,0,0,3,91,6,1,CIC|ECE,Python|Security|Blockchain,5,14,92
+116,1747016,Sahana Swamy,CIC,2017,2021,Rapid7,Senior Engineer,5,2,Chennai,2414435,Blockchain,Smart Contracts,15,336,93,1,2,4.8,3,3,0,0,2,78,9,1,CIC|CSE,Python|Security|Blockchain,3,10,86
+117,1704017,Vidya Gopal,ECE,2017,2021,NXP,Senior Engineer,5,1,Chennai,3039773,Embedded,IoT,22,587,36,0,0,0.0,0,0,0,0,1,73,6,1,ECE|CSE,C|Verilog|VLSI|Embedded,12,0,89
+118,1754018,Srikanth Pillai,AID,2017,2021,Microsoft,Senior Engineer,5,1,Pune,2352777,Data Science,ML Engineering,13,507,295,0,0,0.0,0,0,2,0,0,89,8,1,AID|AIML,Python|Data Science|SQL|ML,6,0,84
+119,1742019,Rajesh Verma,CSM,2017,2021,Waymo,Senior Engineer,5,1,Mumbai,2409180,AI Research,Machine Learning,12,553,107,1,3,4.8,1,2,2,0,0,89,10,1,CSM|AIML,Python|ML|TensorFlow|PyTorch,6,12,99
+120,1703020,Pooja Krishna,MEC,2017,2021,Eicher,Staff Engineer,5,1,Gurugram,2602676,Robotics,Industrial,14,746,87,0,0,0.0,0,0,0,0,0,69,9,0,MEC|IT,SolidWorks|CATIA|ANSYS,6,0,83
+121,1761021,Bhavana Krishna,AIML,2017,2021,Cruise,Lead Engineer,5,2,Bangalore,2884864,ML Engineering,MLOps,14,315,118,0,0,0.0,0,0,2,0,1,83,9,1,AIML|ECE,Python|Deep Learning|PyTorch,0,0,83
+122,1761022,Swathi Bhat,AIML,2017,2021,Anthropic,Lead Engineer,5,2,Mumbai,3162481,Research,Neural Networks,12,838,159,0,0,0.0,0,0,0,0,3,71,8,0,AIML|IT,Python|Deep Learning|PyTorch,6,0,88
+123,1701023,Ramesh Shetty,CIV,2017,2021,Bechtel,Staff Engineer,5,2,Chennai,2748798,Infrastructure,Roads,19,364,64,0,0,0.0,0,0,0,0,2,68,6,0,CIV|AIML,AutoCAD|Staad Pro|Revit,12,0,98
+124,1704024,Prasad Nair,ECE,2017,2021,Xilinx,Principal Engineer,5,2,Pune,2520364,Embedded,IoT,17,426,23,1,3,4.3,3,0,0,1,0,73,7,1,ECE|CSO,C|Verilog|VLSI|Embedded,6,18,86
+125,1761025,Prakash Bhat,AIML,2017,2021,Cruise,Senior Engineer,5,2,Noida,3197817,Research,Neural Networks,16,322,53,1,3,4.1,3,2,0,0,2,80,9,1,AIML|CSO,Python|Deep Learning|PyTorch,12,10,96
+126,1749026,Santosh Swamy,CSO,2017,2021,Tech Mahindra,Principal Engineer,5,1,Chennai,3091082,Edge Computing,IoT,24,466,54,1,3,4.2,0,3,0,0,3,77,10,0,CSO|CSO,Python|IoT|Sensors|Edge,6,16,89
+127,1761027,Archana Subramanian,AIML,2017,2021,Apple,Senior Engineer,5,1,Chennai,3169158,Research,Neural Networks,22,635,230,1,3,4.7,0,1,2,0,0,80,6,0,AIML|AID,Python|Deep Learning|PyTorch,4,14,94
+128,1754028,Rekha Naidu,AID,2017,2021,PhonePe,Staff Engineer,5,2,Pune,2684328,Data Science,Analytics,24,625,244,0,0,0.0,0,0,0,0,1,89,9,1,AID|AIML,Python|Data Science|SQL|ML,0,0,95
+129,1712029,Prasad Gopal,IT,2017,2021,Infosys,Senior Software Engineer,5,1,Hyderabad,2768847,Cloud Engineering,Azure,12,809,193,0,0,0.0,0,0,0,0,2,82,8,0,IT|MEC,Python|Kubernetes|Docker|AWS,6,0,82
+130,1754030,Naveen Krishna,AID,2017,2021,Microsoft,Staff Engineer,5,2,Pune,2266592,Data Engineering,Pipelines,25,626,66,0,0,0.0,0,0,0,0,2,87,8,1,AID|CSO,Python|Data Science|SQL|ML,7,0,97
+131,1704031,Ramesh Krishna,ECE,2017,2021,MediaTek,Lead Engineer,5,2,Delhi,2935962,Hardware Design,VLSI,12,975,3,1,1,4.8,2,0,0,0,2,93,6,1,ECE|CIV,C|Verilog|VLSI|Embedded,12,14,94
+132,1754032,Madhavi Desai,AID,2017,2021,Gramener,Senior Engineer,5,1,Pune,2966510,Data Engineering,Pipelines,18,965,285,0,0,0.0,0,0,1,0,1,88,9,0,AID|AIML,Python|Data Science|SQL|ML,7,0,97
+133,1747033,Ajay Verma,CIC,2017,2021,Trend Micro,Senior Software Engineer,5,1,Chennai,3031753,Security,Pentesting,24,576,54,1,2,4.8,3,0,0,0,2,68,9,1,CIC|AID,Python|Security|Blockchain,10,16,84
+134,1749034,Anjali Rao,CSO,2017,2021,LG Soft,Lead Engineer,5,2,Chennai,2248548,IoT,Smart Cities,20,765,7,1,5,4.6,1,0,0,0,1,90,8,0,CSO|ECE,Python|IoT|Sensors|Edge,5,20,94
+135,1705035,Mythili Reddy,CSE,2017,2021,Google,Principal Engineer,5,1,Bangalore,2777033,Data Engineering,BigData,21,461,166,1,5,4.9,0,0,0,0,8,67,8,0,CSE|CSO,Python|Java|React|AWS,10,20,92
+136,1754036,Ashok Swamy,AID,2017,2021,Google,Principal Engineer,5,1,Bangalore,2983898,Data Science,Analytics,13,995,89,1,5,4.6,4,3,1,1,0,66,9,1,AID|CIV,Python|Data Science|SQL|ML,3,14,88
+137,1761037,Ramesh Naidu,AIML,2017,2021,Tesla,Staff Engineer,5,2,Delhi,3090249,Research,Neural Networks,18,905,87,0,0,0.0,0,0,2,0,2,70,10,0,AIML|MEC,Python|Deep Learning|PyTorch,7,0,87
+138,1712038,Prakash Gopal,IT,2017,2021,Red Hat,Lead Engineer,5,2,Hyderabad,2555480,Database,Oracle,25,463,236,0,0,0.0,0,0,0,0,10,78,6,0,IT|AID,Python|Kubernetes|Docker|AWS,10,0,85
+139,1702039,Ramya Pillai,EEE,2017,2021,Tesla,Staff Engineer,5,1,Mumbai,2609242,Renewable,Solar,20,808,69,1,4,4.1,0,0,0,0,3,89,6,1,EEE|MEC,MATLAB|Power Systems|PLC,6,8,99
+140,1701040,Amit Rao,CIV,2017,2021,Fluor,Senior Software Engineer,5,1,Bangalore,2219353,Structural Design,Buildings,16,965,7,1,4,4.3,3,2,0,0,2,75,8,1,CIV|IT,AutoCAD|Staad Pro|Revit,8,10,95
+141,1754041,Vinay Subramanian,AID,2017,2021,Fractal,Principal Engineer,5,2,Pune,2651001,Data Science,ML Engineering,20,903,54,1,2,4.5,0,3,1,0,1,69,9,0,AID|EEE,Python|Data Science|SQL|ML,10,12,87
+142,1747042,Lakshmi Krishnan,CIC,2017,2021,McAfee,Senior Engineer,5,2,Mumbai,2428645,Security,Pentesting,24,610,44,0,0,0.0,0,0,0,0,3,70,9,1,CIC|CSE,Python|Security|Blockchain,12,0,92
+143,1705043,Keerthi Mohan,CSE,2017,2021,Nvidia,Senior Software Engineer,5,2,Hyderabad,2987873,Cloud Engineering,AWS,24,899,260,1,5,4.1,1,1,0,0,0,88,7,0,CSE|CSM,Python|Java|React|AWS,4,8,89
+144,1701044,Amit Nair,CIV,2017,2021,Afcons,Senior Engineer,5,2,Mumbai,2993903,Construction,Project Management,16,626,61,1,1,4.8,1,1,0,1,3,73,9,1,CIV|CSO,AutoCAD|Staad Pro|Revit,10,20,86
+145,1761045,Rekha Balaji,AIML,2017,2021,Tesla,Senior Engineer,5,1,Pune,2275905,AI,Deep Learning,16,694,257,0,0,0.0,0,0,2,0,2,93,8,1,AIML|IT,Python|Deep Learning|PyTorch,6,0,97
+146,1749046,Ramesh Iyer,CSO,2017,2021,Honeywell,Principal Engineer,5,2,Mumbai,2873703,IoT,Smart Cities,21,827,66,1,4,5.0,3,2,0,0,1,90,10,1,CSO|EEE,Python|IoT|Sensors|Edge,0,16,98
+147,1703047,Lakshmi Prasad,MEC,2017,2021,Honda,Staff Engineer,5,2,Hyderabad,2592828,Manufacturing,CAD/CAM,22,410,33,0,0,0.0,0,0,0,0,1,85,6,1,MEC|CSO,SolidWorks|CATIA|ANSYS,6,0,87
+148,1747048,Lakshmi Swamy,CIC,2017,2021,Palo Alto Networks,Staff Engineer,5,2,Delhi,2711018,Cyber Security,Threat Intelligence,20,825,30,0,0,0.0,0,0,0,0,1,89,8,0,CIC|CIV,Python|Security|Blockchain,5,0,91
+149,1754049,Vidya Krishnan,AID,2017,2021,Swiggy,Staff Engineer,5,2,Bangalore,2278659,Data Science,ML Engineering,20,560,193,0,0,0.0,0,0,2,0,3,67,8,1,AID|CIV,Python|Data Science|SQL|ML,3,0,82
+150,1747050,Meena Sharma,CIC,2017,2021,CrowdStrike,Lead Engineer,5,2,Chennai,2630600,Blockchain,Smart Contracts,16,874,68,1,1,4.7,4,2,0,0,3,91,7,1,CIC|AIML,Python|Security|Blockchain,3,18,99
+151,1704051,Vasudha Shetty,ECE,2017,2021,Intel,Staff Engineer,5,1,Mumbai,2549436,Hardware Design,VLSI,19,811,98,0,0,0.0,0,0,0,0,2,92,9,1,ECE|CIV,C|Verilog|VLSI|Embedded,0,0,86
+152,1703052,Santosh Gopal,MEC,2017,2021,Hero,Principal Engineer,5,1,Noida,3046648,Automotive,Powertrain,19,358,82,0,0,0.0,0,0,0,0,3,89,7,0,MEC|CSE,SolidWorks|CATIA|ANSYS,3,0,91
+153,1749053,Archana Shetty,CSO,2017,2021,Cisco,Senior Engineer,5,1,Pune,2363510,IoT,Smart Cities,14,749,49,1,3,4.6,2,2,0,0,3,74,6,1,CSO|MEC,Python|IoT|Sensors|Edge,5,24,99
+154,1761054,Ravi Sharma,AIML,2017,2021,Meta,Senior Software Engineer,5,2,Chennai,3115403,AI,NLP,23,358,186,0,0,0.0,0,0,2,0,3,68,9,0,AIML|CSM,Python|Deep Learning|PyTorch,7,0,92
+155,1702055,Karthik Shetty,EEE,2017,2021,Tesla,Senior Software Engineer,5,2,Gurugram,2756467,Power Systems,Grid,20,909,3,1,5,4.1,3,3,0,0,0,93,10,0,EEE|IT,MATLAB|Power Systems|PLC,10,8,98
+156,1701056,Divya Reddy,CIV,2017,2021,Jacobs,Principal Engineer,5,2,Delhi,3090299,Construction,Project Management,16,570,8,1,1,4.9,0,3,0,0,2,72,10,0,CIV|AID,AutoCAD|Staad Pro|Revit,3,16,97
+157,1749057,Ramesh Balaji,CSO,2017,2021,Wipro IoT,Principal Engineer,5,1,Chennai,2862248,IoT,Industrial,21,555,70,0,0,0.0,0,0,0,0,2,66,8,1,CSO|ECE,Python|IoT|Sensors|Edge,5,0,86
+158,1742058,Kavya Rao,CSM,2017,2021,DeepMind,Senior Engineer,5,2,Gurugram,2506553,AI Research,Machine Learning,18,685,81,1,5,5.0,3,3,0,0,0,93,8,1,CSM|CSO,Python|ML|TensorFlow|PyTorch,7,10,83
+159,1705059,Harini Desai,CSE,2017,2021,Zoho,Senior Software Engineer,5,2,Delhi,2904666,Software Engineering,Full Stack,15,589,120,0,0,0.0,0,0,0,0,4,75,9,1,CSE|CSE,Python|Java|React|AWS,12,0,98
+160,1702060,Kishore Reddy,EEE,2017,2021,Suzlon,Senior Software Engineer,5,1,Mumbai,2201901,Power Systems,Grid,13,725,29,0,0,0.0,0,0,0,0,3,86,10,1,EEE|AIML,MATLAB|Power Systems|PLC,8,0,92
+161,1712061,Ganesh Subramanian,IT,2017,2021,Amazon,Staff Engineer,5,2,Noida,2701651,Networking,SDN,17,854,216,1,1,4.5,4,1,0,0,5,76,8,1,IT|CSO,Python|Kubernetes|Docker|AWS,5,14,89
+162,1704062,Vinay Sharma,ECE,2017,2021,NXP,Staff Engineer,5,1,Mumbai,2530193,Embedded,IoT,24,758,16,0,0,0.0,0,0,0,0,3,79,10,1,ECE|CIC,C|Verilog|VLSI|Embedded,0,0,97
+163,1702063,Krishna Iyer,EEE,2017,2021,Eaton,Staff Engineer,5,2,Noida,2597888,Automation,PLC,19,452,89,1,4,4.1,2,0,0,0,1,85,7,1,EEE|CSE,MATLAB|Power Systems|PLC,10,16,91
+164,1703064,Meena Bhat,MEC,2017,2021,Ashok Leyland,Lead Engineer,5,1,Mumbai,3073663,Aerospace,Design,14,783,88,0,0,0.0,0,0,0,0,3,88,7,0,MEC|AIML,SolidWorks|CATIA|ANSYS,12,0,94
+165,1712065,Manoj Bhat,IT,2017,2021,HCL,Senior Engineer,5,1,Pune,3005144,System Administration,Linux,16,430,120,1,5,4.7,1,3,0,0,0,89,7,1,IT|CSE,Python|Kubernetes|Docker|AWS,8,8,84
+166,1742066,Keerthi Mohan,CSM,2017,2021,Apple,Principal Engineer,5,1,Mumbai,2412550,AI,Computer Vision,18,350,176,1,5,4.5,2,2,2,0,0,75,6,1,CSM|CSM,Python|ML|TensorFlow|PyTorch,10,12,85
+167,1712067,Pooja Gopal,IT,2017,2021,Wipro,Principal Engineer,5,2,Mumbai,2903533,Cloud Engineering,Azure,17,852,161,1,2,4.9,2,2,0,0,11,66,8,0,IT|AIML,Python|Kubernetes|Docker|AWS,4,16,85
+168,1761068,Keerthi Reddy,AIML,2017,2021,Cruise,Principal Engineer,5,2,Hyderabad,2680219,ML Engineering,MLOps,22,952,147,0,0,0.0,0,0,0,0,3,91,10,0,AIML|MEC,Python|Deep Learning|PyTorch,5,0,86
+169,1761069,Harini Murthy,AIML,2017,2021,Apple,Senior Engineer,5,2,Noida,2523777,Research,Neural Networks,22,890,147,1,1,4.6,1,2,2,1,0,70,8,0,AIML|CIV,Python|Deep Learning|PyTorch,5,14,97
+170,1749070,Vivek Prasad,CSO,2017,2021,Wipro IoT,Staff Engineer,5,1,Mumbai,2923701,Edge Computing,IoT,18,615,17,0,0,0.0,0,0,0,0,3,91,7,0,CSO|CIC,Python|IoT|Sensors|Edge,5,0,94
+171,1747071,Padma Krishnan,CIC,2017,2021,Fortinet,Principal Engineer,5,1,Delhi,2538106,Cyber Security,Threat Intelligence,13,639,82,1,3,4.5,3,3,0,0,0,72,7,0,CIC|CIV,Python|Security|Blockchain,8,20,99
+172,1761072,Akshara Shetty,AIML,2017,2021,OpenAI,Staff Engineer,5,2,Delhi,2690908,Research,Neural Networks,23,467,64,1,2,4.8,4,3,1,0,1,77,8,1,AIML|ECE,Python|Deep Learning|PyTorch,10,12,90
+173,1701073,Vasudha Reddy,CIV,2017,2021,Arup,Staff Engineer,5,2,Bangalore,2708133,Structural Design,Buildings,21,601,3,1,3,4.7,1,2,0,0,0,80,10,1,CIV|MEC,AutoCAD|Staad Pro|Revit,3,24,89
+174,1747074,Mohan Bhat,CIC,2017,2021,Rapid7,Senior Engineer,5,2,Noida,2471474,Cyber Security,Threat Intelligence,17,567,18,0,0,0.0,0,0,0,0,1,87,8,1,CIC|ECE,Python|Security|Blockchain,5,0,98
+175,1704075,Kishore Bhat,ECE,2017,2021,NXP,Principal Engineer,5,2,Chennai,2601037,Hardware Design,VLSI,15,463,3,0,0,0.0,0,0,0,0,0,78,6,0,ECE|CSO,C|Verilog|VLSI|Embedded,7,0,83
+176,1761076,Suresh Bhat,AIML,2017,2021,DeepMind,Senior Software Engineer,5,2,Mumbai,2230179,ML Engineering,MLOps,13,639,200,1,1,4.5,2,0,2,0,1,71,8,1,AIML|CSE,Python|Deep Learning|PyTorch,10,12,95
+177,1742077,Shweta Nair,CSM,2017,2021,Microsoft Research,Lead Engineer,5,1,Mumbai,2485490,Data Science,ML,22,562,96,0,0,0.0,0,0,1,0,2,75,8,1,CSM|MEC,Python|ML|TensorFlow|PyTorch,0,0,95
+178,1705078,Sowmya Singh,CSE,2017,2021,Freshworks,Senior Engineer,5,2,Noida,2666234,DevOps,CI/CD,23,506,287,1,4,4.5,1,0,0,0,4,86,10,1,CSE|CSM,Python|Java|React|AWS,10,16,98
+179,1742079,Naveen Murthy,CSM,2017,2021,IBM Research,Principal Engineer,5,2,Pune,3033837,AI,Computer Vision,24,835,237,1,3,4.9,2,2,0,1,1,91,9,1,CSM|CSO,Python|ML|TensorFlow|PyTorch,3,14,93
+180,1704080,Vasudha Shetty,ECE,2017,2021,Texas Instruments,Senior Engineer,5,2,Gurugram,3099395,Embedded,IoT,16,459,73,1,2,4.8,3,2,0,0,2,81,9,0,ECE|CIV,C|Verilog|VLSI|Embedded,3,10,85
+181,1704081,Archana Subramanian,ECE,2017,2021,Intel,Lead Engineer,5,2,Pune,2758918,Wireless,5G,14,328,9,0,0,0.0,0,0,0,0,3,66,7,1,ECE|AID,C|Verilog|VLSI|Embedded,12,0,84
+182,1704082,Renuka Mohan,ECE,2017,2021,Marvell,Staff Engineer,5,2,Delhi,2877113,IC Design,Analog,25,606,15,0,0,0.0,0,0,0,0,2,92,7,0,ECE|CIV,C|Verilog|VLSI|Embedded,8,0,94
+183,1747083,Arun Bhat,CIC,2017,2021,Fortinet,Senior Software Engineer,5,2,Mumbai,2923526,Blockchain,Smart Contracts,13,346,48,0,0,0.0,0,0,0,0,3,95,7,0,CIC|CIV,Python|Security|Blockchain,0,0,98
+184,1705084,Mythili Bhat,CSE,2017,2021,Meta,Senior Software Engineer,5,2,Delhi,2912808,Data Engineering,BigData,14,761,176,0,0,0.0,0,0,0,0,9,70,9,1,CSE|CSE,Python|Java|React|AWS,10,0,88
+185,1702085,Harini Shetty,EEE,2017,2021,Eaton,Principal Engineer,5,1,Pune,2549361,Automation,PLC,15,737,70,1,3,4.9,0,3,0,1,2,90,8,0,EEE|CIV,MATLAB|Power Systems|PLC,8,16,96
+186,1754086,Mythili Rao,AID,2017,2021,Gramener,Senior Software Engineer,5,2,Gurugram,2216975,Data Science,ML Engineering,25,474,267,1,4,4.7,3,1,0,0,3,67,10,1,AID|EEE,Python|Data Science|SQL|ML,12,12,82
+187,1712087,Padma Varma,IT,2017,2021,Capgemini,Staff Engineer,5,2,Bangalore,2768127,Networking,SDN,15,777,109,0,0,0.0,0,0,0,0,7,92,10,1,IT|ECE,Python|Kubernetes|Docker|AWS,5,0,97
+188,1747088,Sanjay Naidu,CIC,2017,2021,Palo Alto Networks,Senior Software Engineer,5,2,Chennai,2278625,Security,Pentesting,18,413,44,1,4,4.9,2,2,0,0,3,79,10,1,CIC|EEE,Python|Security|Blockchain,7,24,85
+189,1761089,Vasudha Murthy,AIML,2017,2021,Nvidia,Principal Engineer,5,2,Noida,3057691,ML Engineering,MLOps,24,374,137,0,0,0.0,0,0,0,0,2,67,7,1,AIML|CIC,Python|Deep Learning|PyTorch,3,0,86
+190,1705090,Madhavi Gupta,CSE,2017,2021,SAP,Senior Engineer,5,2,Mumbai,2474296,Cloud Engineering,AWS,16,574,234,0,0,0.0,0,0,0,0,3,80,9,0,CSE|EEE,Python|Java|React|AWS,10,0,83
+191,1742091,Renuka Verma,CSM,2017,2021,Apple,Senior Software Engineer,5,2,Hyderabad,2973121,AI,NLP,12,488,210,1,4,4.8,2,0,2,0,3,95,6,0,CSM|ECE,Python|ML|TensorFlow|PyTorch,7,20,85
+192,1705092,Rajesh Menon,CSE,2017,2021,ServiceNow,Principal Engineer,5,1,Mumbai,2687877,Data Engineering,BigData,13,688,90,1,4,4.3,4,2,0,1,15,87,8,1,CSE|MEC,Python|Java|React|AWS,3,12,97
+193,1749093,Akshara Naidu,CSO,2017,2021,ABB,Staff Engineer,5,2,Noida,3135930,Embedded IoT,Sensors,24,849,90,0,0,0.0,0,0,0,1,0,66,10,0,CSO|CIC,Python|IoT|Sensors|Edge,6,0,98
+194,1742094,Karthik Kumar,CSM,2017,2021,Google AI,Staff Engineer,5,2,Bangalore,2662254,AI,Computer Vision,13,781,207,1,4,4.1,4,3,1,0,3,65,7,0,CSM|MEC,Python|ML|TensorFlow|PyTorch,5,24,93
+195,1749095,Harini Iyer,CSO,2017,2021,Honeywell,Senior Engineer,5,2,Delhi,3103945,Edge Computing,IoT,23,957,3,1,4,4.0,4,2,0,0,2,94,6,1,CSO|CIV,Python|IoT|Sensors|Edge,7,10,84
+196,1742096,Vinay Subramanian,CSM,2017,2021,IBM Research,Principal Engineer,5,1,Gurugram,3044627,AI,NLP,20,657,183,1,4,4.6,1,2,1,0,3,94,9,0,CSM|AIML,Python|ML|TensorFlow|PyTorch,8,18,99
+197,1749097,Renuka Patel,CSO,2017,2021,GE,Principal Engineer,5,1,Delhi,2352776,IoT,Smart Cities,16,574,3,0,0,0.0,0,0,0,0,2,83,9,0,CSO|CIC,Python|IoT|Sensors|Edge,3,0,96
+198,1703098,Mythili Mohan,MEC,2017,2021,Tesla,Senior Engineer,5,2,Pune,2644853,Robotics,Industrial,14,672,12,1,3,4.2,0,0,0,1,2,93,10,1,MEC|CSO,SolidWorks|CATIA|ANSYS,3,18,97
+199,1704099,Mythili Sharma,ECE,2017,2021,Infineon,Senior Engineer,5,2,Bangalore,2547133,Embedded,IoT,15,668,24,0,0,0.0,0,0,0,0,2,74,9,1,ECE|CSE,C|Verilog|VLSI|Embedded,8,0,98
+200,1702100,Amit Gupta,EEE,2017,2021,Emerson,Senior Engineer,5,2,Mumbai,2344395,Renewable,Solar,16,307,98,1,5,4.2,2,0,0,0,1,94,10,0,EEE|EEE,MATLAB|Power Systems|PLC,8,24,94
+201,1749101,Shweta Bhat,CSO,2017,2021,LG Soft,Senior Engineer,5,2,Chennai,3194578,IoT,Industrial,21,850,68,1,2,4.3,4,1,0,1,0,80,10,1,CSO|AID,Python|IoT|Sensors|Edge,6,18,95
+202,1701102,Swathi Nair,CIV,2017,2021,Bechtel,Staff Engineer,5,1,Hyderabad,3068573,Infrastructure,Roads,12,312,34,1,3,4.8,2,1,0,0,0,81,6,0,CIV|AIML,AutoCAD|Staad Pro|Revit,5,24,93
+203,1704103,Santosh Singh,ECE,2017,2021,Renesas,Principal Engineer,5,1,Mumbai,2364332,Embedded,IoT,14,649,35,1,4,4.5,4,3,0,1,2,80,10,0,ECE|CSO,C|Verilog|VLSI|Embedded,7,12,87
+204,1704104,Karthik Sundaram,ECE,2017,2021,ST Microelectronics,Senior Software Engineer,5,2,Pune,2548414,Wireless,5G,15,310,49,1,5,4.7,3,1,0,0,0,78,8,1,ECE|AID,C|Verilog|VLSI|Embedded,12,8,86
+205,1712105,Gopal Swamy,IT,2017,2021,Google,Senior Software Engineer,5,1,Bangalore,2904269,Networking,SDN,18,523,100,1,3,4.1,2,0,0,0,4,94,6,1,IT|CSE,Python|Kubernetes|Docker|AWS,7,10,93
+206,1712106,Rahul Ramani,IT,2017,2021,Google,Lead Engineer,5,2,Gurugram,2938360,DevOps,Kubernetes,18,397,203,1,4,4.4,3,1,0,0,8,92,10,0,IT|AIML,Python|Kubernetes|Docker|AWS,12,24,95
+207,1705107,Srikanth Singh,CSE,2017,2021,Freshworks,Principal Engineer,5,1,Hyderabad,2504324,Software Engineering,Backend,13,505,269,0,0,0.0,0,0,0,0,1,89,10,1,CSE|EEE,Python|Java|React|AWS,3,0,85
+208,1747108,Padma Verma,CIC,2017,2021,CrowdStrike,Senior Engineer,5,2,Bangalore,2427065,Cyber Security,Threat Intelligence,19,787,17,1,4,4.2,1,1,0,0,3,72,7,1,CIC|AIML,Python|Security|Blockchain,4,24,90
+209,1749109,Naresh Balaji,CSO,2017,2021,ABB,Principal Engineer,5,2,Bangalore,2881588,IoT,Smart Cities,19,486,99,1,1,4.4,2,3,0,0,3,89,10,0,CSO|CSE,Python|IoT|Sensors|Edge,6,14,91
+210,1749110,Prasad Gupta,CSO,2017,2021,Siemens,Staff Engineer,5,2,Pune,2732956,Edge Computing,IoT,25,886,83,1,5,4.1,3,2,0,0,2,79,8,0,CSO|AIML,Python|IoT|Sensors|Edge,4,16,97
+211,1705111,Mahesh Gupta,CSE,2017,2021,Cisco,Lead Engineer,5,2,Chennai,2581119,Cloud Engineering,AWS,20,808,276,0,0,0.0,0,0,0,0,15,75,9,0,CSE|CSE,Python|Java|React|AWS,0,0,85
+212,1701112,Kishore Balaji,CIV,2017,2021,Gammon India,Senior Software Engineer,5,2,Chennai,2467625,Infrastructure,Roads,12,480,95,1,2,4.2,2,3,0,0,1,88,8,1,CIV|AIML,AutoCAD|Staad Pro|Revit,4,12,87
+213,1754113,Naveen Iyer,AID,2017,2021,Google,Principal Engineer,5,2,Gurugram,2857684,Data Engineering,Pipelines,18,770,280,1,5,4.4,4,3,2,0,2,69,8,0,AID|AID,Python|Data Science|SQL|ML,12,16,82
+214,1705114,Padma Prasad,CSE,2017,2021,Flipkart,Senior Software Engineer,5,1,Chennai,2805950,Software Engineering,Full Stack,17,394,264,1,5,4.3,3,1,0,0,11,82,6,0,CSE|CIV,Python|Java|React|AWS,4,8,99
+215,1704115,Sanjay Prasad,ECE,2017,2021,ON Semi,Staff Engineer,5,2,Chennai,3179321,Embedded,IoT,14,873,88,0,0,0.0,0,0,0,1,1,89,6,0,ECE|AID,C|Verilog|VLSI|Embedded,3,0,96
+216,1704116,Anu Srinivas,ECE,2017,2021,MediaTek,Senior Engineer,5,1,Chennai,2235244,Hardware Design,VLSI,17,729,75,1,3,4.3,1,3,0,0,0,90,6,0,ECE|CSE,C|Verilog|VLSI|Embedded,5,12,89
+217,1761117,Swathi Mohan,AIML,2017,2021,Apple,Senior Software Engineer,5,2,Noida,2551092,AI,NLP,16,454,104,0,0,0.0,0,0,0,0,2,68,8,1,AIML|AIML,Python|Deep Learning|PyTorch,4,0,86
+218,1749118,Harish Kumar,CSO,2017,2021,Schneider,Senior Engineer,5,2,Pune,2219219,Edge Computing,IoT,19,369,95,0,0,0.0,0,0,0,0,2,85,6,1,CSO|AIML,Python|IoT|Sensors|Edge,0,0,99
+219,1747119,Sanjay Subramanian,CIC,2017,2021,Qualys,Senior Software Engineer,5,1,Bangalore,3002175,Blockchain,Smart Contracts,19,884,70,1,4,4.2,3,1,0,0,3,78,10,0,CIC|EEE,Python|Security|Blockchain,7,20,98
+220,1747120,Mahesh Reddy,CIC,2017,2021,Qualys,Principal Engineer,5,2,Bangalore,3024520,Cyber Security,Threat Intelligence,15,530,89,0,0,0.0,0,0,0,0,3,75,7,0,CIC|CSE,Python|Security|Blockchain,12,0,87
+221,1749121,Santosh Mohan,CSO,2017,2021,Schneider,Senior Engineer,5,2,Pune,2593991,IoT,Industrial,17,387,98,1,3,4.6,4,3,0,0,2,69,9,1,CSO|EEE,Python|IoT|Sensors|Edge,7,18,92
+222,1754122,Rajesh Iyer,AID,2017,2021,Amazon,Staff Engineer,5,2,Noida,2447161,Data Science,ML Engineering,22,341,69,1,5,4.3,2,3,2,0,1,84,7,1,AID|CSE,Python|Data Science|SQL|ML,0,24,88
+223,1702123,Archana Swamy,EEE,2017,2021,Hitachi,Lead Engineer,5,2,Hyderabad,2861369,Renewable,Solar,18,892,41,0,0,0.0,0,0,0,0,2,93,9,0,EEE|MEC,MATLAB|Power Systems|PLC,3,0,82
+224,1701124,Shalini Nair,CIV,2017,2021,Jacobs,Lead Engineer,5,2,Gurugram,2473763,Infrastructure,Roads,25,389,63,1,5,4.8,2,2,0,0,2,88,6,0,CIV|CIC,AutoCAD|Staad Pro|Revit,6,24,97
+225,1712125,Mohan Srinivas,IT,2017,2021,Tech Mahindra,Senior Engineer,5,2,Mumbai,2656763,Cloud Engineering,Azure,16,617,76,0,0,0.0,0,0,0,0,1,69,7,1,IT|MEC,Python|Kubernetes|Docker|AWS,5,0,83
+226,1705126,Krishna Bhat,CSE,2017,2021,Microsoft,Senior Engineer,5,1,Pune,2789659,DevOps,CI/CD,20,716,58,0,0,0.0,0,0,0,0,15,76,10,1,CSE|MEC,Python|Java|React|AWS,12,0,88
+227,1704127,Mahesh Menon,ECE,2017,2021,Apple,Senior Software Engineer,5,2,Chennai,3074440,Hardware Design,VLSI,18,333,98,0,0,0.0,0,0,0,0,3,95,8,1,ECE|AID,C|Verilog|VLSI|Embedded,8,0,87
+228,1704128,Ashok Verma,ECE,2017,2021,MediaTek,Senior Software Engineer,5,1,Gurugram,2698019,Wireless,5G,14,748,36,1,4,4.0,1,2,0,0,3,66,10,0,ECE|CIC,C|Verilog|VLSI|Embedded,7,24,82
+229,1703129,Krishna Menon,MEC,2017,2021,Hero,Senior Software Engineer,5,1,Gurugram,2660834,Robotics,Industrial,18,649,6,1,3,4.5,1,2,0,0,1,83,9,1,MEC|CIC,SolidWorks|CATIA|ANSYS,12,10,97
+230,1754130,Keerthi Gupta,AID,2017,2021,Gramener,Senior Software Engineer,5,2,Pune,2274618,Data Engineering,Pipelines,22,390,126,0,0,0.0,0,0,2,0,2,90,8,0,AID|AID,Python|Data Science|SQL|ML,4,0,82
+231,1703131,Pooja Krishna,MEC,2017,2021,Eicher,Senior Engineer,5,2,Noida,2827254,Aerospace,Design,21,448,94,1,3,4.9,0,1,0,0,0,75,9,1,MEC|ECE,SolidWorks|CATIA|ANSYS,8,16,84
+232,1742132,Amit Krishnan,CSM,2017,2021,Nvidia,Senior Software Engineer,5,2,Delhi,2318869,Data Science,ML,22,648,154,1,2,4.5,4,0,1,0,3,71,10,0,CSM|CIV,Python|ML|TensorFlow|PyTorch,0,20,95
+233,1712133,Vinay Mohan,IT,2017,2021,HCL,Lead Engineer,5,2,Gurugram,2470248,System Administration,Linux,13,756,123,0,0,0.0,0,0,0,0,7,66,8,0,IT|MEC,Python|Kubernetes|Docker|AWS,6,0,91
+234,1702134,Ramesh Bhat,EEE,2017,2021,Siemens,Lead Engineer,5,2,Mumbai,2219721,Control Systems,Industrial,25,972,85,1,1,4.7,4,2,0,0,0,88,7,1,EEE|CSO,MATLAB|Power Systems|PLC,0,10,86
+235,1702135,Harish Sharma,EEE,2017,2021,Crompton,Principal Engineer,5,2,Gurugram,2324326,Automation,PLC,24,330,84,1,4,4.6,0,1,0,0,0,95,10,0,EEE|CIC,MATLAB|Power Systems|PLC,5,10,84
+236,1705136,Suresh Pillai,CSE,2017,2021,Amazon,Principal Engineer,5,1,Bangalore,2930572,Software Engineering,Full Stack,21,575,111,1,2,4.4,4,2,0,0,7,70,6,0,CSE|CSE,Python|Java|React|AWS,0,20,98
+237,1742137,Ramya Balaji,CSM,2017,2021,Google AI,Lead Engineer,5,2,Mumbai,3162020,AI Research,Machine Learning,18,861,300,0,0,0.0,0,0,0,0,3,79,8,1,CSM|IT,Python|ML|TensorFlow|PyTorch,6,0,88
+238,1702138,Mohan Verma,EEE,2017,2021,L&T,Senior Software Engineer,5,1,Gurugram,3134763,Power Systems,Grid,20,819,2,0,0,0.0,0,0,0,0,3,82,6,0,EEE|MEC,MATLAB|Power Systems|PLC,0,0,94
+239,1747139,Lakshmi Iyer,CIC,2017,2021,Sophos,Staff Engineer,5,1,Pune,2412853,Security,Pentesting,17,648,46,0,0,0.0,0,0,0,0,1,78,10,1,CIC|AIML,Python|Security|Blockchain,0,0,83
+240,1754140,Padma Kumar,AID,2017,2021,Gramener,Senior Software Engineer,5,1,Gurugram,2792890,Data Science,Analytics,20,990,270,0,0,0.0,0,0,1,0,0,77,10,1,AID|ECE,Python|Data Science|SQL|ML,7,0,93
+241,1712141,Srikanth Reddy,IT,2017,2021,LTI,Principal Engineer,5,2,Pune,3030980,Cloud Engineering,Azure,25,671,85,0,0,0.0,0,0,0,0,13,81,8,1,IT|ECE,Python|Kubernetes|Docker|AWS,8,0,88
+242,1702142,Pooja Krishna,EEE,2017,2021,L&T,Lead Engineer,5,2,Pune,2840691,Control Systems,Industrial,23,606,12,1,3,4.1,4,2,0,0,0,86,9,1,EEE|AIML,MATLAB|Power Systems|PLC,12,16,83
+243,1704143,Ravi Naidu,ECE,2017,2021,Intel,Senior Engineer,5,1,Noida,3197674,Hardware Design,VLSI,22,573,63,1,4,4.7,4,0,0,0,1,88,8,0,ECE|AID,C|Verilog|VLSI|Embedded,8,10,86
+244,1761144,Meena Shetty,AIML,2017,2021,Microsoft,Lead Engineer,5,1,Chennai,2264283,AI,Deep Learning,14,429,218,0,0,0.0,0,0,2,0,1,83,8,0,AIML|CIC,Python|Deep Learning|PyTorch,7,0,97
+245,1742145,Venkat Sundaram,CSM,2017,2021,DeepMind,Senior Software Engineer,5,2,Noida,2588114,AI,NLP,23,975,264,1,5,4.4,2,1,2,0,1,79,6,1,CSM|CSE,Python|ML|TensorFlow|PyTorch,8,16,90
+246,1747146,Gopal Pillai,CIC,2017,2021,Check Point,Senior Software Engineer,5,2,Bangalore,3016277,Blockchain,Smart Contracts,20,770,28,1,3,4.2,0,2,0,0,1,76,10,0,CIC|ECE,Python|Security|Blockchain,3,10,98
+247,1704147,Prakash Sharma,ECE,2017,2021,ON Semi,Senior Software Engineer,5,2,Gurugram,2648989,Hardware Design,VLSI,24,902,95,1,1,4.2,3,1,0,0,2,72,7,0,ECE|CSE,C|Verilog|VLSI|Embedded,3,12,90
+248,1749148,Anjali Reddy,CSO,2017,2021,IBM,Principal Engineer,5,1,Bangalore,2207508,Edge Computing,IoT,15,646,99,0,0,0.0,0,0,0,0,0,81,7,1,CSO|AID,Python|IoT|Sensors|Edge,10,0,88
+249,1703149,Ashok Reddy,MEC,2017,2021,Daimler,Staff Engineer,5,2,Mumbai,3144688,Automotive,Powertrain,17,494,22,1,5,4.4,4,3,0,1,0,94,7,1,MEC|CSO,SolidWorks|CATIA|ANSYS,3,16,87
+250,1742150,Nithya Subramanian,CSM,2017,2021,Waymo,Principal Engineer,5,2,Pune,2935750,AI Research,Machine Learning,20,400,106,1,2,4.8,0,0,1,0,1,89,7,1,CSM|AIML,Python|ML|TensorFlow|PyTorch,3,16,86
+251,1754151,Renuka Krishnan,AID,2017,2021,Netflix,Senior Software Engineer,5,1,Gurugram,2357422,Data Science,ML Engineering,23,449,297,1,3,4.9,4,1,1,0,2,80,8,1,AID|EEE,Python|Data Science|SQL|ML,4,12,84
+252,1704152,Sowmya Rajan,ECE,2017,2021,Qualcomm,Senior Software Engineer,5,1,Pune,2652208,Hardware Design,VLSI,21,929,10,1,4,4.7,4,0,0,0,3,92,7,1,ECE|CSO,C|Verilog|VLSI|Embedded,7,12,91
+253,1702153,Mythili Krishnan,EEE,2017,2021,Enphase,Lead Engineer,5,2,Hyderabad,2463213,Control Systems,Industrial,16,496,74,0,0,0.0,0,0,0,0,2,91,7,1,EEE|CSM,MATLAB|Power Systems|PLC,8,0,89
+254,1747154,Mohan Rao,CIC,2017,2021,Palo Alto Networks,Principal Engineer,5,2,Gurugram,2959181,Cyber Security,Threat Intelligence,17,432,97,0,0,0.0,0,0,0,0,1,76,7,1,CIC|CSM,Python|Security|Blockchain,10,0,83
+255,1761155,Deepak Subramanian,AIML,2017,2021,Microsoft,Staff Engineer,5,2,Bangalore,2409640,ML Engineering,MLOps,13,357,98,0,0,0.0,0,0,0,0,0,80,8,0,AIML|CIC,Python|Deep Learning|PyTorch,6,0,89
+256,1761156,Renuka Nair,AIML,2017,2021,Amazon,Senior Engineer,5,2,Delhi,3139385,ML Engineering,MLOps,19,541,290,1,5,4.9,2,3,0,0,1,73,8,1,AIML|CIC,Python|Deep Learning|PyTorch,6,10,98
+257,1704157,Krishna Desai,ECE,2017,2021,Renesas,Lead Engineer,5,2,Mumbai,2601335,Embedded,IoT,24,461,47,0,0,0.0,0,0,0,1,1,69,9,0,ECE|CIC,C|Verilog|VLSI|Embedded,7,0,98
+258,1703158,Lavanya Murthy,MEC,2017,2021,GE,Principal Engineer,5,2,Delhi,2322912,Manufacturing,CAD/CAM,19,690,89,1,4,4.4,1,0,0,0,3,70,8,0,MEC|CSO,SolidWorks|CATIA|ANSYS,3,16,90
+259,1703159,Venkat Rajan,MEC,2017,2021,Tata Motors,Lead Engineer,5,1,Bangalore,2649382,Automotive,Powertrain,18,351,96,0,0,0.0,0,0,0,0,1,87,6,1,MEC|AID,SolidWorks|CATIA|ANSYS,8,0,92
+260,1705160,Renuka Balaji,CSE,2017,2021,Adobe,Principal Engineer,5,1,Hyderabad,2874481,Software Engineering,Full Stack,21,521,252,0,0,0.0,0,0,0,0,2,79,10,1,CSE|CIV,Python|Java|React|AWS,3,0,94
+261,1742161,Prakash Krishna,CSM,2017,2021,Nvidia,Senior Engineer,5,1,Chennai,2911721,AI Research,Machine Learning,13,500,55,0,0,0.0,0,0,0,0,1,84,7,1,CSM|AIML,Python|ML|TensorFlow|PyTorch,7,0,88
+262,1702162,Srikanth Varma,EEE,2017,2021,Vestas,Senior Software Engineer,5,1,Noida,3016562,Renewable,Solar,18,659,91,1,5,4.7,4,3,0,0,1,71,8,1,EEE|AID,MATLAB|Power Systems|PLC,0,8,88
+263,1701163,Arun Subramanian,CIV,2017,2021,Simplex,Lead Engineer,5,2,Pune,2595925,Construction,Project Management,19,753,29,1,4,4.9,2,0,0,0,1,66,8,1,CIV|CSO,AutoCAD|Staad Pro|Revit,8,24,88
+264,1701164,Kavya Kumar,CIV,2017,2021,GMR,Lead Engineer,5,2,Gurugram,2903787,Infrastructure,Roads,24,512,34,1,3,4.8,1,1,0,0,1,78,9,0,CIV|CSM,AutoCAD|Staad Pro|Revit,10,24,90
+265,1761165,Ravi Gopal,AIML,2017,2021,Uber,Staff Engineer,5,2,Delhi,2443298,AI,NLP,24,554,206,0,0,0.0,0,0,1,0,3,78,10,0,AIML|CSM,Python|Deep Learning|PyTorch,8,0,96
+266,1705166,Manoj Krishna,CSE,2017,2021,VMware,Senior Engineer,5,2,Noida,2325496,Cloud Engineering,AWS,12,873,210,1,5,4.4,0,2,0,0,8,68,9,0,CSE|CSM,Python|Java|React|AWS,0,18,85
+267,1712167,Srikanth Reddy,IT,2017,2021,Google,Lead Engineer,5,2,Pune,2989528,Database,Oracle,19,896,119,1,4,4.4,2,2,0,0,11,72,10,0,IT|CIC,Python|Kubernetes|Docker|AWS,8,18,88
+268,1703168,Rekha Sundaram,MEC,2017,2021,Ford,Principal Engineer,5,2,Gurugram,2308273,Robotics,Industrial,23,749,48,1,4,4.4,4,1,0,0,1,81,9,1,MEC|AID,SolidWorks|CATIA|ANSYS,7,18,93
+269,1747169,Anand Naidu,CIC,2017,2021,Trend Micro,Staff Engineer,5,1,Gurugram,2934027,Cyber Security,Threat Intelligence,25,926,89,0,0,0.0,0,0,0,0,2,74,9,0,CIC|MEC,Python|Security|Blockchain,0,0,92
+270,1705170,Anand Rao,CSE,2017,2021,Tech Mahindra,Senior Software Engineer,5,1,Bangalore,3173852,Software Engineering,Backend,25,787,101,1,2,4.7,1,1,0,0,0,82,6,1,CSE|ECE,Python|Java|React|AWS,5,10,90
+271,1754171,Ramya Prasad,AID,2017,2021,Spotify,Senior Engineer,5,2,Delhi,2913194,Data Science,Analytics,16,843,53,1,2,5.0,2,3,2,0,1,86,8,0,AID|CSM,Python|Data Science|SQL|ML,5,24,95
+272,1747172,Sneha Balaji,CIC,2017,2021,IBM Security,Senior Engineer,5,2,Mumbai,2521128,Security,Pentesting,12,333,0,0,0,0.0,0,0,0,0,1,88,9,0,CIC|CIV,Python|Security|Blockchain,8,0,95
+273,1749173,Vivek Krishna,CSO,2017,2021,Cisco,Lead Engineer,5,1,Bangalore,2374073,IoT,Smart Cities,23,491,90,1,2,4.7,2,1,0,0,1,66,10,0,CSO|CSO,Python|IoT|Sensors|Edge,12,8,99
+274,1747174,Harini Murthy,CIC,2017,2021,Palo Alto Networks,Senior Engineer,5,2,Bangalore,2573539,Cyber Security,Threat Intelligence,24,599,53,0,0,0.0,0,0,0,0,1,67,6,0,CIC|CSM,Python|Security|Blockchain,5,0,91
+275,1703175,Kishore Patel,MEC,2017,2021,Daimler,Senior Software Engineer,5,1,Bangalore,2500003,Manufacturing,CAD/CAM,25,447,26,0,0,0.0,0,0,0,0,2,87,7,1,MEC|CIV,SolidWorks|CATIA|ANSYS,12,0,93
+276,1747176,Mythili Patel,CIC,2017,2021,Fortinet,Senior Engineer,5,1,Delhi,2736090,Security,Pentesting,19,804,39,0,0,0.0,0,0,0,0,1,88,8,1,CIC|AIML,Python|Security|Blockchain,6,0,89
+277,1705177,Kishore Krishnan,CSE,2017,2021,ServiceNow,Senior Engineer,5,1,Pune,3177889,DevOps,CI/CD,18,400,52,0,0,0.0,0,0,0,0,7,79,10,0,CSE|CIC,Python|Java|React|AWS,3,0,82
+278,1712178,Arun Subramanian,IT,2017,2021,Capgemini,Senior Software Engineer,5,2,Hyderabad,2822499,Database,Oracle,24,753,146,1,5,4.4,3,0,0,0,4,85,6,1,IT|IT,Python|Kubernetes|Docker|AWS,8,24,89
+279,1749179,Kishore Shetty,CSO,2017,2021,Rockwell,Lead Engineer,5,2,Mumbai,3144365,Edge Computing,IoT,19,439,7,1,2,4.1,4,1,0,0,3,81,10,1,CSO|AID,Python|IoT|Sensors|Edge,8,18,90
+280,1749180,Sowmya Mohan,CSO,2017,2021,GE,Principal Engineer,5,1,Bangalore,2204692,IoT,Smart Cities,15,496,15,0,0,0.0,0,0,0,0,2,90,6,0,CSO|MEC,Python|IoT|Sensors|Edge,7,0,85
+281,1701181,Vidya Shetty,CIV,2017,2021,Tata Projects,Staff Engineer,5,2,Pune,2652341,Construction,Project Management,24,376,87,0,0,0.0,0,0,0,0,0,81,6,1,CIV|CSE,AutoCAD|Staad Pro|Revit,5,0,98
+282,1712182,Venkat Desai,IT,2017,2021,VMware,Lead Engineer,5,2,Mumbai,2750056,Networking,SDN,15,931,260,0,0,0.0,0,0,0,0,1,86,6,0,IT|CIV,Python|Kubernetes|Docker|AWS,12,0,97
+283,1761183,Ganesh Prasad,AIML,2017,2021,Apple,Staff Engineer,5,2,Bangalore,2811946,ML Engineering,MLOps,14,414,61,1,2,4.6,4,1,0,0,1,95,7,0,AIML|CIV,Python|Deep Learning|PyTorch,5,12,97
+284,1761184,Shalini Rao,AIML,2017,2021,Nvidia,Lead Engineer,5,1,Pune,3048167,ML Engineering,MLOps,23,937,260,1,2,4.9,4,1,0,0,0,80,6,0,AIML|CIV,Python|Deep Learning|PyTorch,5,14,97
+285,1712185,Krishna Bhat,IT,2017,2021,Tech Mahindra,Principal Engineer,5,1,Bangalore,2900481,DevOps,Kubernetes,25,864,228,0,0,0.0,0,0,0,1,3,86,8,0,IT|IT,Python|Kubernetes|Docker|AWS,7,0,90
+286,1702186,Lakshmi Rajan,EEE,2017,2021,Suzlon,Lead Engineer,5,2,Chennai,2586627,Power Systems,Grid,25,420,13,1,2,4.0,4,2,0,0,1,83,7,0,EEE|AIML,MATLAB|Power Systems|PLC,4,24,86
+287,1712187,Pooja Murthy,IT,2017,2021,IBM,Senior Software Engineer,5,2,Hyderabad,2971006,Database,Oracle,21,511,264,0,0,0.0,0,0,0,0,0,68,9,0,IT|CSO,Python|Kubernetes|Docker|AWS,12,0,87
+288,1754188,Ramesh Bhat,AID,2017,2021,Gramener,Lead Engineer,5,2,Bangalore,2976877,Data Science,ML Engineering,13,701,174,0,0,0.0,0,0,1,0,0,68,9,1,AID|AID,Python|Data Science|SQL|ML,4,0,82
+289,1705189,Lakshmi Srinivas,CSE,2017,2021,Wipro,Principal Engineer,5,2,Mumbai,2687158,DevOps,CI/CD,22,426,119,1,2,4.3,4,3,0,0,14,91,7,1,CSE|CSM,Python|Java|React|AWS,3,16,83
+290,1702190,Amit Bhat,EEE,2017,2021,GE,Senior Engineer,5,2,Pune,2531439,Power Systems,Grid,22,343,15,0,0,0.0,0,0,0,1,3,95,7,0,EEE|AID,MATLAB|Power Systems|PLC,12,0,98
+291,1702191,Prakash Desai,EEE,2017,2021,Honeywell,Lead Engineer,5,2,Bangalore,3146115,Renewable,Solar,18,424,27,1,2,4.2,4,0,0,0,1,93,6,1,EEE|CSO,MATLAB|Power Systems|PLC,0,10,87
+292,1701192,Kavya Singh,CIV,2017,2021,Arup,Principal Engineer,5,2,Delhi,3049352,Infrastructure,Roads,22,915,70,1,3,4.7,1,3,0,1,2,65,6,0,CIV|MEC,AutoCAD|Staad Pro|Revit,12,8,91
+293,1747193,Priya Ramani,CIC,2017,2021,McAfee,Senior Software Engineer,5,1,Bangalore,2769658,Blockchain,Smart Contracts,16,411,29,1,1,4.8,3,2,0,0,3,82,10,0,CIC|CSM,Python|Security|Blockchain,4,12,82
+294,1761194,Manoj Gupta,AIML,2017,2021,Apple,Lead Engineer,5,1,Pune,2570224,ML Engineering,MLOps,13,418,222,1,2,4.1,0,1,2,1,3,75,9,1,AIML|IT,Python|Deep Learning|PyTorch,5,16,91
+295,1754195,Rekha Iyer,AID,2017,2021,Fractal,Lead Engineer,5,2,Chennai,3197319,Data Science,ML Engineering,20,967,176,0,0,0.0,0,0,2,0,3,79,7,1,AID|AIML,Python|Data Science|SQL|ML,12,0,92
+296,1701196,Rajesh Ramani,CIV,2017,2021,NBCC,Principal Engineer,5,1,Hyderabad,2985923,Structural Design,Buildings,15,577,31,0,0,0.0,0,0,0,0,2,92,8,1,CIV|EEE,AutoCAD|Staad Pro|Revit,7,0,97
+297,1747197,Sneha Pillai,CIC,2017,2021,McAfee,Staff Engineer,5,2,Gurugram,2976431,Security,Pentesting,19,546,28,1,1,4.5,3,2,0,0,2,71,7,0,CIC|MEC,Python|Security|Blockchain,4,18,92
+298,1742198,Kishore Bhat,CSM,2017,2021,Nvidia,Lead Engineer,5,2,Hyderabad,2715757,AI,Computer Vision,13,907,71,1,3,4.5,3,3,0,0,0,94,7,0,CSM|EEE,Python|ML|TensorFlow|PyTorch,6,16,92
+299,1701199,Lakshmi Mohan,CIV,2017,2021,NBCC,Principal Engineer,5,2,Bangalore,3071919,Structural Design,Buildings,22,680,100,1,5,4.9,2,1,0,0,0,66,10,0,CIV|EEE,AutoCAD|Staad Pro|Revit,5,24,91
+300,1701200,Keerthi Nair,CIV,2017,2021,Jacobs,Senior Software Engineer,5,2,Mumbai,3128181,Infrastructure,Roads,25,437,45,0,0,0.0,0,0,0,0,3,90,7,0,CIV|IT,AutoCAD|Staad Pro|Revit,4,0,99
+301,1704201,Keerthi Krishna,ECE,2017,2021,Nvidia,Senior Software Engineer,5,1,Gurugram,2524900,IC Design,Analog,19,931,15,1,5,4.7,2,0,0,0,3,74,9,0,ECE|IT,C|Verilog|VLSI|Embedded,4,24,84
+302,1749202,Sanjay Desai,CSO,2017,2021,Tech Mahindra,Senior Engineer,5,2,Pune,3121759,IoT,Industrial,12,893,1,0,0,0.0,0,0,0,1,1,70,8,1,CSO|AID,Python|IoT|Sensors|Edge,10,0,82
+303,1703203,Priya Subramanian,MEC,2017,2021,Tesla,Senior Engineer,5,1,Pune,2299556,Robotics,Industrial,21,734,47,0,0,0.0,0,0,0,0,2,69,8,1,MEC|MEC,SolidWorks|CATIA|ANSYS,8,0,94
+304,1761204,Lakshmi Gopal,AIML,2017,2021,Uber,Principal Engineer,5,1,Hyderabad,2489105,AI,NLP,16,957,57,1,4,4.8,1,2,0,1,2,88,8,1,AIML|ECE,Python|Deep Learning|PyTorch,8,24,90
+305,1742205,Ganesh Gopal,CSM,2017,2021,IBM Research,Staff Engineer,5,2,Chennai,2501311,AI Research,Machine Learning,19,467,244,1,5,4.5,2,3,0,0,2,73,8,1,CSM|ECE,Python|ML|TensorFlow|PyTorch,5,18,94
+306,1754206,Santosh Sundaram,AID,2017,2021,Airbnb,Staff Engineer,5,2,Hyderabad,2945548,Data Science,ML Engineering,21,340,185,1,3,4.9,4,3,1,0,0,93,10,0,AID|IT,Python|Data Science|SQL|ML,10,12,82
+307,1701207,Priya Murthy,CIV,2017,2021,Fluor,Lead Engineer,5,2,Delhi,3125198,Construction,Project Management,16,312,49,0,0,0.0,0,0,0,0,0,85,10,0,CIV|IT,AutoCAD|Staad Pro|Revit,0,0,85
+308,1702208,Harish Gupta,EEE,2017,2021,Mitsubishi Electric,Senior Engineer,5,2,Noida,2933567,Automation,PLC,16,582,56,1,4,4.3,2,0,0,0,3,80,10,0,EEE|CIC,MATLAB|Power Systems|PLC,8,20,98
+309,1749209,Prakash Rao,CSO,2017,2021,Rockwell,Senior Engineer,5,1,Noida,2728656,Embedded IoT,Sensors,14,845,16,0,0,0.0,0,0,0,0,1,84,6,0,CSO|CSE,Python|IoT|Sensors|Edge,6,0,92
+310,1747210,Ramya Swamy,CIC,2017,2021,IBM Security,Staff Engineer,5,2,Gurugram,3099242,Cyber Security,Threat Intelligence,14,556,93,0,0,0.0,0,0,0,0,0,95,7,1,CIC|CSO,Python|Security|Blockchain,12,0,89
+311,1747211,Deepak Swamy,CIC,2017,2021,IBM Security,Lead Engineer,5,2,Noida,2848247,Cyber Security,Threat Intelligence,18,799,46,0,0,0.0,0,0,0,0,2,84,9,1,CIC|CIC,Python|Security|Blockchain,5,0,93
+312,1701212,Anjali Naidu,CIV,2017,2021,Gammon India,Lead Engineer,5,2,Delhi,2209067,Construction,Project Management,19,597,51,0,0,0.0,0,0,0,0,2,72,9,0,CIV|EEE,AutoCAD|Staad Pro|Revit,10,0,88
+313,1702213,Rajesh Prasad,EEE,2017,2021,Honeywell,Principal Engineer,5,2,Bangalore,2758553,Renewable,Solar,22,673,100,0,0,0.0,0,0,0,0,0,69,7,1,EEE|EEE,MATLAB|Power Systems|PLC,4,0,83
+314,1749214,Amit Subramanian,CSO,2017,2021,Emerson,Principal Engineer,5,2,Hyderabad,3081608,IoT,Smart Cities,21,643,51,1,2,4.3,3,0,0,0,2,95,8,0,CSO|IT,Python|IoT|Sensors|Edge,0,14,93
+315,1705215,Swathi Swamy,CSE,2017,2021,Google,Senior Software Engineer,5,2,Mumbai,3113489,DevOps,CI/CD,18,702,166,1,4,4.3,3,2,0,0,10,73,8,0,CSE|CSO,Python|Java|React|AWS,7,10,90
+316,1701216,Venkat Iyer,CIV,2017,2021,AECOM,Senior Engineer,5,2,Bangalore,2378535,Construction,Project Management,18,836,5,1,3,4.2,0,3,0,0,1,95,6,0,CIV|CSO,AutoCAD|Staad Pro|Revit,6,12,90
+317,1705217,Harini Krishna,CSE,2017,2021,Zoho,Principal Engineer,5,1,Mumbai,2601841,Software Engineering,Backend,18,827,89,1,3,4.0,0,3,0,0,14,77,8,0,CSE|AIML,Python|Java|React|AWS,0,12,95
+318,1705218,Sowmya Reddy,CSE,2017,2021,TCS,Staff Engineer,5,1,Hyderabad,3152794,Cloud Engineering,AWS,14,564,114,1,1,4.3,2,1,0,0,13,86,10,1,CSE|IT,Python|Java|React|AWS,4,12,91
+319,1754219,Rekha Nair,AID,2017,2021,Spotify,Senior Engineer,5,2,Pune,2280847,Data Engineering,Pipelines,21,460,258,1,3,4.2,4,1,0,0,0,66,7,1,AID|AID,Python|Data Science|SQL|ML,5,24,87
+320,1702220,Krishna Iyer,EEE,2017,2021,Siemens,Senior Software Engineer,5,2,Noida,2263634,Automation,PLC,23,772,93,1,3,5.0,0,3,0,0,3,77,7,0,EEE|MEC,MATLAB|Power Systems|PLC,7,10,97
+321,1701221,Pooja Sharma,CIV,2017,2021,NCC,Principal Engineer,5,1,Gurugram,2623943,Infrastructure,Roads,21,345,21,1,1,4.5,4,3,0,0,1,92,10,0,CIV|ECE,AutoCAD|Staad Pro|Revit,4,8,84
+322,1742222,Kishore Verma,CSM,2017,2021,Uber,Staff Engineer,5,2,Hyderabad,2431464,Data Science,ML,24,895,126,1,4,4.2,3,0,1,0,1,80,10,1,CSM|CSE,Python|ML|TensorFlow|PyTorch,6,20,94
+323,1742223,Rahul Pillai,CSM,2017,2021,Microsoft Research,Senior Engineer,5,2,Mumbai,2645239,AI,NLP,16,388,108,1,1,4.5,4,0,2,0,1,90,9,1,CSM|CSO,Python|ML|TensorFlow|PyTorch,8,10,92
+324,1704224,Harish Srinivas,ECE,2017,2021,Nvidia,Senior Software Engineer,5,1,Gurugram,2534923,IC Design,Analog,25,640,48,0,0,0.0,0,0,0,1,0,82,10,1,ECE|CSM,C|Verilog|VLSI|Embedded,5,0,97
+325,1749225,Padma Sundaram,CSO,2017,2021,Cisco,Senior Engineer,5,2,Bangalore,2226387,IoT,Industrial,15,649,83,0,0,0.0,0,0,0,0,2,93,10,0,CSO|CIC,Python|IoT|Sensors|Edge,8,0,89
+326,1849001,Srikanth Murthy,CSO,2018,2022,LG Soft,Senior Engineer,4,1,Gurugram,1625541,IoT,Industrial,21,977,8,1,4,4.1,3,2,0,0,3,78,6,1,CSO|AID,Python|IoT|Sensors|Edge,0,24,95
+327,1803002,Anjali Krishna,MEC,2018,2022,GE,Software Engineer,4,1,Mumbai,2128794,Manufacturing,CAD/CAM,17,771,87,1,1,4.1,2,2,0,0,3,88,7,1,MEC|CSO,SolidWorks|CATIA|ANSYS,8,16,96
+328,1842003,Harish Desai,CSM,2018,2022,Nvidia,Software Engineer,4,2,Hyderabad,2124934,AI Research,Machine Learning,19,821,270,0,0,0.0,0,0,0,0,0,65,9,1,CSM|CSM,Python|ML|TensorFlow|PyTorch,0,0,93
+329,1802004,Ravi Balaji,EEE,2018,2022,Tesla,Software Engineer,4,2,Noida,1811543,Renewable,Solar,16,942,8,1,4,4.7,0,3,0,1,0,79,7,0,EEE|CIV,MATLAB|Power Systems|PLC,0,16,91
+330,1849005,Ashok Nair,CSO,2018,2022,Emerson,Senior Engineer,4,1,Bangalore,2018913,Embedded IoT,Sensors,14,811,32,0,0,0.0,0,0,0,0,1,70,10,0,CSO|ECE,Python|IoT|Sensors|Edge,5,0,95
+331,1849006,Ajay Krishnan,CSO,2018,2022,Tata Elxsi,Engineer,4,2,Noida,1673280,IoT,Smart Cities,14,343,57,1,3,4.3,1,1,0,0,0,90,10,0,CSO|EEE,Python|IoT|Sensors|Edge,8,18,85
+332,1801007,Shalini Nair,CIV,2018,2022,GMR,Senior Engineer,4,1,Chennai,1738058,Structural Design,Buildings,23,407,80,1,4,5.0,2,3,0,0,1,79,8,1,CIV|IT,AutoCAD|Staad Pro|Revit,8,14,89
+333,1849008,Naveen Balaji,CSO,2018,2022,Cisco,Senior Engineer,4,1,Mumbai,2186226,Edge Computing,IoT,20,712,70,1,5,4.3,3,2,0,0,0,88,8,1,CSO|MEC,Python|IoT|Sensors|Edge,3,14,89
+334,1861009,Sneha Krishna,AIML,2018,2022,DeepMind,Senior Engineer,4,1,Chennai,2161643,AI,NLP,22,388,184,0,0,0.0,0,0,2,0,2,94,7,0,AIML|CSM,Python|Deep Learning|PyTorch,12,0,92
+335,1802010,Mahesh Mohan,EEE,2018,2022,SolarEdge,Engineer,4,1,Mumbai,2252308,Automation,PLC,16,606,21,1,2,4.7,4,3,0,0,0,72,7,0,EEE|CIV,MATLAB|Power Systems|PLC,0,20,89
+336,1802011,Ashok Mohan,EEE,2018,2022,Schneider Electric,Senior Engineer,4,2,Delhi,2073204,Automation,PLC,24,846,46,0,0,0.0,0,0,0,0,3,68,8,0,EEE|CIV,MATLAB|Power Systems|PLC,3,0,95
+337,1849012,Arun Bhat,CSO,2018,2022,IBM,Engineer,4,2,Hyderabad,2222078,Embedded IoT,Sensors,25,604,10,0,0,0.0,0,0,0,0,3,71,7,0,CSO|CSM,Python|IoT|Sensors|Edge,3,0,93
+338,1854013,Vinay Krishna,AID,2018,2022,LinkedIn,Software Engineer,4,1,Chennai,1784914,Data Science,Analytics,20,746,296,1,1,4.9,0,2,1,0,3,69,7,0,AID|CSM,Python|Data Science|SQL|ML,8,8,87
+339,1812014,Saranya Gupta,IT,2018,2022,Red Hat,Senior Engineer,4,1,Hyderabad,2156740,System Administration,Linux,17,869,279,0,0,0.0,0,0,0,0,5,93,10,1,IT|ECE,Python|Kubernetes|Docker|AWS,3,0,85
+340,1812015,Prakash Nair,IT,2018,2022,HCL,Senior Engineer,4,1,Gurugram,2091286,System Administration,Linux,13,771,161,1,1,4.7,4,0,0,0,11,71,6,1,IT|CSO,Python|Kubernetes|Docker|AWS,5,8,86
+341,1804016,Vasudha Naidu,ECE,2018,2022,Marvell,Engineer,4,1,Mumbai,2316452,Wireless,5G,18,304,74,1,3,4.5,3,1,0,0,3,94,9,0,ECE|CSE,C|Verilog|VLSI|Embedded,5,20,90
+342,1804017,Rahul Rajan,ECE,2018,2022,Nvidia,Engineer,4,1,Gurugram,2316236,Embedded,IoT,24,307,12,1,1,4.5,2,0,0,0,0,75,9,0,ECE|CSE,C|Verilog|VLSI|Embedded,3,20,86
+343,1842018,Venkat Reddy,CSM,2018,2022,Tesla,Engineer,4,2,Chennai,1667913,AI Research,Machine Learning,25,347,245,0,0,0.0,0,0,2,0,1,85,6,1,CSM|IT,Python|ML|TensorFlow|PyTorch,12,0,86
+344,1804019,Keerthi Mohan,ECE,2018,2022,Marvell,Software Engineer,4,2,Delhi,2020327,Wireless,5G,12,707,24,1,5,4.9,3,2,0,0,1,81,10,0,ECE|CSE,C|Verilog|VLSI|Embedded,0,8,95
+345,1802020,Srikanth Rajan,EEE,2018,2022,Havells,Senior Engineer,4,2,Hyderabad,2396523,Power Systems,Grid,22,326,35,0,0,0.0,0,0,0,0,2,81,10,1,EEE|AID,MATLAB|Power Systems|PLC,6,0,82
+346,1842021,Rahul Iyer,CSM,2018,2022,Tesla,Senior Engineer,4,1,Hyderabad,1916830,Data Science,ML,16,868,125,0,0,0.0,0,0,1,0,1,89,6,0,CSM|EEE,Python|ML|TensorFlow|PyTorch,4,0,89
+347,1847022,Prasad Sharma,CIC,2018,2022,Sophos,Software Engineer,4,1,Noida,2291761,Blockchain,Smart Contracts,20,409,93,1,3,5.0,3,3,0,0,0,86,8,0,CIC|MEC,Python|Security|Blockchain,0,24,97
+348,1812023,Anjali Mohan,IT,2018,2022,Oracle,Senior Engineer,4,1,Noida,1871411,Networking,SDN,20,632,225,1,2,4.6,4,0,0,0,14,84,7,0,IT|CIC,Python|Kubernetes|Docker|AWS,4,20,87
+349,1842024,Harish Pillai,CSM,2018,2022,Google AI,Software Engineer,4,2,Mumbai,1655866,AI Research,Machine Learning,21,871,51,0,0,0.0,0,0,0,0,3,75,7,1,CSM|CIC,Python|ML|TensorFlow|PyTorch,0,0,98
+350,1842025,Mythili Sharma,CSM,2018,2022,Amazon,Senior Engineer,4,2,Gurugram,1817482,Data Science,ML,18,424,292,1,2,4.5,0,2,2,0,2,81,9,1,CSM|ECE,Python|ML|TensorFlow|PyTorch,4,20,89
+351,1849026,Saranya Krishnan,CSO,2018,2022,Schneider,Software Engineer,4,2,Delhi,1610749,Edge Computing,IoT,21,893,48,1,1,4.7,2,2,0,0,2,88,10,0,CSO|CIV,Python|IoT|Sensors|Edge,6,24,88
+352,1849027,Akshara Desai,CSO,2018,2022,GE,Software Engineer,4,2,Delhi,2381420,Edge Computing,IoT,25,569,34,0,0,0.0,0,0,0,0,3,65,7,0,CSO|IT,Python|IoT|Sensors|Edge,8,0,89
+353,1804028,Saranya Rajan,ECE,2018,2022,Apple,Engineer,4,2,Hyderabad,2138760,Embedded,IoT,20,593,68,0,0,0.0,0,0,0,0,1,89,9,1,ECE|CIC,C|Verilog|VLSI|Embedded,8,0,98
+354,1801029,Sahana Swamy,CIV,2018,2022,L&T,Engineer,4,1,Delhi,2023459,Construction,Project Management,24,695,9,0,0,0.0,0,0,0,0,1,93,10,1,CIV|MEC,AutoCAD|Staad Pro|Revit,0,0,82
+355,1854030,Archana Naidu,AID,2018,2022,Twitter,Software Engineer,4,2,Chennai,2374180,Data Science,Analytics,24,991,122,0,0,0.0,0,0,1,0,2,92,6,0,AID|CIV,Python|Data Science|SQL|ML,5,0,95
+356,1803031,Deepak Balaji,MEC,2018,2022,Tata Motors,Software Engineer,4,2,Hyderabad,1889231,Robotics,Industrial,20,611,97,1,4,4.4,2,1,0,0,1,78,7,1,MEC|AID,SolidWorks|CATIA|ANSYS,5,24,96
+357,1802032,Harini Balaji,EEE,2018,2022,Alstom,Engineer,4,2,Delhi,1602225,Power Systems,Grid,16,881,84,0,0,0.0,0,0,0,0,3,79,8,0,EEE|AIML,MATLAB|Power Systems|PLC,5,0,92
+358,1849033,Divya Sharma,CSO,2018,2022,Rockwell,Engineer,4,1,Noida,2305480,Edge Computing,IoT,16,656,99,1,5,4.2,4,0,0,0,2,81,9,1,CSO|CSM,Python|IoT|Sensors|Edge,7,8,89
+359,1842034,Sneha Desai,CSM,2018,2022,Waymo,Engineer,4,2,Gurugram,2152740,AI,Computer Vision,24,940,200,1,5,4.2,1,3,2,1,1,79,10,0,CSM|IT,Python|ML|TensorFlow|PyTorch,0,18,98
+360,1861035,Ashok Singh,AIML,2018,2022,Anthropic,Senior Engineer,4,2,Noida,1911033,AI,Deep Learning,15,463,81,1,5,4.1,1,1,2,0,1,92,8,1,AIML|AID,Python|Deep Learning|PyTorch,12,18,83
+361,1854036,Shweta Bhat,AID,2018,2022,PhonePe,Software Engineer,4,1,Chennai,2293628,Data Science,ML Engineering,24,503,93,0,0,0.0,0,0,2,0,3,74,8,1,AID|CSO,Python|Data Science|SQL|ML,7,0,85
+362,1861037,Harini Desai,AIML,2018,2022,Nvidia,Senior Engineer,4,2,Hyderabad,2171080,AI,NLP,18,672,124,1,5,4.7,3,3,0,0,1,82,9,1,AIML|CIC,Python|Deep Learning|PyTorch,6,8,94
+363,1861038,Priya Nair,AIML,2018,2022,Uber,Engineer,4,1,Chennai,2299825,Research,Neural Networks,20,642,294,1,5,4.8,0,0,1,0,0,82,9,0,AIML|CSE,Python|Deep Learning|PyTorch,6,20,95
+364,1805039,Bhavana Subramanian,CSE,2018,2022,Flipkart,Senior Engineer,4,2,Bangalore,1855645,Data Engineering,BigData,14,891,231,0,0,0.0,0,0,0,0,7,87,6,1,CSE|CIV,Python|Java|React|AWS,4,0,93
+365,1842040,Shweta Bhat,CSM,2018,2022,Waymo,Senior Engineer,4,2,Noida,1877737,Data Science,ML,23,993,299,1,1,4.4,2,0,0,1,1,84,7,1,CSM|MEC,Python|ML|TensorFlow|PyTorch,3,10,88
+366,1803041,Naresh Naidu,MEC,2018,2022,Eicher,Software Engineer,4,2,Pune,1814298,Aerospace,Design,20,590,60,0,0,0.0,0,0,0,1,0,75,7,0,MEC|AIML,SolidWorks|CATIA|ANSYS,12,0,89
+367,1801042,Sahana Mohan,CIV,2018,2022,Afcons,Software Engineer,4,2,Chennai,1844650,Infrastructure,Roads,24,418,12,0,0,0.0,0,0,0,0,2,83,10,0,CIV|MEC,AutoCAD|Staad Pro|Revit,6,0,94
+368,1849043,Prakash Pillai,CSO,2018,2022,LG Soft,Senior Engineer,4,2,Mumbai,1973986,Edge Computing,IoT,19,986,36,0,0,0.0,0,0,0,0,1,85,8,1,CSO|CIC,Python|IoT|Sensors|Edge,5,0,95
+369,1861044,Priya Srinivas,AIML,2018,2022,Nvidia,Software Engineer,4,1,Chennai,2185587,ML Engineering,MLOps,16,534,200,1,2,5.0,1,0,0,0,3,78,10,1,AIML|ECE,Python|Deep Learning|PyTorch,6,24,98
+370,1842045,Deepak Murthy,CSM,2018,2022,Google AI,Senior Engineer,4,2,Noida,1921081,Data Science,ML,25,586,250,1,2,4.9,2,2,0,0,3,81,6,1,CSM|CSM,Python|ML|TensorFlow|PyTorch,8,12,88
+371,1802046,Meena Gopal,EEE,2018,2022,Siemens,Engineer,4,2,Bangalore,1734955,Power Systems,Grid,21,338,34,1,5,4.5,4,1,0,0,2,91,8,0,EEE|CSM,MATLAB|Power Systems|PLC,3,16,90
+372,1812047,Madhavi Kumar,IT,2018,2022,VMware,Software Engineer,4,1,Hyderabad,2129852,DevOps,Kubernetes,25,422,78,1,3,4.7,0,0,0,0,4,90,7,1,IT|EEE,Python|Kubernetes|Docker|AWS,6,12,94
+373,1803048,Harini Desai,MEC,2018,2022,Cummins,Software Engineer,4,2,Mumbai,2361438,Automotive,Powertrain,23,843,32,0,0,0.0,0,0,0,1,1,86,6,0,MEC|CSE,SolidWorks|CATIA|ANSYS,0,0,87
+374,1805049,Naresh Nair,CSE,2018,2022,PhonePe,Engineer,4,2,Hyderabad,2004359,Software Engineering,Backend,12,833,71,1,3,4.3,4,2,0,0,9,90,9,1,CSE|CIC,Python|Java|React|AWS,12,20,96
+375,1847050,Sowmya Kumar,CIC,2018,2022,Trend Micro,Senior Engineer,4,1,Hyderabad,2073771,Blockchain,Smart Contracts,20,827,94,1,1,4.1,1,0,0,0,3,65,9,1,CIC|CIV,Python|Security|Blockchain,12,18,99
+376,1847051,Mythili Verma,CIC,2018,2022,Sophos,Software Engineer,4,1,Mumbai,1669713,Cyber Security,Threat Intelligence,15,352,33,1,3,4.4,0,3,0,1,2,86,9,0,CIC|AID,Python|Security|Blockchain,6,8,85
+377,1803052,Ajay Swamy,MEC,2018,2022,Cummins,Senior Engineer,4,1,Bangalore,2374488,Manufacturing,CAD/CAM,18,738,40,1,1,4.0,4,1,0,0,0,93,10,1,MEC|AIML,SolidWorks|CATIA|ANSYS,12,14,99
+378,1801053,Mythili Subramanian,CIV,2018,2022,Arup,Engineer,4,1,Hyderabad,1662141,Infrastructure,Roads,22,826,41,0,0,0.0,0,0,0,0,1,73,10,1,CIV|CSO,AutoCAD|Staad Pro|Revit,7,0,94
+379,1847054,Rekha Desai,CIC,2018,2022,Cisco,Engineer,4,2,Mumbai,2062665,Blockchain,Smart Contracts,14,301,84,0,0,0.0,0,0,0,0,2,94,10,1,CIC|AID,Python|Security|Blockchain,3,0,92
+380,1842055,Kavya Pillai,CSM,2018,2022,Uber,Engineer,4,2,Noida,1821272,AI,NLP,12,678,126,1,5,4.7,1,0,1,0,0,88,8,1,CSM|CSE,Python|ML|TensorFlow|PyTorch,8,18,82
+381,1802056,Naresh Bhat,EEE,2018,2022,Alstom,Software Engineer,4,2,Gurugram,2084518,Control Systems,Industrial,21,304,77,0,0,0.0,0,0,0,1,3,91,9,0,EEE|AIML,MATLAB|Power Systems|PLC,3,0,92
+382,1804057,Ajay Varma,ECE,2018,2022,Qualcomm,Software Engineer,4,1,Delhi,1871817,Wireless,5G,15,315,18,1,5,4.3,0,1,0,0,1,69,10,1,ECE|CIC,C|Verilog|VLSI|Embedded,10,18,99
+383,1847058,Madhavi Gupta,CIC,2018,2022,Rapid7,Engineer,4,2,Hyderabad,2227422,Blockchain,Smart Contracts,25,322,30,1,3,4.5,3,0,0,1,1,70,6,0,CIC|CIV,Python|Security|Blockchain,10,8,85
+384,1842059,Padma Krishnan,CSM,2018,2022,OpenAI,Senior Engineer,4,2,Chennai,1767511,AI,Computer Vision,19,780,296,1,5,4.3,2,1,1,1,0,71,10,0,CSM|ECE,Python|ML|TensorFlow|PyTorch,12,10,98
+385,1802060,Saranya Balaji,EEE,2018,2022,Havells,Engineer,4,1,Hyderabad,2091442,Automation,PLC,20,480,31,1,1,4.8,2,3,0,0,1,69,7,1,EEE|CSE,MATLAB|Power Systems|PLC,3,18,98
+386,1804061,Meena Menon,ECE,2018,2022,Broadcom,Engineer,4,2,Mumbai,1999330,Embedded,IoT,19,851,100,1,1,4.2,3,0,0,0,3,85,6,0,ECE|MEC,C|Verilog|VLSI|Embedded,4,20,93
+387,1803062,Padma Gopal,MEC,2018,2022,Mahindra,Senior Engineer,4,2,Noida,2324213,Manufacturing,CAD/CAM,16,945,51,1,1,4.1,4,0,0,0,0,85,6,0,MEC|EEE,SolidWorks|CATIA|ANSYS,12,20,93
+388,1803063,Vidya Nair,MEC,2018,2022,Hero,Engineer,4,2,Bangalore,2123980,Manufacturing,CAD/CAM,23,347,92,0,0,0.0,0,0,0,0,3,94,9,1,MEC|CSE,SolidWorks|CATIA|ANSYS,6,0,86
+389,1842064,Gopal Subramanian,CSM,2018,2022,Nvidia,Engineer,4,2,Bangalore,1763786,Data Science,ML,20,410,59,1,2,4.9,4,3,0,0,2,85,6,0,CSM|IT,Python|ML|TensorFlow|PyTorch,5,16,94
+390,1861065,Rajesh Shetty,AIML,2018,2022,OpenAI,Senior Engineer,4,1,Mumbai,1739215,AI,Deep Learning,19,833,241,0,0,0.0,0,0,2,0,2,78,10,1,AIML|CSE,Python|Deep Learning|PyTorch,8,0,88
+391,1847066,Prasad Rajan,CIC,2018,2022,Check Point,Engineer,4,2,Mumbai,2165929,Security,Pentesting,17,369,40,1,5,4.2,3,2,0,0,3,81,10,1,CIC|EEE,Python|Security|Blockchain,7,10,89
+392,1804067,Venkat Krishna,ECE,2018,2022,Intel,Software Engineer,4,1,Hyderabad,1983735,Embedded,IoT,17,965,68,0,0,0.0,0,0,0,0,3,92,8,1,ECE|AIML,C|Verilog|VLSI|Embedded,6,0,94
+393,1854068,Ravi Reddy,AID,2018,2022,Mu Sigma,Senior Engineer,4,2,Bangalore,2005345,Data Engineering,Pipelines,15,857,82,0,0,0.0,0,0,0,0,2,74,8,0,AID|CSE,Python|Data Science|SQL|ML,0,0,82
+394,1842069,Manoj Prasad,CSM,2018,2022,OpenAI,Engineer,4,1,Noida,1874039,AI,Computer Vision,16,760,233,0,0,0.0,0,0,2,0,0,71,9,1,CSM|ECE,Python|ML|TensorFlow|PyTorch,12,0,86
+395,1812070,Naveen Shetty,IT,2018,2022,DXC,Engineer,4,1,Noida,1948464,Database,Oracle,12,306,77,1,5,4.6,4,2,0,0,6,82,8,0,IT|IT,Python|Kubernetes|Docker|AWS,4,14,99
+396,1854071,Rekha Prasad,AID,2018,2022,Amazon,Software Engineer,4,1,Hyderabad,1827250,Data Science,Analytics,20,906,298,0,0,0.0,0,0,0,0,2,75,8,1,AID|IT,Python|Data Science|SQL|ML,10,0,90
+397,1849072,Ajay Shetty,CSO,2018,2022,Tata Elxsi,Software Engineer,4,1,Gurugram,2227957,IoT,Industrial,22,651,49,1,1,4.7,4,3,0,0,2,77,10,0,CSO|ECE,Python|IoT|Sensors|Edge,3,14,91
+398,1812073,Karthik Reddy,IT,2018,2022,Amazon,Senior Engineer,4,1,Pune,2051582,Cloud Engineering,Azure,19,654,288,1,2,4.5,3,1,0,1,11,89,8,0,IT|CIV,Python|Kubernetes|Docker|AWS,8,14,85
+399,1804074,Mahesh Swamy,ECE,2018,2022,Renesas,Software Engineer,4,2,Noida,2334184,Wireless,5G,16,623,68,1,2,4.7,1,3,0,0,3,86,6,0,ECE|EEE,C|Verilog|VLSI|Embedded,8,12,88
+400,1812075,Ramesh Varma,IT,2018,2022,Red Hat,Engineer,4,2,Bangalore,1829195,Database,Oracle,13,888,69,0,0,0.0,0,0,0,0,0,89,10,1,IT|ECE,Python|Kubernetes|Docker|AWS,10,0,87
+401,1847076,Swathi Balaji,CIC,2018,2022,Palo Alto Networks,Software Engineer,4,2,Delhi,1734213,Cyber Security,Threat Intelligence,24,580,44,1,5,4.9,0,0,0,0,0,89,10,1,CIC|AID,Python|Security|Blockchain,10,20,93
+402,1805077,Srikanth Kumar,CSE,2018,2022,Workday,Software Engineer,4,1,Mumbai,1915815,DevOps,CI/CD,19,365,278,0,0,0.0,0,0,0,0,9,69,6,1,CSE|CIV,Python|Java|React|AWS,7,0,87
+403,1803078,Anu Mohan,MEC,2018,2022,Mahindra,Engineer,4,1,Delhi,2079290,Robotics,Industrial,19,680,57,0,0,0.0,0,0,0,0,1,79,6,1,MEC|CSO,SolidWorks|CATIA|ANSYS,3,0,98
+404,1849079,Divya Rajan,CSO,2018,2022,GE,Senior Engineer,4,2,Chennai,2198939,IoT,Industrial,20,730,100,1,4,4.9,4,0,0,0,2,79,7,1,CSO|CSO,Python|IoT|Sensors|Edge,7,20,82
+405,1804080,Krishna Menon,ECE,2018,2022,Qualcomm,Software Engineer,4,1,Pune,2050410,IC Design,Analog,17,312,100,0,0,0.0,0,0,0,0,2,83,7,1,ECE|CSM,C|Verilog|VLSI|Embedded,4,0,86
+406,1861081,Arun Mohan,AIML,2018,2022,Nvidia,Engineer,4,2,Delhi,1960109,AI,Deep Learning,24,734,209,0,0,0.0,0,0,0,0,3,85,7,0,AIML|IT,Python|Deep Learning|PyTorch,10,0,96
+407,1805082,Anu Sundaram,CSE,2018,2022,Netflix,Senior Engineer,4,2,Pune,1807955,Software Engineering,Full Stack,15,892,115,1,4,4.3,4,3,0,0,10,83,6,1,CSE|AID,Python|Java|React|AWS,7,8,95
+408,1812083,Rekha Srinivas,IT,2018,2022,Accenture,Software Engineer,4,1,Hyderabad,2185028,Database,Oracle,24,425,193,1,2,4.7,1,2,0,0,14,85,9,0,IT|EEE,Python|Kubernetes|Docker|AWS,4,14,85
+409,1854084,Sahana Menon,AID,2018,2022,Tiger Analytics,Senior Engineer,4,1,Delhi,2039372,Data Science,ML Engineering,20,967,261,0,0,0.0,0,0,2,0,0,94,8,1,AID|EEE,Python|Data Science|SQL|ML,5,0,93
+410,1847085,Gopal Varma,CIC,2018,2022,CrowdStrike,Engineer,4,2,Noida,2292959,Cyber Security,Threat Intelligence,16,960,56,0,0,0.0,0,0,0,0,3,78,8,1,CIC|MEC,Python|Security|Blockchain,5,0,97
+411,1805086,Rahul Krishna,CSE,2018,2022,Google,Engineer,4,2,Bangalore,2075093,Data Engineering,BigData,24,443,287,1,4,4.9,2,3,0,0,11,89,8,1,CSE|AIML,Python|Java|React|AWS,10,18,99
+412,1801087,Karthik Swamy,CIV,2018,2022,Gammon India,Senior Engineer,4,2,Pune,2248120,Infrastructure,Roads,15,440,29,0,0,0.0,0,0,0,0,1,86,7,0,CIV|CIC,AutoCAD|Staad Pro|Revit,6,0,99
+413,1847088,Swathi Rajan,CIC,2018,2022,Qualys,Senior Engineer,4,2,Bangalore,1956741,Security,Pentesting,25,833,51,0,0,0.0,0,0,0,0,0,68,7,1,CIC|CIV,Python|Security|Blockchain,10,0,83
+414,1803089,Saranya Balaji,MEC,2018,2022,Hero,Engineer,4,1,Mumbai,1688922,Manufacturing,CAD/CAM,18,695,56,0,0,0.0,0,0,0,0,0,79,6,1,MEC|MEC,SolidWorks|CATIA|ANSYS,6,0,83
+415,1812090,Mythili Krishna,IT,2018,2022,Microsoft,Senior Engineer,4,2,Mumbai,2277402,Cloud Engineering,Azure,12,718,71,1,3,4.5,4,2,0,0,11,78,7,1,IT|IT,Python|Kubernetes|Docker|AWS,7,24,97
+416,1805091,Lakshmi Gopal,CSE,2018,2022,VMware,Software Engineer,4,2,Bangalore,1844591,Data Engineering,BigData,24,741,221,1,5,4.7,0,0,0,0,1,70,8,0,CSE|CSE,Python|Java|React|AWS,7,20,85
+417,1801092,Bhavana Sharma,CIV,2018,2022,L&T,Senior Engineer,4,1,Chennai,1842350,Infrastructure,Roads,13,353,94,0,0,0.0,0,0,0,1,2,90,10,0,CIV|AID,AutoCAD|Staad Pro|Revit,12,0,98
+418,1847093,Prasad Naidu,CIC,2018,2022,Qualys,Software Engineer,4,2,Hyderabad,1734231,Security,Pentesting,20,510,79,1,1,4.3,1,1,0,0,1,91,8,1,CIC|IT,Python|Security|Blockchain,8,14,97
+419,1849094,Saranya Menon,CSO,2018,2022,Rockwell,Engineer,4,1,Noida,1797718,Embedded IoT,Sensors,18,916,43,1,5,4.5,2,0,0,1,0,68,10,1,CSO|CSM,Python|IoT|Sensors|Edge,0,16,85
+420,1802095,Anand Mohan,EEE,2018,2022,Havells,Engineer,4,2,Chennai,1643995,Control Systems,Industrial,23,604,70,1,5,4.0,0,3,0,0,1,91,10,0,EEE|EEE,MATLAB|Power Systems|PLC,6,20,90
+421,1854096,Lavanya Mohan,AID,2018,2022,Fractal,Engineer,4,2,Pune,2141106,Data Engineering,Pipelines,17,624,134,1,5,4.2,4,0,0,1,0,73,10,1,AID|CSO,Python|Data Science|SQL|ML,7,12,95
+422,1849097,Venkat Murthy,CSO,2018,2022,IBM,Engineer,4,1,Mumbai,2100141,Embedded IoT,Sensors,14,414,82,1,1,4.1,0,0,0,0,1,76,7,0,CSO|AIML,Python|IoT|Sensors|Edge,0,10,88
+423,1842098,Sahana Pillai,CSM,2018,2022,Microsoft Research,Senior Engineer,4,2,Gurugram,2176632,AI Research,Machine Learning,14,966,191,0,0,0.0,0,0,0,0,2,69,8,0,CSM|CIV,Python|ML|TensorFlow|PyTorch,6,0,91
+424,1847099,Venkat Nair,CIC,2018,2022,Fortinet,Software Engineer,4,2,Mumbai,1920913,Cyber Security,Threat Intelligence,25,933,61,1,4,4.9,2,3,0,0,2,91,7,1,CIC|CSO,Python|Security|Blockchain,8,12,86
+425,1861100,Harish Menon,AIML,2018,2022,Waymo,Engineer,4,2,Pune,1710605,AI,Deep Learning,21,689,138,1,4,4.8,1,1,1,0,3,89,7,1,AIML|CIC,Python|Deep Learning|PyTorch,7,14,86
+426,1805101,Saranya Sharma,CSE,2018,2022,Tech Mahindra,Senior Engineer,4,2,Pune,2103705,Data Engineering,BigData,15,908,119,1,4,4.5,2,2,0,0,2,65,8,1,CSE|CSE,Python|Java|React|AWS,12,8,83
+427,1802102,Renuka Srinivas,EEE,2018,2022,Rockwell,Engineer,4,1,Delhi,2214848,Automation,PLC,15,495,1,1,5,4.3,3,1,0,0,3,84,10,1,EEE|CIC,MATLAB|Power Systems|PLC,4,16,96
+428,1802103,Mohan Balaji,EEE,2018,2022,Rockwell,Senior Engineer,4,1,Gurugram,1745530,Control Systems,Industrial,21,478,57,0,0,0.0,0,0,0,0,2,85,7,0,EEE|CSE,MATLAB|Power Systems|PLC,8,0,83
+429,1803104,Kavya Iyer,MEC,2018,2022,Honda,Senior Engineer,4,1,Pune,1971507,Manufacturing,CAD/CAM,22,596,89,1,5,4.5,3,3,0,0,1,66,10,0,MEC|MEC,SolidWorks|CATIA|ANSYS,7,12,94
+430,1805105,Suresh Mohan,CSE,2018,2022,Microsoft,Software Engineer,4,1,Pune,2045027,Data Engineering,BigData,22,613,102,0,0,0.0,0,0,0,0,8,95,7,1,CSE|CIC,Python|Java|React|AWS,6,0,89
+431,1847106,Sowmya Varma,CIC,2018,2022,Palo Alto Networks,Software Engineer,4,2,Delhi,1787904,Cyber Security,Threat Intelligence,23,968,45,1,2,4.4,0,2,0,0,2,80,10,1,CIC|CSO,Python|Security|Blockchain,6,20,88
+432,1861107,Vidya Desai,AIML,2018,2022,Amazon,Engineer,4,2,Noida,2371447,Research,Neural Networks,15,719,93,1,4,4.1,1,3,2,0,3,80,8,1,AIML|AID,Python|Deep Learning|PyTorch,3,14,99
+433,1849108,Ajay Bhat,CSO,2018,2022,Tata Elxsi,Software Engineer,4,1,Chennai,1818072,IoT,Industrial,22,300,95,1,2,4.4,1,2,0,0,1,81,7,1,CSO|CIV,Python|IoT|Sensors|Edge,5,16,99
+434,1803109,Renuka Gopal,MEC,2018,2022,Daimler,Senior Engineer,4,2,Noida,2270851,Manufacturing,CAD/CAM,22,335,70,1,4,4.8,2,3,0,0,2,75,9,1,MEC|CSO,SolidWorks|CATIA|ANSYS,0,18,83
+435,1804110,Anand Pillai,ECE,2018,2022,Samsung,Senior Engineer,4,2,Hyderabad,1702257,Embedded,IoT,18,582,69,0,0,0.0,0,0,0,0,3,74,8,1,ECE|EEE,C|Verilog|VLSI|Embedded,0,0,90
+436,1803111,Lavanya Iyer,MEC,2018,2022,Ford,Engineer,4,2,Gurugram,1732935,Aerospace,Design,17,958,46,0,0,0.0,0,0,0,0,2,92,8,0,MEC|IT,SolidWorks|CATIA|ANSYS,3,0,95
+437,1847112,Vasudha Naidu,CIC,2018,2022,McAfee,Senior Engineer,4,1,Hyderabad,2152488,Security,Pentesting,20,306,11,1,1,4.5,1,3,0,0,2,85,8,0,CIC|AID,Python|Security|Blockchain,12,24,82
+438,1847113,Swathi Reddy,CIC,2018,2022,McAfee,Software Engineer,4,2,Gurugram,2342382,Security,Pentesting,20,449,24,0,0,0.0,0,0,0,0,1,77,7,1,CIC|AIML,Python|Security|Blockchain,5,0,87
+439,1842114,Lakshmi Balaji,CSM,2018,2022,DeepMind,Engineer,4,2,Chennai,1725272,AI,NLP,16,976,70,1,1,4.4,4,3,2,0,3,92,9,0,CSM|AIML,Python|ML|TensorFlow|PyTorch,7,16,98
+440,1801115,Kishore Iyer,CIV,2018,2022,Bechtel,Software Engineer,4,2,Noida,1610095,Infrastructure,Roads,23,713,91,0,0,0.0,0,0,0,0,3,95,8,0,CIV|AID,AutoCAD|Staad Pro|Revit,3,0,82
+441,1802116,Suresh Murthy,EEE,2018,2022,Rockwell,Software Engineer,4,2,Bangalore,2125414,Renewable,Solar,13,302,57,1,4,4.9,2,0,0,0,0,83,8,0,EEE|CIV,MATLAB|Power Systems|PLC,0,24,87
+442,1803117,Lakshmi Krishna,MEC,2018,2022,GE,Software Engineer,4,1,Delhi,2127116,Automotive,Powertrain,18,730,54,1,3,4.0,0,1,0,0,0,71,7,1,MEC|ECE,SolidWorks|CATIA|ANSYS,6,24,91
+443,1805118,Deepak Balaji,CSE,2018,2022,Oracle,Software Engineer,4,1,Mumbai,1642772,Software Engineering,Backend,18,521,112,1,5,4.7,1,1,0,0,15,70,6,0,CSE|AID,Python|Java|React|AWS,8,12,87
+444,1803119,Rahul Srinivas,MEC,2018,2022,Tesla,Senior Engineer,4,2,Chennai,1996613,Aerospace,Design,14,323,57,0,0,0.0,0,0,0,0,2,71,6,0,MEC|IT,SolidWorks|CATIA|ANSYS,8,0,89
+445,1854120,Nithya Varma,AID,2018,2022,Tiger Analytics,Senior Engineer,4,2,Chennai,1998600,Data Engineering,Pipelines,25,870,191,0,0,0.0,0,0,1,0,0,79,8,1,AID|AID,Python|Data Science|SQL|ML,7,0,97
+446,1805121,Kavya Murthy,CSE,2018,2022,Workday,Engineer,4,2,Delhi,1622449,Data Engineering,BigData,16,555,272,1,1,4.6,3,0,0,0,12,76,6,0,CSE|CSM,Python|Java|React|AWS,12,14,93
+447,1803122,Ravi Iyer,MEC,2018,2022,Bosch,Senior Engineer,4,2,Mumbai,2115056,Manufacturing,CAD/CAM,16,814,88,1,4,4.4,0,1,0,0,3,93,6,0,MEC|MEC,SolidWorks|CATIA|ANSYS,3,16,92
+448,1861123,Vinay Ramani,AIML,2018,2022,Waymo,Engineer,4,2,Hyderabad,2369236,AI,Deep Learning,17,644,194,0,0,0.0,0,0,1,0,3,67,7,1,AIML|ECE,Python|Deep Learning|PyTorch,10,0,93
+449,1849124,Harini Kumar,CSO,2018,2022,Siemens,Software Engineer,4,2,Chennai,1721864,Embedded IoT,Sensors,15,434,66,1,4,4.1,4,2,0,1,0,81,9,1,CSO|ECE,Python|IoT|Sensors|Edge,6,8,91
+450,1842125,Ashok Desai,CSM,2018,2022,DeepMind,Software Engineer,4,1,Delhi,2345739,AI,NLP,12,449,201,1,2,4.8,0,2,2,0,1,89,9,0,CSM|IT,Python|ML|TensorFlow|PyTorch,8,10,85
+451,1849126,Nithya Rajan,CSO,2018,2022,IBM,Senior Engineer,4,2,Bangalore,2008290,IoT,Smart Cities,19,698,12,1,5,4.4,4,2,0,0,2,84,10,1,CSO|AIML,Python|IoT|Sensors|Edge,12,24,99
+452,1802127,Archana Kumar,EEE,2018,2022,Honeywell,Senior Engineer,4,2,Mumbai,2142824,Renewable,Solar,15,350,87,1,3,4.0,1,1,0,1,3,75,7,1,EEE|CSO,MATLAB|Power Systems|PLC,4,24,88
+453,1803128,Saranya Pillai,MEC,2018,2022,Siemens,Software Engineer,4,2,Pune,1838177,Manufacturing,CAD/CAM,18,516,83,1,1,4.2,4,1,0,0,0,94,10,0,MEC|CSO,SolidWorks|CATIA|ANSYS,4,8,94
+454,1803129,Ashok Krishna,MEC,2018,2022,Daimler,Senior Engineer,4,2,Chennai,1696633,Aerospace,Design,21,565,99,0,0,0.0,0,0,0,0,3,76,10,0,MEC|IT,SolidWorks|CATIA|ANSYS,4,0,92
+455,1847130,Vasudha Sharma,CIC,2018,2022,Sophos,Engineer,4,2,Mumbai,1643690,Blockchain,Smart Contracts,16,385,92,1,5,4.3,1,2,0,0,3,92,10,0,CIC|AID,Python|Security|Blockchain,4,10,89
+456,1847131,Suresh Naidu,CIC,2018,2022,Sophos,Senior Engineer,4,2,Noida,2222225,Security,Pentesting,16,450,37,1,4,4.0,0,2,0,0,2,93,6,1,CIC|ECE,Python|Security|Blockchain,3,14,87
+457,1805132,Vivek Shetty,CSE,2018,2022,IBM,Senior Engineer,4,2,Pune,1849977,Software Engineering,Backend,23,436,213,0,0,0.0,0,0,0,0,2,72,6,0,CSE|CSO,Python|Java|React|AWS,4,0,83
+458,1861133,Vivek Prasad,AIML,2018,2022,DeepMind,Senior Engineer,4,2,Hyderabad,2024639,Research,Neural Networks,12,417,249,1,3,4.3,4,0,1,0,1,89,8,1,AIML|AIML,Python|Deep Learning|PyTorch,6,18,83
+459,1849134,Priya Mohan,CSO,2018,2022,LG Soft,Engineer,4,2,Bangalore,1784349,Edge Computing,IoT,22,365,55,1,4,4.2,1,3,0,0,1,94,10,0,CSO|CSO,Python|IoT|Sensors|Edge,3,20,98
+460,1804135,Akshara Krishnan,ECE,2018,2022,Intel,Software Engineer,4,2,Hyderabad,2291834,IC Design,Analog,24,387,9,1,2,4.8,0,3,0,0,3,94,6,1,ECE|CIV,C|Verilog|VLSI|Embedded,3,10,97
+461,1861136,Nithya Balaji,AIML,2018,2022,OpenAI,Engineer,4,2,Delhi,1745714,AI,Deep Learning,16,752,252,1,5,4.3,1,0,1,0,0,70,6,0,AIML|AIML,Python|Deep Learning|PyTorch,10,20,92
+462,1802137,Akshara Prasad,EEE,2018,2022,L&T,Senior Engineer,4,2,Mumbai,2398451,Control Systems,Industrial,25,408,35,0,0,0.0,0,0,0,0,1,91,6,1,EEE|IT,MATLAB|Power Systems|PLC,6,0,98
+463,1804138,Sahana Kumar,ECE,2018,2022,Samsung,Software Engineer,4,2,Delhi,2029637,IC Design,Analog,21,324,36,1,5,4.8,3,1,0,0,0,83,10,0,ECE|AIML,C|Verilog|VLSI|Embedded,6,20,82
+464,1805139,Nithya Singh,CSE,2018,2022,Citrix,Senior Engineer,4,2,Chennai,1668774,Software Engineering,Full Stack,24,725,277,0,0,0.0,0,0,0,0,13,72,8,0,CSE|CIV,Python|Java|React|AWS,10,0,98
+465,1801140,Ashok Krishna,CIV,2018,2022,Shapoorji Pallonji,Engineer,4,2,Gurugram,1703232,Structural Design,Buildings,19,532,34,1,2,4.4,2,0,0,0,3,75,9,1,CIV|MEC,AutoCAD|Staad Pro|Revit,0,8,90
+466,1812141,Madhavi Gopal,IT,2018,2022,HashiCorp,Engineer,4,2,Chennai,1791271,Database,Oracle,19,962,225,1,1,4.5,0,2,0,0,3,87,9,0,IT|IT,Python|Kubernetes|Docker|AWS,0,10,85
+467,1861142,Sowmya Naidu,AIML,2018,2022,Microsoft,Software Engineer,4,1,Delhi,2144897,Research,Neural Networks,14,451,119,0,0,0.0,0,0,2,0,3,66,8,1,AIML|IT,Python|Deep Learning|PyTorch,0,0,82
+468,1802143,Anand Swamy,EEE,2018,2022,Honeywell,Software Engineer,4,2,Bangalore,1612777,Power Systems,Grid,20,472,50,0,0,0.0,0,0,0,0,1,73,7,0,EEE|CSM,MATLAB|Power Systems|PLC,4,0,89
+469,1861144,Vinay Srinivas,AIML,2018,2022,Tesla,Engineer,4,1,Bangalore,2165109,ML Engineering,MLOps,25,869,99,0,0,0.0,0,0,1,0,2,92,9,1,AIML|AID,Python|Deep Learning|PyTorch,4,0,88
+470,1849145,Rahul Rao,CSO,2018,2022,Wipro IoT,Software Engineer,4,1,Pune,1699299,Edge Computing,IoT,19,522,67,0,0,0.0,0,0,0,0,3,89,8,1,CSO|AID,Python|IoT|Sensors|Edge,0,0,84
+471,1847146,Keerthi Pillai,CIC,2018,2022,Cisco,Senior Engineer,4,1,Gurugram,2281653,Cyber Security,Threat Intelligence,18,639,91,1,2,4.3,2,2,0,0,3,89,6,0,CIC|IT,Python|Security|Blockchain,3,16,90
+472,1854147,Lakshmi Reddy,AID,2018,2022,Uber,Engineer,4,2,Delhi,1825578,Data Science,ML Engineering,12,974,210,1,5,4.8,3,0,0,0,1,82,8,0,AID|CSE,Python|Data Science|SQL|ML,8,18,96
+473,1802148,Mythili Verma,EEE,2018,2022,L&T,Senior Engineer,4,1,Chennai,1755239,Renewable,Solar,12,475,58,1,2,4.4,3,1,0,0,3,73,9,1,EEE|AID,MATLAB|Power Systems|PLC,12,14,90
+474,1812149,Ajay Murthy,IT,2018,2022,VMware,Senior Engineer,4,1,Chennai,2165571,DevOps,Kubernetes,24,661,63,1,5,4.3,2,0,0,0,0,81,8,0,IT|AID,Python|Kubernetes|Docker|AWS,4,14,90
+475,1812150,Rekha Patel,IT,2018,2022,Tech Mahindra,Software Engineer,4,2,Pune,1847230,DevOps,Kubernetes,14,945,275,1,5,4.3,1,1,0,0,6,94,10,0,IT|AID,Python|Kubernetes|Docker|AWS,4,24,96
+476,1804151,Vinay Krishnan,ECE,2018,2022,Broadcom,Engineer,4,2,Mumbai,2148139,Hardware Design,VLSI,22,310,5,0,0,0.0,0,0,0,0,3,75,10,0,ECE|MEC,C|Verilog|VLSI|Embedded,4,0,89
+477,1854152,Ramya Rao,AID,2018,2022,Google,Software Engineer,4,1,Mumbai,1935734,Data Science,Analytics,20,604,182,0,0,0.0,0,0,1,0,0,74,7,0,AID|AID,Python|Data Science|SQL|ML,6,0,91
+478,1804153,Anu Prasad,ECE,2018,2022,Infineon,Software Engineer,4,2,Hyderabad,1954779,IC Design,Analog,13,445,41,1,4,4.5,2,2,0,0,3,78,8,0,ECE|CIV,C|Verilog|VLSI|Embedded,3,18,83
+479,1804154,Rekha Desai,ECE,2018,2022,Xilinx,Senior Engineer,4,2,Hyderabad,1685979,Wireless,5G,25,696,2,0,0,0.0,0,0,0,0,3,77,6,1,ECE|CIC,C|Verilog|VLSI|Embedded,6,0,95
+480,1804155,Anand Rajan,ECE,2018,2022,ST Microelectronics,Senior Engineer,4,1,Noida,2069540,Wireless,5G,16,857,7,0,0,0.0,0,0,0,0,1,95,8,1,ECE|ECE,C|Verilog|VLSI|Embedded,5,0,94
+481,1803156,Rahul Krishnan,MEC,2018,2022,Bosch,Senior Engineer,4,2,Pune,2165188,Automotive,Powertrain,12,785,48,1,1,4.1,4,2,0,1,0,86,9,0,MEC|CSE,SolidWorks|CATIA|ANSYS,8,18,92
+482,1805157,Shalini Mohan,CSE,2018,2022,Nvidia,Senior Engineer,4,2,Delhi,1847654,Software Engineering,Full Stack,12,941,253,1,1,4.6,4,1,0,0,9,75,10,0,CSE|ECE,Python|Java|React|AWS,6,24,94
+483,1803158,Nithya Rao,MEC,2018,2022,Cummins,Software Engineer,4,2,Pune,2164192,Manufacturing,CAD/CAM,24,363,57,0,0,0.0,0,0,0,0,3,79,10,0,MEC|AIML,SolidWorks|CATIA|ANSYS,12,0,89
+484,1842159,Krishna Murthy,CSM,2018,2022,Meta AI,Engineer,4,2,Bangalore,2390368,Data Science,ML,17,386,156,0,0,0.0,0,0,2,0,2,94,10,0,CSM|CSM,Python|ML|TensorFlow|PyTorch,5,0,88
+485,1801160,Ashok Sharma,CIV,2018,2022,Bechtel,Senior Engineer,4,1,Delhi,2117838,Construction,Project Management,15,507,38,0,0,0.0,0,0,0,0,3,67,8,1,CIV|CSE,AutoCAD|Staad Pro|Revit,5,0,85
+486,1849161,Madhavi Subramanian,CSO,2018,2022,Tata Elxsi,Senior Engineer,4,2,Mumbai,2280143,IoT,Smart Cities,14,945,25,0,0,0.0,0,0,0,0,1,69,8,0,CSO|EEE,Python|IoT|Sensors|Edge,10,0,96
+487,1849162,Ramesh Gopal,CSO,2018,2022,ABB,Software Engineer,4,2,Bangalore,2101470,Embedded IoT,Sensors,23,894,25,0,0,0.0,0,0,0,0,0,78,10,1,CSO|CSE,Python|IoT|Sensors|Edge,6,0,93
+488,1849163,Venkat Kumar,CSO,2018,2022,Emerson,Engineer,4,2,Gurugram,1969822,Embedded IoT,Sensors,23,410,4,1,1,4.9,4,0,0,0,1,68,9,1,CSO|CIC,Python|IoT|Sensors|Edge,12,16,88
+489,1804164,Kavya Murthy,ECE,2018,2022,Infineon,Software Engineer,4,2,Bangalore,1851776,IC Design,Analog,21,883,85,1,3,4.5,3,2,0,0,0,91,7,0,ECE|AID,C|Verilog|VLSI|Embedded,6,20,89
+490,1812165,Archana Mohan,IT,2018,2022,VMware,Software Engineer,4,2,Chennai,1615383,System Administration,Linux,14,447,186,1,3,5.0,3,3,0,0,5,81,9,1,IT|CSE,Python|Kubernetes|Docker|AWS,3,14,83
+491,1847166,Priya Patel,CIC,2018,2022,Check Point,Senior Engineer,4,2,Bangalore,2380892,Security,Pentesting,18,653,53,0,0,0.0,0,0,0,0,2,70,8,1,CIC|EEE,Python|Security|Blockchain,0,0,87
+492,1804167,Santosh Mohan,ECE,2018,2022,Intel,Engineer,4,2,Gurugram,1917153,IC Design,Analog,16,937,24,1,5,4.7,1,2,0,0,0,82,6,1,ECE|ECE,C|Verilog|VLSI|Embedded,12,24,86
+493,1802168,Anjali Sundaram,EEE,2018,2022,Mitsubishi Electric,Senior Engineer,4,2,Hyderabad,2177258,Automation,PLC,15,584,24,1,1,4.7,3,3,0,0,2,90,6,0,EEE|MEC,MATLAB|Power Systems|PLC,10,12,86
+494,1861169,Pooja Naidu,AIML,2018,2022,Anthropic,Software Engineer,4,2,Delhi,2083122,ML Engineering,MLOps,17,750,98,1,1,4.4,0,0,2,0,1,88,9,0,AIML|CSO,Python|Deep Learning|PyTorch,0,14,97
+495,1849170,Meena Gupta,CSO,2018,2022,Emerson,Engineer,4,2,Gurugram,2288159,Edge Computing,IoT,13,388,2,1,3,4.9,3,0,0,0,3,87,6,1,CSO|AIML,Python|IoT|Sensors|Edge,12,12,99
+496,1803171,Shalini Patel,MEC,2018,2022,Cummins,Senior Engineer,4,2,Hyderabad,2156824,Automotive,Powertrain,17,559,18,0,0,0.0,0,0,0,0,1,84,9,0,MEC|IT,SolidWorks|CATIA|ANSYS,10,0,85
+497,1804172,Lavanya Krishnan,ECE,2018,2022,AMD,Software Engineer,4,2,Pune,1868338,IC Design,Analog,15,323,23,1,2,4.1,3,1,0,0,0,81,9,1,ECE|IT,C|Verilog|VLSI|Embedded,4,14,86
+498,1804173,Lakshmi Krishna,ECE,2018,2022,Renesas,Engineer,4,2,Gurugram,1968502,Hardware Design,VLSI,20,411,34,1,3,4.5,0,0,0,0,2,87,10,0,ECE|IT,C|Verilog|VLSI|Embedded,7,20,95
+499,1802174,Harini Rajan,EEE,2018,2022,GE,Senior Engineer,4,1,Gurugram,1608808,Control Systems,Industrial,12,344,13,1,3,4.4,0,3,0,0,3,66,10,0,EEE|CIC,MATLAB|Power Systems|PLC,12,10,85
+500,1842175,Anjali Gupta,CSM,2018,2022,IBM Research,Engineer,4,2,Noida,2253236,AI,NLP,25,502,86,1,1,4.3,2,1,2,0,3,90,7,1,CSM|CIV,Python|ML|TensorFlow|PyTorch,8,14,83
+501,1805176,Rahul Mohan,CSE,2018,2022,Nutanix,Engineer,4,2,Bangalore,1800487,Software Engineering,Full Stack,14,461,106,1,1,4.6,3,3,0,0,5,69,6,1,CSE|IT,Python|Java|React|AWS,7,20,89
+502,1802177,Kishore Rao,EEE,2018,2022,Rockwell,Senior Engineer,4,2,Chennai,2355896,Power Systems,Grid,16,519,94,0,0,0.0,0,0,0,0,1,83,7,0,EEE|CSM,MATLAB|Power Systems|PLC,3,0,99
+503,1802178,Arun Rao,EEE,2018,2022,Tesla,Senior Engineer,4,2,Gurugram,1815122,Power Systems,Grid,17,923,77,1,1,5.0,3,3,0,0,1,90,6,1,EEE|ECE,MATLAB|Power Systems|PLC,4,16,90
+504,1805179,Lakshmi Ramani,CSE,2018,2022,Swiggy,Software Engineer,4,2,Noida,1975404,DevOps,CI/CD,18,892,258,0,0,0.0,0,0,0,0,9,67,8,0,CSE|CSE,Python|Java|React|AWS,7,0,98
+505,1805180,Lakshmi Menon,CSE,2018,2022,Oracle,Software Engineer,4,2,Hyderabad,1972513,Data Engineering,BigData,22,598,135,1,1,4.3,4,0,0,0,1,68,6,1,CSE|IT,Python|Java|React|AWS,7,8,95
+506,1812181,Naresh Shetty,IT,2018,2022,Accenture,Engineer,4,1,Noida,2342200,Cloud Engineering,Azure,17,821,286,0,0,0.0,0,0,0,1,3,73,9,0,IT|IT,Python|Kubernetes|Docker|AWS,8,0,95
+507,1854182,Archana Murthy,AID,2018,2022,Microsoft,Engineer,4,1,Hyderabad,1874842,Data Science,ML Engineering,12,900,289,0,0,0.0,0,0,1,0,1,84,7,0,AID|CSM,Python|Data Science|SQL|ML,4,0,85
+508,1801183,Madhavi Krishnan,CIV,2018,2022,Arup,Senior Engineer,4,2,Pune,1692065,Structural Design,Buildings,25,897,21,1,3,4.3,0,3,0,0,3,65,8,1,CIV|IT,AutoCAD|Staad Pro|Revit,10,14,86
+509,1847184,Venkat Krishna,CIC,2018,2022,CrowdStrike,Engineer,4,2,Pune,1855173,Blockchain,Smart Contracts,20,879,8,1,3,4.9,3,3,0,0,0,67,7,1,CIC|AID,Python|Security|Blockchain,5,14,91
+510,1804185,Renuka Gopal,ECE,2018,2022,Samsung,Senior Engineer,4,2,Hyderabad,2153552,IC Design,Analog,22,997,37,0,0,0.0,0,0,0,0,2,66,7,1,ECE|EEE,C|Verilog|VLSI|Embedded,3,0,96
+511,1805186,Deepak Reddy,CSE,2018,2022,Zoho,Software Engineer,4,1,Pune,1621396,DevOps,CI/CD,12,556,284,0,0,0.0,0,0,0,0,4,65,6,1,CSE|AIML,Python|Java|React|AWS,0,0,83
+512,1812187,Ganesh Gopal,IT,2018,2022,LTI,Engineer,4,2,Noida,2081534,Cloud Engineering,Azure,20,981,151,1,3,5.0,4,3,0,0,7,73,7,1,IT|AID,Python|Kubernetes|Docker|AWS,0,10,97
+513,1849188,Akshara Menon,CSO,2018,2022,Emerson,Software Engineer,4,2,Noida,1975794,Edge Computing,IoT,20,940,24,0,0,0.0,0,0,0,0,0,95,6,1,CSO|MEC,Python|IoT|Sensors|Edge,7,0,86
+514,1801189,Naresh Pillai,CIV,2018,2022,Bechtel,Software Engineer,4,2,Delhi,1674027,Construction,Project Management,22,324,20,1,1,4.6,4,2,0,0,3,76,6,1,CIV|EEE,AutoCAD|Staad Pro|Revit,5,24,98
+515,1861190,Karthik Murthy,AIML,2018,2022,Waymo,Engineer,4,1,Pune,1713944,AI,Deep Learning,24,849,105,1,1,4.2,2,2,0,0,1,91,6,1,AIML|IT,Python|Deep Learning|PyTorch,5,20,84
+516,1812191,Mahesh Desai,IT,2018,2022,Tech Mahindra,Engineer,4,2,Bangalore,2342056,DevOps,Kubernetes,23,597,58,1,4,4.2,3,3,0,1,13,84,9,1,IT|IT,Python|Kubernetes|Docker|AWS,6,8,95
+517,1801192,Anand Pillai,CIV,2018,2022,Gammon India,Software Engineer,4,2,Hyderabad,2296990,Infrastructure,Roads,25,444,50,0,0,0.0,0,0,0,0,0,77,9,0,CIV|CSE,AutoCAD|Staad Pro|Revit,8,0,98
+518,1803193,Mahesh Rao,MEC,2018,2022,Honeywell,Senior Engineer,4,1,Mumbai,1878421,Manufacturing,CAD/CAM,16,679,50,1,2,4.7,1,3,0,0,1,86,8,0,MEC|CIV,SolidWorks|CATIA|ANSYS,3,12,90
+519,1842194,Rekha Nair,CSM,2018,2022,Amazon,Engineer,4,2,Gurugram,2370553,AI,Computer Vision,21,579,118,1,4,4.0,3,0,1,0,1,89,10,1,CSM|IT,Python|ML|TensorFlow|PyTorch,7,24,89
+520,1804195,Harini Srinivas,ECE,2018,2022,Texas Instruments,Software Engineer,4,2,Gurugram,2260011,Wireless,5G,23,959,55,1,2,4.1,1,1,0,0,2,69,7,1,ECE|AID,C|Verilog|VLSI|Embedded,3,14,97
+521,1849196,Shweta Gupta,CSO,2018,2022,ABB,Senior Engineer,4,2,Pune,2224858,Edge Computing,IoT,21,907,2,1,4,4.6,1,0,0,0,1,74,6,0,CSO|CSE,Python|IoT|Sensors|Edge,4,16,84
+522,1802197,Suresh Varma,EEE,2018,2022,GE,Senior Engineer,4,2,Pune,2190666,Power Systems,Grid,12,746,84,1,1,4.4,1,0,0,0,2,90,10,1,EEE|ECE,MATLAB|Power Systems|PLC,5,16,97
+523,1802198,Rahul Patel,EEE,2018,2022,Crompton,Senior Engineer,4,1,Mumbai,2179789,Renewable,Solar,18,727,55,1,2,4.3,1,1,0,0,2,94,8,1,EEE|MEC,MATLAB|Power Systems|PLC,6,14,85
+524,1847199,Harini Desai,CIC,2018,2022,McAfee,Senior Engineer,4,1,Delhi,2071169,Cyber Security,Threat Intelligence,19,500,52,0,0,0.0,0,0,0,0,3,92,9,0,CIC|CIV,Python|Security|Blockchain,12,0,86
+525,1854200,Keerthi Rajan,AID,2018,2022,Microsoft,Senior Engineer,4,1,Delhi,1972443,Data Science,ML Engineering,16,353,154,1,2,4.2,2,3,2,0,3,82,8,0,AID|IT,Python|Data Science|SQL|ML,8,10,89
+526,1842201,Anu Iyer,CSM,2018,2022,IBM Research,Software Engineer,4,1,Gurugram,1817902,AI Research,Machine Learning,22,552,204,1,3,4.2,2,3,2,0,2,86,9,0,CSM|MEC,Python|ML|TensorFlow|PyTorch,10,14,90
+527,1804202,Prakash Mohan,ECE,2018,2022,Intel,Software Engineer,4,1,Chennai,1610333,Wireless,5G,17,1000,77,1,2,4.2,4,1,0,0,0,89,6,1,ECE|CSM,C|Verilog|VLSI|Embedded,12,8,84
+528,1847203,Sowmya Subramanian,CIC,2018,2022,Check Point,Senior Engineer,4,2,Gurugram,1653674,Cyber Security,Threat Intelligence,23,964,55,1,4,4.7,2,3,0,0,0,94,7,0,CIC|EEE,Python|Security|Blockchain,12,12,85
+529,1803204,Mythili Iyer,MEC,2018,2022,Honda,Engineer,4,1,Gurugram,2311354,Automotive,Powertrain,19,988,73,0,0,0.0,0,0,0,0,2,89,7,1,MEC|AIML,SolidWorks|CATIA|ANSYS,4,0,85
+530,1861205,Priya Sundaram,AIML,2018,2022,Google,Senior Engineer,4,1,Bangalore,1933287,AI,NLP,18,305,242,0,0,0.0,0,0,2,0,0,77,6,1,AIML|CIC,Python|Deep Learning|PyTorch,0,0,88
+531,1804206,Lavanya Pillai,ECE,2018,2022,ST Microelectronics,Senior Engineer,4,2,Hyderabad,2373805,Wireless,5G,18,537,6,1,4,4.3,3,0,0,0,1,77,8,0,ECE|EEE,C|Verilog|VLSI|Embedded,8,18,94
+532,1805207,Anjali Bhat,CSE,2018,2022,Infosys,Engineer,4,2,Hyderabad,1617618,Data Engineering,BigData,25,410,74,1,5,4.6,1,2,0,0,7,74,6,0,CSE|EEE,Python|Java|React|AWS,12,14,91
+533,1812208,Kishore Iyer,IT,2018,2022,Accenture,Software Engineer,4,1,Chennai,2021783,Cloud Engineering,Azure,13,821,300,1,2,4.7,2,3,0,0,4,72,7,0,IT|AIML,Python|Kubernetes|Docker|AWS,3,14,84
+534,1842209,Kishore Gopal,CSM,2018,2022,Uber,Engineer,4,2,Delhi,1919922,AI,Computer Vision,22,872,77,1,4,4.3,2,1,0,0,3,82,7,1,CSM|CSE,Python|ML|TensorFlow|PyTorch,12,8,87
+535,1804210,Arun Menon,ECE,2018,2022,Infineon,Senior Engineer,4,2,Noida,1874432,Wireless,5G,24,499,24,1,3,5.0,0,0,0,0,1,90,6,1,ECE|CSE,C|Verilog|VLSI|Embedded,5,10,88
+536,1842211,Vivek Prasad,CSM,2018,2022,DeepMind,Engineer,4,1,Delhi,2342255,AI,NLP,18,705,56,1,5,4.6,4,0,0,0,3,76,6,0,CSM|CIC,Python|ML|TensorFlow|PyTorch,10,10,82
+537,1804212,Arun Patel,ECE,2018,2022,AMD,Software Engineer,4,2,Gurugram,1863841,Wireless,5G,19,516,40,0,0,0.0,0,0,0,0,3,65,9,0,ECE|CIV,C|Verilog|VLSI|Embedded,5,0,88
+538,1861213,Rekha Reddy,AIML,2018,2022,Cruise,Engineer,4,2,Noida,1820703,Research,Neural Networks,25,621,199,1,4,4.1,2,1,0,0,1,68,8,1,AIML|CSO,Python|Deep Learning|PyTorch,0,12,86
+539,1861214,Srikanth Rajan,AIML,2018,2022,Waymo,Software Engineer,4,1,Mumbai,2191799,ML Engineering,MLOps,17,449,255,1,4,4.3,0,3,0,1,1,79,9,1,AIML|AIML,Python|Deep Learning|PyTorch,8,16,93
+540,1842215,Harini Mohan,CSM,2018,2022,Microsoft Research,Engineer,4,2,Bangalore,2229328,AI,Computer Vision,14,975,168,1,3,4.5,4,1,0,1,3,92,7,1,CSM|AIML,Python|ML|TensorFlow|PyTorch,4,12,84
+541,1842216,Harini Krishna,CSM,2018,2022,DeepMind,Senior Engineer,4,1,Pune,2242893,AI Research,Machine Learning,23,363,164,0,0,0.0,0,0,1,0,0,82,8,1,CSM|CSM,Python|ML|TensorFlow|PyTorch,0,0,88
+542,1805217,Mythili Pillai,CSE,2018,2022,Qualcomm,Software Engineer,4,2,Bangalore,1621959,Software Engineering,Backend,20,838,282,0,0,0.0,0,0,0,0,5,81,9,0,CSE|MEC,Python|Java|React|AWS,0,0,88
+543,1802218,Mahesh Swamy,EEE,2018,2022,Honeywell,Engineer,4,2,Chennai,1906387,Power Systems,Grid,25,580,71,1,5,4.4,3,1,0,0,1,73,8,1,EEE|AID,MATLAB|Power Systems|PLC,5,20,99
+544,1861219,Madhavi Krishna,AIML,2018,2022,Meta,Software Engineer,4,2,Bangalore,2197595,AI,Deep Learning,15,724,152,1,1,4.1,0,2,2,0,2,79,7,1,AIML|CIV,Python|Deep Learning|PyTorch,5,12,97
+545,1842220,Akshara Gupta,CSM,2018,2022,Amazon,Senior Engineer,4,1,Hyderabad,2152518,AI,NLP,20,741,159,0,0,0.0,0,0,2,0,1,73,10,1,CSM|AIML,Python|ML|TensorFlow|PyTorch,3,0,83
+546,1812221,Vivek Gopal,IT,2018,2022,Cognizant,Engineer,4,2,Delhi,2118174,System Administration,Linux,21,771,66,1,5,4.6,1,1,0,0,0,93,7,0,IT|CIV,Python|Kubernetes|Docker|AWS,0,24,99
+547,1803222,Divya Desai,MEC,2018,2022,GE,Engineer,4,2,Noida,2119998,Robotics,Industrial,12,477,32,1,5,4.0,0,0,0,0,2,77,7,1,MEC|CSO,SolidWorks|CATIA|ANSYS,3,16,84
+548,1803223,Keerthi Patel,MEC,2018,2022,Caterpillar,Senior Engineer,4,1,Chennai,2248727,Manufacturing,CAD/CAM,20,820,96,0,0,0.0,0,0,0,0,3,71,7,1,MEC|CSM,SolidWorks|CATIA|ANSYS,6,0,97
+549,1854224,Ravi Iyer,AID,2018,2022,Meta,Software Engineer,4,2,Noida,2312419,Data Science,ML Engineering,23,484,185,1,3,4.3,2,0,2,1,1,85,10,0,AID|EEE,Python|Data Science|SQL|ML,5,10,95
+550,1861225,Pooja Iyer,AIML,2018,2022,Anthropic,Senior Engineer,4,1,Pune,1828228,AI,Deep Learning,20,822,271,0,0,0.0,0,0,1,0,1,93,9,1,AIML|IT,Python|Deep Learning|PyTorch,3,0,90
+551,1942001,Vivek Krishna,CSM,2019,2023,Amazon,Software Engineer,3,1,Mumbai,1866922,AI Research,Machine Learning,21,478,202,0,0,0.0,0,0,2,0,3,72,10,0,CSM|CSM,Python|ML|TensorFlow|PyTorch,4,0,95
+552,1947002,Ajay Varma,CIC,2019,2023,Qualys,Engineer,3,1,Noida,2328267,Blockchain,Smart Contracts,18,205,71,1,5,4.6,2,2,0,0,3,90,10,1,CIC|IT,Python|Security|Blockchain,7,14,87
+553,1949003,Rahul Rajan,CSO,2019,2023,Rockwell,Senior Engineer,3,1,Bangalore,2154435,Embedded IoT,Sensors,15,463,35,1,5,4.3,3,3,0,0,2,90,6,1,CSO|IT,Python|IoT|Sensors|Edge,8,10,94
+554,1942004,Ramesh Patel,CSM,2019,2023,OpenAI,Software Engineer,3,1,Gurugram,1796899,Data Science,ML,12,282,93,0,0,0.0,0,0,2,0,2,91,10,0,CSM|MEC,Python|ML|TensorFlow|PyTorch,5,0,83
+555,1905005,Akshara Gopal,CSE,2019,2023,Nutanix,Software Engineer,3,1,Gurugram,1712033,Software Engineering,Full Stack,25,585,111,1,3,4.7,2,1,0,0,1,69,10,1,CSE|CIC,Python|Java|React|AWS,0,18,84
+556,1904006,Suresh Iyer,ECE,2019,2023,ON Semi,Senior Engineer,3,1,Mumbai,1807631,Embedded,IoT,12,466,2,1,1,4.5,3,3,0,0,3,94,9,1,ECE|ECE,C|Verilog|VLSI|Embedded,5,24,91
+557,1904007,Ramesh Rajan,ECE,2019,2023,Skyworks,Senior Engineer,3,1,Gurugram,2097030,IC Design,Analog,13,514,69,0,0,0.0,0,0,0,0,1,83,10,1,ECE|IT,C|Verilog|VLSI|Embedded,6,0,83
+558,1961008,Anjali Krishna,AIML,2019,2023,Tesla,Software Engineer,3,1,Noida,1636472,AI,NLP,21,252,86,0,0,0.0,0,0,2,0,2,93,6,1,AIML|ECE,Python|Deep Learning|PyTorch,10,0,83
+559,1942009,Amit Patel,CSM,2019,2023,Nvidia,Engineer,3,1,Hyderabad,1632679,AI Research,Machine Learning,18,472,137,1,5,4.3,3,1,2,0,3,83,9,1,CSM|MEC,Python|ML|TensorFlow|PyTorch,7,20,98
+560,1961010,Anu Verma,AIML,2019,2023,Amazon,Engineer,3,1,Noida,2095330,Research,Neural Networks,14,343,51,1,1,4.3,4,0,1,0,1,95,9,1,AIML|CSM,Python|Deep Learning|PyTorch,8,12,88
+561,1904011,Vasudha Singh,ECE,2019,2023,Broadcom,Senior Engineer,3,1,Bangalore,2182194,Wireless,5G,20,545,100,0,0,0.0,0,0,0,0,0,72,6,1,ECE|MEC,C|Verilog|VLSI|Embedded,6,0,87
+562,1947012,Pooja Kumar,CIC,2019,2023,Sophos,Engineer,3,1,Mumbai,1804660,Blockchain,Smart Contracts,15,590,84,1,4,4.3,2,3,0,0,3,88,8,1,CIC|AIML,Python|Security|Blockchain,12,12,94
+563,1947013,Harish Swamy,CIC,2019,2023,IBM Security,Engineer,3,1,Pune,2205370,Blockchain,Smart Contracts,14,262,6,1,5,4.7,3,1,0,0,2,76,10,0,CIC|AID,Python|Security|Blockchain,12,20,92
+564,1949014,Bhavana Nair,CSO,2019,2023,Cisco,Engineer,3,1,Pune,2001413,IoT,Smart Cities,20,341,100,1,3,4.5,2,2,0,0,2,85,8,0,CSO|EEE,Python|IoT|Sensors|Edge,12,14,82
+565,1905015,Ashok Kumar,CSE,2019,2023,SAP,Senior Engineer,3,1,Chennai,1780376,Cloud Engineering,AWS,23,228,169,1,3,4.5,1,2,0,0,2,92,8,0,CSE|AIML,Python|Java|React|AWS,5,8,83
+566,1902016,Archana Gupta,EEE,2019,2023,Alstom,Software Engineer,3,1,Delhi,1837408,Renewable,Solar,16,303,30,1,5,4.2,4,2,0,0,3,86,10,0,EEE|MEC,MATLAB|Power Systems|PLC,5,14,94
+567,1942017,Harini Gopal,CSM,2019,2023,Apple,Software Engineer,3,1,Noida,1645367,AI,NLP,21,581,115,0,0,0.0,0,0,1,0,0,87,9,1,CSM|CSO,Python|ML|TensorFlow|PyTorch,12,0,98
+568,1912018,Anand Nair,IT,2019,2023,HashiCorp,Senior Engineer,3,1,Delhi,2178914,Cloud Engineering,Azure,21,326,187,0,0,0.0,0,0,0,0,13,71,9,0,IT|CIC,Python|Kubernetes|Docker|AWS,3,0,86
+569,1947019,Amit Kumar,CIC,2019,2023,Check Point,Engineer,3,1,Delhi,1819435,Cyber Security,Threat Intelligence,22,242,82,1,2,4.1,2,3,0,0,3,86,7,0,CIC|IT,Python|Security|Blockchain,4,16,99
+570,1942020,Karthik Murthy,CSM,2019,2023,IBM Research,Senior Engineer,3,1,Bangalore,1966619,AI,Computer Vision,20,548,69,1,3,4.9,1,2,2,0,0,84,6,0,CSM|ECE,Python|ML|TensorFlow|PyTorch,6,10,99
+571,1905021,Naresh Prasad,CSE,2019,2023,PhonePe,Software Engineer,3,1,Gurugram,2067215,Software Engineering,Full Stack,19,347,121,1,3,4.6,3,0,0,0,7,82,6,1,CSE|EEE,Python|Java|React|AWS,5,20,87
+572,1901022,Padma Murthy,CIV,2019,2023,KBR,Engineer,3,1,Bangalore,2389652,Structural Design,Buildings,18,534,71,0,0,0.0,0,0,0,0,3,88,9,1,CIV|MEC,AutoCAD|Staad Pro|Revit,8,0,99
+573,1954023,Harini Singh,AID,2019,2023,Spotify,Software Engineer,3,1,Chennai,2035655,Data Science,Analytics,25,527,236,0,0,0.0,0,0,1,0,3,79,8,0,AID|CSE,Python|Data Science|SQL|ML,3,0,88
+574,1901024,Shalini Menon,CIV,2019,2023,KBR,Engineer,3,1,Hyderabad,2142743,Structural Design,Buildings,21,479,97,1,2,4.6,2,1,0,0,1,94,6,1,CIV|AID,AutoCAD|Staad Pro|Revit,6,10,82
+575,1905025,Padma Kumar,CSE,2019,2023,SAP,Software Engineer,3,1,Delhi,1629042,Cloud Engineering,AWS,19,520,240,0,0,0.0,0,0,0,0,8,69,6,1,CSE|CIV,Python|Java|React|AWS,7,0,85
+576,1904026,Padma Singh,ECE,2019,2023,Qualcomm,Senior Engineer,3,1,Pune,1917825,Wireless,5G,22,462,46,1,5,5.0,3,3,0,0,1,70,10,0,ECE|ECE,C|Verilog|VLSI|Embedded,8,10,96
+577,1902027,Gopal Reddy,EEE,2019,2023,L&T,Software Engineer,3,1,Gurugram,2248712,Power Systems,Grid,21,333,48,1,3,4.9,4,3,0,0,2,92,10,0,EEE|CSO,MATLAB|Power Systems|PLC,10,10,88
+578,1947028,Harini Murthy,CIC,2019,2023,Fortinet,Senior Engineer,3,1,Gurugram,1606461,Blockchain,Smart Contracts,21,405,46,1,4,4.0,0,3,0,0,0,95,9,0,CIC|CIV,Python|Security|Blockchain,4,8,95
+579,1904029,Srikanth Krishnan,ECE,2019,2023,ST Microelectronics,Senior Engineer,3,1,Hyderabad,1689366,Hardware Design,VLSI,17,319,80,1,1,5.0,4,1,0,0,2,65,8,1,ECE|AID,C|Verilog|VLSI|Embedded,5,18,98
+580,1954030,Shweta Naidu,AID,2019,2023,Tiger Analytics,Software Engineer,3,1,Pune,1682153,Data Science,ML Engineering,17,532,127,0,0,0.0,0,0,0,0,3,83,7,0,AID|CIC,Python|Data Science|SQL|ML,5,0,83
+581,1901031,Saranya Nair,CIV,2019,2023,NBCC,Senior Engineer,3,1,Noida,2145505,Infrastructure,Roads,13,535,31,1,4,4.8,0,0,0,0,3,84,8,0,CIV|CSM,AutoCAD|Staad Pro|Revit,7,20,99
+582,1947032,Sneha Krishnan,CIC,2019,2023,McAfee,Software Engineer,3,1,Delhi,1755345,Blockchain,Smart Contracts,18,308,84,1,4,4.2,2,1,0,0,1,82,7,1,CIC|EEE,Python|Security|Blockchain,7,20,87
+583,1954033,Kishore Mohan,AID,2019,2023,Twitter,Senior Engineer,3,1,Gurugram,2327869,Data Science,ML Engineering,15,313,285,0,0,0.0,0,0,1,0,2,84,10,1,AID|MEC,Python|Data Science|SQL|ML,5,0,83
+584,1961034,Ganesh Reddy,AIML,2019,2023,Microsoft,Software Engineer,3,1,Delhi,2170121,AI,NLP,18,444,190,1,5,4.3,3,0,0,0,2,75,8,1,AIML|IT,Python|Deep Learning|PyTorch,0,8,96
+585,1902035,Priya Pillai,EEE,2019,2023,SolarEdge,Software Engineer,3,1,Bangalore,2023951,Renewable,Solar,12,559,37,0,0,0.0,0,0,0,0,3,81,9,0,EEE|ECE,MATLAB|Power Systems|PLC,5,0,89
+586,1903036,Manoj Singh,MEC,2019,2023,Eicher,Engineer,3,1,Pune,2193245,Aerospace,Design,19,468,42,0,0,0.0,0,0,0,0,2,88,10,0,MEC|IT,SolidWorks|CATIA|ANSYS,4,0,97
+587,1912037,Naveen Krishnan,IT,2019,2023,TCS,Engineer,3,1,Mumbai,2172575,Cloud Engineering,Azure,16,465,92,0,0,0.0,0,0,0,1,6,72,10,1,IT|IT,Python|Kubernetes|Docker|AWS,4,0,91
+588,1949038,Mythili Sharma,CSO,2019,2023,GE,Engineer,3,1,Mumbai,2305568,IoT,Smart Cities,23,424,79,1,4,4.4,2,0,0,0,1,85,10,1,CSO|CIV,Python|IoT|Sensors|Edge,8,20,99
+589,1947039,Harini Rao,CIC,2019,2023,Qualys,Software Engineer,3,1,Gurugram,2114064,Blockchain,Smart Contracts,16,508,46,1,2,4.3,4,1,0,0,3,70,8,1,CIC|MEC,Python|Security|Blockchain,0,8,83
+590,1954040,Shweta Pillai,AID,2019,2023,Twitter,Engineer,3,1,Noida,1750126,Data Science,Analytics,13,343,159,0,0,0.0,0,0,2,0,1,87,6,0,AID|CIV,Python|Data Science|SQL|ML,10,0,84
+591,1954041,Santosh Rajan,AID,2019,2023,Mu Sigma,Software Engineer,3,1,Gurugram,2228337,Data Science,Analytics,14,582,176,0,0,0.0,0,0,1,0,1,76,10,1,AID|AID,Python|Data Science|SQL|ML,12,0,91
+592,1954042,Shalini Patel,AID,2019,2023,Tiger Analytics,Engineer,3,1,Hyderabad,1762585,Data Science,ML Engineering,24,211,188,1,1,4.2,0,3,2,0,2,65,7,1,AID|IT,Python|Data Science|SQL|ML,0,20,92
+593,1949043,Gopal Singh,CSO,2019,2023,Siemens,Software Engineer,3,1,Mumbai,1850363,IoT,Smart Cities,19,338,81,1,4,4.7,0,2,0,0,0,76,7,1,CSO|CIC,Python|IoT|Sensors|Edge,10,10,98
+594,1901044,Sanjay Sundaram,CIV,2019,2023,KBR,Software Engineer,3,1,Bangalore,1652067,Structural Design,Buildings,14,549,0,0,0,0.0,0,0,0,0,0,84,7,0,CIV|ECE,AutoCAD|Staad Pro|Revit,7,0,92
+595,1901045,Akshara Krishna,CIV,2019,2023,Tata Projects,Software Engineer,3,1,Mumbai,1720372,Structural Design,Buildings,13,560,22,1,5,4.7,3,3,0,0,1,95,6,1,CIV|AIML,AutoCAD|Staad Pro|Revit,8,12,89
+596,1961046,Ramesh Singh,AIML,2019,2023,Nvidia,Software Engineer,3,1,Noida,1798626,AI,NLP,20,518,265,1,1,4.7,1,3,0,0,1,83,9,0,AIML|CIV,Python|Deep Learning|PyTorch,12,16,89
+597,1949047,Kishore Murthy,CSO,2019,2023,Honeywell,Senior Engineer,3,1,Pune,2269649,IoT,Industrial,14,272,79,0,0,0.0,0,0,0,0,0,73,10,1,CSO|IT,Python|IoT|Sensors|Edge,3,0,96
+598,1902048,Prasad Menon,EEE,2019,2023,Schneider Electric,Senior Engineer,3,1,Bangalore,1908447,Renewable,Solar,17,516,12,1,3,4.3,1,2,0,0,3,80,6,1,EEE|MEC,MATLAB|Power Systems|PLC,6,14,82
+599,1954049,Vinay Sundaram,AID,2019,2023,Airbnb,Software Engineer,3,1,Noida,1666534,Data Science,ML Engineering,20,408,203,0,0,0.0,0,0,1,0,1,83,8,0,AID|CSO,Python|Data Science|SQL|ML,3,0,87
+600,1942050,Mythili Sundaram,CSM,2019,2023,Apple,Senior Engineer,3,1,Hyderabad,2082795,Data Science,ML,14,258,203,1,4,4.5,1,3,0,0,3,84,8,0,CSM|CIC,Python|ML|TensorFlow|PyTorch,4,12,82
+601,1949051,Krishna Reddy,CSO,2019,2023,Siemens,Senior Engineer,3,1,Chennai,1903362,Embedded IoT,Sensors,18,475,63,1,4,4.7,4,3,0,0,3,79,9,1,CSO|EEE,Python|IoT|Sensors|Edge,8,16,84
+602,1903052,Lakshmi Krishnan,MEC,2019,2023,Eicher,Software Engineer,3,1,Gurugram,2117410,Manufacturing,CAD/CAM,16,556,100,1,3,4.4,0,0,0,0,3,92,7,0,MEC|MEC,SolidWorks|CATIA|ANSYS,3,16,95
+603,1961053,Meena Krishna,AIML,2019,2023,Waymo,Engineer,3,1,Noida,1921273,Research,Neural Networks,20,393,277,0,0,0.0,0,0,1,0,2,79,8,0,AIML|ECE,Python|Deep Learning|PyTorch,8,0,99
+604,1904054,Santosh Varma,ECE,2019,2023,Renesas,Engineer,3,1,Hyderabad,2017653,Wireless,5G,19,375,24,1,5,4.5,4,3,0,1,0,82,9,0,ECE|ECE,C|Verilog|VLSI|Embedded,0,10,93
+605,1954055,Sanjay Shetty,AID,2019,2023,Gramener,Senior Engineer,3,1,Gurugram,1630738,Data Science,Analytics,24,215,74,1,4,4.9,0,3,2,0,2,74,7,0,AID|IT,Python|Data Science|SQL|ML,5,8,84
+606,1949056,Madhavi Rao,CSO,2019,2023,LG Soft,Engineer,3,1,Pune,1909880,Edge Computing,IoT,25,273,44,1,5,4.4,1,0,0,0,0,73,6,0,CSO|CIC,Python|IoT|Sensors|Edge,8,20,95
+607,1947057,Anand Balaji,CIC,2019,2023,Qualys,Software Engineer,3,1,Gurugram,1732206,Security,Pentesting,18,385,74,1,4,4.3,1,3,0,0,3,76,9,0,CIC|ECE,Python|Security|Blockchain,4,18,84
+608,1912058,Ajay Iyer,IT,2019,2023,Infosys,Software Engineer,3,1,Chennai,2390687,System Administration,Linux,23,330,179,1,1,4.4,4,2,0,0,14,91,8,0,IT|CSM,Python|Kubernetes|Docker|AWS,12,14,87
+609,1942059,Harish Swamy,CSM,2019,2023,Nvidia,Software Engineer,3,1,Pune,1638092,AI Research,Machine Learning,18,368,108,0,0,0.0,0,0,2,0,1,81,10,0,CSM|CSM,Python|ML|TensorFlow|PyTorch,8,0,86
+610,1903060,Madhavi Swamy,MEC,2019,2023,Ashok Leyland,Engineer,3,1,Chennai,1794979,Automotive,Powertrain,25,570,30,1,1,4.5,4,1,0,0,3,84,7,0,MEC|CIV,SolidWorks|CATIA|ANSYS,6,20,87
+611,1942061,Mahesh Ramani,CSM,2019,2023,Nvidia,Engineer,3,1,Delhi,2061536,AI,Computer Vision,24,375,130,1,4,4.0,4,2,1,0,0,70,9,0,CSM|CSE,Python|ML|TensorFlow|PyTorch,4,10,97
+612,1942062,Madhavi Verma,CSM,2019,2023,Google AI,Software Engineer,3,1,Delhi,2363306,Data Science,ML,19,232,235,1,3,4.9,0,1,2,0,0,66,10,1,CSM|CSM,Python|ML|TensorFlow|PyTorch,0,18,91
+613,1947063,Pooja Kumar,CIC,2019,2023,Fortinet,Engineer,3,1,Gurugram,2364638,Cyber Security,Threat Intelligence,14,552,73,1,2,4.7,0,2,0,0,3,85,9,1,CIC|CIC,Python|Security|Blockchain,0,14,83
+614,1954064,Keerthi Reddy,AID,2019,2023,Google,Engineer,3,1,Pune,1619378,Data Engineering,Pipelines,21,452,233,1,1,4.5,0,1,0,0,2,82,10,0,AID|AIML,Python|Data Science|SQL|ML,0,18,88
+615,1912065,Mahesh Menon,IT,2019,2023,Atlassian,Engineer,3,1,Pune,2261549,System Administration,Linux,12,291,109,1,2,4.4,0,2,0,0,0,80,9,0,IT|CIV,Python|Kubernetes|Docker|AWS,6,10,94
+616,1912066,Gopal Prasad,IT,2019,2023,HashiCorp,Engineer,3,1,Bangalore,2152719,Database,Oracle,21,495,193,0,0,0.0,0,0,0,0,10,93,9,0,IT|CSO,Python|Kubernetes|Docker|AWS,5,0,98
+617,1949067,Ramesh Subramanian,CSO,2019,2023,Schneider,Senior Engineer,3,1,Delhi,2086489,Embedded IoT,Sensors,18,548,86,0,0,0.0,0,0,0,0,0,66,10,0,CSO|MEC,Python|IoT|Sensors|Edge,4,0,88
+618,1903068,Amit Naidu,MEC,2019,2023,Hero,Engineer,3,1,Chennai,1881757,Aerospace,Design,20,353,84,1,5,4.6,3,2,0,0,3,85,10,1,MEC|MEC,SolidWorks|CATIA|ANSYS,7,12,90
+619,1905069,Prasad Mohan,CSE,2019,2023,Nutanix,Engineer,3,1,Hyderabad,1691038,Software Engineering,Full Stack,14,281,199,1,2,4.9,0,1,0,0,8,91,7,1,CSE|ECE,Python|Java|React|AWS,6,14,94
+620,1905070,Ravi Murthy,CSE,2019,2023,Workday,Senior Engineer,3,1,Hyderabad,2093003,Data Engineering,BigData,14,586,237,0,0,0.0,0,0,0,0,10,70,7,0,CSE|AIML,Python|Java|React|AWS,3,0,92
+621,1903071,Anu Sharma,MEC,2019,2023,Caterpillar,Software Engineer,3,1,Mumbai,1800132,Robotics,Industrial,13,384,92,1,3,4.2,3,3,0,0,2,91,8,1,MEC|MEC,SolidWorks|CATIA|ANSYS,7,16,93
+622,1954072,Rekha Subramanian,AID,2019,2023,Airbnb,Engineer,3,1,Hyderabad,2308420,Data Engineering,Pipelines,13,242,162,1,3,4.7,3,2,2,0,1,69,9,1,AID|CSE,Python|Data Science|SQL|ML,4,10,93
+623,1904073,Vasudha Sharma,ECE,2019,2023,Renesas,Engineer,3,1,Hyderabad,1604983,Hardware Design,VLSI,16,270,75,1,1,4.2,4,1,0,1,2,80,10,1,ECE|CSE,C|Verilog|VLSI|Embedded,7,18,93
+624,1902074,Vivek Kumar,EEE,2019,2023,Hitachi,Engineer,3,1,Delhi,2324141,Control Systems,Industrial,19,514,17,1,4,5.0,3,0,0,0,0,93,6,1,EEE|AID,MATLAB|Power Systems|PLC,12,10,98
+625,1947075,Anu Ramani,CIC,2019,2023,Cisco,Senior Engineer,3,1,Hyderabad,1748388,Blockchain,Smart Contracts,18,569,95,1,2,4.6,4,2,0,0,3,89,7,1,CIC|AIML,Python|Security|Blockchain,12,10,95
+626,1949076,Nithya Iyer,CSO,2019,2023,IBM,Software Engineer,3,1,Pune,2186114,Embedded IoT,Sensors,23,291,51,1,2,4.3,2,1,0,0,0,73,8,0,CSO|ECE,Python|IoT|Sensors|Edge,10,12,98
+627,1912077,Shalini Mohan,IT,2019,2023,Google,Software Engineer,3,1,Hyderabad,1680612,Networking,SDN,16,385,85,1,4,4.1,0,3,0,0,14,86,6,0,IT|CIC,Python|Kubernetes|Docker|AWS,6,16,89
+628,1947078,Vidya Singh,CIC,2019,2023,FireEye,Engineer,3,1,Pune,2131054,Cyber Security,Threat Intelligence,25,226,83,1,5,4.5,2,1,0,0,2,82,8,1,CIC|CSE,Python|Security|Blockchain,8,8,98
+629,1942079,Deepak Sundaram,CSM,2019,2023,Apple,Engineer,3,1,Mumbai,1982813,AI,Computer Vision,24,493,240,1,1,4.4,4,0,0,0,2,68,9,0,CSM|AIML,Python|ML|TensorFlow|PyTorch,12,12,83
+630,1961080,Divya Pillai,AIML,2019,2023,DeepMind,Software Engineer,3,1,Gurugram,2152723,ML Engineering,MLOps,20,486,275,1,3,4.4,0,1,2,0,2,69,10,1,AIML|CIC,Python|Deep Learning|PyTorch,6,10,94
+631,1942081,Vidya Sharma,CSM,2019,2023,Waymo,Senior Engineer,3,1,Mumbai,2335452,AI,Computer Vision,13,299,248,0,0,0.0,0,0,2,0,1,77,8,0,CSM|IT,Python|ML|TensorFlow|PyTorch,7,0,99
+632,1954082,Anand Srinivas,AID,2019,2023,Twitter,Engineer,3,1,Pune,2114387,Data Engineering,Pipelines,14,519,70,0,0,0.0,0,0,2,0,3,74,8,1,AID|CIC,Python|Data Science|SQL|ML,0,0,93
+633,1905083,Santosh Varma,CSE,2019,2023,Salesforce,Software Engineer,3,1,Noida,1805264,Cloud Engineering,AWS,19,431,77,0,0,0.0,0,0,0,0,1,81,8,1,CSE|CSM,Python|Java|React|AWS,7,0,91
+634,1912084,Ganesh Reddy,IT,2019,2023,IBM,Software Engineer,3,1,Hyderabad,1736443,System Administration,Linux,25,358,166,1,2,4.7,0,2,0,0,11,83,9,0,IT|MEC,Python|Kubernetes|Docker|AWS,6,12,82
+635,1903085,Harini Naidu,MEC,2019,2023,Hero,Engineer,3,1,Gurugram,1806724,Robotics,Industrial,18,471,84,0,0,0.0,0,0,0,0,3,92,6,0,MEC|ECE,SolidWorks|CATIA|ANSYS,6,0,82
+636,1912086,Madhavi Kumar,IT,2019,2023,Capgemini,Senior Engineer,3,1,Noida,1754979,Database,Oracle,12,463,186,0,0,0.0,0,0,0,0,2,92,8,1,IT|CSM,Python|Kubernetes|Docker|AWS,10,0,98
+637,1954087,Ashok Ramani,AID,2019,2023,LatentView,Engineer,3,1,Chennai,1964366,Data Science,Analytics,18,208,68,0,0,0.0,0,0,0,0,3,88,7,0,AID|AIML,Python|Data Science|SQL|ML,6,0,98
+638,1901088,Ramesh Rao,CIV,2019,2023,Arup,Software Engineer,3,1,Mumbai,1940720,Structural Design,Buildings,17,565,32,1,4,5.0,0,1,0,0,3,88,6,0,CIV|CSE,AutoCAD|Staad Pro|Revit,4,24,88
+639,1961089,Akshara Prasad,AIML,2019,2023,OpenAI,Engineer,3,1,Noida,2323127,ML Engineering,MLOps,23,576,248,0,0,0.0,0,0,1,0,1,73,7,0,AIML|ECE,Python|Deep Learning|PyTorch,5,0,95
+640,1903090,Bhavana Ramani,MEC,2019,2023,Ashok Leyland,Senior Engineer,3,1,Chennai,2021721,Manufacturing,CAD/CAM,22,570,24,0,0,0.0,0,0,0,0,0,66,8,0,MEC|CSE,SolidWorks|CATIA|ANSYS,6,0,82
+641,1947091,Harish Krishnan,CIC,2019,2023,Qualys,Senior Engineer,3,1,Delhi,2257662,Security,Pentesting,23,229,25,0,0,0.0,0,0,0,0,2,92,7,1,CIC|CSE,Python|Security|Blockchain,10,0,87
+642,1947092,Gopal Rao,CIC,2019,2023,Rapid7,Senior Engineer,3,1,Gurugram,1741837,Blockchain,Smart Contracts,22,419,3,1,5,5.0,1,3,0,0,1,72,10,0,CIC|MEC,Python|Security|Blockchain,3,14,93
+643,1902093,Ramya Gupta,EEE,2019,2023,Honeywell,Senior Engineer,3,1,Noida,2061010,Automation,PLC,15,205,28,0,0,0.0,0,0,0,0,1,86,8,1,EEE|MEC,MATLAB|Power Systems|PLC,4,0,90
+644,1904094,Vivek Verma,ECE,2019,2023,Texas Instruments,Senior Engineer,3,1,Gurugram,1629106,Embedded,IoT,13,508,94,1,3,4.9,2,3,0,0,3,87,6,0,ECE|AID,C|Verilog|VLSI|Embedded,10,18,94
+645,1905095,Mohan Mohan,CSE,2019,2023,IBM,Software Engineer,3,1,Pune,1836433,Software Engineering,Backend,20,559,67,1,3,4.2,3,1,0,0,13,69,9,1,CSE|AIML,Python|Java|React|AWS,5,12,84
+646,1961096,Anu Krishnan,AIML,2019,2023,Google,Senior Engineer,3,1,Pune,2303315,Research,Neural Networks,15,244,246,1,3,4.5,1,2,2,0,0,81,6,0,AIML|MEC,Python|Deep Learning|PyTorch,5,18,95
+647,1942097,Suresh Reddy,CSM,2019,2023,Microsoft Research,Engineer,3,1,Chennai,2336338,AI,Computer Vision,25,282,212,0,0,0.0,0,0,2,0,0,92,8,1,CSM|EEE,Python|ML|TensorFlow|PyTorch,0,0,83
+648,1954098,Priya Sundaram,AID,2019,2023,Tiger Analytics,Engineer,3,1,Gurugram,1954557,Data Science,Analytics,25,517,102,1,2,4.2,1,0,1,0,3,75,9,1,AID|MEC,Python|Data Science|SQL|ML,3,14,88
+649,1912099,Pooja Singh,IT,2019,2023,HCL,Software Engineer,3,1,Delhi,2373659,System Administration,Linux,24,527,138,1,3,4.8,2,1,0,0,3,93,9,0,IT|CSE,Python|Kubernetes|Docker|AWS,0,8,86
+650,1954100,Anand Naidu,AID,2019,2023,Swiggy,Engineer,3,1,Delhi,1923052,Data Science,ML Engineering,20,508,255,1,3,4.3,0,2,1,0,1,89,9,1,AID|CIC,Python|Data Science|SQL|ML,4,10,94
+651,1903101,Ravi Swamy,MEC,2019,2023,Volvo,Software Engineer,3,1,Pune,2260797,Aerospace,Design,17,498,9,0,0,0.0,0,0,0,1,2,75,6,1,MEC|EEE,SolidWorks|CATIA|ANSYS,0,0,82
+652,1942102,Akshara Balaji,CSM,2019,2023,Amazon,Senior Engineer,3,1,Pune,2096965,Data Science,ML,16,286,152,1,3,4.2,3,2,2,0,2,93,10,0,CSM|EEE,Python|ML|TensorFlow|PyTorch,7,16,97
+653,1912103,Priya Shetty,IT,2019,2023,Google,Software Engineer,3,1,Mumbai,2179599,System Administration,Linux,14,518,74,1,4,4.7,0,1,0,0,15,74,6,1,IT|CSO,Python|Kubernetes|Docker|AWS,12,14,92
+654,1942104,Anu Bhat,CSM,2019,2023,DeepMind,Software Engineer,3,1,Bangalore,2344079,AI,Computer Vision,14,470,230,0,0,0.0,0,0,0,0,2,95,7,0,CSM|CSM,Python|ML|TensorFlow|PyTorch,4,0,96
+655,1905105,Harish Ramani,CSE,2019,2023,Oracle,Software Engineer,3,1,Bangalore,2248747,Software Engineering,Backend,25,461,127,0,0,0.0,0,0,0,0,6,72,9,0,CSE|AIML,Python|Java|React|AWS,6,0,98
+656,1901106,Sanjay Gupta,CIV,2019,2023,NCC,Software Engineer,3,1,Bangalore,2355365,Infrastructure,Roads,23,483,18,0,0,0.0,0,0,0,0,3,90,9,0,CIV|ECE,AutoCAD|Staad Pro|Revit,12,0,94
+657,1901107,Keerthi Desai,CIV,2019,2023,Afcons,Engineer,3,1,Delhi,2038312,Infrastructure,Roads,23,547,66,1,2,4.5,2,3,0,0,2,84,6,1,CIV|AIML,AutoCAD|Staad Pro|Revit,12,8,91
+658,1947108,Karthik Swamy,CIC,2019,2023,Rapid7,Engineer,3,1,Delhi,1875189,Cyber Security,Threat Intelligence,19,506,40,0,0,0.0,0,0,0,0,2,65,7,0,CIC|CSO,Python|Security|Blockchain,5,0,88
+659,1902109,Mohan Swamy,EEE,2019,2023,Havells,Senior Engineer,3,1,Pune,1644792,Power Systems,Grid,21,381,83,1,2,4.8,0,2,0,0,1,72,7,0,EEE|CSO,MATLAB|Power Systems|PLC,12,16,84
+660,1905110,Keerthi Desai,CSE,2019,2023,Intel,Software Engineer,3,1,Gurugram,1650250,Cloud Engineering,AWS,21,555,183,1,4,4.5,0,3,0,0,6,84,6,1,CSE|CSO,Python|Java|React|AWS,12,12,92
+661,1903111,Anand Iyer,MEC,2019,2023,GM,Software Engineer,3,1,Bangalore,1635744,Robotics,Industrial,19,337,4,1,2,4.4,2,3,0,0,0,75,6,1,MEC|CSE,SolidWorks|CATIA|ANSYS,10,12,96
+662,1947112,Ganesh Gupta,CIC,2019,2023,Rapid7,Software Engineer,3,1,Gurugram,1916862,Blockchain,Smart Contracts,19,325,26,0,0,0.0,0,0,0,0,1,83,6,0,CIC|AIML,Python|Security|Blockchain,4,0,94
+663,1903113,Swathi Gupta,MEC,2019,2023,Honda,Engineer,3,1,Chennai,2383179,Robotics,Industrial,19,430,60,1,4,4.6,4,2,0,0,0,73,9,0,MEC|IT,SolidWorks|CATIA|ANSYS,3,18,94
+664,1961114,Shalini Desai,AIML,2019,2023,Waymo,Senior Engineer,3,1,Pune,2156387,AI,Deep Learning,13,202,258,1,1,4.2,4,2,2,0,2,77,10,0,AIML|CSE,Python|Deep Learning|PyTorch,5,8,93
+665,1905115,Ajay Verma,CSE,2019,2023,Citrix,Senior Engineer,3,1,Hyderabad,2294556,Data Engineering,BigData,17,526,138,1,4,4.8,4,0,0,0,9,85,8,0,CSE|CSM,Python|Java|React|AWS,6,10,89
+666,1905116,Naveen Sundaram,CSE,2019,2023,ServiceNow,Software Engineer,3,1,Delhi,2013437,Software Engineering,Backend,13,548,214,1,4,4.4,3,1,0,0,13,93,9,1,CSE|CSO,Python|Java|React|AWS,7,14,95
+667,1947117,Vasudha Naidu,CIC,2019,2023,Check Point,Engineer,3,1,Bangalore,2093559,Blockchain,Smart Contracts,24,395,19,0,0,0.0,0,0,0,0,1,88,7,0,CIC|CIC,Python|Security|Blockchain,7,0,82
+668,1903118,Deepak Krishna,MEC,2019,2023,Tata Motors,Senior Engineer,3,1,Pune,2204736,Robotics,Industrial,14,231,85,1,4,4.1,1,1,0,0,3,73,10,0,MEC|MEC,SolidWorks|CATIA|ANSYS,5,12,83
+669,1954119,Padma Rao,AID,2019,2023,LinkedIn,Senior Engineer,3,1,Bangalore,2231330,Data Science,Analytics,12,445,156,1,3,4.1,4,1,0,0,2,80,8,1,AID|CSM,Python|Data Science|SQL|ML,3,20,88
+670,1902120,Ajay Murthy,EEE,2019,2023,Vestas,Senior Engineer,3,1,Gurugram,1933498,Power Systems,Grid,12,544,64,0,0,0.0,0,0,0,0,3,88,9,1,EEE|CSO,MATLAB|Power Systems|PLC,12,0,94
+671,1903121,Rahul Menon,MEC,2019,2023,Hero,Senior Engineer,3,1,Gurugram,2017565,Automotive,Powertrain,18,456,98,1,5,4.3,4,1,0,0,0,68,8,1,MEC|CSO,SolidWorks|CATIA|ANSYS,0,10,91
+672,1903122,Lavanya Desai,MEC,2019,2023,Ashok Leyland,Software Engineer,3,1,Pune,2091134,Robotics,Industrial,18,233,59,1,5,4.8,4,0,0,0,2,76,8,0,MEC|EEE,SolidWorks|CATIA|ANSYS,7,14,92
+673,1954123,Arun Bhat,AID,2019,2023,LinkedIn,Engineer,3,1,Mumbai,2006708,Data Science,Analytics,23,439,101,0,0,0.0,0,0,0,0,3,72,6,0,AID|ECE,Python|Data Science|SQL|ML,8,0,91
+674,1905124,Meena Murthy,CSE,2019,2023,Freshworks,Software Engineer,3,1,Gurugram,2254088,Data Engineering,BigData,14,293,235,1,1,4.9,0,2,0,0,4,75,6,1,CSE|CSM,Python|Java|React|AWS,6,24,84
+675,1942125,Pooja Rajan,CSM,2019,2023,Amazon,Software Engineer,3,1,Pune,1869615,AI,NLP,19,238,273,0,0,0.0,0,0,2,1,2,74,6,1,CSM|CSE,Python|ML|TensorFlow|PyTorch,5,0,87
+676,1902126,Madhavi Iyer,EEE,2019,2023,Alstom,Software Engineer,3,1,Mumbai,2107181,Renewable,Solar,24,299,80,0,0,0.0,0,0,0,0,3,92,9,0,EEE|ECE,MATLAB|Power Systems|PLC,4,0,94
+677,1947127,Nithya Swamy,CIC,2019,2023,FireEye,Senior Engineer,3,1,Delhi,1821477,Cyber Security,Threat Intelligence,22,222,91,1,3,4.8,3,0,0,0,1,73,10,0,CIC|IT,Python|Security|Blockchain,6,10,88
+678,1901128,Rekha Rao,CIV,2019,2023,Fluor,Senior Engineer,3,1,Chennai,1892524,Infrastructure,Roads,25,414,14,0,0,0.0,0,0,0,0,3,72,10,1,CIV|AID,AutoCAD|Staad Pro|Revit,10,0,91
+679,1954129,Shalini Singh,AID,2019,2023,Mu Sigma,Engineer,3,1,Noida,2351097,Data Science,Analytics,24,249,182,0,0,0.0,0,0,0,0,2,84,6,1,AID|EEE,Python|Data Science|SQL|ML,8,0,92
+680,1904130,Vinay Singh,ECE,2019,2023,ST Microelectronics,Software Engineer,3,1,Mumbai,2261608,IC Design,Analog,16,482,22,1,5,4.9,0,0,0,0,2,93,7,0,ECE|AID,C|Verilog|VLSI|Embedded,12,18,96
+681,1954131,Manoj Rao,AID,2019,2023,Twitter,Software Engineer,3,1,Pune,1874926,Data Science,ML Engineering,25,443,186,1,1,4.7,3,2,1,0,3,68,6,1,AID|CSM,Python|Data Science|SQL|ML,5,20,96
+682,1901132,Nithya Swamy,CIV,2019,2023,L&T,Senior Engineer,3,1,Pune,1759977,Infrastructure,Roads,14,451,69,1,1,4.7,1,3,0,0,3,85,7,1,CIV|CSM,AutoCAD|Staad Pro|Revit,12,20,96
+683,1954133,Bhavana Reddy,AID,2019,2023,Airbnb,Senior Engineer,3,1,Gurugram,1762443,Data Science,ML Engineering,14,472,220,1,5,4.5,0,0,2,0,3,81,9,1,AID|AID,Python|Data Science|SQL|ML,3,8,86
+684,1903134,Vinay Sharma,MEC,2019,2023,Honeywell,Software Engineer,3,1,Pune,2292818,Aerospace,Design,22,402,53,0,0,0.0,0,0,0,0,1,87,7,0,MEC|CSM,SolidWorks|CATIA|ANSYS,0,0,96
+685,1912135,Ravi Krishna,IT,2019,2023,Cognizant,Software Engineer,3,1,Noida,2117378,Cloud Engineering,Azure,12,410,160,1,4,4.4,3,3,0,1,14,85,10,1,IT|ECE,Python|Kubernetes|Docker|AWS,6,10,85
+686,1912136,Venkat Rao,IT,2019,2023,Accenture,Engineer,3,1,Delhi,2228025,System Administration,Linux,25,401,222,1,3,4.2,4,2,0,1,3,72,9,0,IT|CIV,Python|Kubernetes|Docker|AWS,7,16,92
+687,1901137,Vasudha Rajan,CIV,2019,2023,AECOM,Senior Engineer,3,1,Bangalore,2175269,Infrastructure,Roads,17,481,1,1,5,4.2,3,3,0,1,3,68,8,1,CIV|ECE,AutoCAD|Staad Pro|Revit,10,18,84
+688,1949138,Naresh Srinivas,CSO,2019,2023,Siemens,Senior Engineer,3,1,Gurugram,2073621,IoT,Smart Cities,19,390,33,1,4,4.8,0,2,0,0,1,65,8,1,CSO|CIV,Python|IoT|Sensors|Edge,10,20,90
+689,1912139,Mohan Pillai,IT,2019,2023,Amazon,Software Engineer,3,1,Hyderabad,2395004,Database,Oracle,12,219,208,1,1,4.6,4,2,0,0,14,69,7,0,IT|CSE,Python|Kubernetes|Docker|AWS,3,14,94
+690,1902140,Bhavana Kumar,EEE,2019,2023,ABB,Software Engineer,3,1,Pune,2161463,Control Systems,Industrial,13,334,91,1,3,4.4,2,1,0,0,2,76,10,1,EEE|CSE,MATLAB|Power Systems|PLC,8,8,88
+691,1954141,Priya Kumar,AID,2019,2023,Swiggy,Engineer,3,1,Delhi,1685284,Data Science,Analytics,20,301,217,0,0,0.0,0,0,0,0,2,74,9,1,AID|IT,Python|Data Science|SQL|ML,6,0,98
+692,1912142,Venkat Reddy,IT,2019,2023,Wipro,Senior Engineer,3,1,Noida,1961761,System Administration,Linux,13,352,253,1,2,4.1,2,2,0,0,10,85,8,1,IT|AIML,Python|Kubernetes|Docker|AWS,6,10,92
+693,1901143,Ravi Rao,CIV,2019,2023,Fluor,Engineer,3,1,Bangalore,1845620,Infrastructure,Roads,21,215,80,0,0,0.0,0,0,0,0,2,67,8,1,CIV|EEE,AutoCAD|Staad Pro|Revit,4,0,86
+694,1904144,Rajesh Gopal,ECE,2019,2023,Analog Devices,Software Engineer,3,1,Mumbai,1746147,Hardware Design,VLSI,22,563,56,1,1,4.1,2,2,0,1,1,68,9,0,ECE|AID,C|Verilog|VLSI|Embedded,0,24,84
+695,1954145,Rahul Balaji,AID,2019,2023,Uber,Software Engineer,3,1,Mumbai,1949884,Data Engineering,Pipelines,19,286,130,0,0,0.0,0,0,2,0,2,90,9,1,AID|CSE,Python|Data Science|SQL|ML,12,0,94
+696,1905146,Meena Mohan,CSE,2019,2023,Intel,Senior Engineer,3,1,Delhi,2085635,Software Engineering,Backend,24,353,134,0,0,0.0,0,0,0,0,3,88,8,0,CSE|AIML,Python|Java|React|AWS,0,0,96
+697,1902147,Meena Rao,EEE,2019,2023,Eaton,Senior Engineer,3,1,Noida,2035295,Power Systems,Grid,23,398,72,0,0,0.0,0,0,0,0,0,80,7,1,EEE|EEE,MATLAB|Power Systems|PLC,3,0,82
+698,1961148,Deepak Prasad,AIML,2019,2023,Apple,Software Engineer,3,1,Gurugram,1813373,AI,NLP,22,416,211,0,0,0.0,0,0,0,0,2,74,9,1,AIML|AIML,Python|Deep Learning|PyTorch,12,0,83
+699,1961149,Sahana Patel,AIML,2019,2023,DeepMind,Software Engineer,3,1,Hyderabad,1623645,ML Engineering,MLOps,25,342,127,1,5,4.8,2,1,0,0,1,92,9,0,AIML|MEC,Python|Deep Learning|PyTorch,6,24,95
+700,1949150,Akshara Singh,CSO,2019,2023,Rockwell,Software Engineer,3,1,Noida,2091258,IoT,Industrial,13,562,87,1,2,4.1,3,2,0,0,2,92,7,0,CSO|CSE,Python|IoT|Sensors|Edge,5,10,99
+701,1961151,Kishore Verma,AIML,2019,2023,Anthropic,Engineer,3,1,Pune,1974651,Research,Neural Networks,13,499,159,1,2,4.6,2,2,2,0,1,86,8,0,AIML|EEE,Python|Deep Learning|PyTorch,10,24,92
+702,1903152,Ajay Verma,MEC,2019,2023,Volvo,Software Engineer,3,1,Delhi,2237273,Robotics,Industrial,15,501,94,1,2,4.6,0,1,0,0,2,72,7,1,MEC|IT,SolidWorks|CATIA|ANSYS,0,8,83
+703,1961153,Venkat Krishnan,AIML,2019,2023,Tesla,Engineer,3,1,Hyderabad,2278302,Research,Neural Networks,16,292,68,1,1,4.6,0,1,2,0,1,84,9,0,AIML|IT,Python|Deep Learning|PyTorch,3,12,84
+704,1901154,Deepak Shetty,CIV,2019,2023,AECOM,Engineer,3,1,Chennai,1955143,Structural Design,Buildings,15,366,59,1,5,4.5,1,2,0,0,0,66,8,1,CIV|CSE,AutoCAD|Staad Pro|Revit,4,14,83
+705,1901155,Lavanya Nair,CIV,2019,2023,Bechtel,Engineer,3,1,Chennai,1619958,Construction,Project Management,24,381,79,1,5,4.8,3,3,0,0,2,95,10,1,CIV|CIV,AutoCAD|Staad Pro|Revit,3,14,84
+706,1901156,Lavanya Pillai,CIV,2019,2023,Simplex,Engineer,3,1,Bangalore,2353367,Structural Design,Buildings,12,280,20,1,5,4.9,0,1,0,0,0,73,7,1,CIV|AID,AutoCAD|Staad Pro|Revit,5,16,85
+707,1912157,Vidya Subramanian,IT,2019,2023,Oracle,Engineer,3,1,Gurugram,2037743,Cloud Engineering,Azure,25,490,151,0,0,0.0,0,0,0,0,5,69,10,1,IT|MEC,Python|Kubernetes|Docker|AWS,7,0,94
+708,1961158,Mythili Sundaram,AIML,2019,2023,Anthropic,Software Engineer,3,1,Delhi,2252834,AI,NLP,14,435,110,0,0,0.0,0,0,0,0,1,79,6,0,AIML|AID,Python|Deep Learning|PyTorch,12,0,86
+709,1949159,Prakash Balaji,CSO,2019,2023,Tech Mahindra,Engineer,3,1,Pune,1882834,IoT,Industrial,24,307,3,1,1,4.6,2,0,0,0,2,81,9,0,CSO|MEC,Python|IoT|Sensors|Edge,3,8,83
+710,1954160,Anu Desai,AID,2019,2023,Airbnb,Senior Engineer,3,1,Gurugram,1934862,Data Science,ML Engineering,22,529,221,0,0,0.0,0,0,2,0,0,95,10,0,AID|AIML,Python|Data Science|SQL|ML,12,0,90
+711,1902161,Vivek Pillai,EEE,2019,2023,Eaton,Engineer,3,1,Mumbai,2276428,Renewable,Solar,20,385,91,1,1,4.2,4,0,0,0,2,69,8,1,EEE|CSO,MATLAB|Power Systems|PLC,7,10,99
+712,1942162,Gopal Patel,CSM,2019,2023,DeepMind,Software Engineer,3,1,Hyderabad,1642149,AI Research,Machine Learning,17,330,235,1,5,4.3,4,1,0,0,3,83,7,1,CSM|AIML,Python|ML|TensorFlow|PyTorch,4,12,83
+713,1942163,Sneha Rao,CSM,2019,2023,Apple,Software Engineer,3,1,Gurugram,1630077,AI,Computer Vision,14,401,125,1,4,4.2,4,2,0,0,1,80,7,0,CSM|CSE,Python|ML|TensorFlow|PyTorch,6,18,87
+714,1942164,Naveen Balaji,CSM,2019,2023,Tesla,Senior Engineer,3,1,Pune,2131915,AI Research,Machine Learning,24,518,136,0,0,0.0,0,0,1,0,0,93,9,0,CSM|EEE,Python|ML|TensorFlow|PyTorch,5,0,86
+715,1901165,Krishna Murthy,CIV,2019,2023,KBR,Engineer,3,1,Chennai,2222323,Construction,Project Management,16,544,29,1,1,4.8,3,0,0,0,0,66,6,1,CIV|CSE,AutoCAD|Staad Pro|Revit,10,12,99
+716,1954166,Naveen Swamy,AID,2019,2023,Airbnb,Senior Engineer,3,1,Chennai,2099452,Data Engineering,Pipelines,13,262,148,0,0,0.0,0,0,0,0,2,75,6,0,AID|IT,Python|Data Science|SQL|ML,7,0,87
+717,1947167,Sowmya Subramanian,CIC,2019,2023,Trend Micro,Engineer,3,1,Mumbai,2359784,Security,Pentesting,23,201,69,0,0,0.0,0,0,0,0,3,89,9,0,CIC|CIV,Python|Security|Blockchain,7,0,88
+718,1942168,Srikanth Kumar,CSM,2019,2023,Apple,Engineer,3,1,Bangalore,1606609,AI Research,Machine Learning,14,449,101,1,1,4.3,3,1,1,0,1,70,6,1,CSM|EEE,Python|ML|TensorFlow|PyTorch,8,24,94
+719,1902169,Akshara Shetty,EEE,2019,2023,Siemens,Senior Engineer,3,1,Hyderabad,2223903,Automation,PLC,22,583,65,0,0,0.0,0,0,0,0,1,80,10,0,EEE|CIV,MATLAB|Power Systems|PLC,6,0,83
+720,1902170,Vinay Sharma,EEE,2019,2023,Eaton,Senior Engineer,3,1,Gurugram,2357882,Power Systems,Grid,23,290,21,0,0,0.0,0,0,0,0,3,93,7,0,EEE|CIV,MATLAB|Power Systems|PLC,8,0,92
+721,1947171,Pooja Pillai,CIC,2019,2023,Rapid7,Engineer,3,1,Hyderabad,1626144,Security,Pentesting,25,484,70,0,0,0.0,0,0,0,0,1,86,9,0,CIC|CSO,Python|Security|Blockchain,7,0,92
+722,1902172,Krishna Naidu,EEE,2019,2023,Schneider Electric,Software Engineer,3,1,Pune,2245348,Automation,PLC,18,383,60,0,0,0.0,0,0,0,0,0,95,10,1,EEE|AID,MATLAB|Power Systems|PLC,0,0,85
+723,1905173,Prakash Desai,CSE,2019,2023,Freshworks,Engineer,3,1,Bangalore,2244943,DevOps,CI/CD,25,502,183,1,5,5.0,4,1,0,0,8,74,8,0,CSE|AID,Python|Java|React|AWS,7,16,90
+724,1961174,Krishna Menon,AIML,2019,2023,Tesla,Engineer,3,1,Noida,2179855,Research,Neural Networks,19,373,228,1,1,4.9,3,1,2,0,3,95,10,0,AIML|ECE,Python|Deep Learning|PyTorch,3,12,93
+725,1903175,Shweta Rajan,MEC,2019,2023,Siemens,Senior Engineer,3,1,Delhi,2322577,Aerospace,Design,13,299,5,0,0,0.0,0,0,0,0,0,80,10,1,MEC|AID,SolidWorks|CATIA|ANSYS,7,0,83
+726,1954176,Ajay Menon,AID,2019,2023,Gramener,Senior Engineer,3,1,Bangalore,1958170,Data Science,Analytics,20,257,154,0,0,0.0,0,0,0,0,0,81,10,0,AID|AID,Python|Data Science|SQL|ML,6,0,93
+727,1903177,Rajesh Iyer,MEC,2019,2023,Tata Motors,Senior Engineer,3,1,Noida,1767975,Robotics,Industrial,22,319,35,0,0,0.0,0,0,0,0,2,87,9,1,MEC|CIC,SolidWorks|CATIA|ANSYS,12,0,88
+728,1902178,Anu Singh,EEE,2019,2023,Mitsubishi Electric,Engineer,3,1,Mumbai,1791739,Control Systems,Industrial,20,358,91,0,0,0.0,0,0,0,0,3,69,6,1,EEE|CIV,MATLAB|Power Systems|PLC,4,0,99
+729,1949179,Lavanya Bhat,CSO,2019,2023,Siemens,Senior Engineer,3,1,Noida,1998616,Embedded IoT,Sensors,13,353,88,0,0,0.0,0,0,0,1,3,70,6,0,CSO|AIML,Python|IoT|Sensors|Edge,0,0,92
+730,1902180,Bhavana Reddy,EEE,2019,2023,Schneider Electric,Engineer,3,1,Bangalore,2321505,Power Systems,Grid,15,538,79,0,0,0.0,0,0,0,0,1,84,7,1,EEE|CSO,MATLAB|Power Systems|PLC,3,0,98
+731,1942181,Madhavi Swamy,CSM,2019,2023,Meta AI,Senior Engineer,3,1,Pune,1647516,AI,NLP,15,216,160,1,2,4.2,4,1,0,0,1,82,10,1,CSM|AIML,Python|ML|TensorFlow|PyTorch,8,24,87
+732,1904182,Anand Naidu,ECE,2019,2023,Marvell,Senior Engineer,3,1,Mumbai,1798312,IC Design,Analog,13,407,33,1,3,4.6,1,0,0,0,2,91,10,0,ECE|CSE,C|Verilog|VLSI|Embedded,10,12,85
+733,1954183,Anu Menon,AID,2019,2023,Twitter,Senior Engineer,3,1,Mumbai,2137833,Data Science,ML Engineering,12,534,230,0,0,0.0,0,0,0,0,2,81,6,1,AID|ECE,Python|Data Science|SQL|ML,10,0,94
+734,1904184,Nithya Rao,ECE,2019,2023,Texas Instruments,Software Engineer,3,1,Hyderabad,1734839,Embedded,IoT,24,429,91,1,1,4.6,3,0,0,0,3,72,7,0,ECE|AIML,C|Verilog|VLSI|Embedded,4,24,83
+735,1954185,Kishore Gopal,AID,2019,2023,LinkedIn,Software Engineer,3,1,Hyderabad,1805631,Data Science,Analytics,12,446,95,1,5,4.8,4,0,2,0,3,90,6,0,AID|CIV,Python|Data Science|SQL|ML,7,14,84
+736,1904186,Manoj Murthy,ECE,2019,2023,Apple,Senior Engineer,3,1,Gurugram,1715428,Embedded,IoT,18,589,2,1,3,4.4,0,0,0,0,0,89,10,0,ECE|CSM,C|Verilog|VLSI|Embedded,7,16,96
+737,1902187,Ganesh Kumar,EEE,2019,2023,Enphase,Engineer,3,1,Pune,1882165,Power Systems,Grid,19,484,88,0,0,0.0,0,0,0,0,1,65,8,0,EEE|CIV,MATLAB|Power Systems|PLC,8,0,85
+738,1912188,Suresh Reddy,IT,2019,2023,Infosys,Senior Engineer,3,1,Hyderabad,1838680,DevOps,Kubernetes,25,223,279,1,5,4.9,1,3,0,0,14,81,9,1,IT|AIML,Python|Kubernetes|Docker|AWS,4,12,95
+739,1961189,Mohan Gopal,AIML,2019,2023,Waymo,Engineer,3,1,Pune,1624473,AI,Deep Learning,23,590,159,1,5,4.4,3,2,2,0,2,79,10,1,AIML|MEC,Python|Deep Learning|PyTorch,12,10,91
+740,1912190,Vinay Srinivas,IT,2019,2023,Oracle,Software Engineer,3,1,Bangalore,2285002,DevOps,Kubernetes,15,561,150,1,2,4.8,2,3,0,0,14,86,10,0,IT|CSO,Python|Kubernetes|Docker|AWS,12,12,92
+741,1902191,Rajesh Sundaram,EEE,2019,2023,GE,Engineer,3,1,Noida,2174333,Automation,PLC,12,260,13,1,4,4.6,3,0,0,0,2,84,7,0,EEE|AID,MATLAB|Power Systems|PLC,3,16,94
+742,1912192,Ramya Subramanian,IT,2019,2023,Atlassian,Senior Engineer,3,1,Chennai,2391063,DevOps,Kubernetes,24,591,176,0,0,0.0,0,0,0,0,1,72,9,1,IT|CIV,Python|Kubernetes|Docker|AWS,12,0,96
+743,1954193,Madhavi Patel,AID,2019,2023,Amazon,Senior Engineer,3,1,Hyderabad,2313173,Data Science,ML Engineering,19,593,128,1,1,4.3,2,3,1,0,3,94,9,0,AID|CIV,Python|Data Science|SQL|ML,8,10,84
+744,1912194,Srikanth Varma,IT,2019,2023,Google,Engineer,3,1,Gurugram,1899324,System Administration,Linux,23,351,51,1,4,4.4,0,3,0,0,9,65,7,0,IT|MEC,Python|Kubernetes|Docker|AWS,4,12,95
+745,1901195,Anand Nair,CIV,2019,2023,NCC,Software Engineer,3,1,Chennai,2294502,Construction,Project Management,25,593,91,0,0,0.0,0,0,0,0,3,78,6,1,CIV|MEC,AutoCAD|Staad Pro|Revit,7,0,88
+746,1905196,Ashok Pillai,CSE,2019,2023,Nutanix,Software Engineer,3,1,Gurugram,1878590,Cloud Engineering,AWS,17,272,253,1,3,4.3,1,1,0,0,6,84,7,1,CSE|MEC,Python|Java|React|AWS,12,24,83
+747,1949197,Ramesh Subramanian,CSO,2019,2023,Honeywell,Software Engineer,3,1,Chennai,2151576,IoT,Industrial,25,552,72,0,0,0.0,0,0,0,0,1,70,10,1,CSO|CSM,Python|IoT|Sensors|Edge,7,0,88
+748,1902198,Gopal Iyer,EEE,2019,2023,Crompton,Engineer,3,1,Chennai,2365087,Automation,PLC,24,234,74,1,5,4.4,0,3,0,0,3,92,10,1,EEE|CSM,MATLAB|Power Systems|PLC,3,16,97
+749,1949199,Rahul Ramani,CSO,2019,2023,Tata Elxsi,Software Engineer,3,1,Hyderabad,1742974,IoT,Industrial,13,511,19,1,2,4.4,4,3,0,0,2,78,7,1,CSO|AIML,Python|IoT|Sensors|Edge,3,18,91
+750,1942200,Vinay Gupta,CSM,2019,2023,DeepMind,Senior Engineer,3,1,Hyderabad,1798944,AI,NLP,18,325,249,1,2,4.1,1,3,0,0,2,68,6,1,CSM|AIML,Python|ML|TensorFlow|PyTorch,8,20,90
+751,1961201,Ajay Gupta,AIML,2019,2023,OpenAI,Engineer,3,1,Bangalore,2396113,Research,Neural Networks,15,217,150,1,2,4.8,2,1,2,0,2,84,6,1,AIML|CSE,Python|Deep Learning|PyTorch,12,10,96
+752,1942202,Vidya Krishna,CSM,2019,2023,Google AI,Senior Engineer,3,1,Mumbai,2206693,Data Science,ML,15,537,98,1,2,4.7,4,3,0,0,1,85,9,1,CSM|AID,Python|ML|TensorFlow|PyTorch,6,10,83
+753,1902203,Anjali Singh,EEE,2019,2023,Vestas,Senior Engineer,3,1,Noida,1869123,Renewable,Solar,24,260,59,0,0,0.0,0,0,0,0,0,92,6,0,EEE|AID,MATLAB|Power Systems|PLC,7,0,97
+754,1903204,Sneha Patel,MEC,2019,2023,Honeywell,Engineer,3,1,Hyderabad,1604865,Automotive,Powertrain,21,235,28,1,3,4.4,4,3,0,0,1,94,8,1,MEC|IT,SolidWorks|CATIA|ANSYS,5,24,90
+755,1961205,Saranya Kumar,AIML,2019,2023,Tesla,Engineer,3,1,Pune,1674924,AI,NLP,13,571,235,1,3,4.1,1,2,2,1,1,92,7,1,AIML|AID,Python|Deep Learning|PyTorch,12,10,93
+756,1902206,Madhavi Krishna,EEE,2019,2023,Alstom,Senior Engineer,3,1,Mumbai,2327650,Power Systems,Grid,16,436,98,1,4,4.8,1,3,0,0,2,85,6,1,EEE|CSE,MATLAB|Power Systems|PLC,10,24,97
+757,1912207,Kavya Menon,IT,2019,2023,LTI,Software Engineer,3,1,Delhi,1641605,DevOps,Kubernetes,14,481,227,1,2,4.1,2,3,0,0,9,85,7,1,IT|EEE,Python|Kubernetes|Docker|AWS,5,20,90
+758,1949208,Padma Kumar,CSO,2019,2023,Bosch,Senior Engineer,3,1,Delhi,1771428,IoT,Industrial,23,586,45,0,0,0.0,0,0,0,0,1,84,9,0,CSO|CIV,Python|IoT|Sensors|Edge,5,0,89
+759,1901209,Nithya Menon,CIV,2019,2023,L&T,Software Engineer,3,1,Bangalore,2087708,Infrastructure,Roads,24,596,5,0,0,0.0,0,0,0,1,3,82,8,1,CIV|CSE,AutoCAD|Staad Pro|Revit,6,0,96
+760,1905210,Ravi Rajan,CSE,2019,2023,Swiggy,Engineer,3,1,Chennai,1702467,Cloud Engineering,AWS,24,536,175,0,0,0.0,0,0,0,0,2,78,8,1,CSE|AID,Python|Java|React|AWS,4,0,83
+761,1904211,Arun Shetty,ECE,2019,2023,ST Microelectronics,Engineer,3,1,Noida,1716798,Hardware Design,VLSI,16,399,16,0,0,0.0,0,0,0,0,1,65,7,1,ECE|CSM,C|Verilog|VLSI|Embedded,7,0,90
+762,1903212,Keerthi Murthy,MEC,2019,2023,Daimler,Senior Engineer,3,1,Pune,1884453,Robotics,Industrial,23,453,45,0,0,0.0,0,0,0,0,2,88,7,1,MEC|ECE,SolidWorks|CATIA|ANSYS,8,0,90
+763,1905213,Vidya Varma,CSE,2019,2023,Adobe,Engineer,3,1,Mumbai,2049533,Cloud Engineering,AWS,13,437,105,0,0,0.0,0,0,0,0,0,76,6,0,CSE|CSO,Python|Java|React|AWS,3,0,84
+764,1912214,Renuka Naidu,IT,2019,2023,IBM,Engineer,3,1,Noida,1801488,Networking,SDN,14,210,129,1,3,4.9,3,2,0,0,3,69,7,0,IT|CIC,Python|Kubernetes|Docker|AWS,6,16,85
+765,1904215,Harini Krishna,ECE,2019,2023,NXP,Engineer,3,1,Pune,2005293,Wireless,5G,13,201,37,0,0,0.0,0,0,0,0,1,85,7,1,ECE|CSM,C|Verilog|VLSI|Embedded,5,0,84
+766,1942216,Harish Krishna,CSM,2019,2023,Apple,Senior Engineer,3,1,Delhi,1705903,Data Science,ML,16,376,87,1,5,4.6,3,2,2,0,1,76,8,0,CSM|AIML,Python|ML|TensorFlow|PyTorch,10,8,93
+767,1912217,Vivek Desai,IT,2019,2023,TCS,Engineer,3,1,Chennai,1702793,Cloud Engineering,Azure,20,547,137,1,2,4.4,2,3,0,0,9,78,8,1,IT|AIML,Python|Kubernetes|Docker|AWS,5,20,98
+768,1954218,Archana Krishna,AID,2019,2023,Twitter,Software Engineer,3,1,Mumbai,2009996,Data Science,ML Engineering,20,342,221,1,4,4.1,0,3,1,0,3,88,6,0,AID|AID,Python|Data Science|SQL|ML,12,24,85
+769,1949219,Shweta Sharma,CSO,2019,2023,Tata Elxsi,Engineer,3,1,Chennai,2079309,Edge Computing,IoT,15,201,16,0,0,0.0,0,0,0,0,0,75,9,0,CSO|IT,Python|IoT|Sensors|Edge,5,0,83
+770,1954220,Swathi Murthy,AID,2019,2023,Uber,Software Engineer,3,1,Gurugram,1686684,Data Engineering,Pipelines,19,408,230,1,3,4.3,1,2,1,0,0,91,10,1,AID|EEE,Python|Data Science|SQL|ML,6,12,84
+771,1947221,Naveen Desai,CIC,2019,2023,Trend Micro,Engineer,3,1,Delhi,2330773,Security,Pentesting,22,284,29,1,2,4.4,0,3,0,0,1,65,6,0,CIC|AID,Python|Security|Blockchain,10,12,92
+772,1903222,Manoj Pillai,MEC,2019,2023,Volvo,Senior Engineer,3,1,Hyderabad,1897317,Manufacturing,CAD/CAM,25,535,27,0,0,0.0,0,0,0,0,1,88,6,1,MEC|CIV,SolidWorks|CATIA|ANSYS,12,0,88
+773,1901223,Ramesh Mohan,CIV,2019,2023,NBCC,Senior Engineer,3,1,Bangalore,1658929,Structural Design,Buildings,24,243,85,1,4,4.7,3,1,0,0,0,95,9,0,CIV|EEE,AutoCAD|Staad Pro|Revit,10,20,84
+774,1905224,Lavanya Menon,CSE,2019,2023,ServiceNow,Engineer,3,1,Gurugram,2091786,Data Engineering,BigData,14,553,117,1,4,4.2,3,0,0,0,4,67,7,1,CSE|EEE,Python|Java|React|AWS,8,12,91
+775,1954225,Naveen Gopal,AID,2019,2023,Airbnb,Senior Engineer,3,1,Gurugram,2217799,Data Science,ML Engineering,24,486,150,0,0,0.0,0,0,1,0,1,95,8,1,AID|CIC,Python|Data Science|SQL|ML,0,0,92
+776,2042001,Meena Varma,CSM,2020,2024,Anthropic,Software Engineer,2,1,Mumbai,1274887,Data Science,ML,12,546,263,1,2,4.7,3,3,0,0,3,73,9,0,CSM|AIML,Python|ML|TensorFlow|PyTorch,3,16,86
+777,2061002,Mythili Mohan,AIML,2020,2024,Tesla,Software Engineer,2,1,Gurugram,1338061,AI,NLP,19,289,95,1,1,4.8,3,3,2,0,2,77,6,1,AIML|ECE,Python|Deep Learning|PyTorch,3,8,97
+778,2002003,Manoj Sharma,EEE,2020,2024,Vestas,Engineer,2,1,Delhi,1396467,Power Systems,Grid,14,407,96,1,2,4.3,0,0,0,0,0,90,8,0,EEE|CIC,MATLAB|Power Systems|PLC,3,24,84
+779,2002004,Sahana Ramani,EEE,2020,2024,L&T,Graduate Engineer,2,1,Chennai,1743580,Automation,PLC,19,312,78,1,4,4.4,2,3,0,0,1,87,7,1,EEE|CSE,MATLAB|Power Systems|PLC,7,8,84
+780,2002005,Anjali Srinivas,EEE,2020,2024,L&T,Software Engineer,2,1,Pune,1326294,Renewable,Solar,15,212,21,1,2,4.6,0,1,0,0,3,83,6,0,EEE|IT,MATLAB|Power Systems|PLC,8,16,90
+781,2042006,Sowmya Subramanian,CSM,2020,2024,Apple,Graduate Engineer,2,1,Bangalore,1574202,Data Science,ML,19,389,169,1,1,4.0,0,0,0,0,0,84,10,0,CSM|CSO,Python|ML|TensorFlow|PyTorch,10,20,94
+782,2061007,Deepak Rajan,AIML,2020,2024,Google,Engineer,2,1,Mumbai,1780192,AI,Deep Learning,14,256,52,0,0,0.0,0,0,2,0,1,70,6,0,AIML|CSM,Python|Deep Learning|PyTorch,10,0,96
+783,2061008,Sahana Prasad,AIML,2020,2024,Waymo,Graduate Engineer,2,1,Gurugram,1571241,ML Engineering,MLOps,22,329,231,1,4,4.6,4,0,1,0,0,81,10,0,AIML|CIV,Python|Deep Learning|PyTorch,12,10,94
+784,2049009,Amit Shetty,CSO,2020,2024,Siemens,Engineer,2,1,Noida,1240663,IoT,Industrial,13,323,100,1,2,4.8,3,1,0,0,0,73,6,1,CSO|CSO,Python|IoT|Sensors|Edge,6,8,92
+785,2061010,Anand Rao,AIML,2020,2024,Microsoft,Graduate Engineer,2,1,Hyderabad,1562434,ML Engineering,MLOps,19,249,279,0,0,0.0,0,0,1,0,3,92,6,0,AIML|EEE,Python|Deep Learning|PyTorch,10,0,87
+786,2049011,Vasudha Menon,CSO,2020,2024,Emerson,Graduate Engineer,2,1,Mumbai,1699863,Embedded IoT,Sensors,18,376,68,1,2,4.0,4,2,0,0,0,93,8,1,CSO|ECE,Python|IoT|Sensors|Edge,0,8,94
+787,2061012,Lavanya Iyer,AIML,2020,2024,DeepMind,Graduate Engineer,2,1,Delhi,1679785,AI,NLP,21,482,162,1,1,4.1,0,1,1,0,3,93,6,0,AIML|CSE,Python|Deep Learning|PyTorch,6,12,99
+788,2001013,Mohan Krishnan,CIV,2020,2024,GMR,Software Engineer,2,1,Hyderabad,1626660,Construction,Project Management,14,520,42,0,0,0.0,0,0,0,0,3,85,10,0,CIV|EEE,AutoCAD|Staad Pro|Revit,5,0,90
+789,2042014,Kavya Ramani,CSM,2020,2024,Uber,Software Engineer,2,1,Pune,1603850,AI Research,Machine Learning,23,223,87,1,4,4.6,0,1,1,0,0,73,9,1,CSM|AIML,Python|ML|TensorFlow|PyTorch,3,12,91
+790,2049015,Anand Iyer,CSO,2020,2024,ABB,Software Engineer,2,1,Bangalore,1253690,IoT,Industrial,21,486,50,1,1,4.4,4,0,0,0,3,79,10,0,CSO|AID,Python|IoT|Sensors|Edge,0,16,90
+791,2047016,Divya Gupta,CIC,2020,2024,Check Point,Graduate Engineer,2,1,Gurugram,1497935,Cyber Security,Threat Intelligence,19,559,86,1,5,4.3,1,2,0,0,1,95,6,1,CIC|CIC,Python|Security|Blockchain,6,18,97
+792,2042017,Amit Nair,CSM,2020,2024,Google AI,Software Engineer,2,1,Hyderabad,1578442,Data Science,ML,13,536,193,1,3,4.6,1,0,1,0,1,68,7,1,CSM|ECE,Python|ML|TensorFlow|PyTorch,12,18,95
+793,2001018,Swathi Kumar,CIV,2020,2024,NBCC,Graduate Engineer,2,1,Gurugram,1461941,Construction,Project Management,18,294,58,0,0,0.0,0,0,0,1,3,94,6,1,CIV|AIML,AutoCAD|Staad Pro|Revit,7,0,82
+794,2004019,Renuka Swamy,ECE,2020,2024,ON Semi,Graduate Engineer,2,1,Bangalore,1729363,Embedded,IoT,16,413,6,0,0,0.0,0,0,0,0,2,78,7,0,ECE|AID,C|Verilog|VLSI|Embedded,3,0,89
+795,2005020,Ajay Sharma,CSE,2020,2024,Intel,Graduate Engineer,2,1,Mumbai,1545978,Data Engineering,BigData,13,570,85,1,4,4.9,3,3,0,0,5,83,8,0,CSE|AIML,Python|Java|React|AWS,10,20,85
+796,2042021,Anjali Patel,CSM,2020,2024,Apple,Software Engineer,2,1,Delhi,1537683,AI,NLP,16,490,110,0,0,0.0,0,0,1,0,1,82,7,1,CSM|MEC,Python|ML|TensorFlow|PyTorch,5,0,83
+797,2002022,Lavanya Srinivas,EEE,2020,2024,Enphase,Graduate Engineer,2,1,Gurugram,1591622,Power Systems,Grid,24,588,80,1,4,4.0,2,2,0,0,0,81,9,0,EEE|IT,MATLAB|Power Systems|PLC,10,20,92
+798,2003023,Harini Kumar,MEC,2020,2024,Cummins,Software Engineer,2,1,Pune,1394334,Aerospace,Design,12,210,24,0,0,0.0,0,0,0,1,1,93,7,1,MEC|CSE,SolidWorks|CATIA|ANSYS,12,0,92
+799,2054024,Lakshmi Patel,AID,2020,2024,Netflix,Software Engineer,2,1,Chennai,1253385,Data Science,Analytics,20,376,297,0,0,0.0,0,0,1,0,1,69,10,1,AID|AID,Python|Data Science|SQL|ML,5,0,93
+800,2042025,Mahesh Bhat,CSM,2020,2024,Tesla,Software Engineer,2,1,Mumbai,1634968,AI Research,Machine Learning,19,418,129,0,0,0.0,0,0,0,0,2,78,7,1,CSM|CSO,Python|ML|TensorFlow|PyTorch,12,0,95
+801,2042026,Mahesh Rajan,CSM,2020,2024,Waymo,Engineer,2,1,Hyderabad,1579624,AI,NLP,13,401,256,0,0,0.0,0,0,1,0,1,92,10,1,CSM|EEE,Python|ML|TensorFlow|PyTorch,6,0,97
+802,2002027,Ganesh Rao,EEE,2020,2024,ABB,Software Engineer,2,1,Mumbai,1637167,Control Systems,Industrial,18,487,79,1,2,4.3,4,1,0,0,3,79,9,1,EEE|ECE,MATLAB|Power Systems|PLC,8,24,94
+803,2003028,Sanjay Patel,MEC,2020,2024,Honda,Software Engineer,2,1,Noida,1512874,Aerospace,Design,20,223,15,1,1,4.3,3,0,0,0,2,79,8,1,MEC|MEC,SolidWorks|CATIA|ANSYS,12,14,98
+804,2004029,Shalini Sharma,ECE,2020,2024,Nvidia,Software Engineer,2,1,Gurugram,1755471,Embedded,IoT,14,398,79,0,0,0.0,0,0,0,0,1,68,9,0,ECE|AIML,C|Verilog|VLSI|Embedded,5,0,98
+805,2001030,Sanjay Rajan,CIV,2020,2024,KBR,Software Engineer,2,1,Gurugram,1470261,Infrastructure,Roads,24,361,79,1,3,5.0,0,0,0,0,0,65,6,0,CIV|ECE,AutoCAD|Staad Pro|Revit,10,8,95
+806,2049031,Ramesh Shetty,CSO,2020,2024,LG Soft,Graduate Engineer,2,1,Gurugram,1556330,Embedded IoT,Sensors,14,438,77,0,0,0.0,0,0,0,1,0,91,10,1,CSO|AID,Python|IoT|Sensors|Edge,12,0,89
+807,2049032,Akshara Pillai,CSO,2020,2024,LG Soft,Graduate Engineer,2,1,Hyderabad,1653760,Embedded IoT,Sensors,16,376,47,0,0,0.0,0,0,0,0,3,65,6,0,CSO|IT,Python|IoT|Sensors|Edge,12,0,84
+808,2001033,Anand Pillai,CIV,2020,2024,Simplex,Engineer,2,1,Delhi,1207567,Infrastructure,Roads,13,362,33,1,3,4.7,1,0,0,0,3,71,7,1,CIV|CSE,AutoCAD|Staad Pro|Revit,0,18,85
+809,2047034,Vivek Bhat,CIC,2020,2024,Cisco,Engineer,2,1,Hyderabad,1748453,Cyber Security,Threat Intelligence,14,358,47,1,4,4.4,3,3,0,1,3,88,8,0,CIC|CIV,Python|Security|Blockchain,4,10,82
+810,2042035,Swathi Verma,CSM,2020,2024,Nvidia,Software Engineer,2,1,Pune,1498919,AI Research,Machine Learning,12,244,207,0,0,0.0,0,0,0,0,0,86,10,1,CSM|CSO,Python|ML|TensorFlow|PyTorch,12,0,88
+811,2001036,Padma Bhat,CIV,2020,2024,Afcons,Engineer,2,1,Hyderabad,1371705,Structural Design,Buildings,25,229,31,1,5,4.9,2,1,0,0,2,72,7,1,CIV|CSE,AutoCAD|Staad Pro|Revit,4,16,90
+812,2042037,Bhavana Sundaram,CSM,2020,2024,Apple,Software Engineer,2,1,Delhi,1679086,Data Science,ML,21,582,207,0,0,0.0,0,0,1,0,1,90,8,0,CSM|EEE,Python|ML|TensorFlow|PyTorch,10,0,98
+813,2061038,Swathi Sundaram,AIML,2020,2024,Anthropic,Software Engineer,2,1,Noida,1513580,Research,Neural Networks,21,582,253,0,0,0.0,0,0,0,0,0,91,10,1,AIML|CIV,Python|Deep Learning|PyTorch,8,0,96
+814,2001039,Sanjay Reddy,CIV,2020,2024,Tata Projects,Engineer,2,1,Mumbai,1688558,Structural Design,Buildings,16,454,4,0,0,0.0,0,0,0,0,1,85,6,1,CIV|CSO,AutoCAD|Staad Pro|Revit,5,0,85
+815,2061040,Naveen Mohan,AIML,2020,2024,Meta,Engineer,2,1,Hyderabad,1444659,Research,Neural Networks,17,371,183,1,4,4.1,0,0,1,0,3,89,8,0,AIML|CIC,Python|Deep Learning|PyTorch,10,10,84
+816,2047041,Prakash Ramani,CIC,2020,2024,Symantec,Software Engineer,2,1,Bangalore,1788049,Security,Pentesting,23,508,29,0,0,0.0,0,0,0,0,3,81,10,0,CIC|ECE,Python|Security|Blockchain,3,0,93
+817,2002042,Arun Reddy,EEE,2020,2024,L&T,Engineer,2,1,Bangalore,1611387,Control Systems,Industrial,15,579,42,0,0,0.0,0,0,0,0,2,90,6,1,EEE|CSE,MATLAB|Power Systems|PLC,12,0,83
+818,2004043,Karthik Swamy,ECE,2020,2024,Intel,Engineer,2,1,Chennai,1649867,Wireless,5G,24,258,98,1,4,4.4,1,2,0,1,1,72,8,0,ECE|AID,C|Verilog|VLSI|Embedded,7,8,89
+819,2003044,Renuka Kumar,MEC,2020,2024,GE,Software Engineer,2,1,Delhi,1525147,Automotive,Powertrain,23,257,68,0,0,0.0,0,0,0,0,0,86,10,1,MEC|AIML,SolidWorks|CATIA|ANSYS,4,0,99
+820,2002045,Meena Naidu,EEE,2020,2024,Havells,Graduate Engineer,2,1,Mumbai,1533151,Control Systems,Industrial,13,420,66,1,5,4.7,2,2,0,0,3,90,7,0,EEE|CIC,MATLAB|Power Systems|PLC,10,20,93
+821,2047046,Shalini Pillai,CIC,2020,2024,FireEye,Software Engineer,2,1,Hyderabad,1405806,Security,Pentesting,12,223,35,1,4,4.1,0,3,0,0,3,80,8,0,CIC|MEC,Python|Security|Blockchain,12,14,93
+822,2002047,Ashok Subramanian,EEE,2020,2024,Honeywell,Graduate Engineer,2,1,Bangalore,1447123,Control Systems,Industrial,14,455,9,1,3,4.4,1,3,0,0,1,76,8,1,EEE|EEE,MATLAB|Power Systems|PLC,0,8,83
+823,2003048,Anjali Krishna,MEC,2020,2024,GE,Software Engineer,2,1,Bangalore,1371161,Manufacturing,CAD/CAM,25,516,42,1,3,4.2,0,1,0,0,0,71,8,0,MEC|CIC,SolidWorks|CATIA|ANSYS,8,12,97
+824,2047049,Swathi Sharma,CIC,2020,2024,Symantec,Software Engineer,2,1,Bangalore,1235299,Security,Pentesting,14,543,11,0,0,0.0,0,0,0,1,2,82,10,1,CIC|AID,Python|Security|Blockchain,0,0,93
+825,2004050,Kavya Prasad,ECE,2020,2024,Marvell,Software Engineer,2,1,Noida,1324000,Hardware Design,VLSI,16,274,81,1,5,4.1,3,1,0,0,2,91,9,1,ECE|AID,C|Verilog|VLSI|Embedded,3,14,85
+826,2042051,Kishore Shetty,CSM,2020,2024,Meta AI,Engineer,2,1,Delhi,1729170,AI,Computer Vision,17,554,209,1,2,4.8,4,2,2,0,1,69,6,1,CSM|EEE,Python|ML|TensorFlow|PyTorch,3,16,86
+827,2004052,Meena Iyer,ECE,2020,2024,Nvidia,Engineer,2,1,Chennai,1646988,Hardware Design,VLSI,21,220,11,1,2,4.8,1,0,0,0,1,76,9,1,ECE|IT,C|Verilog|VLSI|Embedded,10,14,89
+828,2012053,Vivek Desai,IT,2020,2024,Google,Graduate Engineer,2,1,Gurugram,1622539,DevOps,Kubernetes,25,550,55,0,0,0.0,0,0,0,0,9,94,10,1,IT|ECE,Python|Kubernetes|Docker|AWS,10,0,94
+829,2054054,Ravi Iyer,AID,2020,2024,Flipkart,Software Engineer,2,1,Bangalore,1524208,Data Engineering,Pipelines,19,405,208,0,0,0.0,0,0,0,0,3,91,8,0,AID|AID,Python|Data Science|SQL|ML,8,0,88
+830,2047055,Rekha Shetty,CIC,2020,2024,Qualys,Software Engineer,2,1,Chennai,1426117,Security,Pentesting,21,331,45,1,4,4.2,4,2,0,0,0,95,9,1,CIC|ECE,Python|Security|Blockchain,6,10,84
+831,2042056,Venkat Krishna,CSM,2020,2024,IBM Research,Graduate Engineer,2,1,Bangalore,1478367,AI,Computer Vision,17,566,291,0,0,0.0,0,0,0,1,3,93,9,1,CSM|ECE,Python|ML|TensorFlow|PyTorch,4,0,94
+832,2002057,Meena Varma,EEE,2020,2024,Crompton,Software Engineer,2,1,Mumbai,1726914,Renewable,Solar,12,354,91,0,0,0.0,0,0,0,0,3,84,10,1,EEE|MEC,MATLAB|Power Systems|PLC,12,0,98
+833,2004058,Akshara Prasad,ECE,2020,2024,Qualcomm,Software Engineer,2,1,Pune,1712873,Wireless,5G,12,215,81,0,0,0.0,0,0,0,0,3,81,10,1,ECE|MEC,C|Verilog|VLSI|Embedded,8,0,95
+834,2061059,Divya Iyer,AIML,2020,2024,Tesla,Graduate Engineer,2,1,Noida,1352916,ML Engineering,MLOps,13,503,274,0,0,0.0,0,0,2,0,0,68,6,1,AIML|CSE,Python|Deep Learning|PyTorch,4,0,90
+835,2047060,Vasudha Desai,CIC,2020,2024,Symantec,Graduate Engineer,2,1,Noida,1649990,Cyber Security,Threat Intelligence,13,505,34,0,0,0.0,0,0,0,0,1,69,7,0,CIC|CIC,Python|Security|Blockchain,3,0,87
+836,2005061,Ramesh Naidu,CSE,2020,2024,Amazon,Graduate Engineer,2,1,Pune,1258564,Software Engineering,Backend,20,379,132,0,0,0.0,0,0,0,0,2,76,10,0,CSE|MEC,Python|Java|React|AWS,5,0,92
+837,2049062,Vidya Naidu,CSO,2020,2024,Rockwell,Software Engineer,2,1,Bangalore,1325574,IoT,Smart Cities,12,304,74,0,0,0.0,0,0,0,1,0,94,9,0,CSO|CSM,Python|IoT|Sensors|Edge,0,0,99
+838,2012063,Rajesh Sundaram,IT,2020,2024,Amazon,Software Engineer,2,1,Mumbai,1349193,Networking,SDN,18,263,191,1,1,4.5,3,0,0,0,7,93,7,1,IT|ECE,Python|Kubernetes|Docker|AWS,10,20,89
+839,2001064,Kavya Shetty,CIV,2020,2024,Simplex,Engineer,2,1,Noida,1724860,Infrastructure,Roads,15,591,80,0,0,0.0,0,0,0,0,1,83,10,0,CIV|CSO,AutoCAD|Staad Pro|Revit,5,0,97
+840,2049065,Renuka Patel,CSO,2020,2024,Honeywell,Graduate Engineer,2,1,Gurugram,1695544,IoT,Industrial,20,385,35,1,4,4.1,1,3,0,0,1,75,7,0,CSO|ECE,Python|IoT|Sensors|Edge,8,16,83
+841,2012066,Vidya Desai,IT,2020,2024,Google,Graduate Engineer,2,1,Chennai,1724789,System Administration,Linux,22,403,258,1,2,4.4,0,0,0,0,15,72,9,0,IT|AID,Python|Kubernetes|Docker|AWS,7,16,95
+842,2061067,Sowmya Patel,AIML,2020,2024,Nvidia,Graduate Engineer,2,1,Hyderabad,1574902,AI,Deep Learning,21,427,91,1,4,4.8,1,2,2,0,1,87,9,0,AIML|EEE,Python|Deep Learning|PyTorch,12,24,94
+843,2047068,Swathi Gupta,CIC,2020,2024,Fortinet,Software Engineer,2,1,Chennai,1557932,Cyber Security,Threat Intelligence,16,218,20,1,1,4.8,2,1,0,0,2,92,7,1,CIC|MEC,Python|Security|Blockchain,6,18,94
+844,2001069,Prasad Reddy,CIV,2020,2024,Afcons,Software Engineer,2,1,Gurugram,1276560,Infrastructure,Roads,21,279,91,1,2,4.3,2,1,0,0,3,93,7,1,CIV|EEE,AutoCAD|Staad Pro|Revit,4,20,99
+845,2012070,Mahesh Menon,IT,2020,2024,HashiCorp,Software Engineer,2,1,Delhi,1692998,DevOps,Kubernetes,21,320,175,0,0,0.0,0,0,0,0,11,77,6,0,IT|IT,Python|Kubernetes|Docker|AWS,3,0,94
+846,2054071,Nithya Krishnan,AID,2020,2024,Meta,Software Engineer,2,1,Bangalore,1622739,Data Engineering,Pipelines,15,516,296,1,3,4.1,4,1,1,1,1,77,8,0,AID|CIV,Python|Data Science|SQL|ML,5,8,82
+847,2012072,Prakash Ramani,IT,2020,2024,LTI,Software Engineer,2,1,Noida,1716188,Networking,SDN,17,581,89,0,0,0.0,0,0,0,0,5,91,10,1,IT|CIV,Python|Kubernetes|Docker|AWS,10,0,97
+848,2054073,Ramya Reddy,AID,2020,2024,LinkedIn,Graduate Engineer,2,1,Noida,1706594,Data Science,ML Engineering,25,546,182,1,2,4.7,1,1,1,0,3,85,10,1,AID|CSM,Python|Data Science|SQL|ML,6,12,87
+849,2061074,Deepak Shetty,AIML,2020,2024,OpenAI,Engineer,2,1,Gurugram,1365118,Research,Neural Networks,13,534,92,1,4,4.1,0,0,2,0,0,80,8,1,AIML|CIV,Python|Deep Learning|PyTorch,8,12,89
+850,2054075,Naveen Rajan,AID,2020,2024,Gramener,Engineer,2,1,Mumbai,1701246,Data Science,Analytics,19,570,134,0,0,0.0,0,0,0,0,2,66,6,0,AID|CSM,Python|Data Science|SQL|ML,8,0,90
+851,2047076,Naresh Ramani,CIC,2020,2024,Symantec,Graduate Engineer,2,1,Pune,1524428,Cyber Security,Threat Intelligence,15,203,28,0,0,0.0,0,0,0,0,2,75,9,0,CIC|EEE,Python|Security|Blockchain,7,0,99
+852,2049077,Padma Prasad,CSO,2020,2024,Tata Elxsi,Software Engineer,2,1,Pune,1518007,Embedded IoT,Sensors,22,305,44,1,4,4.3,1,2,0,0,2,90,8,0,CSO|EEE,Python|IoT|Sensors|Edge,5,18,97
+853,2054078,Bhavana Swamy,AID,2020,2024,Flipkart,Software Engineer,2,1,Hyderabad,1701635,Data Science,Analytics,20,307,164,0,0,0.0,0,0,2,0,1,94,9,1,AID|AID,Python|Data Science|SQL|ML,7,0,82
+854,2054079,Kishore Sundaram,AID,2020,2024,Netflix,Graduate Engineer,2,1,Mumbai,1532919,Data Science,ML Engineering,18,346,277,0,0,0.0,0,0,2,0,3,90,8,1,AID|AID,Python|Data Science|SQL|ML,4,0,86
+855,2005080,Deepak Rao,CSE,2020,2024,Adobe,Software Engineer,2,1,Gurugram,1317006,Data Engineering,BigData,25,530,241,1,1,4.8,3,1,0,0,8,90,7,1,CSE|AID,Python|Java|React|AWS,0,24,86
+856,2001081,Akshara Rao,CIV,2020,2024,Arup,Software Engineer,2,1,Mumbai,1541897,Construction,Project Management,21,491,84,1,1,4.0,1,1,0,0,1,95,7,1,CIV|CIV,AutoCAD|Staad Pro|Revit,3,14,97
+857,2042082,Renuka Kumar,CSM,2020,2024,DeepMind,Engineer,2,1,Pune,1324813,Data Science,ML,19,323,204,1,3,4.4,3,2,2,0,2,89,8,0,CSM|IT,Python|ML|TensorFlow|PyTorch,7,18,93
+858,2047083,Harini Swamy,CIC,2020,2024,Fortinet,Graduate Engineer,2,1,Noida,1679210,Cyber Security,Threat Intelligence,14,227,15,1,2,4.2,2,1,0,0,1,83,10,1,CIC|AID,Python|Security|Blockchain,6,16,98
+859,2005084,Swathi Reddy,CSE,2020,2024,Salesforce,Graduate Engineer,2,1,Pune,1692172,Data Engineering,BigData,20,424,51,1,2,4.3,4,0,0,1,14,92,6,1,CSE|CSM,Python|Java|React|AWS,7,10,93
+860,2012085,Sahana Desai,IT,2020,2024,HCL,Software Engineer,2,1,Hyderabad,1421419,System Administration,Linux,24,491,63,0,0,0.0,0,0,0,0,10,87,7,0,IT|CSE,Python|Kubernetes|Docker|AWS,4,0,83
+861,2054086,Nithya Murthy,AID,2020,2024,Uber,Engineer,2,1,Hyderabad,1527920,Data Engineering,Pipelines,13,587,285,1,4,4.8,4,0,0,0,1,71,10,0,AID|AIML,Python|Data Science|SQL|ML,3,20,91
+862,2061087,Ganesh Desai,AIML,2020,2024,Nvidia,Software Engineer,2,1,Gurugram,1251433,Research,Neural Networks,13,384,203,1,1,4.8,3,1,1,0,1,94,10,1,AIML|ECE,Python|Deep Learning|PyTorch,12,16,98
+863,2002088,Vivek Sundaram,EEE,2020,2024,Honeywell,Graduate Engineer,2,1,Gurugram,1316763,Renewable,Solar,23,449,89,0,0,0.0,0,0,0,1,0,91,6,1,EEE|CSE,MATLAB|Power Systems|PLC,12,0,87
+864,2061089,Rajesh Patel,AIML,2020,2024,Cruise,Software Engineer,2,1,Gurugram,1281620,Research,Neural Networks,23,597,165,0,0,0.0,0,0,0,0,0,72,6,0,AIML|IT,Python|Deep Learning|PyTorch,0,0,99
+865,2002090,Divya Mohan,EEE,2020,2024,Havells,Engineer,2,1,Bangalore,1421666,Automation,PLC,14,468,9,1,3,4.2,2,2,0,1,2,69,9,0,EEE|CIV,MATLAB|Power Systems|PLC,7,14,92
+866,2004091,Vidya Patel,ECE,2020,2024,Intel,Software Engineer,2,1,Delhi,1719153,IC Design,Analog,19,345,93,0,0,0.0,0,0,0,0,0,71,8,0,ECE|AID,C|Verilog|VLSI|Embedded,7,0,89
+867,2049092,Mohan Singh,CSO,2020,2024,Honeywell,Graduate Engineer,2,1,Noida,1203648,IoT,Industrial,18,507,33,1,1,4.4,2,3,0,1,1,91,9,1,CSO|EEE,Python|IoT|Sensors|Edge,8,8,98
+868,2002093,Vinay Balaji,EEE,2020,2024,ABB,Software Engineer,2,1,Chennai,1597021,Automation,PLC,22,504,43,1,3,4.7,3,1,0,0,2,77,8,0,EEE|ECE,MATLAB|Power Systems|PLC,7,18,95
+869,2049094,Akshara Balaji,CSO,2020,2024,Schneider,Graduate Engineer,2,1,Mumbai,1590590,IoT,Industrial,22,237,50,0,0,0.0,0,0,0,1,1,81,8,1,CSO|ECE,Python|IoT|Sensors|Edge,7,0,97
+870,2012095,Harish Bhat,IT,2020,2024,Oracle,Software Engineer,2,1,Bangalore,1554812,Cloud Engineering,Azure,22,432,158,1,3,4.1,0,0,0,0,0,65,8,0,IT|AIML,Python|Kubernetes|Docker|AWS,8,24,84
+871,2005096,Kishore Murthy,CSE,2020,2024,Oracle,Engineer,2,1,Bangalore,1378788,Software Engineering,Full Stack,22,231,175,1,3,5.0,3,0,0,0,15,79,8,0,CSE|CSE,Python|Java|React|AWS,5,8,92
+872,2002097,Saranya Murthy,EEE,2020,2024,Vestas,Graduate Engineer,2,1,Mumbai,1494250,Renewable,Solar,12,303,85,1,4,4.1,4,1,0,0,0,74,8,1,EEE|AIML,MATLAB|Power Systems|PLC,8,12,84
+873,2049098,Ramya Gupta,CSO,2020,2024,Cisco,Graduate Engineer,2,1,Noida,1676161,Embedded IoT,Sensors,20,575,6,1,2,4.4,3,0,0,0,0,72,8,0,CSO|CSE,Python|IoT|Sensors|Edge,3,20,87
+874,2049099,Anjali Bhat,CSO,2020,2024,IBM,Engineer,2,1,Hyderabad,1233163,IoT,Industrial,23,412,94,1,3,4.0,4,2,0,0,2,71,10,1,CSO|AID,Python|IoT|Sensors|Edge,8,10,83
+875,2003100,Bhavana Swamy,MEC,2020,2024,Eicher,Software Engineer,2,1,Delhi,1597538,Robotics,Industrial,22,406,6,1,2,4.8,2,3,0,0,2,89,6,1,MEC|CSO,SolidWorks|CATIA|ANSYS,12,12,99
+876,2002101,Akshara Nair,EEE,2020,2024,Honeywell,Software Engineer,2,1,Bangalore,1730275,Renewable,Solar,17,390,46,0,0,0.0,0,0,0,0,1,67,8,1,EEE|AID,MATLAB|Power Systems|PLC,6,0,95
+877,2061102,Manoj Murthy,AIML,2020,2024,Tesla,Engineer,2,1,Delhi,1338989,ML Engineering,MLOps,15,546,116,1,4,4.7,2,0,1,0,1,86,9,1,AIML|CSO,Python|Deep Learning|PyTorch,10,16,85
+878,2042103,Meena Bhat,CSM,2020,2024,Nvidia,Software Engineer,2,1,Gurugram,1661505,Data Science,ML,14,477,87,0,0,0.0,0,0,0,0,0,87,6,0,CSM|CSE,Python|ML|TensorFlow|PyTorch,10,0,90
+879,2054104,Suresh Prasad,AID,2020,2024,Uber,Engineer,2,1,Hyderabad,1353091,Data Engineering,Pipelines,17,270,287,0,0,0.0,0,0,1,0,2,84,10,0,AID|EEE,Python|Data Science|SQL|ML,6,0,83
+880,2054105,Ravi Naidu,AID,2020,2024,LinkedIn,Graduate Engineer,2,1,Bangalore,1524919,Data Science,Analytics,15,426,134,1,5,4.2,0,3,1,0,2,80,6,1,AID|MEC,Python|Data Science|SQL|ML,8,10,87
+881,2003106,Mahesh Varma,MEC,2020,2024,Tesla,Engineer,2,1,Noida,1556060,Automotive,Powertrain,24,286,82,1,5,4.3,0,3,0,0,0,68,7,1,MEC|IT,SolidWorks|CATIA|ANSYS,12,14,86
+882,2005107,Harini Reddy,CSE,2020,2024,PhonePe,Engineer,2,1,Noida,1738044,DevOps,CI/CD,22,439,72,1,4,4.5,2,3,0,0,11,74,7,0,CSE|AID,Python|Java|React|AWS,10,12,97
+883,2002108,Naresh Nair,EEE,2020,2024,Crompton,Engineer,2,1,Gurugram,1614031,Automation,PLC,14,364,19,1,1,4.9,2,1,0,0,3,93,9,1,EEE|CSE,MATLAB|Power Systems|PLC,6,14,84
+884,2047109,Shweta Singh,CIC,2020,2024,Trend Micro,Engineer,2,1,Mumbai,1434969,Blockchain,Smart Contracts,22,226,93,0,0,0.0,0,0,0,1,1,85,10,0,CIC|CSO,Python|Security|Blockchain,3,0,96
+885,2049110,Krishna Srinivas,CSO,2020,2024,Emerson,Software Engineer,2,1,Bangalore,1334333,IoT,Industrial,24,392,44,1,5,4.5,3,1,0,0,2,85,7,0,CSO|EEE,Python|IoT|Sensors|Edge,12,16,91
+886,2003111,Rajesh Naidu,MEC,2020,2024,Volvo,Engineer,2,1,Pune,1656094,Automotive,Powertrain,25,385,3,0,0,0.0,0,0,0,0,2,84,8,1,MEC|IT,SolidWorks|CATIA|ANSYS,10,0,86
+887,2049112,Shalini Sundaram,CSO,2020,2024,Honeywell,Software Engineer,2,1,Pune,1555149,Embedded IoT,Sensors,18,519,5,1,1,4.2,4,2,0,0,1,80,10,1,CSO|CIC,Python|IoT|Sensors|Edge,6,24,94
+888,2042113,Renuka Balaji,CSM,2020,2024,Apple,Engineer,2,1,Delhi,1370230,AI,Computer Vision,17,313,73,1,1,4.2,4,1,2,0,2,95,10,0,CSM|AID,Python|ML|TensorFlow|PyTorch,6,10,90
+889,2061114,Shweta Singh,AIML,2020,2024,Microsoft,Graduate Engineer,2,1,Bangalore,1366006,AI,Deep Learning,14,200,114,1,1,4.8,0,2,0,0,1,72,8,0,AIML|ECE,Python|Deep Learning|PyTorch,0,10,86
+890,2061115,Anand Naidu,AIML,2020,2024,Cruise,Engineer,2,1,Pune,1265414,Research,Neural Networks,19,358,196,0,0,0.0,0,0,2,0,0,94,10,0,AIML|AIML,Python|Deep Learning|PyTorch,3,0,94
+891,2047116,Vinay Patel,CIC,2020,2024,McAfee,Graduate Engineer,2,1,Gurugram,1587842,Cyber Security,Threat Intelligence,25,402,45,1,4,4.3,1,3,0,0,0,67,7,0,CIC|EEE,Python|Security|Blockchain,12,10,85
+892,2049117,Mohan Subramanian,CSO,2020,2024,Rockwell,Graduate Engineer,2,1,Pune,1444235,IoT,Industrial,16,405,75,1,4,4.4,4,0,0,0,2,71,8,0,CSO|AIML,Python|IoT|Sensors|Edge,12,14,84
+893,2061118,Gopal Singh,AIML,2020,2024,Nvidia,Graduate Engineer,2,1,Bangalore,1750433,AI,NLP,17,278,107,1,3,4.1,0,3,2,0,2,89,7,0,AIML|AID,Python|Deep Learning|PyTorch,12,20,96
+894,2003119,Meena Rajan,MEC,2020,2024,Caterpillar,Graduate Engineer,2,1,Mumbai,1606764,Robotics,Industrial,14,330,2,0,0,0.0,0,0,0,0,2,74,7,1,MEC|CIV,SolidWorks|CATIA|ANSYS,7,0,97
+895,2047120,Akshara Bhat,CIC,2020,2024,CrowdStrike,Graduate Engineer,2,1,Delhi,1244813,Blockchain,Smart Contracts,16,377,80,0,0,0.0,0,0,0,0,1,95,10,1,CIC|CSM,Python|Security|Blockchain,7,0,97
+896,2047121,Srikanth Ramani,CIC,2020,2024,CrowdStrike,Graduate Engineer,2,1,Delhi,1495447,Security,Pentesting,17,460,49,1,3,4.4,2,1,0,0,0,68,6,0,CIC|ECE,Python|Security|Blockchain,5,18,89
+897,2003122,Rahul Srinivas,MEC,2020,2024,GM,Graduate Engineer,2,1,Chennai,1503184,Aerospace,Design,22,330,45,1,2,4.6,1,1,0,0,0,72,7,0,MEC|AIML,SolidWorks|CATIA|ANSYS,5,14,97
+898,2004123,Ramesh Gopal,ECE,2020,2024,ON Semi,Software Engineer,2,1,Chennai,1534444,Embedded,IoT,18,216,60,0,0,0.0,0,0,0,0,0,90,8,1,ECE|CIV,C|Verilog|VLSI|Embedded,8,0,88
+899,2012124,Mohan Naidu,IT,2020,2024,IBM,Software Engineer,2,1,Gurugram,1222437,System Administration,Linux,24,440,239,0,0,0.0,0,0,0,0,11,91,9,0,IT|CSE,Python|Kubernetes|Docker|AWS,6,0,88
+900,2049125,Rekha Mohan,CSO,2020,2024,ABB,Engineer,2,1,Hyderabad,1431683,Edge Computing,IoT,15,211,95,1,3,4.4,0,0,0,1,1,92,10,1,CSO|CIV,Python|IoT|Sensors|Edge,12,8,86
+901,2061126,Sneha Ramani,AIML,2020,2024,Cruise,Engineer,2,1,Gurugram,1653195,Research,Neural Networks,13,290,131,0,0,0.0,0,0,2,0,2,74,10,0,AIML|MEC,Python|Deep Learning|PyTorch,8,0,93
+902,2042127,Madhavi Iyer,CSM,2020,2024,Meta AI,Engineer,2,1,Chennai,1213899,Data Science,ML,25,266,104,1,5,4.6,0,2,2,0,1,92,7,0,CSM|CSM,Python|ML|TensorFlow|PyTorch,4,24,92
+903,2005128,Sneha Verma,CSE,2020,2024,Workday,Engineer,2,1,Bangalore,1703993,DevOps,CI/CD,23,449,151,1,4,4.7,0,1,0,0,13,83,7,1,CSE|ECE,Python|Java|React|AWS,0,20,84
+904,2012129,Karthik Kumar,IT,2020,2024,DXC,Software Engineer,2,1,Delhi,1250212,Cloud Engineering,Azure,18,533,79,0,0,0.0,0,0,0,0,4,90,7,0,IT|IT,Python|Kubernetes|Docker|AWS,3,0,83
+905,2001130,Prakash Sharma,CIV,2020,2024,Gammon India,Engineer,2,1,Bangalore,1604262,Structural Design,Buildings,23,234,66,1,1,4.9,4,2,0,0,3,66,7,1,CIV|CIC,AutoCAD|Staad Pro|Revit,6,14,99
+906,2003131,Deepak Balaji,MEC,2020,2024,Ford,Graduate Engineer,2,1,Mumbai,1552336,Aerospace,Design,14,235,9,1,5,4.8,1,2,0,0,2,79,6,1,MEC|MEC,SolidWorks|CATIA|ANSYS,8,24,89
+907,2047132,Rahul Shetty,CIC,2020,2024,Symantec,Software Engineer,2,1,Bangalore,1688738,Cyber Security,Threat Intelligence,24,438,37,0,0,0.0,0,0,0,0,1,83,7,0,CIC|CIC,Python|Security|Blockchain,0,0,86
+908,2003133,Madhavi Sundaram,MEC,2020,2024,Daimler,Software Engineer,2,1,Bangalore,1376112,Robotics,Industrial,23,328,16,0,0,0.0,0,0,0,0,1,66,6,0,MEC|MEC,SolidWorks|CATIA|ANSYS,0,0,98
+909,2042134,Rajesh Gopal,CSM,2020,2024,DeepMind,Graduate Engineer,2,1,Bangalore,1466657,AI,Computer Vision,15,514,166,1,4,4.8,1,1,1,0,0,80,9,0,CSM|MEC,Python|ML|TensorFlow|PyTorch,4,12,94
+910,2061135,Vinay Sundaram,AIML,2020,2024,Google,Engineer,2,1,Hyderabad,1237165,ML Engineering,MLOps,14,556,235,0,0,0.0,0,0,2,0,3,95,9,1,AIML|AID,Python|Deep Learning|PyTorch,0,0,98
+911,2049136,Srikanth Sundaram,CSO,2020,2024,Wipro IoT,Software Engineer,2,1,Pune,1261742,Edge Computing,IoT,19,552,2,1,2,4.0,3,1,0,1,1,66,8,0,CSO|EEE,Python|IoT|Sensors|Edge,8,8,96
+912,2001137,Lavanya Balaji,CIV,2020,2024,KBR,Engineer,2,1,Noida,1426547,Structural Design,Buildings,16,447,68,1,4,5.0,4,1,0,0,2,79,8,1,CIV|CSE,AutoCAD|Staad Pro|Revit,0,8,88
+913,2001138,Srikanth Pillai,CIV,2020,2024,Afcons,Software Engineer,2,1,Pune,1301814,Construction,Project Management,12,310,62,1,5,4.1,2,0,0,0,2,74,6,1,CIV|IT,AutoCAD|Staad Pro|Revit,6,8,83
+914,2001139,Rajesh Iyer,CIV,2020,2024,Gammon India,Graduate Engineer,2,1,Pune,1380304,Infrastructure,Roads,24,397,7,1,5,4.8,4,0,0,0,0,92,7,0,CIV|CSO,AutoCAD|Staad Pro|Revit,0,10,87
+915,2001140,Sneha Singh,CIV,2020,2024,Jacobs,Software Engineer,2,1,Delhi,1291683,Infrastructure,Roads,18,525,78,1,5,4.7,1,0,0,0,2,89,10,0,CIV|ECE,AutoCAD|Staad Pro|Revit,0,12,88
+916,2004141,Shweta Subramanian,ECE,2020,2024,Renesas,Engineer,2,1,Bangalore,1216922,Wireless,5G,19,417,6,1,4,4.5,3,3,0,0,0,82,6,1,ECE|CSO,C|Verilog|VLSI|Embedded,8,24,90
+917,2054142,Keerthi Bhat,AID,2020,2024,Google,Engineer,2,1,Delhi,1414187,Data Science,ML Engineering,16,408,115,1,4,5.0,3,1,0,0,3,92,9,0,AID|CSM,Python|Data Science|SQL|ML,7,18,99
+918,2004143,Sowmya Bhat,ECE,2020,2024,Qualcomm,Software Engineer,2,1,Bangalore,1516817,Hardware Design,VLSI,24,592,79,1,1,4.3,1,1,0,0,1,82,6,0,ECE|IT,C|Verilog|VLSI|Embedded,4,16,85
+919,2042144,Sowmya Singh,CSM,2020,2024,Tesla,Engineer,2,1,Chennai,1477848,AI,Computer Vision,24,557,133,0,0,0.0,0,0,0,0,0,81,8,0,CSM|AIML,Python|ML|TensorFlow|PyTorch,7,0,85
+920,2012145,Madhavi Swamy,IT,2020,2024,Infosys,Engineer,2,1,Hyderabad,1585312,DevOps,Kubernetes,16,436,179,0,0,0.0,0,0,0,0,15,71,6,1,IT|CSE,Python|Kubernetes|Docker|AWS,0,0,89
+921,2002146,Rajesh Bhat,EEE,2020,2024,SolarEdge,Engineer,2,1,Chennai,1383128,Control Systems,Industrial,17,435,21,1,5,4.4,0,2,0,0,0,90,8,0,EEE|CIV,MATLAB|Power Systems|PLC,8,14,96
+922,2061147,Ramya Ramani,AIML,2020,2024,Waymo,Engineer,2,1,Chennai,1654286,Research,Neural Networks,22,259,84,1,2,4.9,3,3,1,1,2,71,7,1,AIML|MEC,Python|Deep Learning|PyTorch,0,20,83
+923,2047148,Keerthi Pillai,CIC,2020,2024,Rapid7,Software Engineer,2,1,Noida,1465545,Cyber Security,Threat Intelligence,16,275,23,1,2,4.9,2,1,0,0,2,92,9,1,CIC|CIC,Python|Security|Blockchain,3,8,89
+924,2001149,Karthik Krishnan,CIV,2020,2024,Arup,Graduate Engineer,2,1,Pune,1256020,Construction,Project Management,23,460,79,1,5,4.5,3,1,0,0,0,89,7,1,CIV|CSO,AutoCAD|Staad Pro|Revit,6,10,84
+925,2049150,Vivek Gopal,CSO,2020,2024,LG Soft,Graduate Engineer,2,1,Chennai,1627348,Embedded IoT,Sensors,12,404,97,1,1,4.5,4,0,0,0,2,67,7,1,CSO|AIML,Python|IoT|Sensors|Edge,4,14,94
+926,2005151,Vivek Reddy,CSE,2020,2024,Qualcomm,Graduate Engineer,2,1,Pune,1728392,Cloud Engineering,AWS,12,274,120,1,4,4.6,0,3,0,0,6,75,10,0,CSE|EEE,Python|Java|React|AWS,8,18,90
+927,2003152,Gopal Swamy,MEC,2020,2024,Hero,Software Engineer,2,1,Noida,1374370,Manufacturing,CAD/CAM,19,367,10,1,2,4.8,0,0,0,0,2,65,10,0,MEC|MEC,SolidWorks|CATIA|ANSYS,0,14,82
+928,2005153,Shalini Varma,CSE,2020,2024,Oracle,Engineer,2,1,Noida,1785902,Data Engineering,BigData,17,309,151,1,3,4.4,4,0,0,0,5,95,9,1,CSE|CIC,Python|Java|React|AWS,8,18,91
+929,2049154,Ravi Sharma,CSO,2020,2024,Tech Mahindra,Graduate Engineer,2,1,Pune,1541087,IoT,Smart Cities,13,250,96,1,1,4.3,0,2,0,0,3,81,6,0,CSO|CSE,Python|IoT|Sensors|Edge,3,18,85
+930,2004155,Bhavana Naidu,ECE,2020,2024,Texas Instruments,Software Engineer,2,1,Pune,1336241,IC Design,Analog,20,221,72,0,0,0.0,0,0,0,0,3,85,7,1,ECE|CSE,C|Verilog|VLSI|Embedded,10,0,93
+931,2002156,Mythili Reddy,EEE,2020,2024,Hitachi,Engineer,2,1,Gurugram,1602908,Renewable,Solar,25,489,66,0,0,0.0,0,0,0,0,0,93,7,1,EEE|CSM,MATLAB|Power Systems|PLC,12,0,95
+932,2005157,Ashok Srinivas,CSE,2020,2024,Tech Mahindra,Software Engineer,2,1,Mumbai,1653072,Data Engineering,BigData,21,570,179,1,4,4.7,2,2,0,0,6,70,9,1,CSE|CSM,Python|Java|React|AWS,8,8,87
+933,2003158,Vinay Kumar,MEC,2020,2024,Mahindra,Graduate Engineer,2,1,Gurugram,1286341,Robotics,Industrial,25,571,76,0,0,0.0,0,0,0,0,1,81,8,1,MEC|AIML,SolidWorks|CATIA|ANSYS,7,0,88
+934,2005159,Divya Gopal,CSE,2020,2024,HCL,Engineer,2,1,Noida,1355219,Cloud Engineering,AWS,19,393,289,0,0,0.0,0,0,0,0,11,65,9,1,CSE|CSE,Python|Java|React|AWS,6,0,91
+935,2061160,Sanjay Iyer,AIML,2020,2024,Microsoft,Engineer,2,1,Bangalore,1348859,Research,Neural Networks,25,401,80,1,2,4.3,4,3,0,0,2,93,6,1,AIML|AID,Python|Deep Learning|PyTorch,6,14,97
+936,2005161,Suresh Ramani,CSE,2020,2024,Oracle,Engineer,2,1,Delhi,1712217,Data Engineering,BigData,15,426,222,1,1,4.9,4,3,0,0,8,87,6,1,CSE|EEE,Python|Java|React|AWS,12,16,98
+937,2003162,Prakash Verma,MEC,2020,2024,John Deere,Software Engineer,2,1,Noida,1769222,Manufacturing,CAD/CAM,25,310,62,1,1,4.8,1,2,0,0,1,90,9,1,MEC|CSE,SolidWorks|CATIA|ANSYS,4,10,96
+938,2012163,Sneha Naidu,IT,2020,2024,Google,Engineer,2,1,Mumbai,1561573,Cloud Engineering,Azure,15,372,221,1,2,4.5,2,0,0,0,9,70,10,0,IT|MEC,Python|Kubernetes|Docker|AWS,8,14,95
+939,2042164,Madhavi Naidu,CSM,2020,2024,Meta AI,Engineer,2,1,Chennai,1276902,AI,Computer Vision,14,460,275,0,0,0.0,0,0,0,0,1,93,9,1,CSM|CIV,Python|ML|TensorFlow|PyTorch,7,0,94
+940,2003165,Lavanya Naidu,MEC,2020,2024,Tata Motors,Graduate Engineer,2,1,Gurugram,1541924,Manufacturing,CAD/CAM,19,590,40,1,4,4.5,0,3,0,0,1,88,6,0,MEC|AID,SolidWorks|CATIA|ANSYS,7,8,91
+941,2001166,Ramesh Nair,CIV,2020,2024,Jacobs,Graduate Engineer,2,1,Hyderabad,1339680,Construction,Project Management,21,457,99,1,5,4.1,3,2,0,0,3,83,6,1,CIV|ECE,AutoCAD|Staad Pro|Revit,3,20,88
+942,2054167,Santosh Gupta,AID,2020,2024,PhonePe,Graduate Engineer,2,1,Gurugram,1747256,Data Science,ML Engineering,23,315,59,1,4,4.2,0,1,0,0,1,89,6,1,AID|MEC,Python|Data Science|SQL|ML,0,10,84
+943,2002168,Anand Nair,EEE,2020,2024,Vestas,Engineer,2,1,Chennai,1406561,Automation,PLC,25,285,9,0,0,0.0,0,0,0,0,1,88,10,0,EEE|CIC,MATLAB|Power Systems|PLC,8,0,90
+944,2054169,Harini Pillai,AID,2020,2024,Twitter,Graduate Engineer,2,1,Delhi,1434711,Data Science,ML Engineering,22,470,298,1,1,4.8,1,2,2,0,1,88,7,1,AID|CIC,Python|Data Science|SQL|ML,4,10,86
+945,2012170,Sanjay Bhat,IT,2020,2024,Wipro,Graduate Engineer,2,1,Gurugram,1426840,System Administration,Linux,16,343,124,0,0,0.0,0,0,0,0,14,71,8,1,IT|ECE,Python|Kubernetes|Docker|AWS,3,0,92
+946,2061171,Priya Bhat,AIML,2020,2024,DeepMind,Software Engineer,2,1,Bangalore,1699031,AI,Deep Learning,19,337,161,1,3,4.2,2,2,2,0,3,76,9,1,AIML|CSO,Python|Deep Learning|PyTorch,10,18,92
+947,2012172,Nithya Mohan,IT,2020,2024,Oracle,Software Engineer,2,1,Noida,1369401,System Administration,Linux,22,285,55,1,5,4.2,0,1,0,0,2,70,6,1,IT|CSM,Python|Kubernetes|Docker|AWS,12,14,85
+948,2054173,Renuka Nair,AID,2020,2024,LatentView,Engineer,2,1,Chennai,1542406,Data Science,ML Engineering,12,411,70,0,0,0.0,0,0,2,0,0,90,6,0,AID|IT,Python|Data Science|SQL|ML,10,0,90
+949,2047174,Padma Sundaram,CIC,2020,2024,IBM Security,Software Engineer,2,1,Mumbai,1717351,Security,Pentesting,16,542,58,0,0,0.0,0,0,0,1,3,82,6,0,CIC|EEE,Python|Security|Blockchain,3,0,91
+950,2061175,Bhavana Singh,AIML,2020,2024,Meta,Software Engineer,2,1,Gurugram,1235298,AI,NLP,16,404,139,1,2,4.6,3,0,1,0,2,68,7,1,AIML|AIML,Python|Deep Learning|PyTorch,8,8,85
+951,2061176,Meena Reddy,AIML,2020,2024,OpenAI,Software Engineer,2,1,Gurugram,1216449,ML Engineering,MLOps,17,547,206,1,1,4.6,1,2,2,0,3,91,6,0,AIML|CSE,Python|Deep Learning|PyTorch,0,16,83
+952,2004177,Shweta Subramanian,ECE,2020,2024,Texas Instruments,Graduate Engineer,2,1,Bangalore,1490342,Wireless,5G,15,504,21,0,0,0.0,0,0,0,0,3,69,6,0,ECE|AIML,C|Verilog|VLSI|Embedded,8,0,82
+953,2047178,Anand Rao,CIC,2020,2024,Palo Alto Networks,Graduate Engineer,2,1,Hyderabad,1725135,Blockchain,Smart Contracts,20,394,94,1,1,4.7,0,2,0,0,0,82,9,0,CIC|AID,Python|Security|Blockchain,6,14,99
+954,2003179,Deepak Krishna,MEC,2020,2024,Volvo,Engineer,2,1,Pune,1430765,Aerospace,Design,18,507,23,1,4,4.8,4,2,0,0,0,93,8,1,MEC|EEE,SolidWorks|CATIA|ANSYS,6,20,99
+955,2049180,Priya Singh,CSO,2020,2024,Honeywell,Engineer,2,1,Noida,1583623,IoT,Smart Cities,17,417,64,0,0,0.0,0,0,0,0,2,84,9,0,CSO|AIML,Python|IoT|Sensors|Edge,0,0,96
+956,2061181,Sahana Gopal,AIML,2020,2024,Uber,Software Engineer,2,1,Pune,1677106,Research,Neural Networks,17,221,125,1,1,4.2,3,3,0,0,1,73,6,0,AIML|CSO,Python|Deep Learning|PyTorch,0,18,93
+957,2042182,Priya Rajan,CSM,2020,2024,IBM Research,Graduate Engineer,2,1,Chennai,1312114,AI,Computer Vision,12,583,111,1,3,4.1,3,3,1,0,0,84,10,1,CSM|EEE,Python|ML|TensorFlow|PyTorch,7,14,83
+958,2004183,Santosh Srinivas,ECE,2020,2024,Apple,Graduate Engineer,2,1,Noida,1205898,Wireless,5G,22,240,58,1,5,4.9,4,0,0,0,1,75,10,0,ECE|CSE,C|Verilog|VLSI|Embedded,4,18,97
+959,2049184,Ramesh Pillai,CSO,2020,2024,Emerson,Engineer,2,1,Gurugram,1679010,Embedded IoT,Sensors,17,206,60,1,2,5.0,1,2,0,0,1,80,9,1,CSO|CIV,Python|IoT|Sensors|Edge,12,24,84
+960,2012185,Venkat Rao,IT,2020,2024,Cognizant,Engineer,2,1,Mumbai,1503475,Cloud Engineering,Azure,22,237,195,0,0,0.0,0,0,0,0,5,74,7,0,IT|CSE,Python|Kubernetes|Docker|AWS,5,0,94
+961,2004186,Lavanya Patel,ECE,2020,2024,Intel,Engineer,2,1,Noida,1504891,Wireless,5G,12,487,90,1,3,4.9,2,1,0,0,1,77,9,1,ECE|CSO,C|Verilog|VLSI|Embedded,5,18,88
+962,2004187,Krishna Menon,ECE,2020,2024,NXP,Engineer,2,1,Bangalore,1681080,Embedded,IoT,23,500,34,1,1,4.9,0,2,0,0,1,72,10,1,ECE|AIML,C|Verilog|VLSI|Embedded,5,12,84
+963,2049188,Ajay Shetty,CSO,2020,2024,Bosch,Engineer,2,1,Pune,1533077,Edge Computing,IoT,18,575,16,0,0,0.0,0,0,0,0,2,67,8,0,CSO|IT,Python|IoT|Sensors|Edge,12,0,98
+964,2054189,Mythili Subramanian,AID,2020,2024,Flipkart,Engineer,2,1,Pune,1742085,Data Science,ML Engineering,16,590,57,1,1,4.7,2,3,0,0,2,69,10,0,AID|CIV,Python|Data Science|SQL|ML,5,8,94
+965,2002190,Amit Shetty,EEE,2020,2024,Schneider Electric,Software Engineer,2,1,Delhi,1639786,Automation,PLC,13,477,86,1,1,4.2,1,0,0,0,3,95,9,0,EEE|ECE,MATLAB|Power Systems|PLC,10,16,88
+966,2001191,Venkat Naidu,CIV,2020,2024,Fluor,Software Engineer,2,1,Mumbai,1596357,Infrastructure,Roads,19,403,61,0,0,0.0,0,0,0,0,1,95,10,1,CIV|MEC,AutoCAD|Staad Pro|Revit,7,0,84
+967,2003192,Prasad Desai,MEC,2020,2024,Siemens,Software Engineer,2,1,Mumbai,1285211,Robotics,Industrial,20,206,23,1,1,4.1,2,2,0,0,3,66,8,1,MEC|AID,SolidWorks|CATIA|ANSYS,0,18,98
+968,2012193,Suresh Rajan,IT,2020,2024,IBM,Engineer,2,1,Chennai,1767366,Cloud Engineering,Azure,14,383,64,0,0,0.0,0,0,0,0,10,92,8,0,IT|CIC,Python|Kubernetes|Docker|AWS,12,0,99
+969,2012194,Meena Krishnan,IT,2020,2024,TCS,Engineer,2,1,Gurugram,1435917,DevOps,Kubernetes,13,346,112,0,0,0.0,0,0,0,0,3,83,10,1,IT|CIC,Python|Kubernetes|Docker|AWS,3,0,89
+970,2061195,Prakash Naidu,AIML,2020,2024,Uber,Software Engineer,2,1,Hyderabad,1561931,ML Engineering,MLOps,16,309,134,1,1,4.6,4,3,1,0,1,89,10,1,AIML|AID,Python|Deep Learning|PyTorch,10,20,84
+971,2002196,Ajay Iyer,EEE,2020,2024,Vestas,Engineer,2,1,Noida,1706791,Renewable,Solar,21,264,75,0,0,0.0,0,0,0,0,2,91,7,0,EEE|CSM,MATLAB|Power Systems|PLC,10,0,89
+972,2004197,Karthik Desai,ECE,2020,2024,AMD,Engineer,2,1,Gurugram,1684931,Wireless,5G,13,479,92,1,2,4.7,3,0,0,0,2,71,8,0,ECE|MEC,C|Verilog|VLSI|Embedded,6,8,82
+973,2001198,Suresh Prasad,CIV,2020,2024,NBCC,Software Engineer,2,1,Bangalore,1223381,Structural Design,Buildings,15,548,58,0,0,0.0,0,0,0,0,2,88,8,1,CIV|IT,AutoCAD|Staad Pro|Revit,10,0,94
+974,2042199,Swathi Menon,CSM,2020,2024,Anthropic,Graduate Engineer,2,1,Pune,1205741,AI Research,Machine Learning,24,549,294,1,2,4.2,4,3,2,0,2,85,9,1,CSM|MEC,Python|ML|TensorFlow|PyTorch,12,8,99
+975,2042200,Naveen Varma,CSM,2020,2024,IBM Research,Engineer,2,1,Noida,1558813,AI,NLP,16,365,163,1,5,4.8,1,1,1,0,3,69,10,1,CSM|CIV,Python|ML|TensorFlow|PyTorch,10,24,87
+976,2005201,Prakash Iyer,CSE,2020,2024,TCS,Graduate Engineer,2,1,Chennai,1643555,Software Engineering,Backend,24,305,71,1,2,4.6,2,3,0,0,7,68,10,1,CSE|AID,Python|Java|React|AWS,5,14,92
+977,2002202,Rajesh Naidu,EEE,2020,2024,Enphase,Software Engineer,2,1,Delhi,1213068,Power Systems,Grid,14,273,39,0,0,0.0,0,0,0,0,3,87,10,1,EEE|CSE,MATLAB|Power Systems|PLC,8,0,88
+978,2042203,Ramya Bhat,CSM,2020,2024,Microsoft Research,Engineer,2,1,Gurugram,1630589,Data Science,ML,18,444,191,0,0,0.0,0,0,0,1,3,66,7,0,CSM|MEC,Python|ML|TensorFlow|PyTorch,12,0,90
+979,2061204,Padma Shetty,AIML,2020,2024,Waymo,Engineer,2,1,Noida,1243908,Research,Neural Networks,22,297,50,1,3,4.9,3,0,1,0,2,65,8,0,AIML|AIML,Python|Deep Learning|PyTorch,12,20,97
+980,2002205,Mythili Patel,EEE,2020,2024,GE,Software Engineer,2,1,Noida,1774243,Control Systems,Industrial,12,301,15,0,0,0.0,0,0,0,0,1,65,10,1,EEE|CSE,MATLAB|Power Systems|PLC,8,0,89
+981,2049206,Ashok Mohan,CSO,2020,2024,Schneider,Engineer,2,1,Mumbai,1560063,Edge Computing,IoT,24,550,19,1,3,4.4,1,3,0,0,1,74,7,0,CSO|CIC,Python|IoT|Sensors|Edge,0,24,83
+982,2047207,Renuka Pillai,CIC,2020,2024,Qualys,Engineer,2,1,Chennai,1375959,Cyber Security,Threat Intelligence,22,584,36,0,0,0.0,0,0,0,0,0,74,9,1,CIC|AIML,Python|Security|Blockchain,10,0,90
+983,2054208,Ramya Singh,AID,2020,2024,Google,Software Engineer,2,1,Noida,1549605,Data Engineering,Pipelines,24,572,255,1,5,4.1,0,2,0,0,1,70,9,0,AID|EEE,Python|Data Science|SQL|ML,6,24,82
+984,2002209,Santosh Patel,EEE,2020,2024,ABB,Engineer,2,1,Noida,1676986,Control Systems,Industrial,21,467,71,1,5,4.3,4,0,0,0,2,65,10,1,EEE|CSE,MATLAB|Power Systems|PLC,12,24,99
+985,2004210,Shalini Rajan,ECE,2020,2024,ST Microelectronics,Software Engineer,2,1,Gurugram,1341117,Hardware Design,VLSI,25,232,21,1,1,4.0,4,3,0,0,3,79,8,1,ECE|CSE,C|Verilog|VLSI|Embedded,5,24,95
+986,2002211,Divya Singh,EEE,2020,2024,Tesla,Engineer,2,1,Bangalore,1328659,Control Systems,Industrial,19,488,66,1,1,4.8,1,2,0,0,0,76,9,1,EEE|EEE,MATLAB|Power Systems|PLC,4,18,96
+987,2061212,Bhavana Reddy,AIML,2020,2024,Cruise,Graduate Engineer,2,1,Noida,1391554,AI,Deep Learning,13,519,89,1,2,4.4,2,2,2,0,2,84,8,1,AIML|CSE,Python|Deep Learning|PyTorch,12,18,99
+988,2005213,Madhavi Nair,CSE,2020,2024,Nutanix,Software Engineer,2,1,Delhi,1453031,Cloud Engineering,AWS,14,362,292,1,3,4.0,3,2,0,1,2,70,6,1,CSE|AIML,Python|Java|React|AWS,8,8,85
+989,2047214,Krishna Iyer,CIC,2020,2024,Palo Alto Networks,Software Engineer,2,1,Gurugram,1242392,Security,Pentesting,14,301,28,1,5,4.2,4,2,0,0,0,83,7,0,CIC|CSE,Python|Security|Blockchain,4,16,95
+990,2001215,Prasad Patel,CIV,2020,2024,KBR,Engineer,2,1,Pune,1642407,Structural Design,Buildings,19,227,87,0,0,0.0,0,0,0,0,3,73,8,1,CIV|MEC,AutoCAD|Staad Pro|Revit,7,0,86
+991,2049216,Ravi Shetty,CSO,2020,2024,Rockwell,Engineer,2,1,Delhi,1721619,IoT,Smart Cities,12,421,81,0,0,0.0,0,0,0,0,1,65,6,1,CSO|CIV,Python|IoT|Sensors|Edge,12,0,98
+992,2004217,Mahesh Gupta,ECE,2020,2024,ST Microelectronics,Software Engineer,2,1,Delhi,1732337,Hardware Design,VLSI,19,482,68,0,0,0.0,0,0,0,0,1,80,7,1,ECE|IT,C|Verilog|VLSI|Embedded,3,0,82
+993,2049218,Ramya Mohan,CSO,2020,2024,IBM,Engineer,2,1,Noida,1573621,Edge Computing,IoT,23,370,43,1,5,4.7,2,2,0,0,0,86,8,1,CSO|CIC,Python|IoT|Sensors|Edge,10,8,89
+994,2002219,Lakshmi Subramanian,EEE,2020,2024,Havells,Graduate Engineer,2,1,Mumbai,1738423,Control Systems,Industrial,24,290,18,1,3,4.3,3,1,0,0,3,72,7,0,EEE|ECE,MATLAB|Power Systems|PLC,4,12,93
+995,2061220,Nithya Gopal,AIML,2020,2024,Google,Software Engineer,2,1,Delhi,1330291,ML Engineering,MLOps,21,203,210,1,1,4.4,4,3,0,0,2,90,9,0,AIML|CSO,Python|Deep Learning|PyTorch,7,24,85
+996,2042221,Naresh Ramani,CSM,2020,2024,Amazon,Engineer,2,1,Mumbai,1544861,AI,Computer Vision,23,414,85,1,2,4.6,1,0,2,0,3,81,8,1,CSM|EEE,Python|ML|TensorFlow|PyTorch,5,8,94
+997,2004222,Divya Patel,ECE,2020,2024,ON Semi,Graduate Engineer,2,1,Gurugram,1215479,IC Design,Analog,12,531,22,0,0,0.0,0,0,0,0,1,66,9,1,ECE|CIV,C|Verilog|VLSI|Embedded,6,0,99
+998,2001223,Venkat Gopal,CIV,2020,2024,Arup,Software Engineer,2,1,Bangalore,1206669,Construction,Project Management,22,598,67,0,0,0.0,0,0,0,0,1,69,7,1,CIV|AID,AutoCAD|Staad Pro|Revit,7,0,84
+999,2054224,Anjali Desai,AID,2020,2024,Google,Software Engineer,2,1,Hyderabad,1666256,Data Science,ML Engineering,15,209,155,1,4,4.4,0,2,0,0,2,78,9,1,AID|EEE,Python|Data Science|SQL|ML,3,16,82
+1000,2005225,Ashok Ramani,CSE,2020,2024,Tech Mahindra,Engineer,2,1,Gurugram,1587872,Software Engineering,Full Stack,18,529,162,0,0,0.0,0,0,0,0,13,71,8,1,CSE|MEC,Python|Java|React|AWS,3,0,94

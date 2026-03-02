@@ -8,7 +8,7 @@ from django.db.models import F
 
 from common.permissions import ScopePermission, IsOwnerOrAdmin, IsVerifiedAlumni
 from common.utils import success_response, error_response
-from .models import Blog, BlogComment, BlogLike
+from .models import Blog, BlogComment, BlogLike, BlogSave
 from .serializers import (
     BlogSerializer,
     BlogListSerializer,
@@ -191,6 +191,137 @@ class BlogCommentDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = BlogComment.objects.all()
     serializer_class = BlogCommentSerializer
     permission_classes = [permissions.IsAuthenticated, IsOwnerOrAdmin]
+
+
+class BlogLikeByPkView(APIView):
+    """Like/Unlike a blog post by numeric PK (used by frontend)."""
+
+    permission_classes = [permissions.IsAuthenticated]
+
+    def post(self, request, pk):
+        try:
+            blog = Blog.objects.get(pk=pk)
+        except Blog.DoesNotExist:
+            return error_response('Blog not found', status_code=status.HTTP_404_NOT_FOUND)
+
+        like, created = BlogLike.objects.get_or_create(blog=blog, user=request.user)
+        if created:
+            Blog.objects.filter(pk=blog.pk).update(likes_count=F('likes_count') + 1)
+            blog.refresh_from_db()
+            return success_response(message='Blog liked', data={'liked': True, 'likes_count': blog.likes_count})
+        else:
+            like.delete()
+            Blog.objects.filter(pk=blog.pk).update(likes_count=F('likes_count') - 1)
+            blog.refresh_from_db()
+            return success_response(message='Blog unliked', data={'liked': False, 'likes_count': blog.likes_count})
+
+
+class BlogCommentsByPkView(generics.ListCreateAPIView):
+    """List/Create comments for a blog by numeric PK (used by frontend)."""
+
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_serializer_class(self):
+        if self.request.method == 'POST':
+            return BlogCommentCreateSerializer
+        return BlogCommentSerializer
+
+    def get_queryset(self):
+        blog_pk = self.kwargs.get('pk')
+        return BlogComment.objects.filter(
+            blog__pk=blog_pk,
+            parent__isnull=True
+        ).select_related('author')
+
+    def perform_create(self, serializer):
+        blog_pk = self.kwargs.get('pk')
+        try:
+            blog = Blog.objects.get(pk=blog_pk)
+        except Blog.DoesNotExist:
+            raise serializers.ValidationError({'blog': 'Blog not found'})
+        serializer.save(blog=blog, author=self.request.user)
+
+    def list(self, request, *args, **kwargs):
+        queryset = self.get_queryset()
+        serializer = self.get_serializer(queryset, many=True)
+        return success_response(data=serializer.data)
+
+
+class BlogSaveView(APIView):
+    """Save/Unsave a blog post by numeric PK."""
+
+    permission_classes = [permissions.IsAuthenticated]
+
+    def post(self, request, pk):
+        try:
+            blog = Blog.objects.get(pk=pk)
+        except Blog.DoesNotExist:
+            return error_response('Blog not found', status_code=status.HTTP_404_NOT_FOUND)
+
+        save, created = BlogSave.objects.get_or_create(blog=blog, user=request.user)
+        if created:
+            return success_response(message='Blog saved', data={'saved': True})
+        else:
+            save.delete()
+            return success_response(message='Blog unsaved', data={'saved': False})
+
+
+class SavedBlogsView(generics.ListAPIView):
+    """List blogs saved by the current user."""
+
+    serializer_class = BlogListSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        return Blog.objects.filter(saves__user=self.request.user).select_related('author')
+
+    def list(self, request, *args, **kwargs):
+        queryset = self.get_queryset()
+        serializer = self.get_serializer(queryset, many=True, context={'request': request})
+        return success_response(data=serializer.data)
+
+
+class BlogDetailByPkView(generics.RetrieveUpdateDestroyAPIView):
+    """Get, update, delete a blog post by integer PK (used by frontend)."""
+
+    queryset = Blog.objects.all()
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_serializer_class(self):
+        if self.request.method in ['PUT', 'PATCH']:
+            return BlogCreateSerializer
+        return BlogSerializer
+
+    def get_permissions(self):
+        if self.request.method in ['PUT', 'PATCH', 'DELETE']:
+            return [permissions.IsAuthenticated(), IsOwnerOrAdmin()]
+        return super().get_permissions()
+
+    def retrieve(self, request, *args, **kwargs):
+        instance = self.get_object()
+        Blog.objects.filter(pk=instance.pk).update(views_count=F('views_count') + 1)
+        instance.refresh_from_db()
+        serializer = BlogSerializer(instance, context={'request': request})
+        return success_response(data=serializer.data)
+
+    def update(self, request, *args, **kwargs):
+        partial = kwargs.pop('partial', False)
+        instance = self.get_object()
+        serializer = self.get_serializer(instance, data=request.data, partial=partial)
+        serializer.is_valid(raise_exception=True)
+        blog = serializer.save()
+        if blog.status == 'published' and not blog.published_at:
+            blog.published_at = timezone.now()
+            blog.save()
+        return success_response(
+            data=BlogSerializer(blog, context={'request': request}).data,
+            message='Blog updated successfully'
+        )
+
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        instance.delete()
+        return success_response(message='Blog deleted successfully')
 
 
 class MyBlogsView(generics.ListAPIView):

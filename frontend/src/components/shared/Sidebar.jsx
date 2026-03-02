@@ -5,6 +5,7 @@ import {
   FiUsers,
   FiCalendar,
   FiBriefcase,
+  FiBookmark,
   FiUser,
   FiCpu,
   FiFileText,
@@ -20,6 +21,7 @@ const iconMap = {
   users: FiUsers,
   calendar: FiCalendar,
   briefcase: FiBriefcase,
+  bookmark: FiBookmark,
   user: FiUser,
   cpu: FiCpu,
   'file-text': FiFileText,
@@ -43,7 +45,7 @@ const Sidebar = ({ menuItems, isOpen, onClose }) => {
 
   return (
     <>
-      {/* Mobile Overlay */}
+      {/* Overlay (mobile + when sidebar open over content) */}
       {isOpen && (
         <div
           className="fixed inset-0 bg-black/50 z-40 lg:hidden"
@@ -54,9 +56,8 @@ const Sidebar = ({ menuItems, isOpen, onClose }) => {
       {/* Sidebar */}
       <aside
         className={`fixed top-0 left-0 z-40 h-screen pt-16 transition-transform duration-300 
-          bg-white border-r border-gray-200 w-64
-          ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-          lg:translate-x-0`}
+          bg-white border-r border-gray-200 w-64 shadow-sm
+          ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
       >
         <div className="h-full px-3 py-4 overflow-y-auto scrollbar-thin">
           <nav className="space-y-1">

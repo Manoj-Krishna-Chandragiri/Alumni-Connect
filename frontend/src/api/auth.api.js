@@ -13,6 +13,16 @@ const authApi = {
     return response;
   },
 
+  verifyOtp: async (data) => {
+    const response = await axiosInstance.post('/auth/verify-otp/', data);
+    return response;
+  },
+
+  resendOtp: async (data) => {
+    const response = await axiosInstance.post('/auth/resend-otp/', data);
+    return response;
+  },
+
   logout: async () => {
     return { success: true };
   },
@@ -35,6 +45,11 @@ const authApi = {
 
   getProfile: async () => {
     return axiosInstance.get('/auth/me/');
+  },
+
+  getCounsellors: async (department = null) => {
+    const params = department ? { department } : {};
+    return axiosInstance.get('/auth/counsellors/', { params });
   },
 };
 

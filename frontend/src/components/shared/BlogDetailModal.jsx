@@ -74,7 +74,8 @@ const BlogDetailModal = ({ blog, isOpen, onClose }) => {
     try {
       setLoadingComments(true);
       const response = await api.getBlogComments(blog.id);
-      setComments(response.data || []);
+      const data = response.data;
+      setComments(Array.isArray(data) ? data : (data?.results || []));
     } catch (error) {
       console.error('Failed to load comments:', error);
     } finally {

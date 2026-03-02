@@ -117,7 +117,7 @@ const RollNumberInput = ({ value, onChange, onValidationChange, className = '' }
               <li>BC: Branch code</li>
               <li>##: Student number</li>
             </ul>
-            <p className="mt-2">Example: 22BQ1A4225, 23BQ5A05A1</p>
+            <p className="mt-2">Example: 22BQ1A4225, 23BQ5A0508</p>
           </div>
         </div>
       )}

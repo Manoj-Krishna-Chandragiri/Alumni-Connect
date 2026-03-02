@@ -24,12 +24,17 @@ class Choices:
     ]
     
     DEPARTMENTS = [
-        ('cse', 'Computer Science & Engineering'),
-        ('ece', 'Electronics & Communication Engineering'),
-        ('eee', 'Electrical & Electronics Engineering'),
-        ('mech', 'Mechanical Engineering'),
-        ('civil', 'Civil Engineering'),
-        ('it', 'Information Technology'),
+        ('CSE', 'Computer Science & Engineering'),
+        ('CSM', 'CSE with Artificial Intelligence & Machine Learning'),
+        ('AID', 'Artificial Intelligence & Data Science'),
+        ('AIML', 'Artificial Intelligence & Machine Learning'),
+        ('CSO', 'CSE with Internet of Things'),
+        ('CIC', 'CSE with IoT and Cyber Security including Blockchain Technology'),
+        ('ECE', 'Electronics & Communication Engineering'),
+        ('EEE', 'Electrical & Electronics Engineering'),
+        ('IT', 'Information Technology'),
+        ('CIV', 'Civil Engineering'),
+        ('MEC', 'Mechanical Engineering'),
     ]
     
     VERIFICATION_STATUS = [

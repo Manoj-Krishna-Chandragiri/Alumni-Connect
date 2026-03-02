@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Your Email</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 30px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #2563eb;
+            margin: 0;
+        }
+        .otp-box {
+            background-color: #fff;
+            border: 2px dashed #2563eb;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        .otp-code {
+            font-size: 32px;
+            font-weight: bold;
+            color: #2563eb;
+            letter-spacing: 8px;
+            margin: 10px 0;
+        }
+        .expiry-info {
+            background-color: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 12px;
+            margin: 20px 0;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #2563eb;
+            color: #fff !important;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>{{ site_name }}</h1>
+            <p>Email Verification</p>
+        </div>
+
+        <p>Hi <strong>{{ user.first_name }}</strong>,</p>
+
+        <p>Thank you for registering with VVITU Alumni Network! To complete your registration and activate your account, please verify your email address using the OTP code below:</p>
+
+        <div class="otp-box">
+            <p style="margin: 0; color: #666;">Your Verification Code</p>
+            <div class="otp-code">{{ otp_code }}</div>
+        </div>
+
+        <div class="expiry-info">
+            <strong>⏰ Important:</strong> This OTP will expire in <strong>5 minutes</strong>. Please verify your email promptly.
+        </div>
+
+        <p style="text-align: center;">
+            <a href="{{ verify_url }}" class="button">Verify Email Now</a>
+        </p>
+
+        <p><strong>What's next?</strong></p>
+        <ul>
+            <li>Enter the OTP code on the verification page</li>
+            <li>Complete your profile with your details</li>
+            <li>Connect with fellow alumni and students</li>
+            <li>Explore job opportunities and events</li>
+        </ul>
+
+        <p style="margin-top: 30px;">If you didn't create an account with us, please ignore this email or contact support if you have concerns.</p>
+
+        <div class="footer">
+            <p>This is an automated email from VVITU Alumni Network. Please do not reply to this email.</p>
+            <p>&copy; 2026 VVITU Alumni Network. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -124,13 +124,17 @@ class SavedJob(models.Model):
         on_delete=models.CASCADE,
         related_name='saved_jobs'
     )
-    job = models.ForeignKey(
-        Job,
-        on_delete=models.CASCADE,
-        related_name='saved_by'
+    job_id = models.CharField(
+        max_length=100,
+         blank=True,
+        default='',
+        help_text="MongoDB Job ObjectId or Django Job ID"
     )
     saved_at = models.DateTimeField(auto_now_add=True)
     
     class Meta:
         db_table = 'saved_jobs'
-        unique_together = ['user', 'job']
+        unique_together = ['user', 'job_id']
+    
+    def __str__(self):
+        return f"{self.user.email} - Job {self.job_id}"

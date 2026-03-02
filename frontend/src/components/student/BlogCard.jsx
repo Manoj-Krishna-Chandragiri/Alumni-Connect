@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FiUser, FiThumbsUp, FiMessageCircle, FiRepeat, FiSend, FiX, FiLink, FiTwitter, FiLinkedin, FiCheck, FiHeart } from 'react-icons/fi';
+import { FiUser, FiThumbsUp, FiMessageCircle, FiRepeat, FiSend, FiX, FiLink, FiTwitter, FiLinkedin, FiCheck, FiHeart, FiGlobe, FiBookmark, FiFlag } from 'react-icons/fi';
 import { HiOutlineDotsHorizontal, HiOutlineLightBulb, HiOutlineHand } from 'react-icons/hi';
 import { MdOutlineCelebration } from 'react-icons/md';
 import { BsQuestionCircle } from 'react-icons/bs';
@@ -34,6 +34,8 @@ const BlogCard = ({ blog, onRead, onViewDetail }) => {
   const [comments, setComments] = useState([]);
   const [loadingComments, setLoadingComments] = useState(false);
   const [showOptionsMenu, setShowOptionsMenu] = useState(false);
+  const [isSaved, setIsSaved] = useState(blog.is_saved || false);
+  const [savingPost, setSavingPost] = useState(false);
   const optionsMenuRef = useRef(null);
 
   // Use appropriate API based on user role
@@ -223,7 +225,8 @@ const BlogCard = ({ blog, onRead, onViewDetail }) => {
       try {
         setLoadingComments(true);
         const response = await api.getBlogComments(blog.id);
-        setComments(response.data || []);
+        const data = response.data;
+        setComments(Array.isArray(data) ? data : (data?.results || []));
       } catch (error) {
         console.error('Failed to load comments:', error);
       } finally {
@@ -321,13 +324,30 @@ const BlogCard = ({ blog, onRead, onViewDetail }) => {
     return REACTIONS.find(r => r.type === userReaction);
   };
 
+  const handleSaveBlog = async (e) => {
+    e.stopPropagation();
+    if (savingPost) return;
+    try {
+      setSavingPost(true);
+      const newSaved = !isSaved;
+      setIsSaved(newSaved);
+      await api.saveBlog(blog.id);
+    } catch (error) {
+      setIsSaved(isSaved); // revert
+      console.error('Failed to save blog:', error);
+    } finally {
+      setSavingPost(false);
+      setShowOptionsMenu(false);
+    }
+  };
+
   const currentReactionDisplay = getReactionDisplay();
 
   return (
     <div className="bg-white rounded-lg border border-gray-200 mb-3 hover:shadow-sm transition-shadow">
       {/* Author Header - Exact LinkedIn Style */}
       <div className="px-4 py-3">
-        <div className="flex items-start justify-between">
+        <div className="flex items-start justify-between relative">
           <div className="flex gap-2">
             <button
               onClick={handleAuthorClick}
@@ -363,13 +383,50 @@ const BlogCard = ({ blog, onRead, onViewDetail }) => {
               <div className="flex items-center gap-1 text-xs text-gray-500">
                 <span>{formatRelativeTime(blog.created_at)}</span>
                 <span>•</span>
-                <span>🌐</span>
+                <FiGlobe className="w-3 h-3" />
               </div>
             </div>
           </div>
-          <button className="text-gray-500 hover:bg-gray-100 p-2 rounded-full">
+          <button
+            onClick={(e) => { e.stopPropagation(); setShowOptionsMenu(!showOptionsMenu); }}
+            className="text-gray-500 hover:bg-gray-100 p-2 rounded-full"
+          >
             <HiOutlineDotsHorizontal className="w-5 h-5" />
           </button>
+          {showOptionsMenu && (
+            <div
+              ref={optionsMenuRef}
+              className="absolute right-0 top-10 bg-white rounded-lg shadow-lg border border-gray-200 p-1 z-50 min-w-48"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={handleSaveBlog}
+                disabled={savingPost}
+                className="w-full flex items-center gap-3 px-3 py-2 hover:bg-gray-50 rounded text-sm text-gray-700"
+              >
+                <FiBookmark className={`w-4 h-4 ${isSaved ? 'fill-current text-primary-600' : ''}`} />
+                <span>{isSaved ? 'Unsave post' : 'Save post'}</span>
+              </button>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  navigator.clipboard.writeText(`${window.location.origin}/blogs/${blog.id}`);
+                  setShowOptionsMenu(false);
+                }}
+                className="w-full flex items-center gap-3 px-3 py-2 hover:bg-gray-50 rounded text-sm text-gray-700"
+              >
+                <FiLink className="w-4 h-4" />
+                <span>Copy link</span>
+              </button>
+              <button
+                onClick={() => setShowOptionsMenu(false)}
+                className="w-full flex items-center gap-3 px-3 py-2 hover:bg-gray-50 rounded text-sm text-red-500"
+              >
+                <FiFlag className="w-4 h-4" />
+                <span>Report post</span>
+              </button>
+            </div>
+          )}
         </div>
       </div>
 
@@ -387,7 +444,7 @@ const BlogCard = ({ blog, onRead, onViewDetail }) => {
       </div>
 
       {/* Cover Image - LinkedIn Style (Full Width, No Padding on Sides) */}
-      {blog.coverImage && !isExpanded && (
+      {(blog.cover_image || blog.coverImage) && !isExpanded && (
         <div 
           className="cursor-pointer hover:opacity-95 transition-opacity"
           onClick={(e) => {
@@ -396,7 +453,7 @@ const BlogCard = ({ blog, onRead, onViewDetail }) => {
           }}
         >
           <img
-            src={blog.coverImage}
+            src={blog.cover_image || blog.coverImage}
             alt={blog.title}
             className="w-full object-cover"
             style={{ maxHeight: '500px' }}
@@ -405,10 +462,10 @@ const BlogCard = ({ blog, onRead, onViewDetail }) => {
       )}
       
       {/* Expanded cover image */}
-      {blog.coverImage && isExpanded && (
+      {(blog.cover_image || blog.coverImage) && isExpanded && (
         <div className="w-full">
           <img
-            src={blog.coverImage}
+            src={blog.cover_image || blog.coverImage}
             alt={blog.title}
             className="w-full object-cover"
             style={{ maxHeight: '600px' }}

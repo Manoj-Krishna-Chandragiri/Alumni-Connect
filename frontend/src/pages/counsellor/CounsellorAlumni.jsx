@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import counsellorApi from '../../api/counsellor.api';
 import { AlumniTable } from '../../components/counsellor';
 import { Modal, Loader, ErrorAlert, Pagination } from '../../components/shared';
-import { FiFilter, FiDownload } from 'react-icons/fi';
+import { FiFilter } from 'react-icons/fi';
+import { DEPARTMENTS_LIST } from '../../utils/rollNumberUtils';
 
 const CounsellorAlumni = () => {
   const [alumni, setAlumni] = useState([]);
@@ -74,13 +75,6 @@ const CounsellorAlumni = () => {
             <FiFilter className="w-4 h-4" />
             Filters
           </button>
-          <button
-            onClick={handleExport}
-            className="btn-primary flex items-center gap-2"
-          >
-            <FiDownload className="w-4 h-4" />
-            Export
-          </button>
         </div>
       </div>
 
@@ -98,10 +92,9 @@ const CounsellorAlumni = () => {
                 className="input-field"
               >
                 <option value="">All Departments</option>
-                <option value="cse">Computer Science</option>
-                <option value="ece">Electronics</option>
-                <option value="me">Mechanical</option>
-                <option value="ce">Civil</option>
+                {DEPARTMENTS_LIST.map((d) => (
+                  <option key={d.value} value={d.value}>{d.label}</option>
+                ))}
               </select>
             </div>
             <div>

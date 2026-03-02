@@ -46,7 +46,8 @@ class ScopePermission(permissions.BasePermission):
         if not required_scope:
             return True
         
-        user_scopes = getattr(request, 'user_scopes', [])
+        # Check jwt_scopes set by JWTScopeMiddleware
+        user_scopes = getattr(request, 'jwt_scopes', [])
         
         if isinstance(required_scope, list):
             return any(scope in user_scopes for scope in required_scope)
@@ -131,3 +132,78 @@ class CanReadAlumni(ScopePermission):
 
 class CanVerifyAlumni(ScopePermission):
     required_scope = 'verify:alumni'
+
+
+class IsSameUserOrAdmin(permissions.BasePermission):
+    """Allow access if user is accessing their own resource or is admin."""
+    
+    def has_object_permission(self, request, view, obj):
+        # Admin has full access
+        if hasattr(request.user, 'role') and request.user.role == 'admin':
+            return True
+        
+        # User can access their own resource
+        if hasattr(obj, 'user'):
+            return obj.user == request.user
+        
+        # If obj is User model directly
+        return obj == request.user
+
+
+class DepartmentPermission(permissions.BasePermission):
+    """Allow access only to users from the same department (for HODs)."""
+    
+    def has_permission(self, request, view):
+        # Admin and principal have access to all departments
+        if hasattr(request.user, 'role') and request.user.role in ['admin', 'principal']:
+            return True
+        return True  # Allow, will check in has_object_permission
+    
+    def has_object_permission(self, request, view, obj):
+        # Admin and principal have full access
+        if hasattr(request.user, 'role') and request.user.role in ['admin', 'principal']:
+            return True
+        
+        # HOD can only access their department
+        if hasattr(request.user, 'role') and request.user.role == 'hod':
+            user_dept = getattr(request.user, 'department', None)
+            obj_dept = getattr(obj, 'department', None)
+            if user_dept and obj_dept:
+                return user_dept == obj_dept
+        
+        # Counsellors have access to their assigned students
+        # Others have access to their own resources
+        return True
+
+
+class IsOwnerOrAdmin(permissions.BasePermission):
+    """Allow access if user owns the resource or is admin."""
+    
+    def has_object_permission(self, request, view, obj):
+        # Admin has full access
+        if hasattr(request.user, 'role') and request.user.role == 'admin':
+            return True
+        
+        # Check if user is the owner
+        if hasattr(obj, 'author'):
+            return obj.author == request.user
+        if hasattr(obj, 'user'):
+            return obj.user == request.user
+        
+        return obj == request.user
+
+
+class IsVerifiedAlumni(permissions.BasePermission):
+    """Allow only verified alumni."""
+    
+    def has_permission(self, request, view):
+        if not request.user or request.user.role != 'alumni':
+            return False
+        
+        # Check if alumni profile is verified
+        try:
+            from apps.accounts.models import AlumniProfile
+            profile = AlumniProfile.objects.filter(user=request.user).first()
+            return profile and profile.verification_status == 'verified'
+        except:
+            return False

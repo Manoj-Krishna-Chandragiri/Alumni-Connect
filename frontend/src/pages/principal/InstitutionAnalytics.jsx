@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Loader, ErrorAlert, StatsCard } from '../../components/shared';
 import { FiUsers, FiTrendingUp, FiBriefcase, FiAward, FiPieChart, FiGlobe } from 'react-icons/fi';
+import principalApi from '../../api/principal.api';
 
 const InstitutionAnalytics = () => {
   const [analytics, setAnalytics] = useState(null);
@@ -8,38 +9,20 @@ const InstitutionAnalytics = () => {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    // Simulate API call
-    setTimeout(() => {
-      setAnalytics({
-        totalStudents: 6250,
-        totalAlumni: 15800,
-        overallPlacementRate: 82,
-        avgPackage: 10.8,
-        departmentStats: [
-          { dept: 'Computer Science', students: 1200, placed: 1080, rate: 90 },
-          { dept: 'Electronics', students: 800, placed: 680, rate: 85 },
-          { dept: 'Mechanical', students: 750, placed: 600, rate: 80 },
-          { dept: 'Civil', students: 600, placed: 450, rate: 75 },
-          { dept: 'Information Tech', students: 900, placed: 765, rate: 85 },
-        ],
-        topRecruiters: [
-          { company: 'Google', hires: 45 },
-          { company: 'Microsoft', hires: 38 },
-          { company: 'Amazon', hires: 32 },
-          { company: 'TCS', hires: 120 },
-          { company: 'Infosys', hires: 95 },
-        ],
-        globalPresence: [
-          { country: 'India', alumni: 12500 },
-          { country: 'USA', alumni: 1800 },
-          { country: 'UK', alumni: 650 },
-          { country: 'Germany', alumni: 320 },
-          { country: 'Canada', alumni: 280 },
-        ],
-      });
-      setLoading(false);
-    }, 500);
+    fetchAnalytics();
   }, []);
+
+  const fetchAnalytics = async () => {
+    try {
+      setLoading(true);
+      const response = await principalApi.getInstitutionInsights();
+      setAnalytics(response.data);
+    } catch (err) {
+      setError('Failed to load institution analytics');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   if (loading) {
     return (
@@ -142,7 +125,7 @@ const InstitutionAnalytics = () => {
         </div>
       </div>
 
-      {/* Top Recruiters & Global Presence */}
+      {/* Top Recruiters & Top Skills */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Top Recruiters */}
         <div className="bg-white rounded-xl border border-gray-200 p-6">
@@ -151,33 +134,46 @@ const InstitutionAnalytics = () => {
             <h2 className="text-lg font-semibold text-gray-900">Top Recruiters</h2>
           </div>
           <div className="space-y-3">
-            {analytics?.topRecruiters.map((item, idx) => (
-              <div key={idx} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                <div className="flex items-center gap-3">
-                  <span className="w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-sm font-medium">
-                    {idx + 1}
-                  </span>
-                  <span className="font-medium text-gray-900">{item.company}</span>
+            {(analytics?.topRecruiters || []).length > 0 ? (
+              analytics.topRecruiters.map((item, idx) => (
+                <div key={idx} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                  <div className="flex items-center gap-3">
+                    <span className="w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-sm font-medium">
+                      {idx + 1}
+                    </span>
+                    <span className="font-medium text-gray-900">{item.company}</span>
+                  </div>
+                  <span className="text-primary-600 font-semibold">{item.hires} hires</span>
                 </div>
-                <span className="text-primary-600 font-semibold">{item.hires} hires</span>
-              </div>
-            ))}
+              ))
+            ) : (
+              <p className="text-sm text-gray-400 text-center py-4">No recruiter data available</p>
+            )}
           </div>
         </div>
 
-        {/* Global Presence */}
+        {/* Top Skills */}
         <div className="bg-white rounded-xl border border-gray-200 p-6">
           <div className="flex items-center gap-2 mb-4">
-            <FiGlobe className="w-5 h-5 text-primary-600" />
-            <h2 className="text-lg font-semibold text-gray-900">Global Alumni Presence</h2>
+            <FiAward className="w-5 h-5 text-primary-600" />
+            <h2 className="text-lg font-semibold text-gray-900">Top Student Skills</h2>
           </div>
           <div className="space-y-3">
-            {analytics?.globalPresence.map((item, idx) => (
-              <div key={idx} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                <span className="font-medium text-gray-900">{item.country}</span>
-                <span className="text-primary-600 font-semibold">{item.alumni.toLocaleString()}</span>
-              </div>
-            ))}
+            {(analytics?.topSkills || []).length > 0 ? (
+              analytics.topSkills.map((item, idx) => (
+                <div key={idx} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                  <div className="flex items-center gap-3">
+                    <span className="w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-sm font-medium">
+                      {idx + 1}
+                    </span>
+                    <span className="font-medium text-gray-900">{item.skill}</span>
+                  </div>
+                  <span className="text-purple-600 font-semibold">{item.count} students</span>
+                </div>
+              ))
+            ) : (
+              <p className="text-sm text-gray-400 text-center py-4">No skills data available</p>
+            )}
           </div>
         </div>
       </div>

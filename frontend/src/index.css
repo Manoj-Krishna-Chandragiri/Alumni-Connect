@@ -18,7 +18,7 @@
   }
   
   .btn-primary {
-    @apply btn bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+    @apply btn bg-primary-500 text-white hover:bg-primary-600 focus:ring-primary-400;
   }
   
   .btn-secondary {
@@ -50,7 +50,7 @@
   }
   
   .sidebar-item-active {
-    @apply sidebar-item bg-primary-50 text-primary-700 hover:bg-primary-100;
+    @apply sidebar-item bg-primary-50 text-primary-700 hover:bg-primary-100 font-semibold;
   }
   
   .badge {
@@ -58,7 +58,7 @@
   }
   
   .badge-primary {
-    @apply badge bg-primary-100 text-primary-800;
+    @apply badge bg-primary-100 text-primary-700;
   }
   
   .badge-success {

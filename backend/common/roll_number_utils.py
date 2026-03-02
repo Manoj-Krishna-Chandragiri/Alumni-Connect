@@ -3,7 +3,7 @@ Roll Number Utility Functions
 Format: YYBQXABC## (10 digits)
 - YY: College start year (2 digits)
 - BQ: Constant
-- X: 1 for regular, 5 for lateral entry
+- X: 1 for regular (4-year BTech), 5 for lateral entry (3-year after Diploma)
 - A: Constant
 - BC: Branch code (2 digits)
 - ##: Student number (2 digits or A0-Z9 for overflow)
@@ -128,6 +128,7 @@ def parse_roll_number(roll_number):
         'actual_student_number': actual_student_num,
         'is_lateral_entry': entry_type == '5',
         'is_regular': entry_type == '1',
+        'course_duration': 3 if entry_type == '5' else 4,
     }
 
 

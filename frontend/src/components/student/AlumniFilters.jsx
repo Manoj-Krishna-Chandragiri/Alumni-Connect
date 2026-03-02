@@ -1,16 +1,7 @@
 import { FiX } from 'react-icons/fi';
+import { DEPARTMENTS_LIST } from '../../utils/rollNumberUtils';
 
 const AlumniFilters = ({ filters, onChange, onClear }) => {
-  const departments = [
-    'Computer Science',
-    'Electronics',
-    'Mechanical',
-    'Civil',
-    'Electrical',
-    'Information Technology',
-    'Chemical',
-    'Biotechnology',
-  ];
 
   const graduationYears = Array.from(
     { length: 30 },
@@ -50,9 +41,9 @@ const AlumniFilters = ({ filters, onChange, onClear }) => {
             className="input"
           >
             <option value="">All Departments</option>
-            {departments.map((dept) => (
-              <option key={dept} value={dept}>
-                {dept}
+            {DEPARTMENTS_LIST.map((dept) => (
+              <option key={dept.value} value={dept.value}>
+                {dept.label}
               </option>
             ))}
           </select>

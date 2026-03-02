@@ -19,5 +19,6 @@ class JobApplicationAdmin(admin.ModelAdmin):
 
 @admin.register(SavedJob)
 class SavedJobAdmin(admin.ModelAdmin):
-    list_display = ['user', 'job', 'saved_at']
+    list_display = ['user', 'job_id', 'saved_at']
     list_filter = ['saved_at']
+    search_fields = ['user__email', 'job_id']

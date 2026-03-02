@@ -11,6 +11,7 @@ const Login = () => {
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [errorCode, setErrorCode] = useState(null);
   const [isPasswordFocused, setIsPasswordFocused] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
@@ -372,11 +373,17 @@ const Login = () => {
     e.preventDefault();
     setLoading(true);
     setError('');
+    setErrorCode(null);
 
     const result = await login(formData);
     
     if (!result.success) {
-      setError(result.error);
+      // Handle both string and object errors
+      const errorMessage = typeof result.error === 'string' 
+        ? result.error 
+        : result.error?.message || result.error?.detail || 'Invalid credentials. Please try again.';
+      setError(errorMessage);
+      setErrorCode(result.errorCode || null);
     }
     
     setLoading(false);
@@ -453,9 +460,9 @@ const Login = () => {
             }}>
               <h2 style={{
                 textAlign: 'center',
-                fontSize: '22px',
+                fontSize: '1.3em',
                 fontWeight: '700',
-                color: '#217093',
+                color: '#E77E69',
                 marginBottom: '16px'
               }}>
                 Sign in to VVITU Alumni Portal
@@ -566,11 +573,30 @@ const Login = () => {
               </div>
 
               {/* Error Alert */}
-              {error && <ErrorAlert message={error} onClose={() => setError('')} />}
+              {error && errorCode === 'alumni_pending_verification' ? (
+                <div style={{
+                  backgroundColor: '#FEF3C7',
+                  border: '1px solid #F59E0B',
+                  borderRadius: '8px',
+                  padding: '16px',
+                  marginBottom: '16px',
+                  textAlign: 'center'
+                }}>
+                  <div style={{ fontSize: '28px', marginBottom: '8px' }}>&#9203;</div>
+                  <p style={{ fontWeight: '600', color: '#92400E', fontSize: '0.95em', marginBottom: '4px' }}>
+                    Verification In Progress
+                  </p>
+                  <p style={{ color: '#92400E', fontSize: '0.85em' }}>
+                    {error}
+                  </p>
+                </div>
+              ) : error && (
+                <ErrorAlert message={error} onClose={() => { setError(''); setErrorCode(null); }} />
+              )}
 
               {/* Email Input */}
               <div ref={inputGroup1Ref} className="inputGroup inputGroup1" style={{ position: 'relative', marginBottom: '2em' }}>
-                <label htmlFor="email" style={{ display: 'block', marginBottom: '12px', fontSize: '1.25em', fontWeight: '700', color: '#217093' }}>College Email</label>
+                <label htmlFor="email" style={{ display: 'block', marginBottom: '8px', fontSize: '1em', fontWeight: '700', color: '#E77E69' }}>College Email</label>
                 <input 
                   ref={emailRef}
                   type="text" 
@@ -584,14 +610,14 @@ const Login = () => {
                   onBlur={handleEmailBlur}
                   style={{
                     width: '100%',
-                    height: '65px',
-                    padding: '14px 1em 0',
+                    height: '50px',
+                    padding: '10px 1em 0',
                     boxSizing: 'border-box',
-                    backgroundColor: '#f3fafd',
-                    border: '2px solid #217093',
+                    backgroundColor: '#FEF0EE',
+                    border: '2px solid #E77E69',
                     borderRadius: '4px',
-                    fontSize: '1.55em',
-                    fontWeight: '600',
+                    fontSize: '1em',
+                    fontWeight: '500',
                     fontFamily: 'inherit',
                     color: '#353538',
                     transition: 'box-shadow 0.2s linear, border-color 0.25s ease-out'
@@ -603,11 +629,11 @@ const Login = () => {
                   fontFamily: 'inherit',
                   top: 0,
                   left: 0,
-                  transform: 'translate(1.4em, 2.6em) scale(1)',
+                  transform: 'translate(1.4em, 2em) scale(1)',
                   transformOrigin: '0 0',
-                  fontSize: '1.25em',
+                  fontSize: '0.95em',
                   fontWeight: '400',
-                  color: '#217093',
+                  color: '#E77E69',
                   opacity: '0.65',
                   pointerEvents: 'none',
                   transition: 'transform 0.2s ease-out, opacity 0.2s linear'
@@ -616,7 +642,7 @@ const Login = () => {
 
               {/* Password Input */}
               <div className="inputGroup inputGroup2" style={{ position: 'relative', marginBottom: '2em' }}>
-                <label htmlFor="password" style={{ display: 'block', marginBottom: '12px', fontSize: '1.25em', fontWeight: '700', color: '#217093' }}>Password</label>
+                <label htmlFor="password" style={{ display: 'block', marginBottom: '8px', fontSize: '1em', fontWeight: '700', color: '#E77E69' }}>Password</label>
                 <input 
                   ref={passwordRef}
                   type={showPassword ? 'text' : 'password'}
@@ -629,14 +655,14 @@ const Login = () => {
                   onBlur={handlePasswordBlur}
                   style={{
                     width: '100%',
-                    height: '65px',
+                    height: '50px',
                     padding: '0 1em',
                     boxSizing: 'border-box',
-                    backgroundColor: '#f3fafd',
-                    border: '2px solid #217093',
+                    backgroundColor: '#FEF0EE',
+                    border: '2px solid #E77E69',
                     borderRadius: '4px',
-                    fontSize: '1.55em',
-                    fontWeight: '600',
+                    fontSize: '1em',
+                    fontWeight: '500',
                     fontFamily: 'inherit',
                     color: '#353538',
                     transition: 'box-shadow 0.2s linear, border-color 0.25s ease-out'
@@ -650,7 +676,7 @@ const Login = () => {
                   top: '.25em',
                   right: 0,
                   fontSize: '1em',
-                  color: '#217093',
+                  color: '#E77E69',
                   cursor: 'pointer',
                   userSelect: 'none'
                 }}>
@@ -666,8 +692,8 @@ const Login = () => {
                     position: 'relative',
                     height: '.85em',
                     width: '.85em',
-                    backgroundColor: '#f3fafd',
-                    border: '2px solid #217093',
+                    backgroundColor: '#FEF0EE',
+                    border: '2px solid #E77E69',
                     borderRadius: '3px'
                   }}>
                     <span style={{
@@ -676,7 +702,7 @@ const Login = () => {
                       top: '.025em',
                       width: '.2em',
                       height: '.5em',
-                      border: 'solid #217093',
+                      border: 'solid #E77E69',
                       borderWidth: '0 3px 3px 0',
                       transform: showPassword ? 'rotate(45deg)' : 'rotate(45deg)',
                       visibility: showPassword ? 'visible' : 'hidden'
@@ -693,11 +719,11 @@ const Login = () => {
                   disabled={loading}
                   style={{
                     width: '100%',
-                    height: '65px',
-                    backgroundColor: '#4eb8dd',
+                    height: '50px',
+                    backgroundColor: '#E77E69',
                     border: 'none',
                     borderRadius: '4px',
-                    fontSize: '1.55em',
+                    fontSize: '1.1em',
                     fontWeight: '600',
                     color: '#ffffff',
                     fontFamily: 'inherit',
@@ -705,8 +731,8 @@ const Login = () => {
                     transition: 'background-color 0.2s ease-out',
                     opacity: loading ? 0.5 : 1
                   }}
-                  onMouseEnter={(e) => e.target.style.backgroundColor = '#217093'}
-                  onMouseLeave={(e) => e.target.style.backgroundColor = '#4eb8dd'}
+                  onMouseEnter={(e) => e.target.style.backgroundColor = '#CA6959'}
+                  onMouseLeave={(e) => e.target.style.backgroundColor = '#E77E69'}
                 >
                   {loading ? 'Logging in...' : 'Log in'}
                 </button>
@@ -716,7 +742,7 @@ const Login = () => {
               <div style={{ marginTop: '1.5em', textAlign: 'center' }}>
                 <p style={{ color: '#6b7280' }}>
                   Don't have an account?{' '}
-                  <Link to="/register" style={{ color: '#217093', fontWeight: '600', textDecoration: 'none' }}>
+                  <Link to="/register" style={{ color: '#E77E69', fontWeight: '600', textDecoration: 'none' }}>
                     Sign up
                   </Link>
                 </p>
@@ -729,7 +755,7 @@ const Login = () => {
 
       <style>{`
         .inputGroup1.focusWithText .helper {
-          transform: translate(1.4em, 2em) scale(0.65) !important;
+          transform: translate(1.4em, 1.5em) scale(0.65) !important;
           opacity: 1 !important;
         }
         .inputGroup1.hasValue .helper {
@@ -738,7 +764,7 @@ const Login = () => {
         }
         input:focus {
           outline: none !important;
-          border-color: #4eb8dd !important;
+          border-color: #E77E69 !important;
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
         }
       `}</style>

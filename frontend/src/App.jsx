@@ -26,6 +26,7 @@ import {
   AlumniDirectory,
   Events as StudentEvents,
   Jobs as StudentJobs,
+  SavedJobs,
   Profile as StudentProfile,
   AICareer,
 } from './pages/student';
@@ -36,6 +37,7 @@ import {
   AlumniJobs,
   AlumniBlogs,
   AlumniProfile,
+  AlumniSavedItems,
 } from './pages/alumni';
 
 // Counsellor Pages
@@ -44,13 +46,14 @@ import {
   CounsellorStudents,
   CounsellorAlumni,
   CounsellingInsights,
+  CounsellorProfile,
 } from './pages/counsellor';
 
 // HOD Pages
-import { HODHome, DepartmentAnalytics } from './pages/hod';
+import { HODHome, DepartmentAnalytics, HODStudents, HODAlumni, HODProfile } from './pages/hod';
 
 // Principal Pages
-import { PrincipalHome, InstitutionAnalytics } from './pages/principal';
+import { PrincipalHome, InstitutionAnalytics, PrincipalStudents, PrincipalAlumni, PrincipalProfile } from './pages/principal';
 
 // Admin Pages
 import {
@@ -61,6 +64,7 @@ import {
   ManageStudents,
   ManageAlumni,
   SystemSettings,
+  AdminProfile,
 } from './pages/admin';
 
 // Common Pages
@@ -108,6 +112,14 @@ function App() {
             element={
               <RequireScope scope={SCOPES.VIEW_JOBS}>
                 <StudentJobs />
+              </RequireScope>
+            }
+          />
+          <Route
+            path="saved-jobs"
+            element={
+              <RequireScope scope={SCOPES.VIEW_JOBS}>
+                <SavedJobs />
               </RequireScope>
             }
           />
@@ -183,6 +195,7 @@ function App() {
             }
           />
           <Route path="settings" element={<Settings />} />
+          <Route path="saved" element={<AlumniSavedItems />} />
           <Route path="*" element={<NotFound />} />
         </Route>
 
@@ -229,6 +242,7 @@ function App() {
               </RequireScope>
             }
           />
+          <Route path="profile" element={<CounsellorProfile />} />
           <Route path="settings" element={<Settings />} />
           <Route path="*" element={<NotFound />} />
         </Route>
@@ -248,7 +262,7 @@ function App() {
             path="students"
             element={
               <RequireScope scope={SCOPES.VIEW_STUDENTS}>
-                <CounsellorStudents />
+                <HODStudents />
               </RequireScope>
             }
           />
@@ -256,7 +270,7 @@ function App() {
             path="alumni"
             element={
               <RequireScope scope={SCOPES.VIEW_ALUMNI}>
-                <CounsellorAlumni />
+                <HODAlumni />
               </RequireScope>
             }
           />
@@ -276,6 +290,7 @@ function App() {
               </RequireScope>
             }
           />
+          <Route path="profile" element={<HODProfile />} />
           <Route path="settings" element={<Settings />} />
           <Route path="*" element={<NotFound />} />
         </Route>
@@ -295,7 +310,7 @@ function App() {
             path="students"
             element={
               <RequireScope scope={SCOPES.VIEW_STUDENTS}>
-                <CounsellorStudents />
+                <PrincipalStudents />
               </RequireScope>
             }
           />
@@ -303,7 +318,7 @@ function App() {
             path="alumni"
             element={
               <RequireScope scope={SCOPES.VIEW_ALUMNI}>
-                <CounsellorAlumni />
+                <PrincipalAlumni />
               </RequireScope>
             }
           />
@@ -323,6 +338,7 @@ function App() {
               </RequireScope>
             }
           />
+          <Route path="profile" element={<PrincipalProfile />} />
           <Route path="settings" element={<Settings />} />
           <Route path="*" element={<NotFound />} />
         </Route>
@@ -386,6 +402,7 @@ function App() {
               </RequireScope>
             }
           />
+          <Route path="profile" element={<AdminProfile />} />
           <Route path="*" element={<NotFound />} />
         </Route>
 

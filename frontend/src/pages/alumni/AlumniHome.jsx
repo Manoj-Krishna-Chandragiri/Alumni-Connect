@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import alumniApi from '../../api/alumni.api';
 import { BlogList } from '../../components/student';
@@ -34,9 +34,9 @@ const AlumniHome = () => {
   return (
     <div className="space-y-6">
       {/* Welcome Section */}
-      <div className="bg-gradient-to-r from-primary-600 to-primary-700 rounded-xl p-6 text-white">
+      <div className="bg-gradient-to-r from-[#A8422F] via-[#C4503A] to-[#E77E69] rounded-xl p-6 text-white">
         <h1 className="text-2xl font-bold mb-2">
-          Welcome back, {user?.firstName}! 👋
+          Welcome back, {user?.firstName}! 
         </h1>
         <p className="text-primary-100">
           Share your knowledge and help shape the careers of future graduates.

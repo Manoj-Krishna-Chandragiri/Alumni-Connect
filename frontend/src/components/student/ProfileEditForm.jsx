@@ -7,7 +7,7 @@ import {
 import { SiLeetcode, SiCodechef, SiFacebook } from 'react-icons/si';
 import RollNumberInput from '../shared/RollNumberInput';
 import FileUpload from '../shared/FileUpload';
-import { BRANCH_FULL_NAMES } from '../../utils/rollNumberUtils';
+import { BRANCH_FULL_NAMES, parseRollNumber } from '../../utils/rollNumberUtils';
 
 const ProfileEditForm = ({ profile, onSave, onCancel, loading }) => {
   const [formData, setFormData] = useState({
@@ -55,6 +55,7 @@ const ProfileEditForm = ({ profile, onSave, onCancel, loading }) => {
 
   const [activeTab, setActiveTab] = useState('personal');
   const [rollNumberValid, setRollNumberValid] = useState(true);
+  const [parsedRollInfo, setParsedRollInfo] = useState(null);
 
   // Update form data when profile prop changes
   useEffect(() => {
@@ -88,11 +89,56 @@ const ProfileEditForm = ({ profile, onSave, onCancel, loading }) => {
         internships: profile?.internships || [],
         placements: profile?.placements || [],
       });
+      
+      // Parse roll number on initial load
+      if (profile?.rollNumber) {
+        const parsed = parseRollNumber(profile.rollNumber);
+        if (parsed) {
+          setParsedRollInfo(parsed);
+        }
+      }
     }
   }, [profile]);
 
   const handleChange = (field, value) => {
     setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleRollNumberChange = (value) => {
+    // Update roll number
+    setFormData(prev => ({ ...prev, rollNumber: value }));
+    
+    // Parse roll number and auto-populate department with SHORT code (CSM, CSE, etc.)
+    const parsed = parseRollNumber(value);
+    if (parsed && parsed.branchShort) {
+      // Store parsed info for display
+      setParsedRollInfo(parsed);
+      // Store short code in lowercase to match backend format
+      setFormData(prev => ({ ...prev, department: parsed.branchShort.toLowerCase() }));
+    } else {
+      setParsedRollInfo(null);
+    }
+  };
+
+  // Get display department name
+  const getDepartmentDisplay = () => {
+    // First try to get from parsed roll number
+    if (parsedRollInfo && parsedRollInfo.branchFull) {
+      return parsedRollInfo.branchFull;
+    }
+    // Try to parse current roll number
+    if (formData.rollNumber) {
+      const parsed = parseRollNumber(formData.rollNumber);
+      if (parsed && parsed.branchFull) {
+        return parsed.branchFull;
+      }
+    }
+    // Fallback to stored department code
+    if (formData.department) {
+      const deptUpper = formData.department.toUpperCase();
+      return BRANCH_FULL_NAMES[deptUpper] || formData.department;
+    }
+    return 'Not specified';
   };
 
   const handleSocialProfileChange = (platform, value) => {
@@ -318,11 +364,15 @@ const ProfileEditForm = ({ profile, onSave, onCancel, loading }) => {
                   type="email"
                   value={formData.email}
                   onChange={(e) => handleChange('email', e.target.value)}
-                  className="input pl-10"
+                  className="input pl-10 bg-gray-50 text-gray-700"
                   required
                   disabled
+                  title="Email cannot be changed"
                 />
               </div>
+              <p className="text-xs text-gray-500 mt-1">
+                Email is linked to your roll number and cannot be changed
+              </p>
             </div>
 
             <div>
@@ -381,7 +431,7 @@ const ProfileEditForm = ({ profile, onSave, onCancel, loading }) => {
               </label>
               <RollNumberInput
                 value={formData.rollNumber}
-                onChange={(value) => handleChange('rollNumber', value)}
+                onChange={handleRollNumberChange}
                 onValidationChange={setRollNumberValid}
               />
             </div>
@@ -392,10 +442,14 @@ const ProfileEditForm = ({ profile, onSave, onCancel, loading }) => {
               </label>
               <input
                 type="text"
-                value={formData.department}
-                className="input bg-gray-50"
+                value={getDepartmentDisplay()}
+                className="input bg-gray-50 text-gray-700"
                 disabled
+                title="Department is automatically determined from your roll number"
               />
+              <p className="text-xs text-gray-500 mt-1">
+                Auto-filled from roll number: {formData.department?.toUpperCase() || 'N/A'}
+              </p>
             </div>
 
             <div className="grid grid-cols-2 gap-4">

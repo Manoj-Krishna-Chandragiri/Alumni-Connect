@@ -10,6 +10,8 @@ app_name = 'accounts'
 urlpatterns = [
     # Authentication
     path('register/', views.RegisterView.as_view(), name='register'),
+    path('verify-otp/', views.VerifyOTPView.as_view(), name='verify_otp'),
+    path('resend-otp/', views.ResendOTPView.as_view(), name='resend_otp'),
     path('login/', views.LoginView.as_view(), name='login'),
     path('logout/', views.LogoutView.as_view(), name='logout'),
     path('refresh/', TokenRefreshView.as_view(), name='token_refresh'),
@@ -18,6 +20,9 @@ urlpatterns = [
     
     # Validation
     path('validate-roll-number/', views.ValidateRollNumberView.as_view(), name='validate_roll_number'),
+    
+    # Counsellors list
+    path('counsellors/', views.CounsellorListView.as_view(), name='counsellor_list'),
     
     # User management (Admin)
     path('users/', views.UserListView.as_view(), name='user_list'),

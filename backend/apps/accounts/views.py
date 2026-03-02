@@ -12,6 +12,7 @@ from django.utils import timezone
 from common.permissions import RolePermission, ScopePermission, IsSameUserOrAdmin
 from common.utils import success_response, error_response
 from common.roll_number_utils import validate_roll_number, parse_roll_number
+from common.email_service import EmailNotificationService
 from .serializers import (
     CustomTokenObtainPairSerializer,
     UserSerializer,
@@ -21,25 +22,107 @@ from .serializers import (
     AlumniVerificationSerializer,
     StudentProfileSerializer,
     AlumniProfileSerializer,
+    OTPVerificationSerializer,
+    OTPResendSerializer,
 )
-from .models import StudentProfile, AlumniProfile
+from .models import StudentProfile, AlumniProfile, EmailOTP
 
 User = get_user_model()
 
 
 class RegisterView(generics.CreateAPIView):
-    """Register new user."""
+    """Register new user with OTP email verification."""
     
     queryset = User.objects.all()
     serializer_class = UserRegistrationSerializer
     permission_classes = [permissions.AllowAny]
     
     def create(self, request, *args, **kwargs):
+        # Debug logging
+        print(f"Registration request data: {request.data}")
+        
         serializer = self.get_serializer(data=request.data)
+        
+        if not serializer.is_valid():
+            print(f"Validation errors: {serializer.errors}")
+        
         serializer.is_valid(raise_exception=True)
+        
+        # Create user (will be inactive until OTP verification)
         user = serializer.save()
         
-        # Generate tokens
+        # User is created as inactive by default
+        user.is_active = False
+        user.save()
+        
+        # Generate and send OTP
+        otp = EmailOTP.create_otp(user, purpose='signup', expiry_minutes=5)
+        
+        # Send OTP email
+        try:
+            EmailNotificationService.send_otp_email(user, otp.otp_code)
+        except Exception as e:
+            # Log error but don't fail registration
+            print(f"Failed to send OTP email: {str(e)}")
+        
+        return success_response(
+            data={
+                'email': user.email,
+                'message': 'Registration successful! Please check your email for the OTP to verify your account.',
+                'otp_expires_in_minutes': 5
+            },
+            message='Registration successful. OTP sent to email.',
+            status_code=status.HTTP_201_CREATED
+        )
+
+
+class VerifyOTPView(APIView):
+    """Verify OTP and activate user account."""
+    
+    permission_classes = [permissions.AllowAny]
+    
+    def post(self, request):
+        # Debug logging
+        print(f"OTP verification request data: {request.data}")
+        
+        serializer = OTPVerificationSerializer(data=request.data)
+        
+        if not serializer.is_valid():
+            print(f"OTP Validation errors: {serializer.errors}")
+        
+        serializer.is_valid(raise_exception=True)
+        
+        user = serializer.validated_data['user']
+        otp = serializer.validated_data['otp']
+        
+        # Mark OTP as verified
+        otp.is_verified = True
+        otp.verified_at = timezone.now()
+        otp.save()
+        
+        # Activate user account in SQLite
+        user.is_active = True
+        user.is_verified = True
+        user.save()
+        
+        # ========== SYNC VERIFICATION STATUS TO MONGODB ==========
+        try:
+            from common.models import User as MongoUser
+            
+            mongo_user = MongoUser.objects(email=user.email).first()
+            if mongo_user:
+                mongo_user.is_active = True
+                mongo_user.is_verified = True
+                mongo_user.save()
+                print(f"✅ MongoDB sync: User verified - {user.email}")
+            else:
+                print(f"⚠️  MongoDB user not found for verification: {user.email}")
+                
+        except Exception as e:
+            print(f"⚠️  MongoDB verification sync failed for {user.email}: {str(e)}")
+            # Continue anyway - SQLite is the source of truth
+        
+        # Generate tokens for immediate login
         refresh = RefreshToken.for_user(user)
         refresh['role'] = user.role
         refresh['scopes'] = user.get_scopes()
@@ -52,8 +135,41 @@ class RegisterView(generics.CreateAPIView):
                     'access': str(refresh.access_token),
                 }
             },
-            message='Registration successful',
-            status_code=status.HTTP_201_CREATED
+            message='Email verified successfully! You are now logged in.'
+        )
+
+
+class ResendOTPView(APIView):
+    """Resend OTP to user's email."""
+    
+    permission_classes = [permissions.AllowAny]
+    
+    def post(self, request):
+        serializer = OTPResendSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        
+        email = serializer.validated_data['email']
+        user = User.objects.get(email=email)
+        
+        # Generate new OTP
+        otp = EmailOTP.create_otp(user, purpose='signup', expiry_minutes=5)
+        
+        # Send OTP email
+        try:
+            EmailNotificationService.send_otp_email(user, otp.otp_code)
+        except Exception as e:
+            return error_response(
+                f'Failed to send OTP email: {str(e)}',
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+        
+        return success_response(
+            data={
+                'email': user.email,
+                'message': 'A new OTP has been sent to your email.',
+                'otp_expires_in_minutes': 5
+            },
+            message='OTP resent successfully.'
         )
 
 
@@ -61,6 +177,22 @@ class LoginView(TokenObtainPairView):
     """Custom login view with role and scopes."""
     
     serializer_class = CustomTokenObtainPairSerializer
+    
+    def post(self, request, *args, **kwargs):
+        # Get the token response from serializer (already has user data)
+        response = super().post(request, *args, **kwargs)
+        data = response.data
+        
+        # Restructure to match frontend expectations: {tokens: {access, refresh}, user, profile}
+        # The serializer already includes complete user data
+        return Response({
+            'tokens': {
+                'access': data['access'],
+                'refresh': data['refresh'],
+            },
+            'user': data['user'],
+            'profile': None  # Profile data is included in user object
+        }, status=response.status_code)
 
 
 class LogoutView(APIView):
@@ -622,4 +754,35 @@ class ValidateRollNumberView(APIView):
                 'already_exists': already_exists,
                 'info': roll_info
             }
+        )
+
+
+class CounsellorListView(APIView):
+    """Get list of counsellors, optionally filtered by department."""
+    
+    permission_classes = [permissions.AllowAny]
+    
+    def get(self, request):
+        department = request.query_params.get('department', None)
+        
+        # Filter counsellors by role
+        counsellors = User.objects.filter(role='counsellor', is_active=True)
+        
+        # Apply department filter if provided
+        if department:
+            counsellors = counsellors.filter(department=department)
+        
+        # Serialize counsellor data
+        data = []
+        for counsellor in counsellors:
+            data.append({
+                'id': counsellor.id,
+                'name': counsellor.full_name,
+                'email': counsellor.email,
+                'department': counsellor.department,
+            })
+        
+        return success_response(
+            data=data,
+            message=f'Found {len(data)} counsellor(s)'
         )

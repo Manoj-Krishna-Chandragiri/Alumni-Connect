@@ -5,3 +5,4 @@ export { default as ManageEvents } from './ManageEvents';
 export { default as ManageStudents } from './ManageStudents';
 export { default as ManageAlumni } from './ManageAlumni';
 export { default as SystemSettings } from './SystemSettings';
+export { default as AdminProfile } from './AdminProfile';

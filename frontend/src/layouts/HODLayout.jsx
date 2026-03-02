@@ -4,7 +4,7 @@ import { Navbar, Sidebar } from '../components/shared';
 import { SCOPES } from '../constants/roles';
 
 const HODLayout = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(window.innerWidth >= 1024);
 
   const menuItems = [
     {
@@ -56,7 +56,7 @@ const HODLayout = () => {
         onClose={() => setSidebarOpen(false)}
       />
 
-      <main className="lg:ml-64 pt-16 min-h-screen">
+      <main className={`pt-16 min-h-screen transition-all duration-300 ${sidebarOpen ? 'lg:ml-64' : ''}`}>
         <div className="p-4 md:p-6">
           <Outlet />
         </div>

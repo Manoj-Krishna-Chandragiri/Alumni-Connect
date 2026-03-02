@@ -45,7 +45,8 @@ const Navbar = ({ onMenuClick, title }) => {
         <div className="flex items-center gap-4">
           <button
             onClick={onMenuClick}
-            className="p-2 rounded-lg hover:bg-gray-100 lg:hidden"
+            className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            aria-label="Toggle sidebar"
           >
             <FiMenu className="w-6 h-6" />
           </button>
@@ -83,10 +84,10 @@ const Navbar = ({ onMenuClick, title }) => {
               className="flex items-center gap-2 p-2 rounded-lg hover:bg-gray-100"
             >
               {/* Profile Image or Initials */}
-              {(profile?.profileImage || profile?.profilePicture) ? (
+              {(user?.avatar || profile?.profileImage || profile?.profilePicture) ? (
                 <img 
-                  src={profile?.profileImage || profile?.profilePicture} 
-                  alt={`${profile.firstName || user?.firstName} ${profile.lastName || user?.lastName}`}
+                  src={user?.avatar || profile?.profileImage || profile?.profilePicture} 
+                  alt={`${profile?.firstName || user?.firstName} ${profile?.lastName || user?.lastName}`}
                   className="w-8 h-8 rounded-full object-cover"
                 />
               ) : (

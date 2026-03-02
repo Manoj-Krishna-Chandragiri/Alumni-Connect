@@ -4,7 +4,13 @@ import { FiCheckCircle, FiXCircle, FiEye, FiSearch } from 'react-icons/fi';
 const AlumniVerificationTable = ({ alumni, onVerify, onReject, onView }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredAlumni = alumni.filter(
+  const normalizedAlumni = alumni.map((alum) => ({
+    ...alum,
+    name: alum.name ?? alum.fullName ?? alum.full_name ?? `${alum.firstName ?? ''} ${alum.lastName ?? ''}`.trim() ?? 'Unknown',
+    email: alum.email ?? '',
+  }));
+
+  const filteredAlumni = normalizedAlumni.filter(
     (alum) =>
       alum.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       alum.email.toLowerCase().includes(searchTerm.toLowerCase())
@@ -74,7 +80,7 @@ const AlumniVerificationTable = ({ alumni, onVerify, onReject, onView }) => {
                   {alum.department}
                 </td>
                 <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">
-                  {new Date(alum.appliedOn).toLocaleDateString()}
+                  {alum.appliedOn ? new Date(alum.appliedOn).toLocaleDateString() : alum.createdAt ? new Date(alum.createdAt).toLocaleDateString() : '—'}
                 </td>
                 <td className="px-4 py-4 whitespace-nowrap">
                   <div className="flex items-center gap-2">
