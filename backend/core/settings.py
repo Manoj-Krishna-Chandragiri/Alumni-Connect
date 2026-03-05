@@ -21,6 +21,14 @@ DEBUG = os.getenv('DEBUG', 'True').lower() == 'true'
 _allowed = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1')
 ALLOWED_HOSTS = [h.strip() for h in _allowed.split(',') if h.strip()]
 
+# Render auto-injects RENDER_EXTERNAL_HOSTNAME with the service's public hostname
+_render_host = os.getenv('RENDER_EXTERNAL_HOSTNAME', '')
+if _render_host and _render_host not in ALLOWED_HOSTS:
+    ALLOWED_HOSTS.append(_render_host)
+# Always allow internal health-check probes on Render
+if os.getenv('RENDER') and '127.0.0.1' not in ALLOWED_HOSTS:
+    ALLOWED_HOSTS.extend(['127.0.0.1', 'localhost'])
+
 # Production security headers (only enforced when DEBUG=False)
 if not DEBUG:
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
