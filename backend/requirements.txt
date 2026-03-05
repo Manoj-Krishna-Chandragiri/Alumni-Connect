@@ -4,6 +4,7 @@ djangorestframework-simplejwt>=5.3.1
 django-cors-headers>=4.3.1
 django-filter>=23.5
 pymongo>=4.0.0
+mongoengine>=0.27.0
 python-dotenv>=1.0.0
 PyJWT>=2.8.0
 bcrypt>=4.1.2
@@ -13,3 +14,7 @@ pandas>=2.1.0
 gunicorn>=21.2.0
 cloudinary>=1.40.0
 Pillow>=10.0.0
+# Production
+psycopg2-binary>=2.9.9
+dj-database-url>=2.1.0
+whitenoise>=6.6.0
