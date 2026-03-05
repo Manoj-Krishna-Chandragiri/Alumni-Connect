@@ -12,17 +12,23 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        # Must remove the FK (job) first — it owns the job_id column.
+        # Only then can we add the new job_id CharField without a column conflict.
         migrations.AlterUniqueTogether(
             name='savedjob',
-            unique_together={('user', 'job_id')},
+            unique_together=set(),
+        ),
+        migrations.RemoveField(
+            model_name='savedjob',
+            name='job',
         ),
         migrations.AddField(
             model_name='savedjob',
             name='job_id',
             field=models.CharField(blank=True, default='', help_text='MongoDB Job ObjectId or Django Job ID', max_length=100),
         ),
-        migrations.RemoveField(
-            model_name='savedjob',
-            name='job',
+        migrations.AlterUniqueTogether(
+            name='savedjob',
+            unique_together={('user', 'job_id')},
         ),
     ]
