@@ -53,7 +53,7 @@ def create_test_user():
     StudentProfile.objects.create(
         user=user,
         roll_no=roll_no,
-        phone='+91 9876543210',
+        phone='+919876543210',
         current_year=4,
         cgpa=8.5,
         bio='Test student account for Manoj Krishna',

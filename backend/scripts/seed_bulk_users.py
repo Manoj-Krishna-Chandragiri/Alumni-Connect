@@ -65,7 +65,7 @@ def create_admin_hierarchy():
             first_name='Dr. Principal',
             last_name='Kumar',
             role='principal',
-            department='administration',
+            department='csm',
             is_active=True,
             is_verified=True
         )
@@ -164,7 +164,7 @@ def create_students_bulk(count=50):
         StudentProfile.objects.create(
             user=user,
             roll_no=roll_no,
-            phone=f'+91 90012345{i:02d}',
+            phone=f'+9190012345{i:02d}',
             current_year=current_year,
             cgpa=cgpa,
             bio=f'{first_name} {last_name} - {dept.upper()} student, batch of {batch_year}',
@@ -222,7 +222,7 @@ def create_alumni_bulk(count=50):
         AlumniProfile.objects.create(
             user=user,
             roll_no=roll_no,
-            phone=f'+91 98765432{i:02d}',
+            phone=f'+9198765432{i:02d}',
             bio=f'Alumni from {dept.upper()} department, graduated in {grad_year}',
             current_company=random.choice(COMPANIES),
             current_position=random.choice(['Software Engineer', 'Senior Developer', 'Tech Lead', 'Manager']),
