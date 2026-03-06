@@ -237,20 +237,10 @@ FRONTEND_URL = os.getenv('FRONTEND_URL', 'http://localhost:5173')
 # Allow @vvit.net accounts to login without email verification (for seeded accounts)
 SKIP_EMAIL_VERIFICATION_FOR_VVIT = os.getenv('SKIP_EMAIL_VERIFICATION', 'True').lower() == 'true'
 
-# Email Configuration
-# Set EMAIL_BACKEND to 'django.core.mail.backends.smtp.EmailBackend' to send real emails
-# Keep 'django.core.mail.backends.console.EmailBackend' for dev (prints OTP to console)
-# In production without SMTP configured, use console backend to print OTP to logs
-if DEBUG:
-    # Development: print to console
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-else:
-    # Production: use console backend to print OTPs to Render logs (for now)
-    # Switch to smtp when email server is properly configured
-    EMAIL_BACKEND = os.getenv('EMAIL_BACKEND', 'django.core.mail.backends.console.EmailBackend')
-    
-EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.gmail.com')
-EMAIL_PORT = int(os.getenv('EMAIL_PORT', ' 587'))
+# Email Configuration - Default to SMTP for real email sending
+EMAIL_BACKEND = os.getenv('EMAIL_BACKEND', 'django.core.mail.backends.smtp.EmailBackend')
+EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.office365.com')
+EMAIL_PORT = int(os.getenv('EMAIL_PORT', '587'))
 EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'True').lower() == 'true'
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', '')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', '')
