@@ -23,7 +23,7 @@ from apps.accounts.models import StudentProfile, AlumniProfile
 User = get_user_model()
 
 # Sample data
-DEPARTMENTS = ['csm', 'ece', 'eee', 'mech', 'civil']
+DEPARTMENTS = ['cse', 'csm', 'aid', 'aiml', 'cso', 'cic', 'ece', 'eee', 'it', 'civ', 'mec']
 FIRST_NAMES_MALE = ['Rahul', 'Amit', 'Karthik', 'Aditya', 'Vikram', 'Rohit', 'Arjun', 'Rajesh', 'Suresh', 'Manoj', 
                      'Venkat', 'Krishna', 'Sai', 'Praveen', 'Naveen', 'Pavan', 'Tarun', 'Akhil', 'Nikhil', 'Varun']
 FIRST_NAMES_FEMALE = ['Sneha', 'Priya', 'Divya', 'Ananya', 'Pooja', 'Neha', 'Meera', 'Sravani', 'Keerthi', 'Swathi',
@@ -31,6 +31,22 @@ FIRST_NAMES_FEMALE = ['Sneha', 'Priya', 'Divya', 'Ananya', 'Pooja', 'Neha', 'Mee
 LAST_NAMES = ['Kumar', 'Sharma', 'Patel', 'Reddy', 'Verma', 'Gupta', 'Joshi', 'Kapoor', 'Das', 'Iyer', 
               'Menon', 'Nair', 'Rao', 'Singh', 'Prasad', 'Naidu', 'Chowdary', 'Varma', 'Babu', 'Murthy']
 
+# Department-specific skills
+SKILLS_BY_DEPT = {
+    'cse': ['Python', 'Java', 'JavaScript', 'React', 'SQL', 'MongoDB', 'Node.js', 'Django', 'Git'],
+    'csm': ['Machine Learning', 'Deep Learning', 'Python', 'TensorFlow', 'NLP', 'Data Science', 'PyTorch'],
+    'aid': ['AI', 'Deep Learning', 'Computer Vision', 'NLP', 'Python', 'TensorFlow', 'Keras'],
+    'aiml': ['Machine Learning', 'AI', 'Python', 'Scikit-learn', 'Data Science', 'Neural Networks'],
+    'cso': ['Cybersecurity', 'Ethical Hacking', 'Network Security', 'Python', 'Penetration Testing', 'Cryptography'],
+    'cic': ['Cloud Computing', 'AWS', 'Azure', 'Docker', 'Kubernetes', 'DevOps', 'Terraform'],
+    'ece': ['Embedded Systems', 'VLSI', 'Signal Processing', 'C', 'C++', 'MATLAB', 'Verilog'],
+    'eee': ['Power Systems', 'Electrical Design', 'AutoCAD', 'MATLAB', 'PLC', 'Circuit Analysis'],
+    'it': ['Python', 'Java', 'JavaScript', 'React', 'SQL', 'Web Development', 'Git', 'Node.js'],
+    'civ': ['AutoCAD', 'Civil 3D', 'Structural Analysis', 'Project Management', 'Construction', 'Surveying'],
+    'mec': ['CAD', 'SolidWorks', 'CATIA', 'Manufacturing', 'Thermodynamics', 'Mechanical Design']
+}
+
+# Generic fallback skills
 SKILLS = ['Python', 'Java', 'JavaScript', 'React', 'Django', 'Node.js', 'SQL', 'MongoDB', 
           'Machine Learning', 'Data Science', 'Cloud Computing', 'AWS', 'Docker', 'Git']
 
@@ -132,7 +148,8 @@ def create_students_bulk(count=50):
         roll_prefix = str(batch_year)[-2:]  # Last 2 digits of year
         
         # VVIT roll format: YYBQXAserial (e.g., 22BQ1A4201)
-        dept_code = {'csm': '4', 'ece': '5', 'eee': '2', 'mech': '3', 'civil': '1'}.get(dept, '4')
+        dept_code = {'cse': '05', 'csm': '4', 'aid': '66', 'aiml': '67', 'cso': '68', 'cic': '69', 
+                     'ece': '5', 'eee': '2', 'it': '12', 'civ': '1', 'mec': '3'}.get(dept, '05')
         roll_no = f"{roll_prefix}BQ{dept_code}A{4200 + i:04d}"
         email = f"{roll_no.lower()}@vvit.net"
         
@@ -167,7 +184,7 @@ def create_students_bulk(count=50):
             current_year=current_year,
             cgpa=cgpa,
             bio=f'{first_name} {last_name} - {dept.upper()} student, batch of {batch_year}',
-            skills=random.sample(SKILLS, k=random.randint(3, 6)),
+            skills=random.sample(SKILLS_BY_DEPT.get(dept, SKILLS), k=min(random.randint(3, 6), len(SKILLS_BY_DEPT.get(dept, SKILLS)))),
             batch_year=batch_year,
             graduation_year=batch_year + 4,
         )
@@ -214,7 +231,8 @@ def create_alumni_bulk(count=50):
         # Create alumni profile
         batch_year = grad_year - 4
         roll_prefix = str(batch_year)[-2:]
-        dept_code = {'csm': '4', 'ece': '5', 'eee': '2', 'mech': '3', 'civil': '1'}.get(dept, '4')
+        dept_code = {'cse': '05', 'csm': '4', 'aid': '66', 'aiml': '67', 'cso': '68', 'cic': '69', 
+                     'ece': '5', 'eee': '2', 'it': '12', 'civ': '1', 'mec': '3'}.get(dept, '05')
         roll_no = f"{roll_prefix}BQ{dept_code}A{4100 + i:04d}"
         
         AlumniProfile.objects.create(
@@ -224,7 +242,7 @@ def create_alumni_bulk(count=50):
             current_company=random.choice(COMPANIES),
             current_designation=random.choice(['Software Engineer', 'Senior Developer', 'Tech Lead', 'Manager']),
             experience_years=2026 - grad_year,
-            skills=random.sample(SKILLS, k=random.randint(4, 8)),
+            skills=random.sample(SKILLS_BY_DEPT.get(dept, SKILLS), k=min(random.randint(4, 8), len(SKILLS_BY_DEPT.get(dept, SKILLS)))),
             graduation_year=grad_year,
         )
         
