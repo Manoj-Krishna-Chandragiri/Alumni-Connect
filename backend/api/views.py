@@ -2129,7 +2129,7 @@ class AlumniVerificationActionView(APIView):
 # ============== COUNSELLOR VIEWS ==============
 
 class CounsellorStatsView(APIView):
-    """Dashboard statistics for counsellors."""
+    """Dashboard statistics for counsellors (Django ORM version)."""
     permission_classes = [IsAuthenticated]
     
     def get(self, request):
@@ -2137,51 +2137,47 @@ class CounsellorStatsView(APIView):
         if request.user.role != 'counsellor':
             return error_response('Access denied. Counsellors only.', status_code=status.HTTP_403_FORBIDDEN)
         
-        # Resolve MongoEngine user by email (request.user is Django ORM User)
-        mongo_counsellor = User.objects(email=request.user.email).first()
-        if not mongo_counsellor:
-            return error_response('Counsellor profile not found', status_code=status.HTTP_404_NOT_FOUND)
+        # Use Django ORM instead of MongoDB
+        from django.contrib.auth import get_user_model
+        from apps.accounts.models import StudentProfile as DjangoStudentProfile
+        from apps.accounts.models import AlumniProfile as DjangoAlumniProfile
         
-        # Count students assigned to this counsellor
-        assigned_student_users = User.objects(assigned_counsellor=mongo_counsellor, role='student')
-        total_students = assigned_student_users.count()
+        DjangoUser = get_user_model()
+        counsellor = request.user
         
-        # Count alumni assigned to this counsellor
-        assigned_alumni_users = User.objects(assigned_counsellor=mongo_counsellor, role='alumni')
-        total_alumni = assigned_alumni_users.count()
+        # Count students assigned to this counsellor (by department)
+        assigned_students = DjangoUser.objects.filter(
+            role='student',
+            department__iexact=counsellor.department
+        )
+        total_students = assigned_students.count()
         
-        # Count placed students
+        # Count alumni from same department
+        assigned_alumni = DjangoUser.objects.filter(
+            role='alumni',
+            department__iexact=counsellor.department
+        )
+        total_alumni = assigned_alumni.count()
+        
+        # Count placed students (with student profiles)
         placed_count = 0
-        for user in assigned_student_users:
-            profile = StudentProfile.objects(user=user).first()
-            if profile and profile.is_placed:
-                placed_count += 1
+        student_profiles = DjangoStudentProfile.objects.filter(
+            user__in=assigned_students
+        )
+        # Note: Django StudentProfile doesn't have is_placed field yet, so count is 0 for now
+        # TODO: Add is_placed field to StudentProfile model
         
         # Calculate placement rate
         placement_rate = (placed_count / total_students * 100) if total_students > 0 else 0
         
         # Count verified alumni
-        verified_alumni = 0
-        for user in assigned_alumni_users:
-            profile = AlumniProfile.objects(user=user).first()
-            if profile and profile.is_verified:
-                verified_alumni += 1
+        verified_alumni = DjangoAlumniProfile.objects.filter(
+            user__in=assigned_alumni,
+            verification_status='verified'
+        ).count()
         
-        # Recent placements (placed students with offers)
+        # Recent placements (empty for now since we don't have placement data)
         recent_placements = []
-        for user in assigned_student_users:
-            if len(recent_placements) >= 4:
-                break
-            profile = StudentProfile.objects(user=user, is_placed=True).first()
-            if profile and profile.placement_offers:
-                offer = profile.placement_offers[0]
-                full_name = f"{user.first_name} {user.last_name}".strip() or user.email.split('@')[0]
-                recent_placements.append({
-                    'name': full_name,
-                    'company': offer.company_name or '',
-                    'package': offer.package or '',
-                    'role': offer.role or '',
-                })
 
         # Upcoming events from Django ORM Event model
         from django.utils import timezone
