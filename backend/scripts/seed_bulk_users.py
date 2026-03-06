@@ -88,13 +88,19 @@ def create_admin_hierarchy():
         print(f'✓ Created Principal: {principal.email}')
         users_created += 1
     
-    # HODs (one per department)
+    # HODs (one per department - ALL 11 departments)
     hod_names = [
         ('Rajesh', 'Sharma', 'csm'),
         ('Suresh', 'Reddy', 'ece'),
         ('Ramesh', 'Patel', 'eee'),
-        ('Mahesh', 'Kumar', 'mech'),
-        ('Ganesh', 'Rao', 'civil'),
+        ('Mahesh', 'Kumar', 'mec'),    # Fixed: mec not mech
+        ('Ganesh', 'Rao', 'civ'),      # Fixed: civ not civil
+        ('Kiran', 'Kumar', 'cse'),     # NEW
+        ('Vijay', 'Singh', 'aid'),     # NEW
+        ('Anil', 'Reddy', 'aiml'),     # NEW
+        ('Prakash', 'Verma', 'cso'),   # NEW
+        ('Ravi', 'Prasad', 'cic'),     # NEW
+        ('Satish', 'Naidu', 'it'),     # NEW
     ]
     
     for first, last, dept in hod_names:
@@ -197,24 +203,30 @@ def create_students_bulk(count=50):
 
 
 def create_alumni_bulk(count=50):
-    """Create bulk alumni (graduated)."""
+    """Create bulk alumni (graduated) with roll number based emails."""
     users_created = 0
-    graduation_years = [2020, 2021, 2022, 2023]  # Graduated alumni
+    graduation_years = [2020, 2021, 2022, 2023, 2024]  # Graduated alumni
     
     for i in range(1, count + 1):
-        # Generate unique email
+        # Generate unique roll-based email (matching credentials file format)
         grad_year = random.choice(graduation_years)
-        first_name = random.choice(FIRST_NAMES_MALE + FIRST_NAMES_FEMALE)
-        last_name = random.choice(LAST_NAMES)
-        email = f"{first_name.lower()}.{last_name.lower()}{i}@vvit.net"
+        batch_year = grad_year - 4
+        dept = random.choice(DEPARTMENTS)
+        
+        # Generate roll number
+        roll_prefix = str(batch_year)[-2:]
+        dept_code = {'cse': '05', 'csm': '4', 'aid': '66', 'aiml': '67', 'cso': '68', 'cic': '69', 
+                     'ece': '5', 'eee': '2', 'it': '12', 'civ': '1', 'mec': '3'}.get(dept, '4')
+        roll_no = f"{roll_prefix}BQ{dept_code}A{4100 + i:04d}"
+        email = f"{roll_no.lower()}@vvit.net"
         
         # Skip if exists
         if User.objects.filter(email=email).exists():
-            email = f"{first_name.lower()}.{last_name.lower()}{i}{random.randint(10,99)}@vvit.net"
-            if User.objects.filter(email=email).exists():
-                continue
+            continue
         
-        dept = random.choice(DEPARTMENTS)
+        # Random name
+        first_name = random.choice(FIRST_NAMES_MALE + FIRST_NAMES_FEMALE)
+        last_name = random.choice(LAST_NAMES)
         
         # Create user
         user = User.objects.create_user(
@@ -228,13 +240,7 @@ def create_alumni_bulk(count=50):
             is_verified=True
         )
         
-        # Create alumni profile
-        batch_year = grad_year - 4
-        roll_prefix = str(batch_year)[-2:]
-        dept_code = {'cse': '05', 'csm': '4', 'aid': '66', 'aiml': '67', 'cso': '68', 'cic': '69', 
-                     'ece': '5', 'eee': '2', 'it': '12', 'civ': '1', 'mec': '3'}.get(dept, '05')
-        roll_no = f"{roll_prefix}BQ{dept_code}A{4100 + i:04d}"
-        
+        # Create alumni profile (roll_no already generated above)
         AlumniProfile.objects.create(
             user=user,
             roll_number=roll_no,
@@ -244,6 +250,7 @@ def create_alumni_bulk(count=50):
             experience_years=2026 - grad_year,
             skills=random.sample(SKILLS_BY_DEPT.get(dept, SKILLS), k=min(random.randint(4, 8), len(SKILLS_BY_DEPT.get(dept, SKILLS)))),
             graduation_year=grad_year,
+            verification_status='verified',  # Auto-verify seeded alumni for testing
         )
         
         users_created += 1
@@ -278,8 +285,8 @@ def main():
     print("="*70)
     print(f"\n📊 Breakdown:")
     print(f"   • Admin/Principal: 2")
-    print(f"   • HODs: 5")
-    print(f"   • Counsellors: 10")
+    print(f"   • HODs: 11 (all departments)")
+    print(f"   • Counsellors: 22 (2 per department)")
     print(f"   • Students: {student_count}")
     print(f"   • Alumni: {alumni_count}")
     print(f"\n🔐 Default Passwords:")
@@ -291,8 +298,11 @@ def main():
     print(f"   • Alumni: Alumni@123")
     print(f"\n📧 Sample Logins:")
     print(f"   Admin: admin@vvit.net / Admin@123")
-    print(f"   Student: 22bq1a4201@vvit.net / Student@123")
-    print(f"   Alumni: Check created users above / Alumni@123")
+    print(f"   HOD: hod.cse@vvit.net / Hod@123")
+    print(f"   Counsellor: counsellor1.csm@vvit.net / Counsellor@123")
+    print(f"   Student: 22bq4a4201@vvit.net / Student@123")
+    print(f"   Alumni: 16bq4a4102@vvit.net / Alumni@123")
+    print(f"\n📝 All departments: {', '.join(DEPARTMENTS)}")
     print("\n" + "="*70 + "\n")
 
 
