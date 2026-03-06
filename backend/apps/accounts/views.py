@@ -773,9 +773,9 @@ class CounsellorListView(APIView):
         # Filter counsellors by role
         counsellors = User.objects.filter(role='counsellor', is_active=True)
         
-        # Apply department filter if provided
+        # Apply department filter if provided (case-insensitive)
         if department:
-            counsellors = counsellors.filter(department=department)
+            counsellors = counsellors.filter(department__iexact=department)
         
         # Serialize counsellor data
         data = []
