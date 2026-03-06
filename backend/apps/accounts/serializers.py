@@ -63,12 +63,19 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
                 'detail': 'Invalid email or password. Please check your credentials and try again.'
             })
         
-        # Check if verified
+        # Check if verified (auto-verify @vvit.net seeded accounts)
         if not user.is_verified:
-            raise serializers.ValidationError({
-                'detail': 'Your account is not verified. Please check your email for the verification code.',
-                'error_code': 'not_verified'
-            })
+            if user.email.endswith('@vvit.net'):
+                # Auto-verify @vvit.net accounts (seeded users)
+                user.is_verified = True
+                user.is_active = True
+                user.save()
+                print(f"✅ Auto-verified seeded account: {user.email}")
+            else:
+                raise serializers.ValidationError({
+                    'detail': 'Your account is not verified. Please check your email for the verification code.',
+                    'error_code': 'not_verified'
+                })
         
         # Check if active
         if not user.is_active:
