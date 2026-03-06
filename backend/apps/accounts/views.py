@@ -8,6 +8,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth import get_user_model
 from django.utils import timezone
+import threading
 
 from common.permissions import RolePermission, ScopePermission, IsSameUserOrAdmin
 from common.utils import success_response, error_response
@@ -28,6 +29,20 @@ from .serializers import (
 from .models import StudentProfile, AlumniProfile, EmailOTP
 
 User = get_user_model()
+
+
+def send_otp_email_async(user, otp_code):
+    """Send OTP email in background thread to avoid blocking request."""
+    def _send_email():
+        try:
+            EmailNotificationService.send_otp_email(user, otp_code)
+            print(f"✅ OTP email sent successfully to {user.email}")
+        except Exception as e:
+            print(f"❌ Failed to send OTP email to {user.email}: {str(e)}")
+    
+    thread = threading.Thread(target=_send_email)
+    thread.daemon = True
+    thread.start()
 
 
 class RegisterView(generics.CreateAPIView):
@@ -58,12 +73,8 @@ class RegisterView(generics.CreateAPIView):
         # Generate and send OTP
         otp = EmailOTP.create_otp(user, purpose='signup', expiry_minutes=5)
         
-        # Send OTP email
-        try:
-            EmailNotificationService.send_otp_email(user, otp.otp_code)
-        except Exception as e:
-            # Log error but don't fail registration
-            print(f"Failed to send OTP email: {str(e)}")
+        # Send OTP email asynchronously (non-blocking)
+        send_otp_email_async(user, otp.otp_code)
         
         return success_response(
             data={
@@ -154,14 +165,8 @@ class ResendOTPView(APIView):
         # Generate new OTP
         otp = EmailOTP.create_otp(user, purpose='signup', expiry_minutes=5)
         
-        # Send OTP email
-        try:
-            EmailNotificationService.send_otp_email(user, otp.otp_code)
-        except Exception as e:
-            return error_response(
-                f'Failed to send OTP email: {str(e)}',
-                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR
-            )
+        # Send OTP email asynchronously (non-blocking)
+        send_otp_email_async(user, otp.otp_code)
         
         return success_response(
             data={
