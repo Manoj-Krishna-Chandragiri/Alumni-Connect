@@ -84,6 +84,72 @@ class BlogCreateSerializer(serializers.ModelSerializer):
             'title', 'excerpt', 'content', 'cover_image',
             'tags', 'category', 'status'
         ]
+    
+    def create(self, validated_data):
+        # Handle base64 image upload
+        cover_image = validated_data.get('cover_image', '')
+        
+        if cover_image and cover_image.startswith('data:image'):
+            # It's a base64 image, upload to Cloudinary
+            import base64
+            import io
+            from common.cloudinary_utils import upload_image
+            
+            try:
+                # Extract base64 data
+                header, encoded = cover_image.split(',', 1)
+                image_data = base64.b64decode(encoded)
+                image_file = io.BytesIO(image_data)
+                image_file.name = 'blog_cover.jpg'
+                image_file.content_type = 'image/jpeg'
+                
+                # Upload to Cloudinary
+                result = upload_image(image_file, folder='blogs/covers')
+                
+                if result.get('success'):
+                    validated_data['cover_image'] = result.get('url')
+                else:
+                    # Remove cover_image if upload failed
+                    validated_data.pop('cover_image', None)
+            except Exception as e:
+                print(f"Error uploading blog cover image: {str(e)}")
+                # Remove cover_image if processing failed
+                validated_data.pop('cover_image', None)
+        
+        return super().create(validated_data)
+    
+    def update(self, instance, validated_data):
+        # Handle base64 image upload for updates
+        cover_image = validated_data.get('cover_image', '')
+        
+        if cover_image and cover_image.startswith('data:image'):
+            # It's a base64 image, upload to Cloudinary
+            import base64
+            import io
+            from common.cloudinary_utils import upload_image
+            
+            try:
+                # Extract base64 data
+                header, encoded = cover_image.split(',', 1)
+                image_data = base64.b64decode(encoded)
+                image_file = io.BytesIO(image_data)
+                image_file.name = 'blog_cover.jpg'
+                image_file.content_type = 'image/jpeg'
+                
+                # Upload to Cloudinary
+                result = upload_image(image_file, folder='blogs/covers')
+                
+                if result.get('success'):
+                    validated_data['cover_image'] = result.get('url')
+                else:
+                    # Keep existing cover_image if upload failed
+                    validated_data.pop('cover_image', None)
+            except Exception as e:
+                print(f"Error uploading blog cover image: {str(e)}")
+                # Keep existing cover_image if processing failed
+                validated_data.pop('cover_image', None)
+        
+        return super().update(instance, validated_data)
 
 
 class BlogCommentSerializer(serializers.ModelSerializer):
