@@ -51,6 +51,7 @@ def create_admin_hierarchy():
             last_name='Admin',
             role='admin',
             department='csm',
+            is_active=True,
             is_verified=True
         )
         print(f'✓ Created Admin: {admin.email}')
@@ -65,6 +66,7 @@ def create_admin_hierarchy():
             last_name='Kumar',
             role='principal',
             department='administration',
+            is_active=True,
             is_verified=True
         )
         print(f'✓ Created Principal: {principal.email}')
@@ -89,6 +91,7 @@ def create_admin_hierarchy():
                 last_name=last,
                 role='hod',
                 department=dept,
+                is_active=True,
                 is_verified=True
             )
             print(f'✓ Created HOD: {hod.email}')
@@ -108,6 +111,7 @@ def create_admin_hierarchy():
                     last_name=last_name,
                     role='counsellor',
                     department=dept,
+                    is_active=True,
                     is_verified=True
                 )
                 print(f'✓ Created Counsellor: {counsellor.email}')
@@ -149,6 +153,7 @@ def create_students_bulk(count=50):
             last_name=last_name,
             role='student',
             department=dept,
+            is_active=True,
             is_verified=True
         )
         
@@ -204,6 +209,7 @@ def create_alumni_bulk(count=50):
             last_name=last_name,
             role='alumni',
             department=dept,
+            is_active=True,
             is_verified=True
         )
         
