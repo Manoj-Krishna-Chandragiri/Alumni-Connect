@@ -237,8 +237,8 @@ FRONTEND_URL = os.getenv('FRONTEND_URL', 'http://localhost:5173')
 # Allow @vvit.net accounts to login without email verification (for seeded accounts)
 SKIP_EMAIL_VERIFICATION_FOR_VVIT = os.getenv('SKIP_EMAIL_VERIFICATION', 'True').lower() == 'true'
 
-# Email Configuration - Default to SMTP for real email sending
-EMAIL_BACKEND = os.getenv('EMAIL_BACKEND', 'django.core.mail.backends.smtp.EmailBackend')
+# Email Configuration - Using console backend to see OTPs in logs
+EMAIL_BACKEND = os.getenv('EMAIL_BACKEND', 'django.core.mail.backends.console.EmailBackend')
 EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.office365.com')
 EMAIL_PORT = int(os.getenv('EMAIL_PORT', '587'))
 EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'True').lower() == 'true'
