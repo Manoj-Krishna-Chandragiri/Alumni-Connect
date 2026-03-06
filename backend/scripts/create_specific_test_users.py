@@ -52,13 +52,11 @@ def create_test_user():
     # Create student profile
     StudentProfile.objects.create(
         user=user,
-        roll_no=roll_no,
-        phone='+919876543210',
+        roll_number=roll_no,
         current_year=4,
         cgpa=8.5,
         bio='Test student account for Manoj Krishna',
         skills=['Python', 'Django', 'React', 'JavaScript'],
-        department='csm',
         batch_year=2022,
         graduation_year=2026,
     )

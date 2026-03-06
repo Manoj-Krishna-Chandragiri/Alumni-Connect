@@ -163,13 +163,11 @@ def create_students_bulk(count=50):
         
         StudentProfile.objects.create(
             user=user,
-            roll_no=roll_no,
-            phone=f'+9190012345{i:02d}',
+            roll_number=roll_no,
             current_year=current_year,
             cgpa=cgpa,
             bio=f'{first_name} {last_name} - {dept.upper()} student, batch of {batch_year}',
             skills=random.sample(SKILLS, k=random.randint(3, 6)),
-            department=dept,
             batch_year=batch_year,
             graduation_year=batch_year + 4,
         )
@@ -221,15 +219,12 @@ def create_alumni_bulk(count=50):
         
         AlumniProfile.objects.create(
             user=user,
-            roll_no=roll_no,
-            phone=f'+9198765432{i:02d}',
+            roll_number=roll_no,
             bio=f'Alumni from {dept.upper()} department, graduated in {grad_year}',
             current_company=random.choice(COMPANIES),
-            current_position=random.choice(['Software Engineer', 'Senior Developer', 'Tech Lead', 'Manager']),
-            years_of_experience=2026 - grad_year,
+            current_designation=random.choice(['Software Engineer', 'Senior Developer', 'Tech Lead', 'Manager']),
+            experience_years=2026 - grad_year,
             skills=random.sample(SKILLS, k=random.randint(4, 8)),
-            department=dept,
-            batch_year=batch_year,
             graduation_year=grad_year,
         )
         
